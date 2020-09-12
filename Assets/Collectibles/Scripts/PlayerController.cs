@@ -65,7 +65,9 @@ public class PlayerController : MonoBehaviour
     {
         GameObject projectileObject = Instantiate(projectilePrefab, rigidbody2d.position + Vector2.up * 0.5f, Quaternion.identity);
 
-        Projectile projectile = projectileObject.GetComponent<Projectile>();
+        BulletProjectile projectile = projectileObject.GetComponent<BulletProjectile>();
         projectile.Launch(mouseDirection, 300);
+
+        this.ChangeHealth(-1);
     }
 }
