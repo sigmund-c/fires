@@ -14,10 +14,16 @@ public class PlayerController : MonoBehaviour
     bool isBoosted;
     float boostTimer;
 
+    public GameObject projectilePrefab;
+    Rigidbody2D rigidbody2d;
+
+    Vector2 mouseDirection = new Vector2(1,0);
+
     // Start is called before the first frame update
     void Start()
     {
-        
+        rigidbody2d = GetComponent<Rigidbody2D>();
+        currentHealth = maxHealth;
     }
 
     // Update is called once per frame
@@ -31,6 +37,16 @@ public class PlayerController : MonoBehaviour
                 isBoosted = false;
             }
         }
+
+        if(Input.GetMouseButtonDown(1)) //Right click
+        {
+            Launch();
+        }
+    }
+
+    void FixedUpdate()
+    {
+        mouseDirection = new Vector2(Input.mousePosition.x, Input.mousePosition.y);
     }
 
     public void ChangeHealth(int amount)
@@ -43,5 +59,13 @@ public class PlayerController : MonoBehaviour
     {
         isBoosted = true;
         boostTimer = boostDuration;
+    }
+
+    void Launch()
+    {
+        GameObject projectileObject = Instantiate(projectilePrefab, rigidbody2d.position + Vector2.up * 0.5f, Quaternion.identity);
+
+        Projectile projectile = projectileObject.GetComponent<Projectile>();
+        projectile.Launch(mouseDirection, 300);
     }
 }
