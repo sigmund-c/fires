@@ -10,12 +10,14 @@ public class jumpMovement : MonoBehaviour
     bool isJumping;
 
     Rigidbody2D rb;
+    Transform sprite;
 
     // Start is called before the first frame update
     void Start()
     {
         isJumping = false;
         rb = GetComponent<Rigidbody2D>();
+        sprite = transform.GetChild(1);
     }
 
     // Update is called once per frame
@@ -24,7 +26,7 @@ public class jumpMovement : MonoBehaviour
         if (Input.GetKeyDown("w") && !isJumping)
         {
             jumpStart = Time.time;
-            transform.localScale = new Vector3(1, 0.5f, 1);
+            sprite.localScale = new Vector3(1, 0.5f, 1);
         }
         if (Input.GetKeyUp("w") && !isJumping)
         {
@@ -45,13 +47,15 @@ public class jumpMovement : MonoBehaviour
 
 
         isJumping = true;
-        transform.localScale = new Vector3(1, 1, 1);
-        if (Input.GetKey("d") && !Input.GetKey("a"))
+        sprite.localScale = new Vector3(1, 1, 1);
+        if (Input.GetKey("a") && !Input.GetKey("d"))
         {
             rb.AddForce(Quaternion.Euler(0, 0, 30) * transform.up * jumpAmount * 350);
-        } else if (!Input.GetKey("d") && Input.GetKey("a"))
+            Debug.Log("jump left");
+        } else if (!Input.GetKey("a") && Input.GetKey("d"))
         {
             rb.AddForce(Quaternion.Euler(0, 0, -30) * transform.up * jumpAmount * 350);
+            Debug.Log("jump right");
         } else
         {
             rb.AddForce(transform.up * jumpAmount * 350);
