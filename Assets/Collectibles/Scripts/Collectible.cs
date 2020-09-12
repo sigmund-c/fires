@@ -5,7 +5,7 @@ using UnityEngine;
 public class Collectible : MonoBehaviour
 {
     float originalY;
-    public float hoverIntensity = 0.5F;
+    public float hoverIntensity = 0.3F;
 
     // Start is called before the first frame update
     void Start()
@@ -22,13 +22,13 @@ public class Collectible : MonoBehaviour
             transform.position.z);
     }
 
-    // public void OnTriggerEnter2D(Collider2D other)
-    // {
-    //     PlayerController controller = other.GetComponent<PlayerController>();
+    public void OnTriggerEnter2D(Collider2D other)
+    {
+        PlayerController controller = other.GetComponent<PlayerController>();
 
-    //     if (controller != null)
-    //     {
-    //         Destroy(gameObject);
-    //     }
-    // }
+        if (controller != null)
+        {
+            Destroy(gameObject);
+        }
+    }
 }

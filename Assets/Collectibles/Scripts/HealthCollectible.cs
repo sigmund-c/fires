@@ -10,15 +10,15 @@ public class HealthCollectible : Collectible
         
     }
 
-    // public void OnTriggerEnter2D(Collider2D other)
-    // {
-    //     PlayerController controller = other.GetComponent<PlayerController>();
+    new void OnTriggerEnter2D(Collider2D other)
+    {
+        PlayerController controller = other.GetComponent<PlayerController>();
 
-    //     if (controller != null)
-    //     {
-    //         //controller.changeHealth(5);
-    //     }
+        if (controller != null)
+        {
+            controller.ChangeHealth(5);
+        }
 
-    //     base.OnTriggerEnter2D(other);
-    // }
+        base.OnTriggerEnter2D(other);
+    }
 }
