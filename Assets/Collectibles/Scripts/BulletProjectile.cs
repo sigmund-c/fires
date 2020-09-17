@@ -12,6 +12,6 @@ public class BulletProjectile : Projectile
 
     public void Launch(Vector2 direction, float force)
     {
-        rigidbody.AddForce(direction * force);
+        this.rigidbody.AddForce(direction * force);
     }
 }
