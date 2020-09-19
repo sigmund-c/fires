@@ -4,14 +4,19 @@ using UnityEngine;
 
 public class jumpMovement : MonoBehaviour
 {
+    private static float maxJump = 2f;
     float jumpStart;
     float jumpCharge;
 
+    bool isCharging;
     bool isJumping;
 
     Rigidbody2D rb;
     Transform sprite;
     Vector2 shootingTriangle = new Vector2(0, 0);
+
+    public GameObject launchBar;
+    private LaunchBar activeLaunchBar;
 
     // Start is called before the first frame update
     void Start()
@@ -27,6 +32,8 @@ public class jumpMovement : MonoBehaviour
         
         if (Input.GetMouseButtonDown(0) && !isJumping)
         {
+            isCharging = true;
+
             jumpStart = Time.time;
             sprite.localScale = new Vector3(1, 0.5f, 1);
             
@@ -35,15 +42,39 @@ public class jumpMovement : MonoBehaviour
             Vector2 mousePosition = ray.GetPoint(3);
             Vector2 playerPosition = rb.transform.position;
             shootingTriangle = (mousePosition - playerPosition).normalized;
+
+            // Instantiate LaunchBar
+            activeLaunchBar = Instantiate(launchBar, (Vector2)this.transform.position + shootingTriangle*2, 
+                                            Quaternion.FromToRotation(new Vector2(1,0), shootingTriangle), this.transform)
+                              .GetComponent<LaunchBar>();
         }
-        if (Input.GetMouseButtonUp(0) && !isJumping)
+        if (Input.GetMouseButton(0)) // When holding down button, increase bar
         {
-            Jump(Time.time - jumpStart, shootingTriangle);
+            if (activeLaunchBar != null)
+            {
+                float percent = (Time.time - jumpStart) / maxJump;
+                activeLaunchBar.SetSize(percent);
+            }
         }
-        if (Input.GetMouseButton(0) && Time.time - jumpStart > 2f && !isJumping)
+        if (Input.GetMouseButtonUp(0) && isCharging) // Jump when release
         {
+            isCharging = false;
             Jump(Time.time - jumpStart, shootingTriangle);
+            if (activeLaunchBar != null)
+            {
+                Destroy(activeLaunchBar.gameObject);
+            }
         }
+        if (Input.GetMouseButton(0) && Time.time - jumpStart > maxJump && isCharging) // Jump when held too long
+        {
+            isCharging = false;
+            Jump(Time.time - jumpStart, shootingTriangle);
+            if (activeLaunchBar != null)
+            {
+                Destroy(activeLaunchBar.gameObject);
+            }
+        }
+        
 
     }
 
@@ -53,8 +84,7 @@ public class jumpMovement : MonoBehaviour
         {
             jumpAmount = 2f;
         }
-
-        isJumping = true;
+        
         sprite.localScale = new Vector3(1, 1, 1);
         rb.AddForce(dirc * 10 * jumpAmount, ForceMode2D.Impulse);
 
@@ -79,6 +109,14 @@ public class jumpMovement : MonoBehaviour
         if (col.gameObject.tag == "ground")
         {
             isJumping = false;
+        }
+    }
+
+    private void OnCollisionExit2D(Collision2D col)
+    {
+        if (col.gameObject.tag == "ground")
+        {
+            isJumping = true;
         }
     }
 }
