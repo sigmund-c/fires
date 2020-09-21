@@ -95,3 +95,7 @@ $RECYCLE.BIN/
 
 # Windows shortcuts
 *.lnk
+
+# Github Plugin, you guys download if you want
+/Assets/Plugins/Github
+/Assets/Plugins/Github.meta
