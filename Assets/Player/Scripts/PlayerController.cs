@@ -166,7 +166,7 @@ public class PlayerController : MonoBehaviour
     {
         if (col.gameObject.tag == "ground")
         {
-            isJumping = true;
+            isJumping = false;
         }
     }
 
