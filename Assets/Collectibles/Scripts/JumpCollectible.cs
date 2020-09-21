@@ -4,11 +4,6 @@ using UnityEngine;
 
 public class JumpCollectible : Collectible
 {
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
 
     new void OnTriggerEnter2D(Collider2D other)
     {

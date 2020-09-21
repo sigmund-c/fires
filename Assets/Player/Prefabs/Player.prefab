@@ -9,7 +9,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 6758930254819153870}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: SMask_Player
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -43,7 +43,7 @@ GameObject:
   - component: {fileID: 6758930254996970066}
   - component: {fileID: 6758930254996970068}
   - component: {fileID: 6758930254996970069}
-  m_Layer: 8
+  m_Layer: 11
   m_Name: FireHitbox
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -104,7 +104,7 @@ GameObject:
   m_Component:
   - component: {fileID: 6758930255129577046}
   - component: {fileID: 6758930255129577033}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: Outer_Mask
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -186,7 +186,7 @@ GameObject:
   - component: {fileID: 6758930255216236323}
   - component: {fileID: 6758930255216236325}
   - component: {fileID: 6758930255216236322}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: FireSprite
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -287,7 +287,7 @@ GameObject:
   m_Component:
   - component: {fileID: 6758930255279008755}
   - component: {fileID: 6758930255279008754}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: Inner_Mask
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -367,10 +367,10 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 6758930255466825041}
-  - component: {fileID: 6758930255466825043}
   - component: {fileID: 6758930255466825040}
   - component: {fileID: 6758930255466825042}
-  m_Layer: 0
+  - component: {fileID: 6410144603297677982}
+  m_Layer: 11
   m_Name: Player
   m_TagString: Player
   m_Icon: {fileID: 0}
@@ -394,18 +394,6 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &6758930255466825043
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6758930255466825052}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c153c964bea25ac4b971970e4c90a6b7, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!50 &6758930255466825040
 Rigidbody2D:
   serializedVersion: 4
@@ -453,3 +441,20 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 0.38596296, y: 0.6276574}
   m_EdgeRadius: 0
+--- !u!114 &6410144603297677982
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6758930255466825052}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ae0ba5656159d0d4d8ef8995d488cfcf, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  maxHealth: 50
+  boostDuration: 10
+  boostMultiplier: 2
+  launchBar: {fileID: 5925175496615645783, guid: 475877e99a5f1e0478331a22692acb71, type: 3}
+  projectilePrefab: {fileID: 1311386620750424233, guid: 9e0e1b7747b491241ba7847f247d6677, type: 3}

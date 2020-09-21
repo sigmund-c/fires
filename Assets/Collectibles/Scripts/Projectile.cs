@@ -4,13 +4,13 @@ using UnityEngine;
 
 public class Projectile : MonoBehaviour
 {
-    Rigidbody2D rigidbody2d;
+    Rigidbody2D rb;
 
-    public Rigidbody2D rigidbody { get { return rigidbody2d; }}
+    public new Rigidbody2D rigidbody { get { return rb; }}
 
     public void Awake()
     {
-        rigidbody2d = GetComponent<Rigidbody2D>();
+        rb = GetComponent<Rigidbody2D>();
     }
 
     // Update is called once per frame
@@ -24,6 +24,8 @@ public class Projectile : MonoBehaviour
 
     public void OnCollisionEnter2D(Collision2D other)
     {
+        Debug.Log("Projectile Collision with " + other.gameObject);
+        Destroy(gameObject);
     //     EnemyController controller = other.collider.GetComponent<EnemyController>();
     //     if (controller != null)
     //     {

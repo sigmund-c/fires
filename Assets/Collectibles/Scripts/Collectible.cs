@@ -5,12 +5,15 @@ using UnityEngine;
 public class Collectible : MonoBehaviour
 {
     float originalY;
-    public float hoverIntensity = 0.3F;
+    public float hoverIntensity = 0.25F;
+
+    private new AudioSource audio;
 
     // Start is called before the first frame update
     void Start()
     {
-        this.originalY = this.transform.position.y;
+        originalY = transform.position.y;
+        audio = GetComponent<AudioSource>();
     }
 
     // Update is called once per frame
@@ -25,10 +28,15 @@ public class Collectible : MonoBehaviour
     public void OnTriggerEnter2D(Collider2D other)
     {
         PlayerController controller = other.GetComponent<PlayerController>();
-
         if (controller != null)
         {
-            Destroy(gameObject);
+            StartCoroutine(DestroyCollectible());
         }
+    }
+    IEnumerator DestroyCollectible()
+    {
+        audio.Play();
+        yield return new WaitForSeconds(0.6f);
+        Destroy(gameObject);
     }
 }
