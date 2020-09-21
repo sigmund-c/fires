@@ -116,7 +116,7 @@ public class jumpMovement : MonoBehaviour
     {
         if (col.gameObject.tag == "ground")
         {
-            isJumping = true;
+            isJumping = false;
         }
     }
 }
