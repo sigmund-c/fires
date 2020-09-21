@@ -6,15 +6,13 @@ public class Projectile : MonoBehaviour
 {
     Rigidbody2D rb;
 
-    public new Rigidbody2D rigidbody { get { return rb; }}
-
     public void Awake()
     {
         rb = GetComponent<Rigidbody2D>();
     }
 
     // Update is called once per frame
-    public void Update()
+    void Update()
     {
         if(transform.position.magnitude > 1000.0f)
         {
@@ -22,7 +20,7 @@ public class Projectile : MonoBehaviour
         }
     }
 
-    public void OnCollisionEnter2D(Collision2D other)
+    void OnCollisionEnter2D(Collision2D other)
     {
         Debug.Log("Projectile Collision with " + other.gameObject);
         Destroy(gameObject);
@@ -33,5 +31,10 @@ public class Projectile : MonoBehaviour
     //     }
         
     //     Destroy(gameObject);
+    }
+
+    public void Launch(Vector2 direction, float force)
+    {
+        rb.AddForce(direction * force);
     }
 }

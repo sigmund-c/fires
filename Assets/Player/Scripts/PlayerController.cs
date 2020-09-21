@@ -27,7 +27,7 @@ public class PlayerController : MonoBehaviour
 
     //Projectiles
     public GameObject projectilePrefab;
-    Vector2 mouseDirection = new Vector2(1,0);
+    Vector3 mouseDirection = new Vector2(1,0);
 
     Rigidbody2D rb;
     Transform sprite;
@@ -51,7 +51,7 @@ public class PlayerController : MonoBehaviour
 
     void FixedUpdate()
     {
-        mouseDirection = new Vector2(Input.mousePosition.x, Input.mousePosition.y);
+        mouseDirection = Input.mousePosition - Camera.main.WorldToScreenPoint(rb.position);
     }
 
     void handleTimers()
@@ -184,10 +184,24 @@ public class PlayerController : MonoBehaviour
 
     void Launch()
     {
-        GameObject projectileObject = Instantiate(projectilePrefab, rb.position + mouseDirection.normalized, Quaternion.identity);
+        Vector3 direction = Vector3.up;
+        if (Mathf.Abs(mouseDirection.y) > Mathf.Abs(mouseDirection.x))
+        {
+            if (mouseDirection.y > 0) direction = Vector3.forward;
+            if (mouseDirection.y < 0) direction = Vector3.back;
+        }
+        else
+        {
+            if (mouseDirection.x > 0) direction = Vector3.right;
+            if (mouseDirection.x < 0) direction = Vector3.left;
+        }
 
-        BulletProjectile projectile = projectileObject.GetComponent<BulletProjectile>();
-        projectile.Launch(mouseDirection, 200);
+        GameObject projectileObject = Instantiate(projectilePrefab,
+            rb.position + (Vector2)mouseDirection.normalized * 0.5f,
+            Quaternion.LookRotation(direction, Vector3.up));
+
+        Projectile projectile = projectileObject.GetComponent<Projectile>();
+        projectile.Launch((Vector2)mouseDirection, 200);
 
         this.ChangeHealth(-1);
     }
