@@ -1,0 +1,1507 @@
+fileFormatVersion: 2
+guid: 9f7e503284ea93b479523ccea216c814
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: -6807520270456554461
+    second: stone_placeholder_0
+  - first:
+      213: -7520165558420634102
+    second: stone_placeholder_0
+  - first:
+      213: -155220559483244033
+    second: stone_placeholder_1
+  - first:
+      213: -684921541608824556
+    second: stone_placeholder_2
+  - first:
+      213: -527101319045302431
+    second: stone_placeholder_3
+  - first:
+      213: -4967984495722367655
+    second: stone_placeholder_4
+  - first:
+      213: -2528693559294538846
+    second: stone_placeholder_5
+  - first:
+      213: -5998246515302456418
+    second: stone_placeholder_6
+  - first:
+      213: -4490153392602008840
+    second: stone_placeholder_7
+  - first:
+      213: 4220283802882662242
+    second: stone_placeholder_8
+  - first:
+      213: 5499101600905540226
+    second: stone_placeholder_9
+  - first:
+      213: -3303277934206985987
+    second: stone_placeholder_10
+  - first:
+      213: -2311768084273245179
+    second: stone_placeholder_11
+  - first:
+      213: -7904431809453032779
+    second: stone_placeholder_12
+  - first:
+      213: -8684231944039880892
+    second: stone_placeholder_13
+  - first:
+      213: -7432742014565272290
+    second: stone_placeholder_14
+  - first:
+      213: -6462419630577703462
+    second: stone_placeholder_15
+  - first:
+      213: 8719670066907854670
+    second: stone_placeholder_16
+  - first:
+      213: 8174278195673218015
+    second: stone_placeholder_17
+  - first:
+      213: 2594856518988338348
+    second: stone_placeholder_18
+  - first:
+      213: -4347756976949745016
+    second: stone_placeholder_19
+  - first:
+      213: -7233888529122884810
+    second: stone_placeholder_20
+  - first:
+      213: 2466150078589082940
+    second: stone_placeholder_21
+  - first:
+      213: -6803461213262381488
+    second: stone_placeholder_22
+  - first:
+      213: 8630861478167036604
+    second: stone_placeholder_23
+  - first:
+      213: 3352147853798133548
+    second: stone_placeholder_24
+  - first:
+      213: 8663297726277455030
+    second: stone_placeholder_25
+  - first:
+      213: 4058106556416744451
+    second: stone_placeholder_26
+  - first:
+      213: 2091911879344237806
+    second: stone_placeholder_27
+  - first:
+      213: -8301173243983264519
+    second: stone_placeholder_28
+  - first:
+      213: -1444986595384368074
+    second: stone_placeholder_29
+  - first:
+      213: -3629175892097659330
+    second: stone_placeholder_30
+  - first:
+      213: -4928221156622887807
+    second: stone_placeholder_31
+  - first:
+      213: 2163840678770254192
+    second: stone_placeholder_32
+  - first:
+      213: -4848694549135705158
+    second: stone_placeholder_33
+  - first:
+      213: 7770681748193822069
+    second: stone_placeholder_34
+  - first:
+      213: 5689446240370319359
+    second: stone_placeholder_35
+  - first:
+      213: 1954644257568651941
+    second: stone_placeholder_36
+  - first:
+      213: -4437180526744546273
+    second: stone_placeholder_37
+  - first:
+      213: 6192195679944448575
+    second: stone_placeholder_38
+  - first:
+      213: 8901620769081990970
+    second: stone_placeholder_39
+  - first:
+      213: 7704076024535027314
+    second: stone_placeholder_40
+  - first:
+      213: 6162793603620434967
+    second: stone_placeholder_41
+  - first:
+      213: 3538225754361617522
+    second: stone_placeholder_42
+  - first:
+      213: -4485599374236668819
+    second: stone_placeholder_43
+  - first:
+      213: 8889467583811742462
+    second: stone_placeholder_44
+  - first:
+      213: 3375605478923470361
+    second: stone_placeholder_45
+  - first:
+      213: 3973593310246024061
+    second: stone_placeholder_46
+  - first:
+      213: 5314118419725499006
+    second: stone_placeholder_47
+  - first:
+      213: 315957209748119522
+    second: stone_placeholder_48
+  - first:
+      213: -9104140572198774308
+    second: stone_placeholder_49
+  - first:
+      213: 4973517274472970912
+    second: stone_placeholder_50
+  - first:
+      213: 5402718498631746927
+    second: stone_placeholder_51
+  - first:
+      213: 3607013480874506034
+    second: stone_placeholder_52
+  - first:
+      213: 2414007267047333311
+    second: stone_placeholder_53
+  - first:
+      213: -2215710313908700873
+    second: stone_placeholder_54
+  - first:
+      213: 2458882281180055576
+    second: stone_placeholder_55
+  - first:
+      213: -5188726721193861485
+    second: stone_placeholder_56
+  - first:
+      213: 8985696745149001357
+    second: stone_placeholder_57
+  - first:
+      213: 7902029763489832046
+    second: stone_placeholder_58
+  - first:
+      213: 8302082387021765744
+    second: stone_placeholder_59
+  - first:
+      213: -7016483798413827808
+    second: stone_placeholder_60
+  - first:
+      213: -6910700657918242991
+    second: stone_placeholder_61
+  - first:
+      213: 2918454542536966656
+    second: stone_placeholder_62
+  - first:
+      213: 2907435586498747900
+    second: stone_placeholder_63
+  - first:
+      213: -3470012360802358765
+    second: stone_placeholder_64
+  - first:
+      213: 3507419565043773700
+    second: stone_placeholder_65
+  - first:
+      213: -1234389941963665105
+    second: stone_placeholder_66
+  - first:
+      213: -1300930583798850342
+    second: stone_placeholder_67
+  - first:
+      213: 5172802081451024362
+    second: stone_placeholder_68
+  - first:
+      213: -6503297796829200280
+    second: stone_placeholder_69
+  - first:
+      213: 3971949531392702211
+    second: stone_placeholder_70
+  - first:
+      213: -2735252359808645824
+    second: stone_placeholder_71
+  - first:
+      213: -2138928235446288488
+    second: stone_placeholder_72
+  - first:
+      213: 2714320409342391725
+    second: stone_placeholder_73
+  - first:
+      213: -4691024721742236582
+    second: stone_placeholder_74
+  - first:
+      213: 5262908957404052290
+    second: stone_placeholder_75
+  - first:
+      213: -3603697254463900022
+    second: stone_placeholder_76
+  - first:
+      213: 2497306623300428078
+    second: stone_placeholder_77
+  - first:
+      213: 7821946012393805477
+    second: stone_placeholder_78
+  - first:
+      213: -9019594855967191277
+    second: stone_placeholder_79
+  - first:
+      213: 3273483065635674008
+    second: stone_placeholder_80
+  - first:
+      213: 939517299715759123
+    second: stone_placeholder_81
+  - first:
+      213: -7346960615666742000
+    second: stone_placeholder_82
+  - first:
+      213: 2358598664654985617
+    second: stone_placeholder_83
+  - first:
+      213: 3500239495953860945
+    second: stone_placeholder_84
+  - first:
+      213: -1360163572904541850
+    second: stone_placeholder_85
+  - first:
+      213: 6706931484233861571
+    second: stone_placeholder_86
+  - first:
+      213: -1641037208255378210
+    second: stone_placeholder_87
+  - first:
+      213: -6483724631332064959
+    second: stone_placeholder_88
+  - first:
+      213: -7560566808340150555
+    second: stone_placeholder_89
+  - first:
+      213: -1760721507267719132
+    second: stone_placeholder_90
+  - first:
+      213: -2743087241992836835
+    second: stone_placeholder_91
+  - first:
+      213: -9104624132493389821
+    second: stone_placeholder_92
+  - first:
+      213: -4631753143204676840
+    second: stone_placeholder_93
+  - first:
+      213: 4674349743623764387
+    second: stone_placeholder_94
+  - first:
+      213: -3976324823924385354
+    second: stone_placeholder_95
+  - first:
+      213: -4123264939430054561
+    second: stone_placeholder_96
+  - first:
+      213: 4090292024236566201
+    second: stone_placeholder_97
+  - first:
+      213: 8928155590250306702
+    second: stone_placeholder_98
+  - first:
+      213: 3815054943044684524
+    second: stone_placeholder_99
+  - first:
+      213: -5398832124033557545
+    second: stone_placeholder_100
+  - first:
+      213: -851373503466131214
+    second: stone_placeholder_101
+  - first:
+      213: -4695294150345925385
+    second: stone_placeholder_102
+  - first:
+      213: 3627842517099456899
+    second: stone_placeholder_103
+  - first:
+      213: -7958844209082771854
+    second: stone_placeholder_104
+  - first:
+      213: 2354702628583372484
+    second: stone_placeholder_105
+  - first:
+      213: 384734453037548970
+    second: stone_placeholder_106
+  - first:
+      213: -3703116519011877264
+    second: stone_placeholder_107
+  - first:
+      213: 870611283713962959
+    second: stone_placeholder_108
+  - first:
+      213: -5093150827164413940
+    second: stone_placeholder_109
+  - first:
+      213: -4333415060414009270
+    second: stone_placeholder_110
+  - first:
+      213: 708123533187793281
+    second: stone_placeholder_111
+  - first:
+      213: -6133240492182220200
+    second: stone_placeholder_112
+  - first:
+      213: -1599427314688773815
+    second: stone_placeholder_113
+  - first:
+      213: 1637181380603151221
+    second: stone_placeholder_114
+  - first:
+      213: 1358215608496513020
+    second: stone_placeholder_115
+  - first:
+      213: -403520727273465315
+    second: stone_placeholder_116
+  - first:
+      213: 2877909453971908420
+    second: stone_placeholder_117
+  - first:
+      213: -3774291099813604737
+    second: stone_placeholder_118
+  - first:
+      213: 7716952965212504204
+    second: stone_placeholder_119
+  - first:
+      213: 1376224824996529309
+    second: stone_placeholder_120
+  - first:
+      213: -7377119062235719447
+    second: stone_placeholder_121
+  - first:
+      213: -6120197208037202863
+    second: stone_placeholder_122
+  - first:
+      213: 4387909667294813687
+    second: stone_placeholder_123
+  - first:
+      213: 5528312752613798391
+    second: stone_placeholder_124
+  - first:
+      213: -4443851995255907782
+    second: stone_placeholder_125
+  - first:
+      213: 1069577173532763347
+    second: stone_placeholder_126
+  - first:
+      213: -5150763843000342924
+    second: stone_placeholder_127
+  - first:
+      213: 3562327778710587571
+    second: stone_placeholder_128
+  - first:
+      213: -8403589193060630337
+    second: stone_placeholder_129
+  - first:
+      213: -4483666756534276694
+    second: stone_placeholder_130
+  - first:
+      213: 5421917164991690807
+    second: stone_placeholder_131
+  - first:
+      213: -7271627544798352454
+    second: stone_placeholder_132
+  - first:
+      213: 8117385299331806002
+    second: stone_placeholder_133
+  - first:
+      213: -7011593579238643461
+    second: stone_placeholder_134
+  - first:
+      213: 4026879565639020907
+    second: stone_placeholder_135
+  - first:
+      213: -5423028007049543353
+    second: stone_placeholder_136
+  - first:
+      213: -5688921838147814724
+    second: stone_placeholder_137
+  - first:
+      213: -3104434681342000212
+    second: stone_placeholder_138
+  - first:
+      213: 3360595417968903643
+    second: stone_placeholder_139
+  - first:
+      213: -1767802153920920457
+    second: stone_placeholder_140
+  - first:
+      213: -2874453305073825113
+    second: stone_placeholder_141
+  - first:
+      213: 2698763641313363969
+    second: stone_placeholder_142
+  - first:
+      213: -5100775717427960611
+    second: stone_placeholder_143
+  - first:
+      213: -8070302918345809342
+    second: stone_placeholder_144
+  - first:
+      213: 8757043012431648717
+    second: stone_placeholder_145
+  - first:
+      213: -2994181709704401842
+    second: stone_placeholder_146
+  - first:
+      213: 9182009642679369029
+    second: stone_placeholder_147
+  - first:
+      213: 827789625178503345
+    second: stone_placeholder_148
+  - first:
+      213: -5043457381081236158
+    second: stone_placeholder_149
+  - first:
+      213: 1568425975027756151
+    second: stone_placeholder_150
+  - first:
+      213: -8777398074235877630
+    second: stone_placeholder_151
+  - first:
+      213: -4183311293676869647
+    second: stone_placeholder_152
+  - first:
+      213: 7761330359647374159
+    second: stone_placeholder_153
+  - first:
+      213: 8247255962744007927
+    second: stone_placeholder_154
+  - first:
+      213: -4089484233123221745
+    second: stone_placeholder_155
+  - first:
+      213: 4469740021647335545
+    second: stone_placeholder_156
+  - first:
+      213: -4373514276194859920
+    second: stone_placeholder_157
+  - first:
+      213: -5012836817711115681
+    second: stone_placeholder_158
+  - first:
+      213: -7716699817182559370
+    second: stone_placeholder_159
+  - first:
+      213: 4004870457502724258
+    second: stone_placeholder_160
+  - first:
+      213: 9012580342663043946
+    second: stone_placeholder_161
+  - first:
+      213: -703927354131339943
+    second: stone_placeholder_162
+  - first:
+      213: -172587206402014817
+    second: stone_placeholder_163
+  - first:
+      213: -5527687728535959855
+    second: stone_placeholder_164
+  - first:
+      213: 9067007868746029657
+    second: stone_placeholder_165
+  - first:
+      213: -2119846617679451708
+    second: stone_placeholder_166
+  - first:
+      213: 7560423582303609477
+    second: stone_placeholder_167
+  - first:
+      213: 720138003646345139
+    second: stone_placeholder_168
+  - first:
+      213: 954731783299034074
+    second: stone_placeholder_169
+  - first:
+      213: -153087721345837278
+    second: stone_placeholder_170
+  - first:
+      213: -8287905144619959328
+    second: stone_placeholder_171
+  - first:
+      213: -1406696153284747997
+    second: stone_placeholder_172
+  - first:
+      213: 1053986047200820629
+    second: stone_placeholder_173
+  - first:
+      213: -3079453415706754785
+    second: stone_placeholder_174
+  - first:
+      213: 5935184195225663540
+    second: stone_placeholder_175
+  - first:
+      213: -4091174040024104541
+    second: stone_placeholder_176
+  - first:
+      213: 8741439323664414290
+    second: stone_placeholder_177
+  - first:
+      213: 119666257879541747
+    second: stone_placeholder_178
+  - first:
+      213: 3999112887760531844
+    second: stone_placeholder_179
+  - first:
+      213: -7837746521095939919
+    second: stone_placeholder_180
+  - first:
+      213: -1211917578747673153
+    second: stone_placeholder_181
+  - first:
+      213: 6099559089420234374
+    second: stone_placeholder_182
+  - first:
+      213: 4603739401706445112
+    second: stone_placeholder_183
+  - first:
+      213: -2727217622922351743
+    second: stone_placeholder_184
+  - first:
+      213: 755392191910983909
+    second: stone_placeholder_185
+  - first:
+      213: -4990482136686428779
+    second: stone_placeholder_186
+  - first:
+      213: 6260023150175823669
+    second: stone_placeholder_187
+  - first:
+      213: 5609111078607990821
+    second: stone_placeholder_188
+  - first:
+      213: 2225666376149218855
+    second: stone_placeholder_189
+  - first:
+      213: -7161471460265793346
+    second: stone_placeholder_190
+  - first:
+      213: 2389967352806198683
+    second: stone_placeholder_191
+  - first:
+      213: 1164256099735807365
+    second: stone_placeholder_192
+  - first:
+      213: -1598898186532277867
+    second: stone_placeholder_193
+  - first:
+      213: 457648234142138611
+    second: stone_placeholder_194
+  - first:
+      213: 5889446386801629548
+    second: stone_placeholder_195
+  - first:
+      213: 4737877229992696695
+    second: stone_placeholder_196
+  - first:
+      213: 8063719489235677631
+    second: stone_placeholder_197
+  - first:
+      213: -3081477848273039757
+    second: stone_placeholder_198
+  - first:
+      213: 4895040556724986580
+    second: stone_placeholder_199
+  - first:
+      213: 2827053672486457164
+    second: stone_placeholder_200
+  - first:
+      213: 3575773979972940519
+    second: stone_placeholder_201
+  - first:
+      213: 6754074680675192720
+    second: stone_placeholder_202
+  - first:
+      213: -4197141798085178370
+    second: stone_placeholder_203
+  - first:
+      213: -3986331795214728521
+    second: stone_placeholder_204
+  - first:
+      213: 2683053845658724944
+    second: stone_placeholder_205
+  - first:
+      213: -7700605094343714439
+    second: stone_placeholder_206
+  - first:
+      213: -7505939361940034090
+    second: stone_placeholder_207
+  - first:
+      213: -1807690975793927793
+    second: stone_placeholder_208
+  - first:
+      213: -8891467963407836127
+    second: stone_placeholder_209
+  - first:
+      213: 793556216988812359
+    second: stone_placeholder_210
+  - first:
+      213: 6320080496100433645
+    second: stone_placeholder_211
+  - first:
+      213: 6953053875933593195
+    second: stone_placeholder_212
+  - first:
+      213: -4528601930431217020
+    second: stone_placeholder_213
+  - first:
+      213: 9159813277461446675
+    second: stone_placeholder_214
+  - first:
+      213: 4258924320386224936
+    second: stone_placeholder_215
+  - first:
+      213: -3082747239114781686
+    second: stone_placeholder_216
+  - first:
+      213: -7818434502904870383
+    second: stone_placeholder_217
+  - first:
+      213: 7674335440599590782
+    second: stone_placeholder_218
+  - first:
+      213: 5330263177089759975
+    second: stone_placeholder_219
+  - first:
+      213: -8771014561528033372
+    second: stone_placeholder_220
+  - first:
+      213: -2648653042467848857
+    second: stone_placeholder_221
+  - first:
+      213: 6009458898660069570
+    second: stone_placeholder_222
+  - first:
+      213: -4750112308971805931
+    second: stone_placeholder_223
+  - first:
+      213: -1412174794776864932
+    second: stone_placeholder_224
+  - first:
+      213: 8462510765092973485
+    second: stone_placeholder_225
+  - first:
+      213: 1433242567092370652
+    second: stone_placeholder_226
+  - first:
+      213: -7121714057504848448
+    second: stone_placeholder_227
+  - first:
+      213: 5567607258829684012
+    second: stone_placeholder_228
+  - first:
+      213: -1989018748240337462
+    second: stone_placeholder_229
+  - first:
+      213: 307822835512840512
+    second: stone_placeholder_230
+  - first:
+      213: 2918712667361073848
+    second: stone_placeholder_231
+  - first:
+      213: -1396198574655525121
+    second: stone_placeholder_232
+  - first:
+      213: -8415895076763166136
+    second: stone_placeholder_233
+  - first:
+      213: 5046228950784211298
+    second: stone_placeholder_234
+  - first:
+      213: -2186992841130095237
+    second: stone_placeholder_235
+  - first:
+      213: 2662727245968980316
+    second: stone_placeholder_236
+  - first:
+      213: -6133715469990792603
+    second: stone_placeholder_237
+  - first:
+      213: -5545733739206662796
+    second: stone_placeholder_238
+  - first:
+      213: 4068829820132744930
+    second: stone_placeholder_239
+  - first:
+      213: -3454051877860994257
+    second: stone_placeholder_240
+  - first:
+      213: -4743398140804458504
+    second: stone_placeholder_241
+  - first:
+      213: 8629145615823484502
+    second: stone_placeholder_242
+  - first:
+      213: -3863742220361106003
+    second: stone_placeholder_243
+  - first:
+      213: 1510499978269764192
+    second: stone_placeholder_244
+  - first:
+      213: 476305818276584488
+    second: stone_placeholder_245
+  - first:
+      213: 2848332262220397692
+    second: stone_placeholder_246
+  - first:
+      213: -1171055838686748046
+    second: stone_placeholder_247
+  - first:
+      213: 15048468729374938
+    second: stone_placeholder_248
+  - first:
+      213: 6566968010066206117
+    second: stone_placeholder_249
+  - first:
+      213: -234705338567524566
+    second: stone_placeholder_250
+  - first:
+      213: 2770301414203887064
+    second: stone_placeholder_251
+  - first:
+      213: -1886273281508536362
+    second: stone_placeholder_252
+  - first:
+      213: -2901655963873157445
+    second: stone_placeholder_253
+  - first:
+      213: -681974191492992643
+    second: stone_placeholder_254
+  - first:
+      213: 7607563045717322469
+    second: stone_placeholder_255
+  externalObjects: {}
+  serializedVersion: 11
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 0
+    aniso: -1
+    mipBias: -100
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 256
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: stone_placeholder_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 100
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a060636a44103a790800000000000000
+      internalID: -7520165558420634102
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: stone_placeholder_1
+      rect:
+        serializedVersion: 2
+        x: 20
+        y: 100
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ff1f92a39bb88ddf0800000000000000
+      internalID: -155220559483244033
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: stone_placeholder_2
+      rect:
+        serializedVersion: 2
+        x: 40
+        y: 100
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 411a46d9c7bae76f0800000000000000
+      internalID: -684921541608824556
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: stone_placeholder_3
+      rect:
+        serializedVersion: 2
+        x: 60
+        y: 100
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1673aad942c5fa8f0800000000000000
+      internalID: -527101319045302431
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: stone_placeholder_4
+      rect:
+        serializedVersion: 2
+        x: 80
+        y: 100
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 955f1d23c6c2e0bb0800000000000000
+      internalID: -4967984495722367655
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: stone_placeholder_5
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 80
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2ab4e6cfa9648ecd0800000000000000
+      internalID: -2528693559294538846
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: stone_placeholder_6
+      rect:
+        serializedVersion: 2
+        x: 20
+        y: 80
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e932c2c0392f1cca0800000000000000
+      internalID: -5998246515302456418
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: stone_placeholder_7
+      rect:
+        serializedVersion: 2
+        x: 40
+        y: 80
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8f231fe7745cfa1c0800000000000000
+      internalID: -4490153392602008840
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: stone_placeholder_8
+      rect:
+        serializedVersion: 2
+        x: 60
+        y: 80
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 26fd72a32c5719a30800000000000000
+      internalID: 4220283802882662242
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: stone_placeholder_9
+      rect:
+        serializedVersion: 2
+        x: 80
+        y: 80
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 282b1c145cbb05c40800000000000000
+      internalID: 5499101600905540226
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: stone_placeholder_10
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 60
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: df8d43968366822d0800000000000000
+      internalID: -3303277934206985987
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: stone_placeholder_11
+      rect:
+        serializedVersion: 2
+        x: 20
+        y: 60
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 504dec5fc23faefd0800000000000000
+      internalID: -2311768084273245179
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: stone_placeholder_12
+      rect:
+        serializedVersion: 2
+        x: 40
+        y: 60
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5baf0461621dd4290800000000000000
+      internalID: -7904431809453032779
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: stone_placeholder_13
+      rect:
+        serializedVersion: 2
+        x: 60
+        y: 60
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4472764de096b7780800000000000000
+      internalID: -8684231944039880892
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: stone_placeholder_14
+      rect:
+        serializedVersion: 2
+        x: 80
+        y: 60
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e1537b2a48899d890800000000000000
+      internalID: -7432742014565272290
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: stone_placeholder_15
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 40
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ad5a7e9d59fd056a0800000000000000
+      internalID: -6462419630577703462
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: stone_placeholder_16
+      rect:
+        serializedVersion: 2
+        x: 20
+        y: 40
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e4736a02abd720970800000000000000
+      internalID: 8719670066907854670
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: stone_placeholder_17
+      rect:
+        serializedVersion: 2
+        x: 40
+        y: 40
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fdbb254b5bed07170800000000000000
+      internalID: 8174278195673218015
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: stone_placeholder_18
+      rect:
+        serializedVersion: 2
+        x: 60
+        y: 40
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ca418618148c20420800000000000000
+      internalID: 2594856518988338348
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: stone_placeholder_19
+      rect:
+        serializedVersion: 2
+        x: 80
+        y: 40
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 88a2f2b901aa9a3c0800000000000000
+      internalID: -4347756976949745016
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: stone_placeholder_20
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 20
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6338bd4a5b01c9b90800000000000000
+      internalID: -7233888529122884810
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: stone_placeholder_21
+      rect:
+        serializedVersion: 2
+        x: 20
+        y: 20
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c3d9a152e66893220800000000000000
+      internalID: 2466150078589082940
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: stone_placeholder_22
+      rect:
+        serializedVersion: 2
+        x: 40
+        y: 20
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 05ef854a2104591a0800000000000000
+      internalID: -6803461213262381488
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: stone_placeholder_23
+      rect:
+        serializedVersion: 2
+        x: 60
+        y: 20
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cb2cfbf39caf6c770800000000000000
+      internalID: 8630861478167036604
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: stone_placeholder_24
+      rect:
+        serializedVersion: 2
+        x: 80
+        y: 20
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c2fc93c66b8358e20800000000000000
+      internalID: 3352147853798133548
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: stone_placeholder_25
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6bc8736c1673a3870800000000000000
+      internalID: 8663297726277455030
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: stone_placeholder_26
+      rect:
+        serializedVersion: 2
+        x: 20
+        y: 0
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 30c57eb896a415830800000000000000
+      internalID: 4058106556416744451
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: stone_placeholder_27
+      rect:
+        serializedVersion: 2
+        x: 40
+        y: 0
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: eecabb555c6f70d10800000000000000
+      internalID: 2091911879344237806
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: stone_placeholder_28
+      rect:
+        serializedVersion: 2
+        x: 60
+        y: 0
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9f486658aee4ccc80800000000000000
+      internalID: -8301173243983264519
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: stone_placeholder_29
+      rect:
+        serializedVersion: 2
+        x: 80
+        y: 0
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 634e9ece85062fbe0800000000000000
+      internalID: -1444986595384368074
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+  spritePackingTag: 
+  pSDRemoveMatte: 0
+  pSDShowRemoveMatteOption: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
