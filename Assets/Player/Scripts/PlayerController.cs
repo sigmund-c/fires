@@ -9,6 +9,7 @@ public class PlayerController : MonoBehaviour
     public int maxHealth = 50;
     public int health { get { return currentHealth; }}
     int currentHealth;
+
     //JumpBoost
     public float boostDuration = 10.0f;
     public float boostMultiplier = 1.5f; //Use this in movement mechanics
@@ -21,6 +22,12 @@ public class PlayerController : MonoBehaviour
     float jumpCharge;
     bool isCharging;
     bool isJumping;
+    int jumpTimes = 0;
+    int jumpTimesLimit = 0; // 0 means any time.
+    enum DoubleJumpTypeList { PreserveMomentum,
+                          CancelOnAim,
+                          CancelOnDash };
+    int doubleJumpType = 0; //set number respect to above list.
     Vector2 shootingTriangle = new Vector2(0, 0);
     public GameObject launchBar;
     private LaunchBar activeLaunchBar;
@@ -70,7 +77,21 @@ public class PlayerController : MonoBehaviour
     {
         if (Input.GetMouseButtonDown(0) && !isJumping)
         {
+            if (jumpTimesLimit != 0)
+            {
+                jumpTimes++;
+                if (jumpTimes == jumpTimesLimit)
+                {
+                    isJumping = true;
+                }
+            }
             isCharging = true;
+
+            if (doubleJumpType == (int)DoubleJumpTypeList.CancelOnAim)
+            {
+                rb.velocity = new Vector3(0.0f, 0.0f, 0.0f);
+                rb.gravityScale = 0;
+            }
 
             jumpStart = Time.time;
             sprite.localScale = new Vector3(1, 0.5f, 1);
@@ -130,44 +151,43 @@ public class PlayerController : MonoBehaviour
         }
         
         sprite.localScale = new Vector3(1, 1, 1);
+
+        if (doubleJumpType == (int)DoubleJumpTypeList.CancelOnAim)
+        {
+            rb.velocity = new Vector3(0.0f, 0.0f, 0.0f);
+            rb.gravityScale = 1;
+        }
+        else if (doubleJumpType == (int)DoubleJumpTypeList.CancelOnDash)
+        {
+            rb.velocity = new Vector3(0.0f, 0.0f, 0.0f);
+        }
+
         if (isBoosted)
         {
+            
             rb.AddForce(dirc * 10 * jumpAmount * boostMultiplier, ForceMode2D.Impulse);
         } else
         {
             rb.AddForce(dirc * 10 * jumpAmount, ForceMode2D.Impulse);
         }
-
-        /*
-        if (Input.GetKey("a") && !Input.GetKey("d"))
-        {
-            rb.AddForce(new Vector2(1f, 5f),ForceMode2D.Impulse);
-            Debug.Log("jump left");
-        } else if (!Input.GetKey("a") && Input.GetKey("d"))
-        {
-            rb.AddForce(Quaternion.Euler(0, 0, -45) * transform.up * jumpAmount * 350);
-            Debug.Log("jump right");
-        } else
-        {
-            rb.AddForce(transform.up * jumpAmount * 350);
-        }*/
-
     }
 
     void OnCollisionEnter2D(Collision2D col)
     {
         if (col.gameObject.tag == "ground")
         {
+            jumpTimes = 0;
             isJumping = false;
         }
     }
 
     private void OnCollisionExit2D(Collision2D col)
     {
-        if (col.gameObject.tag == "ground")
-        {
-            isJumping = false;
-        }
+        
+        //if (col.gameObject.tag == "ground")
+        //{
+        //    isJumping = false;
+        //}
     }
 
     public void ChangeHealth(int amount)
