@@ -2,63 +2,114 @@
 using System.Collections.Generic;
 using UnityEngine;
 
+
+public enum AirJumpBehaviour { PreserveMomentum, CancelOnAim, CancelOnDash };
+
 public class PlayerController : MonoBehaviour
 {
     //Collectible variables
     //Health
     public int maxHealth = 50;
     public int health { get { return currentHealth; }}
-    int currentHealth;
+    
+    private int currentHealth;
 
     //JumpBoost
     public float boostDuration = 10.0f;
-    public float boostMultiplier = 1.5f; //Use this in movement mechanics
-    bool isBoosted;
-    float boostTimer;
+    public float boostMultiplier = 1.2f; //Use this in movement mechanics
+    
+    private bool isBoosted;
+    private float boostTimer;
 
     //Movement variables
-    private static float maxJump = 2f;
-    float jumpStart;
-    float jumpCharge;
-    bool isCharging;
-    bool isJumping;
-    int jumpTimes = 0;
-    int jumpTimesLimit = 0; // 0 means any time.
-    enum DoubleJumpTypeList { PreserveMomentum,
-                          CancelOnAim,
-                          CancelOnDash };
-    int doubleJumpType = 0; //set number respect to above list.
-    Vector2 shootingTriangle = new Vector2(0, 0);
+    public float maxJumpCharge = 1f;
+    public float baseJumpChange = 0.3f;
+    public int maxJumps = 1; // 0 means any time.
+    public AirJumpBehaviour airJumpBehaviour;
     public GameObject launchBar;
+    
+    private float chargeStartTime;
+    private bool isCharging;
+    private int jumpTimes = 0;
     private LaunchBar activeLaunchBar;
 
     //Projectiles
     public GameObject projectilePrefab;
-    Vector3 mouseDirection = new Vector2(1,0);
 
-    Rigidbody2D rb;
-    Transform sprite;
+    private Rigidbody2D rb;
+    private Transform sprite;
 
-    // Start is called before the first frame update
+
     void Start()
     {
-        isJumping = false;
         rb = GetComponent<Rigidbody2D>();
         sprite = transform.GetChild(1);
         currentHealth = maxHealth/2;
     }
 
-    // Update is called once per frame
     void Update()
     {
-        handleTimers();
-        handleMovement();
-        handleAttack();
-    }
+        Vector3 mousePosition = Utils.MouseWorldPosition();
+        Vector3 aimDirection = (mousePosition - transform.position).normalized;
 
-    void FixedUpdate()
-    {
-        mouseDirection = Input.mousePosition - Camera.main.WorldToScreenPoint(rb.position);
+        handleTimers();
+
+        if (!isCharging)
+        {
+            if (Input.GetMouseButtonDown(1)) // right click
+            {
+                LaunchProjectile(aimDirection);
+            }
+            else if (Input.GetMouseButtonDown(0))
+            {
+                if (maxJumps != 0 && jumpTimes < maxJumps)
+                {
+                    isCharging = true;
+                    chargeStartTime = Time.time;
+                    sprite.localScale = new Vector3(1, 0.5f, 1);
+
+                    if (airJumpBehaviour == AirJumpBehaviour.CancelOnAim)
+                    {
+                        rb.velocity = new Vector3(0.0f, 0.0f, 0.0f);
+                        rb.gravityScale = 0;
+                    }
+
+                     // Instantiate LaunchBar
+                    activeLaunchBar = Instantiate(launchBar, transform.position, Quaternion.FromToRotation(Vector3.right, aimDirection), transform).GetComponent<LaunchBar>();
+                }
+                else 
+                {
+                    // possibly play an "invalid" sound
+                }                
+            }
+        }
+        else // already charging
+        {
+            /*if (Input.GetMouseButton(0) && Time.time - chargeStartTime > maxJumpCharge && isCharging) // Jump when held too long
+            {
+                FinishCharge(Time.time - chargeStartTime, aimDirection);
+            }
+            else*/ if (Input.GetMouseButton(0)) 
+            {
+                // When holding down button, increase bar
+                if (activeLaunchBar != null)
+                {
+                    float percent = Mathf.Min((Time.time - chargeStartTime) / maxJumpCharge, 1f);
+                    activeLaunchBar.SetSize(percent);
+                    activeLaunchBar.UpdateDirection(Quaternion.FromToRotation(Vector3.right, aimDirection));
+                }
+            }
+            else if (Input.GetMouseButtonUp(0)) // Jump when release
+            {
+                FinishCharge(Time.time - chargeStartTime, aimDirection);
+
+            }
+
+            if (Input.GetMouseButtonDown(1)) // cancel charge
+            {
+                FinishCharge();
+            }
+        }
     }
 
     void handleTimers()
@@ -73,102 +124,43 @@ public class PlayerController : MonoBehaviour
         }
     }
 
-    void handleMovement()
+    void FinishCharge(float jumpAmount = 0 , Vector2 dir = default(Vector2))
     {
-        if (Input.GetMouseButtonDown(0) && !isJumping)
+        isCharging = false;
+        if (activeLaunchBar != null)
         {
-            if (jumpTimesLimit != 0)
-            {
-                jumpTimes++;
-                if (jumpTimes == jumpTimesLimit)
-                {
-                    isJumping = true;
-                }
-            }
-            isCharging = true;
-
-            if (doubleJumpType == (int)DoubleJumpTypeList.CancelOnAim)
-            {
-                rb.velocity = new Vector3(0.0f, 0.0f, 0.0f);
-                rb.gravityScale = 0;
-            }
-
-            jumpStart = Time.time;
-            sprite.localScale = new Vector3(1, 0.5f, 1);
-            
-            Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
-
-            Vector2 mousePosition = ray.GetPoint(3);
-            Vector2 playerPosition = rb.transform.position;
-            shootingTriangle = (mousePosition - playerPosition).normalized;
-
-            // Instantiate LaunchBar
-            activeLaunchBar = Instantiate(launchBar, (Vector2)this.transform.position + shootingTriangle*2, 
-                                            Quaternion.FromToRotation(new Vector2(1,0), shootingTriangle), this.transform)
-                              .GetComponent<LaunchBar>();
+            Destroy(activeLaunchBar.gameObject);
         }
-        if (Input.GetMouseButton(0)) // When holding down button, increase bar
+
+        sprite.localScale = new Vector3(1, 1, 1);
+
+        if (jumpAmount != 0)
         {
-            if (activeLaunchBar != null)
-            {
-                float percent = (Time.time - jumpStart) / maxJump;
-                activeLaunchBar.SetSize(percent);
-            }
+            jumpTimes++;
+            Jump(jumpAmount, dir);
         }
-        if (Input.GetMouseButtonUp(0) && isCharging) // Jump when release
-        {
-            isCharging = false;
-            Jump(Time.time - jumpStart, shootingTriangle);
-            if (activeLaunchBar != null)
-            {
-                Destroy(activeLaunchBar.gameObject);
-            }
-        }
-        if (Input.GetMouseButton(0) && Time.time - jumpStart > maxJump && isCharging) // Jump when held too long
-        {
-            isCharging = false;
-            Jump(Time.time - jumpStart, shootingTriangle);
-            if (activeLaunchBar != null)
-            {
-                Destroy(activeLaunchBar.gameObject);
-            }
-        }
-    }
-
-    void handleAttack()
-    {
-        if(Input.GetMouseButtonDown(1)) //Right click
-        {
-            Launch();
-        }
+        rb.gravityScale = 1;
     }
 
     void Jump(float jumpAmount, Vector2 dirc)
     {
-        if (jumpAmount > 2)
+        if (jumpAmount > maxJumpCharge)
         {
-            jumpAmount = 2f;
+            jumpAmount = maxJumpCharge;
         }
         
-        sprite.localScale = new Vector3(1, 1, 1);
-
-        if (doubleJumpType == (int)DoubleJumpTypeList.CancelOnAim)
-        {
-            rb.velocity = new Vector3(0.0f, 0.0f, 0.0f);
-            rb.gravityScale = 1;
-        }
-        else if (doubleJumpType == (int)DoubleJumpTypeList.CancelOnDash)
+        if (airJumpBehaviour == AirJumpBehaviour.CancelOnDash)
         {
             rb.velocity = new Vector3(0.0f, 0.0f, 0.0f);
         }
 
         if (isBoosted)
         {
-            
-            rb.AddForce(dirc * 10 * jumpAmount * boostMultiplier, ForceMode2D.Impulse);
-        } else
+            rb.AddForce(dirc * 15 * (jumpAmount + baseJumpChange) * boostMultiplier, ForceMode2D.Impulse);
+        }
+        else
         {
-            rb.AddForce(dirc * 10 * jumpAmount, ForceMode2D.Impulse);
+            rb.AddForce(dirc * 15 * (jumpAmount + baseJumpChange), ForceMode2D.Impulse);
         }
     }
 
@@ -177,7 +169,6 @@ public class PlayerController : MonoBehaviour
         if (col.gameObject.tag == "ground")
         {
             jumpTimes = 0;
-            isJumping = false;
         }
     }
 
@@ -193,7 +184,7 @@ public class PlayerController : MonoBehaviour
     public void ChangeHealth(int amount)
     {
         currentHealth = Mathf.Clamp(currentHealth + amount, 0, maxHealth);
-        Debug.Log(currentHealth + "/" + maxHealth);
+        // Debug.Log(currentHealth + "/" + maxHealth);
     }
 
     public void BoostMovement()
@@ -202,27 +193,29 @@ public class PlayerController : MonoBehaviour
         boostTimer = boostDuration;
     }
 
-    void Launch()
+    void LaunchProjectile(Vector3 aimDirection)
     {
-        Vector3 direction = Vector3.up;
-        if (Mathf.Abs(mouseDirection.y) > Mathf.Abs(mouseDirection.x))
-        {
-            if (mouseDirection.y > 0) direction = Vector3.forward;
-            if (mouseDirection.y < 0) direction = Vector3.back;
-        }
-        else
-        {
-            if (mouseDirection.x > 0) direction = Vector3.right;
-            if (mouseDirection.x < 0) direction = Vector3.left;
-        }
+        // Vector3 direction = Vector3.up;
+        // if (Mathf.Abs(aimDirection.y) > Mathf.Abs(aimDirection.x))
+        // {
+        //     if (aimDirection.y > 0) direction = Vector3.up;
+        //     if (aimDirection.y < 0) direction = Vector3.down;
+        // }
+        // else
+        // {
+        //     if (aimDirection.x > 0) direction = Vector3.right;
+        //     if (aimDirection.x < 0) direction = Vector3.left;
+        // }
 
-        GameObject projectileObject = Instantiate(projectilePrefab,
-            rb.position + (Vector2)mouseDirection.normalized * 0.5f,
-            Quaternion.LookRotation(direction, Vector3.up));
+        // GameObject projectileObject = Instantiate(projectilePrefab,
+        //     rb.position + (Vector2)aimDirection.normalized * 0.5f,
+        //     Quaternion.FromToRotation(direction, Vector3.up));
 
-        Projectile projectile = projectileObject.GetComponent<Projectile>();
-        projectile.Launch((Vector2)mouseDirection, 200);
+        // Projectile projectile = projectileObject.GetComponent<Projectile>();
+        // projectile.Launch((Vector2)aimDirection, 200);
 
-        this.ChangeHealth(-1);
+        GameObject projectileInst = Instantiate(projectilePrefab, rb.position + (Vector2)aimDirection.normalized * 0.5f, Quaternion.FromToRotation(Vector3.up, aimDirection));
+
+        ChangeHealth(-1);
     }
 }

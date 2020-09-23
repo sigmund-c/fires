@@ -456,5 +456,6 @@ MonoBehaviour:
   maxHealth: 50
   boostDuration: 10
   boostMultiplier: 2
+  doubleJumpType: 2
   launchBar: {fileID: 5925175496615645783, guid: 475877e99a5f1e0478331a22692acb71, type: 3}
   projectilePrefab: {fileID: 1311386620750424233, guid: 9e0e1b7747b491241ba7847f247d6677, type: 3}

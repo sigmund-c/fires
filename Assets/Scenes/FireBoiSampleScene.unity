@@ -140,7 +140,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &40166347
 Transform:
   m_ObjectHideFlags: 0
@@ -5378,7 +5378,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &558993389
 Transform:
   m_ObjectHideFlags: 0
@@ -14704,6 +14704,18 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 6410144603297677982, guid: 6a12fb6aa9d1bf0448337c46aaedf459, type: 3}
+      propertyPath: maxJumps
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 6410144603297677982, guid: 6a12fb6aa9d1bf0448337c46aaedf459, type: 3}
+      propertyPath: airJumpBehaviour
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 6758930254819153871, guid: 6a12fb6aa9d1bf0448337c46aaedf459, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 6758930255466825041, guid: 6a12fb6aa9d1bf0448337c46aaedf459, type: 3}
       propertyPath: m_LocalPosition.x
       value: -3.53
