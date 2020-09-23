@@ -156,7 +156,7 @@ public class PlayerController : MonoBehaviour
 
     void OnCollisionEnter2D(Collision2D col)
     {
-        if (col.gameObject.tag == "ground")
+        if (col.gameObject.tag == "Ground")
         {
             isJumping = false;
         }
@@ -164,7 +164,7 @@ public class PlayerController : MonoBehaviour
 
     private void OnCollisionExit2D(Collision2D col)
     {
-        if (col.gameObject.tag == "ground")
+        if (col.gameObject.tag == "Ground")
         {
             isJumping = false;
         }

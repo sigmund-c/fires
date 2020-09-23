@@ -2,10 +2,10 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class AI_Patrol : MonoBehaviour
+// Same as AI_Patrol, but doesnt check for ground tiles
+public class AI_PatrolFlying : MonoBehaviour
 {
     public float moveSpeed;
-    public float maxFallDist = 2f;
     public float wallDetectionDist = 0.1f;
 
     public Transform groundDetector;
@@ -15,26 +15,20 @@ public class AI_Patrol : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-       
+
     }
 
     // Update is called once per frame
     void Update()
     {
         transform.Translate(Vector2.left * moveSpeed * Time.deltaTime);
-
-        RaycastHit2D groundInfo = Physics2D.Raycast(groundDetector.position, Vector2.down, maxFallDist);
-        if (groundInfo.collider == false) // No ground found
+        
+        RaycastHit2D wallInfo = Physics2D.Raycast(groundDetector.position, Vector2.left, wallDetectionDist);
+        if (wallInfo.collider == true && wallInfo.collider.gameObject.tag == "Ground")
         {
             Rotate();
-        } else // Check for obstructions/walls
-        {
-            RaycastHit2D wallInfo = Physics2D.Raycast(groundDetector.position, Vector2.left, wallDetectionDist);
-            if (wallInfo.collider == true && wallInfo.collider.gameObject.tag == "Ground")
-            {
-                Rotate();
-            }
         }
+        
     }
 
     void Rotate()
