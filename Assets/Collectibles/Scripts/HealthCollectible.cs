@@ -10,7 +10,7 @@ public class HealthCollectible : Collectible
 
         if (controller != null)
         {
-            controller.ChangeHealth(5);
+            controller.RestoreHealth(5);
         }
 
         base.OnTriggerEnter2D(other);

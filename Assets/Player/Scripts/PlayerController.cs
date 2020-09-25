@@ -9,10 +9,8 @@ public class PlayerController : MonoBehaviour
 {
     //Collectible variables
     //Health
-    public int maxHealth = 50;
-    public int health { get { return currentHealth; }}
+    private Damageable damageable;
     
-    private int currentHealth;
 
     //JumpBoost
     public float boostDuration = 10.0f;
@@ -44,7 +42,7 @@ public class PlayerController : MonoBehaviour
     {
         rb = GetComponent<Rigidbody2D>();
         sprite = transform.GetChild(1);
-        currentHealth = maxHealth/2;
+        damageable = GetComponent<Damageable>();
     }
 
     void Update()
@@ -190,10 +188,15 @@ public class PlayerController : MonoBehaviour
         }
     }
 
-    public void ChangeHealth(int amount)
+    public void TakeDamage(int amount)
     {
-        currentHealth = Mathf.Clamp(currentHealth + amount, 0, maxHealth);
+        damageable.TakeDamageNoInvin(amount);
         // Debug.Log(currentHealth + "/" + maxHealth);
+    }
+
+    public void RestoreHealth(int amount)
+    {
+        damageable.RestoreHealth(amount);
     }
 
     public void BoostMovement()
@@ -225,6 +228,6 @@ public class PlayerController : MonoBehaviour
 
         GameObject projectileInst = Instantiate(projectilePrefab, rb.position + (Vector2)aimDirection.normalized * 0.5f, Quaternion.FromToRotation(Vector3.up, aimDirection));
 
-        ChangeHealth(-1);
+        TakeDamage(1);
     }
 }

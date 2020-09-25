@@ -5,7 +5,7 @@ using UnityEngine;
 public class Damageable : MonoBehaviour
 {
     public int maxHealth = 10;
-    public int currHeatlth = 10;
+    public int currHealth = 10;
     public float invincibleDuration = 1f;
 
     private float invincibleTime = 0; // invincible frames from taking damage
@@ -38,16 +38,34 @@ public class Damageable : MonoBehaviour
         }
     }
     
-    private void TakeDamage(int damage)
+    public void TakeDamage(int damage)
     {
-        currHeatlth -= damage;
+        currHealth -= damage;
         invincibleTime = invincibleDuration;
-        Debug.Log(name + "took " + damage +", with [" + currHeatlth + "] hp left");
+        Debug.Log(name + " took " + damage +", with [" + currHealth + "] hp left");
 
-        if (currHeatlth <= 0)
+        if (currHealth <= 0)
         {
             Die();
         }
+    }
+
+    public void TakeDamageNoInvin(int damage)
+    {
+
+        currHealth -= damage;
+        Debug.Log(name + " took " + damage + ", with [" + currHealth + "] hp left");
+
+        if (currHealth <= 0)
+        {
+            Die();
+        }
+    }
+
+    public void RestoreHealth(int restore)
+    {
+        currHealth += restore;
+        Debug.Log(name + " restored " + restore + ", with [" + currHealth + "] hp left");
     }
 
     private void Die()
