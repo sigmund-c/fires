@@ -42,7 +42,7 @@ public class Damageable : MonoBehaviour
     {
         currHeatlth -= damage;
         invincibleTime = invincibleDuration;
-        Debug.Log(name + "took damage of " + damage);
+        Debug.Log(name + "took " + damage +", with [" + currHeatlth + "] hp left");
 
         if (currHeatlth <= 0)
         {
@@ -52,6 +52,7 @@ public class Damageable : MonoBehaviour
 
     private void Die()
     {
-        Debug.Log(name + "died");
+        Debug.Log(name + " died");
+        Destroy(gameObject);
     }
 }

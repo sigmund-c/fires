@@ -176,6 +176,7 @@ GameObject:
   - component: {fileID: 6758930255466825040}
   - component: {fileID: 6758930255466825042}
   - component: {fileID: 6410144603297677982}
+  - component: {fileID: 3701422236833994418}
   m_Layer: 11
   m_Name: Player
   m_TagString: Player
@@ -261,6 +262,24 @@ MonoBehaviour:
   maxHealth: 50
   boostDuration: 10
   boostMultiplier: 2
-  doubleJumpType: 2
+  maxJumpCharge: 1
+  baseJumpChange: 0.3
+  maxJumps: 1
+  airJumpBehaviour: 0
   launchBar: {fileID: 5925175496615645783, guid: 475877e99a5f1e0478331a22692acb71, type: 3}
   projectilePrefab: {fileID: 1311386620750424233, guid: 9e0e1b7747b491241ba7847f247d6677, type: 3}
+--- !u!114 &3701422236833994418
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6758930255466825052}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9c3bb8adae6a1534e88e5a53b8eaf74a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  maxHealth: 10
+  currHeatlth: 10
+  invincibleDuration: 1

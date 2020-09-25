@@ -11,15 +11,19 @@ public class CameraFollow : MonoBehaviour
     // Update is called once per frame
     void LateUpdate()
     {
-        target = player;
+        if (player != null)
+        {
+            target = player;
 
-        foreach(Transform snap in snaps) {
-            if (Vector2.Distance(player.position, snap.position) < 5)
+            foreach (Transform snap in snaps)
             {
-                target = snap;
+                if (Vector2.Distance(player.position, snap.position) < 5)
+                {
+                    target = snap;
+                }
             }
-        }
 
-        transform.position = Vector3.MoveTowards(transform.position, target.position + new Vector3(0,0, -10f), 0.1f);
+            transform.position = Vector3.MoveTowards(transform.position, target.position + new Vector3(0, 0, -10f), 0.1f);
+        }
     }
 }
