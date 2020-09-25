@@ -136,7 +136,11 @@ public class PlayerController : MonoBehaviour
 
         if (jumpAmount != 0)
         {
-            jumpTimes++;
+            if (jumpTimes > 0) // jumpTimes only increases after 
+            {
+                Debug.Log("tset");
+                jumpTimes++;
+            }
             Jump(jumpAmount, dir);
         }
         rb.gravityScale = 1;
@@ -168,16 +172,22 @@ public class PlayerController : MonoBehaviour
     {
         if (col.gameObject.tag == "Ground")
         {
-            jumpTimes = 0;
+            // Check if the "wall" is less than 135 degrees from down, preventing ceiling jumps
+            Debug.Log(Vector2.Angle(Vector2.down, transform.position - col.transform.position));
+            if (Vector2.Angle(Vector2.down, transform.position - col.transform.position) < 135) 
+            {
+                jumpTimes = 0;
+            }
         }
     }
 
     private void OnCollisionExit2D(Collision2D col)
     {
-        //if (col.gameObject.tag == "Ground")
-        //{
-        //    isJumping = false;
-        //}
+        // Starts the jump counter only after leaving the ground (by jumping, or sliding off the ground)
+        if (col.gameObject.tag == "Ground")
+        {
+            jumpTimes = 1;
+        }
     }
 
     public void ChangeHealth(int amount)
