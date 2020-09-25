@@ -4,17 +4,26 @@ using UnityEngine;
 
 public class Projectile : MonoBehaviour
 {
-    Rigidbody2D rb;
+    public float velocity = 10f;
+    public float maxRange = 10f;
+
+    private Rigidbody2D rb;
+    private Vector3 startPos;
+    private float sqrMaxRange;
 
     public void Awake()
     {
         rb = GetComponent<Rigidbody2D>();
+        startPos = transform.position;
+        sqrMaxRange = maxRange * maxRange;
     }
 
-    // Update is called once per frame
-    void Update()
+    void FixedUpdate()
     {
-        if(transform.position.magnitude > 1000.0f)
+        transform.position += transform.up * velocity * Time.fixedDeltaTime;
+
+        float sqrTravelled = (transform.position - startPos).sqrMagnitude;
+        if(sqrTravelled > sqrMaxRange)
         {
             Destroy(gameObject);
         }
@@ -31,10 +40,5 @@ public class Projectile : MonoBehaviour
     //     }
         
     //     Destroy(gameObject);
-    }
-
-    public void Launch(Vector2 direction, float force)
-    {
-        rb.AddForce(direction * force);
     }
 }

@@ -19,5 +19,10 @@ public class LaunchBar : MonoBehaviour
             bar.localScale = new Vector3(sizeNormalized, 1f);
         }
     }
+
+    public void UpdateDirection(Quaternion aimRotation)
+    {
+        transform.rotation = aimRotation;
+    }
     
 }
