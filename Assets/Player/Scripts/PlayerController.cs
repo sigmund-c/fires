@@ -28,7 +28,7 @@ public class PlayerController : MonoBehaviour
     
     private float chargeStartTime;
     private bool isCharging;
-    private int jumpTimes = 0;
+    public int jumpTimes = 0;
     private LaunchBar activeLaunchBar;
 
     //Projectiles
@@ -168,14 +168,19 @@ public class PlayerController : MonoBehaviour
 
     void OnCollisionEnter2D(Collision2D col)
     {
+        Debug.Log(col.gameObject.name);
         if (col.gameObject.tag == "Ground")
         {
+            jumpTimes = 0;
+
+            // Not working on tilemaps :(
+            /*
             // Check if the "wall" is less than 135 degrees from down, preventing ceiling jumps
-            Debug.Log(Vector2.Angle(Vector2.down, transform.position - col.transform.position));
-            if (Vector2.Angle(Vector2.down, transform.position - col.transform.position) < 135) 
+            Debug.Log(Vector2.Angle(Vector2.down, col.transform.position - transform.position));
+            if (Vector2.Angle(Vector2.down, col.transform.position - transform.position) < 135) 
             {
                 jumpTimes = 0;
-            }
+            }*/
         }
     }
 
