@@ -16003,6 +16003,10 @@ PrefabInstance:
       propertyPath: swimmingDrag
       value: 5
       objectReference: {fileID: 0}
+    - target: {fileID: 6410144603297677982, guid: 6a12fb6aa9d1bf0448337c46aaedf459, type: 3}
+      propertyPath: airJumpBehaviour
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 6758930254819153871, guid: 6a12fb6aa9d1bf0448337c46aaedf459, type: 3}
       propertyPath: m_IsActive
       value: 0
