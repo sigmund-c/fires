@@ -10,9 +10,9 @@ GameObject:
   m_Component:
   - component: {fileID: 5840276924045920865}
   - component: {fileID: 7974910611330686522}
-  m_Layer: 0
+  m_Layer: 15
   m_Name: PhysicalHitbox
-  m_TagString: Untagged
+  m_TagString: BurningObj
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -73,7 +73,7 @@ GameObject:
   - component: {fileID: 42508464238876023}
   m_Layer: 9
   m_Name: FlammableObjDynamic
-  m_TagString: Ground
+  m_TagString: BurningObj
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

@@ -10,6 +10,8 @@ public class Utils : MonoBehaviour
     public static GameObject ashParticles = (GameObject)AssetDatabase.LoadAssetAtPath("Assets/Prefabs/AshParticles.prefab", typeof(GameObject));
     public static GameObject infoText = (GameObject)AssetDatabase.LoadAssetAtPath("Assets/Prefabs/Text_DamageText.prefab", typeof(GameObject));
     public static int burningLayer = LayerMask.NameToLayer("Burning");
+    public static int charLayer = LayerMask.NameToLayer("Character");
+    public static int charSwimmingLayer = LayerMask.NameToLayer("Character Swimming");
     public static Camera cam = Camera.main; // better to cache it once in a single place
 
     public static GameObject SpawnScaledParticleSystem(ParticleType type, Transform parent, float time = -1f)

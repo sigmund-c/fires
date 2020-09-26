@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 6174917326966449071}
   m_Layer: 10
   m_Name: PhysicalHitbox
-  m_TagString: Untagged
+  m_TagString: BurningObj
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -66,14 +66,14 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 8676216623934854482}
-  - component: {fileID: 8676216623934854483}
+  - component: {fileID: 7859219364508391645}
   - component: {fileID: 8676216623934854485}
   - component: {fileID: 8676216623934854480}
   - component: {fileID: 8676216623934854481}
   - component: {fileID: 7312159629110927899}
   m_Layer: 9
   m_Name: FlammableObj
-  m_TagString: Ground
+  m_TagString: BurningObj
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -93,8 +93,8 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!58 &8676216623934854483
-CircleCollider2D:
+--- !u!61 &7859219364508391645
+BoxCollider2D:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -107,8 +107,18 @@ CircleCollider2D:
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 1, y: 1}
+    newSize: {x: 1, y: 1}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
   serializedVersion: 2
-  m_Radius: 0.8
+  m_Size: {x: 1.05, y: 1.05}
+  m_EdgeRadius: 0
 --- !u!50 &8676216623934854485
 Rigidbody2D:
   serializedVersion: 4

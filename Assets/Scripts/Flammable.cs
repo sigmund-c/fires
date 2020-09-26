@@ -24,6 +24,7 @@ public class Flammable : MonoBehaviour
         {
             sr.color = BURNING_COLOUR;
             burning.enabled = true;
+            gameObject.layer = Utils.burningLayer;
             StartCoroutine(BurnToAshes());
         }
     }
@@ -48,6 +49,7 @@ public class Flammable : MonoBehaviour
     IEnumerator Ignite()
     {
         isBurning = true;
+        print(gameObject + "started burning, changed layer to burning layer");
         gameObject.layer = Utils.burningLayer;
         
         yield return new WaitForSeconds(Random.Range(0f, 0.3f) + ignitionTime);
