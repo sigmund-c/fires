@@ -52,6 +52,7 @@ public class PlayerController : MonoBehaviour
 
     public float regularDrag = 0.5f;
     public float swimmingDrag = 5f;
+    public float originalGravity = 2f;
 
 
     void Start()
@@ -200,7 +201,7 @@ public class PlayerController : MonoBehaviour
         {
             inSwimMode = false;
             sr.color = Color.white;
-            rb.gravityScale = 1;
+            rb.gravityScale = originalGravity;
             gameObject.layer = Utils.charLayer;
             rb.drag = regularDrag;
         }
@@ -238,7 +239,7 @@ public class PlayerController : MonoBehaviour
             Jump(jumpAmount, dir);
         }
         if (!inSwimMode) // TODO
-            rb.gravityScale = 1;
+            rb.gravityScale = originalGravity;
     }
 
     void Jump(float jumpAmount, Vector2 dirc)
