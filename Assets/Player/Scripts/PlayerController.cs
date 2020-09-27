@@ -61,7 +61,6 @@ public class PlayerController : MonoBehaviour
         sr = sprite.GetComponent<SpriteRenderer>();
         damageable = GetComponent<Damageable>();
         burningFilter = new ContactFilter2D();
-        // burningFilter.useLayerMask = true;
         burningFilter.useTriggers = true;
         burningFilter.SetLayerMask(LayerMask.GetMask("Burning")); // DO NOT use LayerMask.NameToLayer here -- it returns an int instead of bitmask
         // print("burning filter: " + LayerMask.LayerToName(burningFilter.layerMask));
@@ -100,15 +99,15 @@ public class PlayerController : MonoBehaviour
         if (inSwimMode) // constantly move towards cursor
         {
             float mag = aimVector.magnitude;
-            float amount = Mathf.Min(mag > 1f ? Mathf.Log(aimVector.magnitude) : 0f, 2f); // scale with distance from player to cursor logarithmically, cap at 2 
-            print("Amount: " + amount + " Mouse dist: " + aimVector.magnitude);
+            float amount = Mathf.Min(mag > 1f ? Mathf.Log(mag) : 0f, 2f); // scale with distance from player to cursor logarithmically, cap at 2 
+            print("Amount: " + amount + " Mouse dist: " + mag);
             rb.AddForce(aimDirection * amount * 0.15f, ForceMode2D.Impulse);
             // TODO - should we set AirJumpBehaviour to PreserveMomentum only when swimming? or all the time?
         }
 
         if (!isCharging)
         {
-            if (Input.GetMouseButtonDown(1)) // right click
+            if (!inSwimMode && Input.GetMouseButtonDown(1)) // right click
             {
                 LaunchProjectile(aimDirection);
             }
