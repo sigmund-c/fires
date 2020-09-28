@@ -4,5 +4,6 @@ using UnityEngine;
 
 public class Damaging : MonoBehaviour
 {
+    public Team team;
     public int damage = 5;
 }
