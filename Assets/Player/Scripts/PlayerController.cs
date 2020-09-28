@@ -25,8 +25,9 @@ public class PlayerController : MonoBehaviour
     private float boostTimer;
 
     //Movement variables
-    public float maxJumpCharge = 1f;
     public float baseJumpChange = 0.3f;
+    public float maxJumpCharge = 1f;
+    public float maxChargeTime = 1f;
     public int maxJumps = -1; // -1 means unlimited
     public AirJumpBehaviour airJumpBehaviour;
     public GameObject launchBar;
@@ -50,9 +51,10 @@ public class PlayerController : MonoBehaviour
     private bool inSwimMode;
     private GameObject fireHitbox;
 
-    public float regularDrag = 0.5f;
-    public float swimmingDrag = 5f;
+    public float regularDrag;
+    public float swimmingDrag;
     public float originalGravity = 2f;
+    public float aimingTimeScale = 0.5f;
 
 
     void Start()
@@ -100,7 +102,7 @@ public class PlayerController : MonoBehaviour
         if (inSwimMode) // constantly move towards cursor
         {
             float mag = aimVector.magnitude;
-            float amount = Mathf.Min(mag > 1f ? Mathf.Log(mag) : 0f, 2f); // scale with distance from player to cursor logarithmically, cap at 2 
+            float amount = Mathf.Min(mag > 3f ? Mathf.Log(mag) : 0f, 2f); // scale with distance from player to cursor logarithmically, cap at 2 
             print("Amount: " + amount + " Mouse dist: " + mag);
             rb.AddForce(aimDirection * amount * 0.15f, ForceMode2D.Impulse);
             // TODO - should we set AirJumpBehaviour to PreserveMomentum only when swimming? or all the time?
@@ -119,6 +121,7 @@ public class PlayerController : MonoBehaviour
                     isCharging = true;
                     chargeStartTime = Time.time;
                     sprite.localScale = new Vector3(1, 0.5f, 1);
+                    Time.timeScale = aimingTimeScale;
 
                     if (airJumpBehaviour == AirJumpBehaviour.CancelOnAim)
                     {
@@ -228,12 +231,14 @@ public class PlayerController : MonoBehaviour
         }
 
         sprite.localScale = new Vector3(1, 1, 1);
+        Time.timeScale = 1f;
 
         if (jumpAmount != 0)
         {
             if (jumpTimes > 0) // jumpTimes only increases after 
             {
                 // Debug.Log("tset");
+                print("jumpTimes++");
                 jumpTimes++;
             }
             Jump(jumpAmount, dir);
@@ -268,9 +273,12 @@ public class PlayerController : MonoBehaviour
     {
         // Debug.Log(col.gameObject.name);
         // print(col.otherCollider + " touched " + col.collider + " of layer " + col.gameObject.layer);
-        if (col.gameObject.tag == "Ground")
+        if (col.gameObject.tag == "Ground" || col.gameObject.tag == "BurningObj")
         {
+
+            print("jumpTimes = 0");
             jumpTimes = 0;
+
 
             // Not working on tilemaps :(
             /*
@@ -288,6 +296,7 @@ public class PlayerController : MonoBehaviour
         // Starts the jump counter only after leaving the ground (by jumping, or sliding off the ground)
         if (col.gameObject.tag == "Ground")
         {
+            print("jumpTimes = 1");
             jumpTimes = 1;
         }
     }
