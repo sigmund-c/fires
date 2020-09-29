@@ -55,4 +55,24 @@ public class Platform_Points : MonoBehaviour
             movePoints.ForEach(pointsQueue.Enqueue);
         }
     }
+
+    private void OnCollisionEnter2D(Collision2D collision)
+    {
+        // "Stick" player that is on the platform, moving along the platform
+        if (collision.gameObject.tag == "Player")
+        {
+            collision.collider.transform.SetParent(transform);
+        } /*else if (collision.gameObject.tag == "Ground")
+        {
+            movingLeft = !movingLeft;
+        }*/
+    }
+
+    private void OnCollisionExit2D(Collision2D collision)
+    {
+        if (collision.gameObject.tag == "Player")
+        {
+            collision.collider.transform.SetParent(null);
+        }
+    }
 }

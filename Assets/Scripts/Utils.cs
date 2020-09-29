@@ -12,7 +12,7 @@ public class Utils : MonoBehaviour
     public static int burningLayer = LayerMask.NameToLayer("Burning");
     public static int charLayer = LayerMask.NameToLayer("Character");
     public static int charSwimmingLayer = LayerMask.NameToLayer("Character Swimming");
-    public static Camera cam = Camera.main; // better to cache it once in a single place
+    // public static Camera cam = Camera.main; // better to cache it once in a single place -- doesn't work across scenes
 
     public static GameObject SpawnScaledParticleSystem(ParticleType type, Transform parent, float time = -1f)
     {
@@ -38,7 +38,7 @@ public class Utils : MonoBehaviour
 
     public static Vector3 MouseWorldPosition()
     {
-        return cam.ScreenToWorldPoint(Input.mousePosition + new Vector3(0, 0, 10));
+        return Camera.main.ScreenToWorldPoint(Input.mousePosition + new Vector3(0, 0, 10));
     }
 
     public static InfoText SpawnInfoText(Vector2 pos, string text, Vector2 offset = default(Vector2), InfoTextType type = InfoTextType.Plain)

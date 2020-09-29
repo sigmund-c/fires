@@ -180,7 +180,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 5
   m_Sprite: {fileID: -4998827747838694048, guid: 938747ad96da0ad4f9e73b07ea1490e8, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -261,10 +261,10 @@ Rigidbody2D:
   m_UseFullKinematicContacts: 0
   m_UseAutoMass: 0
   m_Mass: 1
-  m_LinearDrag: 0
+  m_LinearDrag: 0.5
   m_AngularDrag: 0.05
-  m_GravityScale: 5
-  m_Material: {fileID: 0}
+  m_GravityScale: 2
+  m_Material: {fileID: 6200000, guid: b4c4184ef02e79144b189e78d29e94d7, type: 2}
   m_Interpolate: 0
   m_SleepingMode: 1
   m_CollisionDetection: 0
@@ -309,16 +309,19 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   boostDuration: 10
   boostMultiplier: 2
-  maxJumpCharge: 0.5
-  baseJumpChange: 0.5
-  maxJumps: 999
+  baseJumpAmount: 0.4
+  maxJumpAmountFromCharge: 0.7
+  maxChargeTime: 0.25
+  maxJumps: 1
   airJumpBehaviour: 2
   launchBar: {fileID: 5925175496615645783, guid: 475877e99a5f1e0478331a22692acb71, type: 3}
   jumpTimes: 0
   projectilePrefab: {fileID: 1311386620750424233, guid: 9e0e1b7747b491241ba7847f247d6677, type: 3}
+  canSwim: 0
   regularDrag: 0.5
-  swimmingDrag: 2
+  swimmingDrag: 5
   originalGravity: 1.5
+  aimingTimeScale: 0.5
 --- !u!114 &3701422236833994418
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -334,3 +337,4 @@ MonoBehaviour:
   maxHealth: 10
   currHealth: 10
   invincibleDuration: 1
+  team: 0

@@ -25,8 +25,8 @@ public class PlayerController : MonoBehaviour
     private float boostTimer;
 
     //Movement variables
-    public float baseJumpChange = 0.3f;
-    public float maxJumpCharge = 1f;
+    public float baseJumpAmount = 0.3f;
+    public float maxJumpAmountFromCharge = 1f; // from charging, excludes base amount
     public float maxChargeTime = 1f;
     public int maxJumps = -1; // -1 means unlimited
     public AirJumpBehaviour airJumpBehaviour;
@@ -51,6 +51,7 @@ public class PlayerController : MonoBehaviour
     private bool inSwimMode;
     private GameObject fireHitbox;
 
+    public bool canSwim; // NOTE: remember to change physics collision matrix accordingly
     public float regularDrag;
     public float swimmingDrag;
     public float originalGravity = 2f;
@@ -99,7 +100,7 @@ public class PlayerController : MonoBehaviour
 
         handleTimers();
 
-        if (inSwimMode) // constantly move towards cursor
+        if (canSwim && inSwimMode) // constantly move towards cursor
         {
             float mag = aimVector.magnitude;
             float amount = Mathf.Min(mag > 3f ? Mathf.Log(mag) : 0f, 2f); // scale with distance from player to cursor logarithmically, cap at 2 
@@ -114,7 +115,7 @@ public class PlayerController : MonoBehaviour
             {
                 LaunchProjectile(aimDirection);
             }
-            else if (Input.GetMouseButtonDown(0))
+            else if (Input.GetMouseButton(0))
             {
                 if (maxJumps == -1 || jumpTimes < maxJumps)
                 {
@@ -149,7 +150,7 @@ public class PlayerController : MonoBehaviour
                 // When holding down button, increase bar
                 if (activeLaunchBar != null)
                 {
-                    float percent = Mathf.Min((Time.time - chargeStartTime) / maxJumpCharge, 1f);
+                    float percent = Mathf.Min((Time.time - chargeStartTime) / maxChargeTime, 1f);
                     activeLaunchBar.SetSize(percent);
                     activeLaunchBar.UpdateDirection(Quaternion.FromToRotation(Vector3.right, aimDirection));
                 }
@@ -169,6 +170,9 @@ public class PlayerController : MonoBehaviour
 
     void FixedUpdate()
     {
+        if (!canSwim)
+            return;
+
         List<Collider2D> results = new List<Collider2D>();
         Physics2D.OverlapCircle(transform.position, 0.2f, burningFilter, results);
 
@@ -222,7 +226,7 @@ public class PlayerController : MonoBehaviour
         }
     }
 
-    void FinishCharge(float jumpAmount = 0 , Vector2 dir = default(Vector2))
+    void FinishCharge(float jumpChargeTime = 0 , Vector2 dir = default(Vector2))
     {
         isCharging = false;
         if (activeLaunchBar != null)
@@ -233,7 +237,7 @@ public class PlayerController : MonoBehaviour
         sprite.localScale = new Vector3(1, 1, 1);
         Time.timeScale = 1f;
 
-        if (jumpAmount != 0)
+        if (jumpChargeTime != 0)
         {
             if (jumpTimes > 0) // jumpTimes only increases after 
             {
@@ -241,38 +245,41 @@ public class PlayerController : MonoBehaviour
                 print("jumpTimes++");
                 jumpTimes++;
             }
-            Jump(jumpAmount, dir);
+            Jump(jumpChargeTime, dir);
         }
         if (!inSwimMode) // TODO
             rb.gravityScale = originalGravity;
     }
 
-    void Jump(float jumpAmount, Vector2 dirc)
+    void Jump(float jumpChargeTime, Vector2 dirc)
     {
-        if (jumpAmount > maxJumpCharge)
+        print("jumpChargeTime: " + jumpChargeTime);
+        if (jumpChargeTime > maxChargeTime)
         {
-            jumpAmount = maxJumpCharge;
+            jumpChargeTime = maxChargeTime;
         }
+        print("Capped: " + jumpChargeTime);
         
         if (airJumpBehaviour == AirJumpBehaviour.CancelOnDash)
         {
             rb.velocity = Vector3.zero;
         }
 
+        float amount = jumpChargeTime / maxChargeTime * maxJumpAmountFromCharge + baseJumpAmount;
+
         if (isBoosted)
         {
-            rb.AddForce(dirc * 15 * (jumpAmount + baseJumpChange) * boostMultiplier, ForceMode2D.Impulse);
+            rb.AddForce(dirc * 15 * amount * boostMultiplier, ForceMode2D.Impulse);
         }
         else
         {
-            rb.AddForce(dirc * 15 * (jumpAmount + baseJumpChange), ForceMode2D.Impulse);
+            rb.AddForce(dirc * 15 * amount, ForceMode2D.Impulse);
         }
     }
 
     void OnCollisionEnter2D(Collision2D col)
     {
         // Debug.Log(col.gameObject.name);
-        // print(col.otherCollider + " touched " + col.collider + " of layer " + col.gameObject.layer);
         if (col.gameObject.tag == "Ground" || col.gameObject.tag == "BurningObj")
         {
 
