@@ -17,51 +17,47 @@ public class CoreLighting : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        light = GetComponent<UnityEngine.Experimental.Rendering.Universal.Light2D>();
-        Timer = updateFrequency;
+        this.light = GetComponent<UnityEngine.Experimental.Rendering.Universal.Light2D>();
+        this.Timer = updateFrequency;
     }
 
     // Update is called once per frame
     void Update()
     {
         handleTimer();
-    }
-
-    void OnGUI()
-    {
         adjustLighting();
     }
 
     void handleTimer()
     {
-        if (timerRunning)
+        if (this.timerRunning)
         {
-            Timer -= Time.deltaTime;
-            if (Timer <= 0)
+            this.Timer -= Time.deltaTime;
+            if (this.Timer <= 0)
             {
-                timerRunning = false;
-                Timer = updateFrequency;
+                this.timerRunning = false;
+                this.Timer = updateFrequency;
             }
         }
     }
 
     void adjustLighting()
     {
-        if (!timerRunning)
+        if (!this.timerRunning)
         {
-            if(goDim)
+            if(this.goDim)
             {
-                light.intensity -= 0.01f;
-                if (light.intensity <= minIntensity){
-                    goDim = false;
+                this.light.intensity -= 0.01f;
+                if (this.light.intensity <= this.minIntensity){
+                    this.goDim = false;
                 }
             } else {
-                light.intensity += 0.01f;
-                if (light.intensity >= maxIntensity){
-                    goDim = true;
+                this.light.intensity += 0.01f;
+                if (this.light.intensity >= maxIntensity){
+                    this.goDim = true;
                 }
             }
-            timerRunning = true;
+            this.timerRunning = true;
         }
     }
 }

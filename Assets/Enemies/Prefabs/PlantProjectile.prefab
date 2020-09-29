@@ -191,6 +191,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f1411a5f2e69cde4ab05687134c58767, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  team: 1
   damage: 5
 --- !u!1 &7332535410252938377
 GameObject:

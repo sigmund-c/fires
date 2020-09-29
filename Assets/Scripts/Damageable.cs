@@ -2,11 +2,14 @@
 using System.Collections.Generic;
 using UnityEngine;
 
+public enum Team { Player, Enemy, Neutal }
+
 public class Damageable : MonoBehaviour
 {
     public int maxHealth = 10;
     public int currHealth = 10;
     public float invincibleDuration = 1f;
+    public Team team;
 
     private float invincibleTime = 0; // invincible frames from taking damage
     private Collider2D colliderObj;
@@ -32,9 +35,11 @@ public class Damageable : MonoBehaviour
             return;
         }
 
-        if (col.gameObject.tag != tag && col.gameObject.GetComponent<Damaging>() != null)
+        Damaging damaging = col.gameObject.GetComponent<Damaging>();
+
+        if (damaging != null && damaging.team != team)
         {
-            TakeDamage(col.gameObject.GetComponent<Damaging>().damage);
+            TakeDamage(damaging.damage);
         }
     }
     

@@ -71,7 +71,7 @@ Rigidbody2D:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 8057157005736239361}
-  m_BodyType: 0
+  m_BodyType: 1
   m_Simulated: 1
   m_UseFullKinematicContacts: 0
   m_UseAutoMass: 0
@@ -112,6 +112,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f1411a5f2e69cde4ab05687134c58767, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  team: 1
   damage: 5
 --- !u!114 &7688836953111091522
 MonoBehaviour:
@@ -126,8 +127,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   maxHealth: 10
-  currHeatlth: 10
+  currHealth: 10
   invincibleDuration: 1
+  team: 1
 --- !u!1 &8057157006399786395
 GameObject:
   m_ObjectHideFlags: 0
