@@ -1,5 +1,65 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
+--- !u!1 &6333194746229592234
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 2016153875947610918}
+  - component: {fileID: 4510959212689194296}
+  - component: {fileID: 1342537236580834479}
+  m_Layer: 18
+  m_Name: SnakeVision
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &2016153875947610918
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6333194746229592234}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 6583508298617354226}
+  m_RootOrder: 5
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!58 &4510959212689194296
+CircleCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6333194746229592234}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: -14.574606, y: 0}
+  serializedVersion: 2
+  m_Radius: 15.074606
+--- !u!114 &1342537236580834479
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6333194746229592234}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4cd2f1dc760c60a41a1508b952eb697b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &6583508297970608852
 GameObject:
   m_ObjectHideFlags: 0
@@ -118,6 +178,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   team: 0
   damage: 5
+  knockbackAmount: 3
 --- !u!61 &6583508297970608857
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -403,7 +464,6 @@ GameObject:
   - component: {fileID: 6583508298617354227}
   - component: {fileID: 6583508298617354220}
   - component: {fileID: 6583508298617354221}
-  - component: {fileID: 6583508298617354222}
   m_Layer: 0
   m_Name: BossSnake
   m_TagString: Enemy
@@ -427,6 +487,7 @@ Transform:
   - {fileID: 6583508298233623545}
   - {fileID: 6583508299090042179}
   - {fileID: 6583508299793991541}
+  - {fileID: 2016153875947610918}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -492,25 +553,13 @@ MonoBehaviour:
   spawnIndicator: {fileID: 0}
   enemyPrefabs: []
   spawnDelay: 1.5
+  idleHead: {fileID: 0}
+  attackHead: {fileID: 0}
+  idleTail: {fileID: 0}
+  attackTail: {fileID: 0}
   shootAmount: 0
   tailAmount: 0
   spawnAmount: 0
---- !u!58 &6583508298617354222
-CircleCollider2D:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6583508298617354223}
-  m_Enabled: 1
-  m_Density: 1
-  m_Material: {fileID: 0}
-  m_IsTrigger: 1
-  m_UsedByEffector: 0
-  m_UsedByComposite: 0
-  m_Offset: {x: -14.985809, y: 0}
-  serializedVersion: 2
-  m_Radius: 15.485809
 --- !u!1 &6583508298698314185
 GameObject:
   m_ObjectHideFlags: 0
@@ -802,6 +851,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   team: 0
   damage: 5
+  knockbackAmount: 3
 --- !u!61 &6583508299082253810
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -1126,6 +1176,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   team: 0
   damage: 5
+  knockbackAmount: 3
 --- !u!61 &6583508299918807876
 BoxCollider2D:
   m_ObjectHideFlags: 0

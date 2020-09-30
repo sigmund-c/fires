@@ -26,7 +26,7 @@ public class AI_BossSnake : MonoBehaviour
     public int spawnAmount = 0;
 
     private Transform headTransform;
-    private Transform target;
+    public Transform target;
     private float timeBetweenShots = 0.5f;
     private float nextShot;
 
@@ -64,7 +64,7 @@ public class AI_BossSnake : MonoBehaviour
         idleTail = tailSprite.sprite;
     }
 
-    void StartAI()
+    public void StartAI()
     {
         if (!hasStarted)
         {
@@ -197,23 +197,6 @@ public class AI_BossSnake : MonoBehaviour
         Vector2 aimDirection = target.position - headTransform.position;
         GameObject projectileInst = Instantiate(projectilePrefab, (Vector2)headTransform.position + aimDirection.normalized * 1.5f, Quaternion.FromToRotation(Vector3.up, aimDirection));
         shootAmount--;
-    }
-
-    private void OnTriggerEnter2D(Collider2D col)
-    {
-        if (col.tag == "Player")
-        {
-            target = col.transform;
-            StartAI();
-        }
-    }
-
-    private void OnTriggerExit2D(Collider2D col)
-    {
-        if (col.tag == "Player")
-        {
-            target = null;
-        }
     }
 
 

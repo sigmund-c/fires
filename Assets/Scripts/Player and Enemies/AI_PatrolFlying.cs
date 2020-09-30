@@ -5,6 +5,7 @@ using UnityEngine;
 // Same as AI_Patrol, but doesnt check for ground tiles
 public class AI_PatrolFlying : MonoBehaviour
 {
+    public LayerMask ignoreLayer;
     public float moveSpeed;
     public float wallDetectionDist = 0.1f;
 
@@ -19,7 +20,7 @@ public class AI_PatrolFlying : MonoBehaviour
     }
 
     // Update is called once per frame
-    void Update()
+    void FixedUpdate()
     {
         transform.Translate(Vector2.left * moveSpeed * Time.deltaTime);
 
@@ -27,13 +28,13 @@ public class AI_PatrolFlying : MonoBehaviour
         RaycastHit2D wallInfo;
         if (movingLeft)
         {
-            wallInfo = Physics2D.Raycast(groundDetector.position, Vector2.left, wallDetectionDist);
+            wallInfo = Physics2D.Raycast(groundDetector.position, Vector2.left, wallDetectionDist, ~ignoreLayer);
         }
         else
         {
             wallInfo = Physics2D.Raycast(groundDetector.position, Vector2.right, wallDetectionDist);
         }
-        if (wallInfo.collider == true && !wallInfo.collider.isTrigger)
+        if (wallInfo.collider == true && !wallInfo.collider.isTrigger && wallInfo.collider.tag != "Player")
         {
             Rotate();
         }

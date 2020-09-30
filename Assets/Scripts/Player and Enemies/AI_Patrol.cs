@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class AI_Patrol : MonoBehaviour
 {
+    public LayerMask ignoreLayer;
     public float moveSpeed;
     public float maxFallDist = 2f;
     public float wallDetectionDist = 0.1f;
@@ -19,11 +20,11 @@ public class AI_Patrol : MonoBehaviour
     }
 
     // Update is called once per frame
-    void Update()
+    void FixedUpdate()
     {
         transform.Translate(Vector2.left * moveSpeed * Time.deltaTime);
 
-        RaycastHit2D groundInfo = Physics2D.Raycast(groundDetector.position, Vector2.down, maxFallDist);
+        RaycastHit2D groundInfo = Physics2D.Raycast(groundDetector.position, Vector2.down, maxFallDist, ~ignoreLayer);
         if (groundInfo.collider == false) // No ground found
         {
             Rotate();
@@ -33,13 +34,14 @@ public class AI_Patrol : MonoBehaviour
             RaycastHit2D wallInfo;
             if (movingLeft)
             {
-                wallInfo = Physics2D.Raycast(groundDetector.position, Vector2.left, wallDetectionDist);
+                wallInfo = Physics2D.Raycast(groundDetector.position, Vector2.left, wallDetectionDist, ~ignoreLayer);
             } else
             {
-                wallInfo = Physics2D.Raycast(groundDetector.position, Vector2.right, wallDetectionDist);
+                wallInfo = Physics2D.Raycast(groundDetector.position, Vector2.right, wallDetectionDist, ~ignoreLayer);
             }
-            if (wallInfo.collider == true && !wallInfo.collider.isTrigger)
+            if (wallInfo.collider == true && wallInfo.collider.tag != "Player")
             {
+                Debug.LogWarning(wallInfo.collider.name);
                 Rotate();
             }
         }
