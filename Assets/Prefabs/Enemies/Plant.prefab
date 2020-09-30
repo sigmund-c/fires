@@ -10,6 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 7119250325952263062}
   - component: {fileID: 7119250325952263063}
+  - component: {fileID: 352820122383186268}
   m_Layer: 0
   m_Name: Plant
   m_TagString: Enemy
@@ -59,6 +60,22 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 1.7220573, y: 2.1623363}
   m_EdgeRadius: 0
+--- !u!114 &352820122383186268
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7119250325952263056}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9c3bb8adae6a1534e88e5a53b8eaf74a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  maxHealth: 4
+  currHealth: 4
+  invincibleDuration: 1
+  team: 1
 --- !u!1 &7119250326101581315
 GameObject:
   m_ObjectHideFlags: 0

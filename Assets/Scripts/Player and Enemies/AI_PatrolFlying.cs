@@ -22,13 +22,22 @@ public class AI_PatrolFlying : MonoBehaviour
     void Update()
     {
         transform.Translate(Vector2.left * moveSpeed * Time.deltaTime);
-        
-        RaycastHit2D wallInfo = Physics2D.Raycast(groundDetector.position, Vector2.left, wallDetectionDist);
-        if (wallInfo.collider == true && wallInfo.collider.gameObject.tag == "Ground")
+
+
+        RaycastHit2D wallInfo;
+        if (movingLeft)
+        {
+            wallInfo = Physics2D.Raycast(groundDetector.position, Vector2.left, wallDetectionDist);
+        }
+        else
+        {
+            wallInfo = Physics2D.Raycast(groundDetector.position, Vector2.right, wallDetectionDist);
+        }
+        if (wallInfo.collider == true && !wallInfo.collider.isTrigger)
         {
             Rotate();
         }
-        
+
     }
 
     void Rotate()

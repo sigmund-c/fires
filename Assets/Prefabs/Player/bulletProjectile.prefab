@@ -178,7 +178,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   velocity: 10
-  maxRange: 10
+  maxRange: 100
 --- !u!114 &-2178702847833985064
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -191,6 +191,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f1411a5f2e69cde4ab05687134c58767, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  team: 0
   damage: 5
 --- !u!1 &7332535410252938377
 GameObject:

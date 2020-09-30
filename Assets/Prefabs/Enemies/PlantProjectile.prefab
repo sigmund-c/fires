@@ -178,7 +178,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   velocity: 10
-  maxRange: 10
+  maxRange: 100
 --- !u!114 &911537619556041883
 MonoBehaviour:
   m_ObjectHideFlags: 0

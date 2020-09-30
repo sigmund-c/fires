@@ -5,11 +5,15 @@ public class CameraFollow : MonoBehaviour
     public Transform player;
 
     public Transform[] snaps;
-
-    public float moveSpeed = 0.1f;
-    public float snapDistance = 5f;
+    public float[] snapDistances;
 
     private Transform target;
+    private Camera cam;
+
+    private void Start()
+    {
+        cam = GetComponent<Camera>();
+    }
 
     // Update is called once per frame
     void LateUpdate()
@@ -18,15 +22,21 @@ public class CameraFollow : MonoBehaviour
         {
             target = player;
 
-            foreach (Transform snap in snaps)
+            for (int i = 0; i < snaps.Length; i++)
             {
-                if (Vector2.Distance(player.position, snap.position) < snapDistance)
+                float snapDistance = 5;
+                if (i < snapDistances.Length)
                 {
-                    target = snap;
+                    snapDistance = snapDistances[i];
+                }
+                if (Vector2.Distance(player.position, snaps[i].position) < snapDistance)
+                {
+                    target = snaps[i];
+                    cam.orthographicSize = snapDistance;
                 }
             }
 
-            transform.position = Vector3.MoveTowards(transform.position, target.position + new Vector3(0, 0, -10f), moveSpeed);
+            transform.position = Vector3.MoveTowards(transform.position, target.position + new Vector3(0, 0, -10f), 0.1f);
         }
     }
 }

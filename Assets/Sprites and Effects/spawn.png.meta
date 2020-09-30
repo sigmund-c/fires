@@ -1,16 +1,7 @@
 fileFormatVersion: 2
-guid: 05ca4f98832292a43a947d10705b386b
+guid: 4a1575b385e6bda4bad711219a215674
 TextureImporter:
-  internalIDToNameTable:
-  - first:
-      213: -5658834823627564755
-    second: snekhead_0
-  - first:
-      213: -4272269244347705446
-    second: snekhead_1
-  - first:
-      213: 8610860967612480413
-    second: snekhead_2
+  internalIDToNameTable: []
   externalObjects: {}
   serializedVersion: 11
   mipmaps:
@@ -53,10 +44,10 @@ TextureImporter:
   spriteMode: 1
   spriteExtrude: 1
   spriteMeshType: 1
-  alignment: 9
-  spritePivot: {x: 0.29054907, y: 0.68390805}
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
   spritePixelsToUnits: 16
-  spriteBorder: {x: 22, y: 70, z: 72, w: 24}
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
   alphaIsTransparency: 1
@@ -96,28 +87,7 @@ TextureImporter:
     forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
-    sprites:
-    - serializedVersion: 2
-      name: snekhead_0
-      rect:
-        serializedVersion: 2
-        x: 25
-        y: 71
-        width: 27
-        height: 54
-      alignment: 9
-      pivot: {x: 0.4394534, y: 0.28203443}
-      border: {x: 0, y: 0, z: 0, w: 19}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: d29911fa5b7c771b0800000000000000
-      internalID: -5658834823627564755
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
+    sprites: []
     outline: []
     physicsShape: []
     bones: []

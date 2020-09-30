@@ -29,8 +29,16 @@ public class AI_Patrol : MonoBehaviour
             Rotate();
         } else // Check for obstructions/walls
         {
-            RaycastHit2D wallInfo = Physics2D.Raycast(groundDetector.position, Vector2.left, wallDetectionDist);
-            if (wallInfo.collider == true && wallInfo.collider.gameObject.tag == "Ground")
+
+            RaycastHit2D wallInfo;
+            if (movingLeft)
+            {
+                wallInfo = Physics2D.Raycast(groundDetector.position, Vector2.left, wallDetectionDist);
+            } else
+            {
+                wallInfo = Physics2D.Raycast(groundDetector.position, Vector2.right, wallDetectionDist);
+            }
+            if (wallInfo.collider == true && !wallInfo.collider.isTrigger)
             {
                 Rotate();
             }
