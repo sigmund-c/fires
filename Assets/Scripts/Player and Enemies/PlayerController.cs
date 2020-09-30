@@ -57,6 +57,8 @@ public class PlayerController : MonoBehaviour
     public float originalGravity = 2f;
     public float aimingTimeScale = 0.5f;
 
+    private Animator animator;
+
 
     void Start()
     {
@@ -69,6 +71,7 @@ public class PlayerController : MonoBehaviour
         burningFilter.SetLayerMask(LayerMask.GetMask("Burning")); // DO NOT use LayerMask.NameToLayer here -- it returns an int instead of bitmask
         // print("burning filter: " + LayerMask.LayerToName(burningFilter.layerMask));
         fireHitbox = transform.GetChild(1).gameObject;
+        animator = sprite.GetComponent<Animator>();
 
     }
 
@@ -253,12 +256,11 @@ public class PlayerController : MonoBehaviour
 
     void Jump(float jumpChargeTime, Vector2 dirc)
     {
-        print("jumpChargeTime: " + jumpChargeTime);
+        animator.SetTrigger("Jump");
         if (jumpChargeTime > maxChargeTime)
         {
             jumpChargeTime = maxChargeTime;
         }
-        print("Capped: " + jumpChargeTime);
         
         if (airJumpBehaviour == AirJumpBehaviour.CancelOnDash)
         {

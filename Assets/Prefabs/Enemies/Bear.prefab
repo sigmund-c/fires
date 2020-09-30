@@ -50,7 +50,7 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0.03636563, y: -0.69334507}
+  m_Offset: {x: 0.042452812, y: -0.3520546}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
@@ -61,7 +61,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 3.1418884, y: 2.053461}
+  m_Size: {x: 2.618452, y: 2.077839}
   m_EdgeRadius: 0
 --- !u!50 &8057157005736239363
 Rigidbody2D:
@@ -140,6 +140,7 @@ GameObject:
   m_Component:
   - component: {fileID: 8057157006399786394}
   - component: {fileID: 8057157006399786397}
+  - component: {fileID: 4821915469777564693}
   m_Layer: 0
   m_Name: BearSprite
   m_TagString: Untagged
@@ -201,7 +202,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: 15ba6312a08a4424fa696731a614376e, type: 3}
+  m_Sprite: {fileID: -5591089738318748460, guid: 7ffa7193a31111b498f22c30e36cf11f, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -212,6 +213,25 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!95 &4821915469777564693
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8057157006399786395}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: ea39b97b0af2711468ef0867c45b5efc, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1 &8057157006973829249
 GameObject:
   m_ObjectHideFlags: 0
