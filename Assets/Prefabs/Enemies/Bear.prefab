@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: 8057157005736239360}
   - component: {fileID: 7634663632262188585}
   - component: {fileID: 7688836953111091522}
-  m_Layer: 0
+  m_Layer: 19
   m_Name: Bear
   m_TagString: Enemy
   m_Icon: {fileID: 0}
@@ -71,7 +71,7 @@ Rigidbody2D:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 8057157005736239361}
-  m_BodyType: 1
+  m_BodyType: 0
   m_Simulated: 1
   m_UseFullKinematicContacts: 0
   m_UseAutoMass: 0
@@ -96,6 +96,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ba3540f80dda19c4a926ba257d01c8aa, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  ignoreLayer:
+    serializedVersion: 2
+    m_Bits: 262144
   moveSpeed: 2
   maxFallDist: 2
   wallDetectionDist: 1
@@ -114,6 +117,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   team: 1
   damage: 5
+  knockbackAmount: 3
 --- !u!114 &7688836953111091522
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -129,6 +133,7 @@ MonoBehaviour:
   maxHealth: 10
   currHealth: 10
   invincibleDuration: 0
+  takeKnockback: 0
   team: 1
 --- !u!1 &8057157006399786395
 GameObject:
@@ -141,7 +146,7 @@ GameObject:
   - component: {fileID: 8057157006399786394}
   - component: {fileID: 8057157006399786397}
   - component: {fileID: 4821915469777564693}
-  m_Layer: 0
+  m_Layer: 19
   m_Name: BearSprite
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -241,7 +246,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 8057157006973829248}
-  m_Layer: 0
+  m_Layer: 19
   m_Name: GroundDetector
   m_TagString: Untagged
   m_Icon: {fileID: -5397416234189338067, guid: 0000000000000000d000000000000000, type: 0}

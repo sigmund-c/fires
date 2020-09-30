@@ -337,4 +337,5 @@ MonoBehaviour:
   maxHealth: 10
   currHealth: 10
   invincibleDuration: 1
+  takeKnockback: 1
   team: 0

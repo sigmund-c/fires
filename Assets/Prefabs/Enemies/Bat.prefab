@@ -10,7 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 9173349504162487704}
   - component: {fileID: 9173349504162487711}
-  m_Layer: 0
+  m_Layer: 19
   m_Name: BatSprite
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -91,7 +91,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 9173349504666538114}
-  m_Layer: 0
+  m_Layer: 19
   m_Name: GroundDetector
   m_TagString: Untagged
   m_Icon: {fileID: -5397416234189338067, guid: 0000000000000000d000000000000000, type: 0}
@@ -126,7 +126,7 @@ GameObject:
   - component: {fileID: 1197549986561585833}
   - component: {fileID: 3061839936007477676}
   - component: {fileID: 7422361395289229580}
-  m_Layer: 0
+  m_Layer: 19
   m_Name: Bat
   m_TagString: Enemy
   m_Icon: {fileID: 0}
@@ -183,7 +183,7 @@ Rigidbody2D:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 9173349506180935939}
-  m_BodyType: 1
+  m_BodyType: 0
   m_Simulated: 1
   m_UseFullKinematicContacts: 0
   m_UseAutoMass: 0
@@ -208,6 +208,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b4a7c5cda163be84fadbdad931ade1e4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  ignoreLayer:
+    serializedVersion: 2
+    m_Bits: 262144
   moveSpeed: 4
   wallDetectionDist: 0.1
   groundDetector: {fileID: 9173349504666538114}
@@ -226,6 +229,7 @@ MonoBehaviour:
   maxHealth: 3
   currHealth: 10
   invincibleDuration: 0
+  takeKnockback: 0
   team: 1
 --- !u!114 &7422361395289229580
 MonoBehaviour:
@@ -241,3 +245,4 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   team: 1
   damage: 3
+  knockbackAmount: 3

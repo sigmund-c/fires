@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 7119250325952263062}
   - component: {fileID: 7119250325952263063}
   - component: {fileID: 352820122383186268}
-  m_Layer: 0
+  m_Layer: 19
   m_Name: Plant
   m_TagString: Enemy
   m_Icon: {fileID: 0}
@@ -87,7 +87,7 @@ GameObject:
   m_Component:
   - component: {fileID: 7119250326101581314}
   - component: {fileID: 7119250326101581313}
-  m_Layer: 0
+  m_Layer: 19
   m_Name: PlantSprite
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -169,7 +169,7 @@ GameObject:
   m_Component:
   - component: {fileID: 7119250326114159522}
   - component: {fileID: 7119250326114159521}
-  m_Layer: 18
+  m_Layer: 19
   m_Name: PlantHeadSprite
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -252,7 +252,7 @@ GameObject:
   - component: {fileID: 7119250327076378040}
   - component: {fileID: 7119250327076378046}
   - component: {fileID: 7119250327076378047}
-  m_Layer: 18
+  m_Layer: 19
   m_Name: PlantHead
   m_TagString: Enemy
   m_Icon: {fileID: 0}

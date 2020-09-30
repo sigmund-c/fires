@@ -9,7 +9,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 7971621717921567969}
-  m_Layer: 0
+  m_Layer: 19
   m_Name: GroundDetector
   m_TagString: Untagged
   m_Icon: {fileID: -5397416234189338067, guid: 0000000000000000d000000000000000, type: 0}
@@ -41,7 +41,7 @@ GameObject:
   - component: {fileID: 7971621718428670459}
   - component: {fileID: 7971621718428670460}
   - component: {fileID: 7971621718428670456}
-  m_Layer: 0
+  m_Layer: 19
   m_Name: Sprite
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -146,7 +146,7 @@ GameObject:
   - component: {fileID: 103624761906591434}
   - component: {fileID: 4292911489476599247}
   - component: {fileID: 8570118296709303663}
-  m_Layer: 0
+  m_Layer: 19
   m_Name: RockElemental
   m_TagString: Enemy
   m_Icon: {fileID: 0}
@@ -228,10 +228,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b4a7c5cda163be84fadbdad931ade1e4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  ignoreLayer:
+    serializedVersion: 2
+    m_Bits: 0
   moveSpeed: 4
   wallDetectionDist: 0.1
   groundDetector: {fileID: 7971621717921567969}
-  useDistance: 0
 --- !u!114 &4292911489476599247
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -247,6 +249,7 @@ MonoBehaviour:
   maxHealth: 3
   currHealth: 10
   invincibleDuration: 1
+  takeKnockback: 0
   team: 1
 --- !u!114 &8570118296709303663
 MonoBehaviour:
@@ -262,3 +265,4 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   team: 1
   damage: 3
+  knockbackAmount: 3

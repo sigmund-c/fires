@@ -10,7 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 7856068064858056498}
   - component: {fileID: 1889979258984083953}
-  m_Layer: 0
+  m_Layer: 18
   m_Name: Sprite
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -95,7 +95,7 @@ GameObject:
   - component: {fileID: 953249944384291489}
   - component: {fileID: -4179915739330219927}
   - component: {fileID: 911537619556041883}
-  m_Layer: 0
+  m_Layer: 18
   m_Name: PlantProjectile
   m_TagString: Enemy
   m_Icon: {fileID: 0}
@@ -159,7 +159,7 @@ Rigidbody2D:
   m_Mass: 1
   m_LinearDrag: 0
   m_AngularDrag: 0.05
-  m_GravityScale: 0.2
+  m_GravityScale: 0
   m_Material: {fileID: 0}
   m_Interpolate: 0
   m_SleepingMode: 1
@@ -193,6 +193,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   team: 1
   damage: 5
+  knockbackAmount: 3
 --- !u!1 &7332535410252938377
 GameObject:
   m_ObjectHideFlags: 0
@@ -203,7 +204,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1368837121416428720}
   - component: {fileID: 9214559698588104568}
-  m_Layer: 0
+  m_Layer: 18
   m_Name: Point Light 2D
   m_TagString: Untagged
   m_Icon: {fileID: 0}
