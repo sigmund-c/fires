@@ -8,6 +8,7 @@ TagManager:
   - Ground
   - PauseMenu
   - BurningObj
+  - Checkpoint
   layers:
   - Default
   - TransparentFX

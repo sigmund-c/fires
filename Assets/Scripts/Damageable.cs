@@ -15,26 +15,26 @@ public class Damageable : MonoBehaviour
     public Slider healthSlider;
     public Team team;
 
-    private float invincibleTimer = 0; // invincible frames from taking damage
-    private Collider2D colliderObj;
-    private Rigidbody2D rb;
-    private SpriteRenderer sr;
-    private AudioSource audioSource;
+    protected float invincibleTimer = 0; // invincible frames from taking damage
+    protected Collider2D colliderObj;
+    protected Rigidbody2D rb;
+    protected SpriteRenderer sr;
+    protected AudioSource audioSource;
 
     // Start is called before the first frame update
-    void Start()
+    protected virtual void Start()
     {
         colliderObj = GetComponent<Collider2D>();
         rb = GetComponent<Rigidbody2D>();
         sr = GetComponent<SpriteRenderer>();
         if (sr == null)
-            sr = transform.GetChild(0).GetComponent<SpriteRenderer>();
+            sr = GetComponentInChildren<SpriteRenderer>();
         audioSource = GetComponent<AudioSource>();
 
         SetSliderMax(maxHealth);
     }
 
-    void Update()
+    protected void Update()
     {
         if (invincibleTimer > 0)
         {
@@ -42,7 +42,7 @@ public class Damageable : MonoBehaviour
         }
     }
 
-    void OnCollisionEnter2D(Collision2D col)
+    public void OnCollisionEnter2D(Collision2D col)
     {
         if (invincibleTimer > 0)
         {
@@ -103,13 +103,13 @@ public class Damageable : MonoBehaviour
         SetSliderHealth(currHealth);
     }
 
-    private void Die()
+    protected virtual void Die()
     {
         Debug.Log(name + " died");
         Destroy(gameObject);
     }
     
-    private IEnumerator HitFlash(float duration = -1f)
+    protected IEnumerator HitFlash(float duration = -1f)
     {        
         if (invincibleDuration > 0) // Hitflash should signify iframes
         {
@@ -134,7 +134,7 @@ public class Damageable : MonoBehaviour
         }
     }
 
-    private void PlaySound()
+    protected void PlaySound()
     {
         if (audioSource != null)
         {
@@ -143,7 +143,7 @@ public class Damageable : MonoBehaviour
     }
 
     // ============== UI ===================
-    private void SetSliderMax(int health)
+    protected void SetSliderMax(int health)
     {
         if (healthSlider != null)
         {
@@ -152,7 +152,7 @@ public class Damageable : MonoBehaviour
         }
     }
 
-    private void SetSliderHealth(int health)
+    protected void SetSliderHealth(int health)
     {
         if (healthSlider != null)
         {
