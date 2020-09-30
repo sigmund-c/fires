@@ -1,37 +1,25 @@
 fileFormatVersion: 2
-guid: aa7c9ced5f0c34343bf5dcaf0d0806ca
+guid: 3f942b412d2e30a47bc92b07812d1159
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -9120012390098041170
-    second: MC (shoot) x1_0
+      213: 9179225655056741417
+    second: Rock elemental (idle) x1_0
   - first:
-      213: -8592774128205754706
-    second: MC (shoot) x1_1
+      213: 6054459474074250646
+    second: Rock elemental (idle) x1_1
   - first:
-      213: 762759612439325666
-    second: MC (shoot) x1_2
+      213: -3141339008948202415
+    second: Rock elemental (idle) x1_2
   - first:
-      213: -7143802898077703919
-    second: MC (shoot) x1_3
+      213: -1679847831380862286
+    second: Rock elemental (idle) x1_3
   - first:
-      213: -2853433985334479499
-    second: MC (shoot) x1_4
+      213: 552468098461546248
+    second: Rock elemental (idle) x1_4
   - first:
-      213: -2426367479075654224
-    second: MC (shoot)_0
-  - first:
-      213: -6992932200421631679
-    second: MC (shoot)_1
-  - first:
-      213: 1132862112913318793
-    second: MC (shoot)_2
-  - first:
-      213: -7277893620372533697
-    second: MC (shoot)_3
-  - first:
-      213: -7116313949768938805
-    second: MC (shoot)_4
+      213: -6579067633198381062
+    second: Rock elemental (idle) x1_5
   externalObjects: {}
   serializedVersion: 11
   mipmaps:
@@ -76,7 +64,7 @@ TextureImporter:
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
-  spritePixelsToUnits: 32
+  spritePixelsToUnits: 16
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
@@ -119,13 +107,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: MC (shoot)_0
+      name: Rock elemental (idle) x1_0
       rect:
         serializedVersion: 2
         x: 0
-        y: 37
-        width: 32
-        height: 32
+        y: 53
+        width: 48
+        height: 48
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -133,20 +121,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 0b5b22b12afc35ed0800000000000000
-      internalID: -2426367479075654224
+      spriteID: 9243fc28919236f70800000000000000
+      internalID: 9179225655056741417
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: MC (shoot)_1
+      name: Rock elemental (idle) x1_1
       rect:
         serializedVersion: 2
-        x: 37
-        y: 37
-        width: 32
-        height: 32
+        x: 53
+        y: 53
+        width: 48
+        height: 48
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -154,20 +142,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 1495a7fb63d14fe90800000000000000
-      internalID: -6992932200421631679
+      spriteID: 69da13350d2c50450800000000000000
+      internalID: 6054459474074250646
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: MC (shoot)_2
+      name: Rock elemental (idle) x1_2
       rect:
         serializedVersion: 2
-        x: 74
-        y: 37
-        width: 32
-        height: 32
+        x: 106
+        y: 53
+        width: 48
+        height: 48
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -175,20 +163,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 98362bbe61cb8bf00800000000000000
-      internalID: 1132862112913318793
+      spriteID: 154909c90d8b764d0800000000000000
+      internalID: -3141339008948202415
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: MC (shoot)_3
+      name: Rock elemental (idle) x1_3
       rect:
         serializedVersion: 2
         x: 0
         y: 0
-        width: 32
-        height: 32
+        width: 48
+        height: 48
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -196,20 +184,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: f3e0d9cef4abffa90800000000000000
-      internalID: -7277893620372533697
+      spriteID: 2ba55dd2c4bffa8e0800000000000000
+      internalID: -1679847831380862286
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: MC (shoot)_4
+      name: Rock elemental (idle) x1_4
       rect:
         serializedVersion: 2
-        x: 37
+        x: 53
         y: 0
-        width: 32
-        height: 32
+        width: 48
+        height: 48
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -217,8 +205,29 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: bca8dd1aa26cd3d90800000000000000
-      internalID: -7116313949768938805
+      spriteID: 8073986fec2caa700800000000000000
+      internalID: 552468098461546248
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Rock elemental (idle) x1_5
+      rect:
+        serializedVersion: 2
+        x: 106
+        y: 0
+        width: 48
+        height: 48
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: af7c0f158d472b4a0800000000000000
+      internalID: -6579067633198381062
       vertices: []
       indices: 
       edges: []

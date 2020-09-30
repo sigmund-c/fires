@@ -44,9 +44,9 @@ CircleCollider2D:
   m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0, y: -0.2}
+  m_Offset: {x: 0, y: -0.03}
   serializedVersion: 2
-  m_Radius: 0.4
+  m_Radius: 0.45
 --- !u!1 &6758930254996970067
 GameObject:
   m_ObjectHideFlags: 0
@@ -92,9 +92,9 @@ CircleCollider2D:
   m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0, y: -0.2}
+  m_Offset: {x: 0, y: -0.03}
   serializedVersion: 2
-  m_Radius: 0.4
+  m_Radius: 0.45
 --- !u!114 &6758930254996970069
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -181,7 +181,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 5
-  m_Sprite: {fileID: -4998827747838694048, guid: 938747ad96da0ad4f9e73b07ea1490e8, type: 3}
+  m_Sprite: {fileID: -1159485593448732530, guid: 79d7ce7ffa057654d90425d77aadd403, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -202,7 +202,7 @@ Animator:
   m_GameObject: {fileID: 6758930255216236320}
   m_Enabled: 1
   m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: 8428ce84ae8f089469f07454dfa1b70b, type: 2}
+  m_Controller: {fileID: 9100000, guid: 3cdb19c79414ce344b2cabe10fed8712, type: 2}
   m_CullingMode: 0
   m_UpdateMode: 0
   m_ApplyRootMotion: 0
@@ -282,7 +282,7 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: -0.0030009747, y: -0.21990228}
+  m_Offset: {x: -0.0030009747, y: -0.05064684}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
@@ -293,7 +293,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 0.38596296, y: 0.6276574}
+  m_Size: {x: 0.7418418, y: 0.85036194}
   m_EdgeRadius: 0
 --- !u!114 &6410144603297677982
 MonoBehaviour:
@@ -309,8 +309,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   boostDuration: 10
   boostMultiplier: 2
-  baseJumpAmount: 0.4
-  maxJumpAmountFromCharge: 0.7
+  baseJumpAmount: 0.2
+  maxJumpAmountFromCharge: 0.9
   maxChargeTime: 0.25
   maxJumps: 1
   airJumpBehaviour: 2
