@@ -77,6 +77,11 @@ public class PlayerController : MonoBehaviour
         fireHitbox = transform.GetChild(1).gameObject;
         animator = sprite.GetComponent<Animator>();
         audioStorage = GetComponent<AudioStorage>();
+
+        if (PersistentManager.instance == null)
+        {
+            Instantiate(Utils.persistentManager, Vector3.zero, Quaternion.identity);
+        }
     }
 
     void SetSwimMode()

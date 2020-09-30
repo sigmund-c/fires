@@ -313,7 +313,7 @@ MonoBehaviour:
   boostMultiplier: 2
   baseJumpAmount: 0.2
   maxJumpAmountFromCharge: 0.9
-  maxChargeTime: 0.25
+  maxChargeTime: 0.2
   maxJumps: 1
   airJumpBehaviour: 2
   launchBar: {fileID: 5925175496615645783, guid: 475877e99a5f1e0478331a22692acb71, type: 3}
