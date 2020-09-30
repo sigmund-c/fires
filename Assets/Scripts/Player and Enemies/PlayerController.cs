@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 
 public enum AirJumpBehaviour { PreserveMomentum, CancelOnAim, CancelOnDash };
@@ -76,7 +77,6 @@ public class PlayerController : MonoBehaviour
         fireHitbox = transform.GetChild(1).gameObject;
         animator = sprite.GetComponent<Animator>();
         audioStorage = GetComponent<AudioStorage>();
-
     }
 
     void SetSwimMode()
@@ -99,8 +99,22 @@ public class PlayerController : MonoBehaviour
         // }
     }
 
+    IEnumerator Respawn(Vector3 pos)
+    {
+        yield return new WaitForSeconds(0.5f);
+        transform.position = pos;
+        Camera.main.transform.position = pos;
+    }
     void Update()
     {
+        if (Input.GetKeyDown(KeyCode.R))
+        {
+            PersistentManager.Reload();
+            // Vector3 prevLoc = PersistentManager.instance.checkpoint;
+            // SceneManager.LoadScene(SceneManager.GetActiveScene().name);
+            // StartCoroutine(Respawn(prevLoc));
+        }
+
         Vector3 mousePosition = Utils.MouseWorldPosition();
         Vector3 aimVector = mousePosition - transform.position;
         Vector3 aimDirection = aimVector.normalized;

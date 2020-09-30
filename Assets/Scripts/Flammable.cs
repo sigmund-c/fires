@@ -54,7 +54,7 @@ public class Flammable : MonoBehaviour
     IEnumerator Ignite()
     {
         isBurning = true;
-        print(gameObject + "started burning, changed layer to burning layer");
+        // print(gameObject + "started burning, changed layer to burning layer");
         gameObject.layer = Utils.burningLayer;
         
         yield return new WaitForSeconds(Random.Range(0f, 0.3f) + ignitionTime);

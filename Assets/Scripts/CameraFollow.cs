@@ -3,6 +3,7 @@
 public class CameraFollow : MonoBehaviour
 {
     public Transform player;
+    public float speed = 0.1f;
 
     public Transform[] snaps;
     public float[] snapDistances;
@@ -36,7 +37,7 @@ public class CameraFollow : MonoBehaviour
                 }
             }
 
-            transform.position = Vector3.MoveTowards(transform.position, target.position + new Vector3(0, 0, -10f), 0.1f);
+            transform.position = Vector3.MoveTowards(transform.position, target.position + new Vector3(0, 0, -10f), speed);
         }
     }
 }
