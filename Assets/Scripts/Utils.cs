@@ -9,6 +9,7 @@ public class Utils : MonoBehaviour
     public static GameObject fireParticles = (GameObject)AssetDatabase.LoadAssetAtPath("Assets/Prefabs/FireParticles.prefab", typeof(GameObject));
     public static GameObject ashParticles = (GameObject)AssetDatabase.LoadAssetAtPath("Assets/Prefabs/AshParticles.prefab", typeof(GameObject));
     public static GameObject infoText = (GameObject)AssetDatabase.LoadAssetAtPath("Assets/Prefabs/Text_DamageText.prefab", typeof(GameObject));
+    public static GameObject sparkle = (GameObject)AssetDatabase.LoadAssetAtPath("Assets/Prefabs/Sparkle.prefab", typeof(GameObject));
     public static int burningLayer = LayerMask.NameToLayer("Burning");
     public static int charLayer = LayerMask.NameToLayer("Character");
     public static int charSwimmingLayer = LayerMask.NameToLayer("Character Swimming");
@@ -57,6 +58,12 @@ public class Utils : MonoBehaviour
         inst.addedOffset = offset;
         inst.type = type;
         inst.SetParent(parent); //cannot simply pass in parent to Instantiate, as it would follow the rotation as well
+        return inst;
+    }
+
+    public static GameObject SpawnSparkle(Transform parent, Vector2 offset = default(Vector2))
+    {
+        GameObject inst = Instantiate(sparkle, parent);
         return inst;
     }
 }
