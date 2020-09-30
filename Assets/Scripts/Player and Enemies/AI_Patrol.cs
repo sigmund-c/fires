@@ -41,7 +41,6 @@ public class AI_Patrol : MonoBehaviour
             }
             if (wallInfo.collider == true && wallInfo.collider.tag != "Player")
             {
-                Debug.LogWarning(wallInfo.collider.name);
                 Rotate();
             }
         }

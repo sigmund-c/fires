@@ -59,6 +59,8 @@ public class PlayerController : MonoBehaviour
 
     private Animator animator;
 
+    private AudioStorage audioStorage;
+
 
     void Start()
     {
@@ -72,6 +74,7 @@ public class PlayerController : MonoBehaviour
         // print("burning filter: " + LayerMask.LayerToName(burningFilter.layerMask));
         fireHitbox = transform.GetChild(1).gameObject;
         animator = sprite.GetComponent<Animator>();
+        audioStorage = GetComponent<AudioStorage>();
 
     }
 
@@ -380,6 +383,8 @@ public class PlayerController : MonoBehaviour
         // projectile.Launch((Vector2)aimDirection, 200);
 
         GameObject projectileInst = Instantiate(projectilePrefab, rb.position + (Vector2)aimDirection.normalized * 0.5f, Quaternion.FromToRotation(Vector3.up, aimDirection));
+
+        audioStorage.PlayClip(0); // shoot SFX
 
         TakeDamage(1);
     }

@@ -27,8 +27,8 @@ TagManager:
   - FlammableDynamic PhysHitbox
   - 
   - 
-  - EnemyVision
-  - 
+  - EnemyProjectile
+  - Enemy
   - 
   - 
   - 

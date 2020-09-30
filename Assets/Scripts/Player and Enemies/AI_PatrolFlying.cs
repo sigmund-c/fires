@@ -34,7 +34,7 @@ public class AI_PatrolFlying : MonoBehaviour
         {
             wallInfo = Physics2D.Raycast(groundDetector.position, Vector2.right, wallDetectionDist);
         }
-        if (wallInfo.collider == true && !wallInfo.collider.isTrigger && wallInfo.collider.tag != "Player")
+        if (wallInfo.collider == true && wallInfo.collider.tag != "Player")
         {
             Rotate();
         }

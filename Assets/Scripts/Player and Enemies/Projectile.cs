@@ -7,6 +7,8 @@ public class Projectile : MonoBehaviour
     public float velocity = 10f;
     public float maxRange = 10f;
 
+    public GameObject explosionHitEffect;
+
     private Rigidbody2D rb;
     private Vector3 startPos;
     private float sqrMaxRange;
@@ -32,6 +34,10 @@ public class Projectile : MonoBehaviour
     void OnCollisionEnter2D(Collision2D other)
     {
         Debug.Log("Projectile Collision with " + other.gameObject);
+        if (explosionHitEffect != null)
+        {
+            Instantiate(explosionHitEffect, transform.position, Quaternion.identity);
+        }
         Destroy(gameObject);
     //     EnemyController controller = other.collider.GetComponent<EnemyController>();
     //     if (controller != null)

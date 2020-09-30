@@ -11,6 +11,8 @@ public class AI_BossSnake : MonoBehaviour
     public List<GameObject> enemyPrefabs;
     public float spawnDelay = 1.5f;
 
+    public GameObject healthUI;
+
     public Sprite idleHead;
     public Sprite attackHead;
     public Sprite idleTail;
@@ -71,6 +73,7 @@ public class AI_BossSnake : MonoBehaviour
             hasStarted = true;
             nextAttack = idleTime;
             Debug.Log("AI started");
+            healthUI.SetActive(true);
         }
     }
 
@@ -139,27 +142,27 @@ public class AI_BossSnake : MonoBehaviour
 
     private void GenerateNewAttack()
     {
-        Debug.LogWarning("generating new attack");
+        //Debug.LogWarning("generating new attack");
         if ((double)headDamageable.currHealth / headDamageable.maxHealth > 0.66)
         {
             int choice = Random.Range(0, 3);
             if (choice == 0)
             {
-                Debug.LogWarning("shooting");
+                //Debug.LogWarning("shooting");
                 shootAmount = Random.Range(2, 5);
                 nextShot = timeBetweenShots;
                 tailAmount = 0;
                 spawnAmount = 0;
             } else if (choice == 1)
             {
-                Debug.LogWarning("tailing");
+                //Debug.LogWarning("tailing");
                 shootAmount = 0;
                 tailAmount = Random.Range(1, 4);
                 nextTail = timeBetweenTails;
                 spawnAmount = 0;
             } else
             {
-                Debug.LogWarning("spawning");
+                //Debug.LogWarning("spawning");
                 shootAmount = 0;
                 tailAmount = 0;
                 spawnAmount = Random.Range(1, 3);
