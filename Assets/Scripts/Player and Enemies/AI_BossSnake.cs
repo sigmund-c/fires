@@ -8,6 +8,7 @@ public class AI_BossSnake : MonoBehaviour
 
     public GameObject projectilePrefab;
     public GameObject spawnIndicator;
+    public GameObject deathEffect;
     public List<GameObject> enemyPrefabs;
     public float spawnDelay = 1.5f;
 
@@ -257,5 +258,20 @@ public class AI_BossSnake : MonoBehaviour
         Instantiate(enemyPrefabs[chosenEnemy], activeSpawnIndicator.transform.position, Quaternion.identity);
         Destroy(activeSpawnIndicator);
         spawnAmount--;
+    }
+
+    private void OnCollisionEnter2D(Collision2D collision)
+    {
+        if (collision.gameObject.name == "iceSpike")
+        {
+            DieBySpike();
+        }
+    }
+
+    private void DieBySpike()
+    {
+        Instantiate(deathEffect, transform.position, Quaternion.identity);
+        healthUI.SetActive(false);
+        headDamageable.Die();
     }
 }

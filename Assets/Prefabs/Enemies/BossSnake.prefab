@@ -237,6 +237,7 @@ MonoBehaviour:
   hasStarted: 0
   projectilePrefab: {fileID: 1311386620750424233, guid: d5c785e0f84cf884dbfab1ffd1315c10, type: 3}
   spawnIndicator: {fileID: 4327952554936516581, guid: 4c491a5ac62b7f046a092935da5c2090, type: 3}
+  deathEffect: {fileID: 1125439760291298633, guid: d6a6bdc0b59f67b4ab95d578709a834e, type: 3}
   enemyPrefabs:
   - {fileID: 9173349506180935939, guid: d19126da587e093449695ac894f088fc, type: 3}
   - {fileID: 8057157005736239361, guid: 565a2b846d53ef4489ab82e9d820edd5, type: 3}

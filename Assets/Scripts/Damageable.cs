@@ -103,7 +103,7 @@ public class Damageable : MonoBehaviour
         SetSliderHealth(currHealth);
     }
 
-    protected virtual void Die()
+    public virtual void Die()
     {
         Debug.Log(name + " died");
         Destroy(gameObject);

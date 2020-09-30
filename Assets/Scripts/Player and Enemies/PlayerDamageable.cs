@@ -15,7 +15,7 @@ public class PlayerDamageable : Damageable
 
 
     // Override, will respawn
-    protected override void Die()
+    public override void Die()
     {
         Debug.Log(name + " died");
         transform.position = lastCheckpoint;
