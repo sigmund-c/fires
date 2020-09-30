@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public enum Team { Player, Enemy, Neutal }
 
@@ -11,12 +12,14 @@ public class Damageable : MonoBehaviour
     public int currHealth = 10;
     public float invincibleDuration = 1f;
     public bool takeKnockback = false;
+    public Slider healthSlider;
     public Team team;
 
     private float invincibleTimer = 0; // invincible frames from taking damage
     private Collider2D colliderObj;
     private Rigidbody2D rb;
     private SpriteRenderer sr;
+    private AudioSource audioSource;
 
     // Start is called before the first frame update
     void Start()
@@ -26,6 +29,9 @@ public class Damageable : MonoBehaviour
         sr = GetComponent<SpriteRenderer>();
         if (sr == null)
             sr = transform.GetChild(0).GetComponent<SpriteRenderer>();
+        audioSource = GetComponent<AudioSource>();
+
+        SetSliderMax(maxHealth);
     }
 
     void Update()
@@ -60,6 +66,8 @@ public class Damageable : MonoBehaviour
         currHealth -= damage;
         StartCoroutine(HitFlash(invincibleDuration));
         Debug.Log(name + " took " + damage +", with [" + currHealth + "] hp left");
+        PlaySound();
+        SetSliderHealth(currHealth);
 
         if (currHealth <= 0)
         {
@@ -71,7 +79,6 @@ public class Damageable : MonoBehaviour
     {
         Vector2 aimVector = source - transform.position;
         Vector2 aimDirection = aimVector.normalized;
-        Debug.LogWarning("knocking back " + aimDirection * knockback);
         rb.AddForce(-aimDirection * knockback * 100);
     }
 
@@ -81,6 +88,7 @@ public class Damageable : MonoBehaviour
         currHealth -= damage;
         StartCoroutine(HitFlash());
         Debug.Log(name + " took " + damage + ", with [" + currHealth + "] hp left");
+        SetSliderHealth(currHealth);
 
         if (currHealth <= 0)
         {
@@ -92,6 +100,7 @@ public class Damageable : MonoBehaviour
     {
         currHealth += restore;
         Debug.Log(name + " restored " + restore + ", with [" + currHealth + "] hp left");
+        SetSliderHealth(currHealth);
     }
 
     private void Die()
@@ -122,6 +131,32 @@ public class Damageable : MonoBehaviour
                 sr.color = Color.white;
                 yield return new WaitForSeconds(0.1f);
             }
+        }
+    }
+
+    private void PlaySound()
+    {
+        if (audioSource != null)
+        {
+            audioSource.Play();
+        }
+    }
+
+    // ============== UI ===================
+    private void SetSliderMax(int health)
+    {
+        if (healthSlider != null)
+        {
+            healthSlider.maxValue = health;
+            healthSlider.value = health;
+        }
+    }
+
+    private void SetSliderHealth(int health)
+    {
+        if (healthSlider != null)
+        {
+            healthSlider.value = health;
         }
     }
 }
