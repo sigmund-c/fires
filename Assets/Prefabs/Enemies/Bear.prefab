@@ -96,8 +96,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ba3540f80dda19c4a926ba257d01c8aa, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  ignoreLayer:
+    serializedVersion: 2
+    m_Bits: 262144
   moveSpeed: 2
-  maxFallDist: 2
+  maxFallDist: 1
   wallDetectionDist: 1
   groundDetector: {fileID: 8057157006973829248}
 --- !u!114 &7634663632262188585
@@ -114,6 +117,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   team: 1
   damage: 5
+  knockbackAmount: 3
 --- !u!114 &7688836953111091522
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -129,6 +133,7 @@ MonoBehaviour:
   maxHealth: 10
   currHealth: 10
   invincibleDuration: 1
+  takeKnockback: 0
   team: 1
 --- !u!1 &8057157006399786395
 GameObject:

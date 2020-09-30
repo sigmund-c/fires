@@ -9,15 +9,18 @@ public class Damageable : MonoBehaviour
     public int maxHealth = 10;
     public int currHealth = 10;
     public float invincibleDuration = 1f;
+    public bool takeKnockback = false;
     public Team team;
 
     private float invincibleTime = 0; // invincible frames from taking damage
     private Collider2D colliderObj;
+    private Rigidbody2D rb;
 
     // Start is called before the first frame update
     void Start()
     {
         colliderObj = GetComponent<Collider2D>();
+        rb = GetComponent<Rigidbody2D>();
     }
 
     void Update()
@@ -40,6 +43,10 @@ public class Damageable : MonoBehaviour
         if (damaging != null && damaging.team != team)
         {
             TakeDamage(damaging.damage);
+            if (takeKnockback)
+            {
+                TakeKnockback(damaging.knockbackAmount, damaging.transform.position);
+            }
         }
     }
     
@@ -53,6 +60,14 @@ public class Damageable : MonoBehaviour
         {
             Die();
         }
+    }
+
+    public void TakeKnockback(float knockback, Vector3 source)
+    {
+        Vector2 aimVector = source - transform.position;
+        Vector2 aimDirection = aimVector.normalized;
+        Debug.LogWarning("knocking back " + aimDirection * knockback);
+        rb.AddForce(-aimDirection * knockback * 100);
     }
 
     public void TakeDamageNoInvin(int damage)

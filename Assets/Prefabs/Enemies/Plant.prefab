@@ -75,6 +75,7 @@ MonoBehaviour:
   maxHealth: 4
   currHealth: 4
   invincibleDuration: 1
+  takeKnockback: 0
   team: 1
 --- !u!1 &7119250326101581315
 GameObject:
@@ -168,7 +169,7 @@ GameObject:
   m_Component:
   - component: {fileID: 7119250326114159522}
   - component: {fileID: 7119250326114159521}
-  m_Layer: 0
+  m_Layer: 18
   m_Name: PlantHeadSprite
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -251,7 +252,7 @@ GameObject:
   - component: {fileID: 7119250327076378040}
   - component: {fileID: 7119250327076378046}
   - component: {fileID: 7119250327076378047}
-  m_Layer: 0
+  m_Layer: 18
   m_Name: PlantHead
   m_TagString: Enemy
   m_Icon: {fileID: 0}
