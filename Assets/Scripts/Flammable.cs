@@ -44,6 +44,11 @@ public class Flammable : MonoBehaviour
             if (((Burning)otherComponent).enabled)
                 StartCoroutine(Ignite());
         }
+
+        if (other.gameObject.GetComponent<Projectile>() != null)
+        {
+            Destroy(other.gameObject); // have to use this event rather than making an event in the projectile class, which would not cause burning to happen
+        }
     }
 
     IEnumerator Ignite()

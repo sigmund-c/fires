@@ -15,10 +15,9 @@ public class PlayerController : MonoBehaviour
     //Collectible variables
     //Health
     private Damageable damageable;
-    
 
     //JumpBoost
-    public float boostDuration = 10.0f;
+    public float boostDuration = 30.0f;
     public float boostMultiplier = 1.2f; //Use this in movement mechanics
     
     private bool isBoosted;
@@ -57,9 +56,11 @@ public class PlayerController : MonoBehaviour
     public float originalGravity = 2f;
     public float aimingTimeScale = 0.5f;
 
+    private bool touchingGround;
     private Animator animator;
 
     private AudioStorage audioStorage;
+
 
 
     void Start()
@@ -245,7 +246,7 @@ public class PlayerController : MonoBehaviour
 
         if (jumpChargeTime != 0)
         {
-            if (jumpTimes > 0) // jumpTimes only increases after 
+            if (/*!touchingGround*/jumpTimes > 0) // jumpTimes only increases after 
             {
                 // Debug.Log("tset");
                 print("jumpTimes++");
@@ -283,13 +284,16 @@ public class PlayerController : MonoBehaviour
     }
 
     void OnCollisionEnter2D(Collision2D col)
+    // void OnCollisionStay2D(Collision2D col)
     {
         // Debug.Log(col.gameObject.name);
-        if (col.gameObject.tag == "Ground" || col.gameObject.tag == "BurningObj")
+        if (jumpTimes > 0 && col.gameObject.tag == "Ground" || col.gameObject.tag == "BurningObj")
         {
+            // touchingGround = true;
 
             print("jumpTimes = 0");
             jumpTimes = 0;
+            // Utils.SpawnSparkle(transform);//, new Vector2(0f, -1f));
 
 
             // Not working on tilemaps :(
@@ -306,9 +310,11 @@ public class PlayerController : MonoBehaviour
     private void OnCollisionExit2D(Collision2D col)
     {
         // Starts the jump counter only after leaving the ground (by jumping, or sliding off the ground)
-        if (col.gameObject.tag == "Ground")
+        if (col.gameObject.tag == "Ground" || col.gameObject.tag == "BurningObj")
         {
-            print("jumpTimes = 1");
+            print("touchingGround = false");
+            // touchingGround = false;
+            // print("jumpTimes = 1");
             jumpTimes = 1;
         }
     }
