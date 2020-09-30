@@ -6,31 +6,36 @@ public enum Team { Player, Enemy, Neutal }
 
 public class Damageable : MonoBehaviour
 {
+    public static Color HITFLASH_COLOR = new Color(1f, 0.58f, 0.58f);
     public int maxHealth = 10;
     public int currHealth = 10;
     public float invincibleDuration = 1f;
     public Team team;
 
-    private float invincibleTime = 0; // invincible frames from taking damage
+    private float invincibleTimer = 0; // invincible frames from taking damage
     private Collider2D colliderObj;
+    private SpriteRenderer sr;
 
     // Start is called before the first frame update
     void Start()
     {
         colliderObj = GetComponent<Collider2D>();
+        sr = GetComponent<SpriteRenderer>();
+        if (sr == null)
+            sr = transform.GetChild(0).GetComponent<SpriteRenderer>();
     }
 
     void Update()
     {
-        if (invincibleDuration > 0)
+        if (invincibleTimer > 0)
         {
-            invincibleDuration -= Time.deltaTime;
+            invincibleTimer -= Time.deltaTime;
         }
     }
 
     void OnCollisionEnter2D(Collision2D col)
     {
-        if (invincibleTime > 0)
+        if (invincibleTimer > 0)
         {
             return;
         }
@@ -46,7 +51,7 @@ public class Damageable : MonoBehaviour
     public void TakeDamage(int damage)
     {
         currHealth -= damage;
-        invincibleTime = invincibleDuration;
+        StartCoroutine(HitFlash(invincibleDuration));
         Debug.Log(name + " took " + damage +", with [" + currHealth + "] hp left");
 
         if (currHealth <= 0)
@@ -59,6 +64,7 @@ public class Damageable : MonoBehaviour
     {
 
         currHealth -= damage;
+        StartCoroutine(HitFlash());
         Debug.Log(name + " took " + damage + ", with [" + currHealth + "] hp left");
 
         if (currHealth <= 0)
@@ -77,5 +83,30 @@ public class Damageable : MonoBehaviour
     {
         Debug.Log(name + " died");
         Destroy(gameObject);
+    }
+    
+    private IEnumerator HitFlash(float duration = -1f)
+    {        
+        if (invincibleDuration > 0) // Hitflash should signify iframes
+        {
+            invincibleTimer = duration == -1 ? invincibleDuration : duration; // default case: use invuln time
+            while (invincibleTimer > 0)
+            {
+                sr.color = HITFLASH_COLOR;
+                yield return new WaitForSeconds(0.1f);
+                sr.color = Color.white;
+                yield return new WaitForSeconds(0.1f);
+            }
+        }
+        else 
+        {
+            for (int i = 0; i < 2; i++)
+            {
+                sr.color = HITFLASH_COLOR;
+                yield return new WaitForSeconds(0.1f);
+                sr.color = Color.white;
+                yield return new WaitForSeconds(0.1f);
+            }
+        }
     }
 }

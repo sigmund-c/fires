@@ -128,7 +128,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   maxHealth: 10
   currHealth: 10
-  invincibleDuration: 1
+  invincibleDuration: 0
   team: 1
 --- !u!1 &8057157006399786395
 GameObject:
