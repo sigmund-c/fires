@@ -37103,11 +37103,11 @@ PrefabInstance:
       objectReference: {fileID: 2101911971}
     - target: {fileID: 6758930255466825041, guid: 6a12fb6aa9d1bf0448337c46aaedf459, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -1.8
+      value: -0.5
       objectReference: {fileID: 0}
     - target: {fileID: 6758930255466825041, guid: 6a12fb6aa9d1bf0448337c46aaedf459, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 1.4
+      value: 2.3
       objectReference: {fileID: 0}
     - target: {fileID: 6758930255466825041, guid: 6a12fb6aa9d1bf0448337c46aaedf459, type: 3}
       propertyPath: m_LocalPosition.z
@@ -37393,6 +37393,14 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1914292714}
     m_Modifications:
+    - target: {fileID: 1729060061516741242, guid: 3038e1cfea3171d4bb5d8cce1573bdf2, type: 3}
+      propertyPath: healthSlider
+      value: 
+      objectReference: {fileID: 1729576036}
+    - target: {fileID: 6544449886704295119, guid: 3038e1cfea3171d4bb5d8cce1573bdf2, type: 3}
+      propertyPath: m_IsTrigger
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 6971854736601901990, guid: 3038e1cfea3171d4bb5d8cce1573bdf2, type: 3}
       propertyPath: healthSlider
       value: 
