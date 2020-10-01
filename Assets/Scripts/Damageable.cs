@@ -86,7 +86,7 @@ public class Damageable : MonoBehaviour
     {
 
         currHealth -= damage;
-        StartCoroutine(HitFlash());
+        //StartCoroutine(HitFlash()); No invincibility frames
         Debug.Log(name + " took " + damage + ", with [" + currHealth + "] hp left");
         SetSliderHealth(currHealth);
 
@@ -110,7 +110,7 @@ public class Damageable : MonoBehaviour
     }
     
     protected IEnumerator HitFlash(float duration = -1f)
-    {        
+    {
         if (invincibleDuration > 0) // Hitflash should signify iframes
         {
             invincibleTimer = duration == -1 ? invincibleDuration : duration; // default case: use invuln time
@@ -132,6 +132,9 @@ public class Damageable : MonoBehaviour
                 yield return new WaitForSeconds(0.1f);
             }
         }
+
+        colliderObj.enabled = false; // Re-check for OnCollisionEnter
+        colliderObj.enabled = true;
     }
 
     protected void PlaySound()
