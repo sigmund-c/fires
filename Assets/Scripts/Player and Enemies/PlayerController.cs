@@ -34,6 +34,7 @@ public class PlayerController : MonoBehaviour
     
     private float chargeStartTime;
     private bool isCharging;
+    public int collidingObjects = 0;
     public int jumpTimes = 0;
     private LaunchBar activeLaunchBar;
 
@@ -306,9 +307,11 @@ public class PlayerController : MonoBehaviour
     // void OnCollisionStay2D(Collision2D col)
     {
         // Debug.Log(col.gameObject.name);
-        if (jumpTimes > 0 && col.gameObject.tag == "Ground" || col.gameObject.tag == "BurningObj")
+        if (col.gameObject.tag == "Ground" || col.gameObject.tag == "BurningObj")
         {
             // touchingGround = true;
+
+            collidingObjects++; // Take into account when colliding with multiple objects before Exiting
 
             print("jumpTimes = 0");
             jumpTimes = 0;
@@ -334,7 +337,10 @@ public class PlayerController : MonoBehaviour
             print("touchingGround = false");
             // touchingGround = false;
             // print("jumpTimes = 1");
-            jumpTimes = 1;
+            collidingObjects--;
+            if (collidingObjects <= 0) { // Only start counting when not touching anything
+                jumpTimes = 1;
+            }
         }
     }
 
