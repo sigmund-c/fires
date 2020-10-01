@@ -78,6 +78,7 @@ public class PlayerController : MonoBehaviour
         fireHitbox = transform.GetChild(1).gameObject;
         animator = sprite.GetComponent<Animator>();
         effectsStorage = GetComponent<EffectsStorage>();
+        effectsStorage.PlayEffect(2); // spawn SFX
 
         if (PersistentManager.instance == null)
         {
