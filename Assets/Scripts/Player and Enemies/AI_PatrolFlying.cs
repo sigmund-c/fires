@@ -32,10 +32,11 @@ public class AI_PatrolFlying : MonoBehaviour
         }
         else
         {
-            wallInfo = Physics2D.Raycast(groundDetector.position, Vector2.right, wallDetectionDist);
+            wallInfo = Physics2D.Raycast(groundDetector.position, Vector2.right, wallDetectionDist, ~ignoreLayer);
         }
         if (wallInfo.collider == true && wallInfo.collider.tag != "Player")
         {
+            Debug.Log(wallInfo.collider.name);
             Rotate();
         }
 
