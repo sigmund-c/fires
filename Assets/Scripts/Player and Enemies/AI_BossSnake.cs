@@ -42,6 +42,7 @@ public class AI_BossSnake : MonoBehaviour
     private GameObject activeSpawnIndicator;
     private List<Transform> spawnTransforms = new List<Transform>();
 
+    private EffectsStorage effectsStorage;
     Damageable headDamageable;
 
     // Start is called before the first frame update
@@ -65,6 +66,8 @@ public class AI_BossSnake : MonoBehaviour
         headSprite = headTransform.GetComponent<SpriteRenderer>();
         tailSprite = transform.Find("SnakeTailSprite").GetComponent<SpriteRenderer>();
         idleTail = tailSprite.sprite;
+
+        effectsStorage = GetComponent<EffectsStorage>();
     }
 
     public void StartAI()
@@ -198,6 +201,7 @@ public class AI_BossSnake : MonoBehaviour
     
     private void ShootProjectile()
     {
+        effectsStorage.PlayEffect(0); // Shoot SFX
         Vector2 aimDirection = target.position - headTransform.position;
         GameObject projectileInst = Instantiate(projectilePrefab, (Vector2)headTransform.position + aimDirection.normalized * 1.5f, Quaternion.FromToRotation(Vector3.up, aimDirection));
         shootAmount--;

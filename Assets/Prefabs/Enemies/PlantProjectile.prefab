@@ -179,6 +179,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   velocity: 10
   maxRange: 100
+  explosionHitEffect: {fileID: 0}
 --- !u!114 &911537619556041883
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -192,7 +193,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   team: 1
-  damage: 5
+  damage: 3
   knockbackAmount: 3
 --- !u!1 &7332535410252938377
 GameObject:

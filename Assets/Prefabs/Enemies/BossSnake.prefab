@@ -150,6 +150,7 @@ GameObject:
   - component: {fileID: 7739546795622598364}
   - component: {fileID: 6971854736601901990}
   - component: {fileID: -8475867410181827962}
+  - component: {fileID: 8231001380361214020}
   m_Layer: 19
   m_Name: BossSnake
   m_TagString: Enemy
@@ -293,7 +294,7 @@ AudioSource:
   MinDistance: 1
   MaxDistance: 30
   Pan2D: 0
-  rolloffMode: 0
+  rolloffMode: 1
   BypassEffects: 0
   BypassListenerEffects: 0
   BypassReverbZones: 0
@@ -366,6 +367,20 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+--- !u!114 &8231001380361214020
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7739546795622598366}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d3061d8bd958ced48882e652119aaba4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  effects:
+  - {fileID: 2138079904934210083, guid: a0fec9656d4de2b4b8217ae515f416bc, type: 3}
 --- !u!1 &7739546795676180728
 GameObject:
   m_ObjectHideFlags: 0
@@ -522,6 +537,7 @@ GameObject:
   - component: {fileID: 7739546796320005102}
   - component: {fileID: 7739546796320005097}
   - component: {fileID: 7739546796320005096}
+  - component: {fileID: 4824969747945443994}
   m_Layer: 19
   m_Name: tailAttack1
   m_TagString: Untagged
@@ -626,7 +642,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   team: 1
-  damage: 5
+  damage: 3
   knockbackAmount: 3
 --- !u!61 &7739546796320005096
 BoxCollider2D:
@@ -654,6 +670,21 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 1.7846336, y: 15.097382}
   m_EdgeRadius: 0
+--- !u!114 &4824969747945443994
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7739546796320005093}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d3061d8bd958ced48882e652119aaba4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  effects:
+  - {fileID: 2138079904934210083, guid: 30bd88e8519f65e45b72cf26afe3b44a, type: 3}
+  - {fileID: 2138079904934210083, guid: b5d1e6df2aa56514395e748494714418, type: 3}
 --- !u!1 &7739546796472876070
 GameObject:
   m_ObjectHideFlags: 0
@@ -943,6 +974,7 @@ GameObject:
   - component: {fileID: 7739546796921873019}
   - component: {fileID: 7739546796921873018}
   - component: {fileID: 7739546796921873013}
+  - component: {fileID: 5135369140193566170}
   m_Layer: 19
   m_Name: tailAttack3
   m_TagString: Untagged
@@ -1047,7 +1079,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   team: 1
-  damage: 5
+  damage: 3
   knockbackAmount: 3
 --- !u!61 &7739546796921873013
 BoxCollider2D:
@@ -1075,6 +1107,21 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 1.7846336, y: 14.61953}
   m_EdgeRadius: 0
+--- !u!114 &5135369140193566170
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7739546796921873015}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d3061d8bd958ced48882e652119aaba4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  effects:
+  - {fileID: 2138079904934210083, guid: 30bd88e8519f65e45b72cf26afe3b44a, type: 3}
+  - {fileID: 2138079904934210083, guid: b5d1e6df2aa56514395e748494714418, type: 3}
 --- !u!1 &7739546796958238980
 GameObject:
   m_ObjectHideFlags: 0
@@ -1383,6 +1430,7 @@ GameObject:
   - component: {fileID: 7739546797438612673}
   - component: {fileID: 7739546797438612672}
   - component: {fileID: 7739546797438612675}
+  - component: {fileID: 1107161839952555811}
   m_Layer: 19
   m_Name: tailAttack2
   m_TagString: Untagged
@@ -1487,7 +1535,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   team: 1
-  damage: 5
+  damage: 3
   knockbackAmount: 3
 --- !u!61 &7739546797438612675
 BoxCollider2D:
@@ -1515,3 +1563,18 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 1.7846336, y: 14.61953}
   m_EdgeRadius: 0
+--- !u!114 &1107161839952555811
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7739546797438612701}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d3061d8bd958ced48882e652119aaba4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  effects:
+  - {fileID: 2138079904934210083, guid: 30bd88e8519f65e45b72cf26afe3b44a, type: 3}
+  - {fileID: 2138079904934210083, guid: b5d1e6df2aa56514395e748494714418, type: 3}
