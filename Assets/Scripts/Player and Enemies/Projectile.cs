@@ -9,12 +9,16 @@ public class Projectile : MonoBehaviour
 
     public GameObject explosionHitEffect;
 
+    private Damaging damaging;
+    private int maxDamage;
     private Rigidbody2D rb;
     private Vector3 startPos;
     private float sqrMaxRange;
 
     public void Awake()
     {
+        damaging = GetComponent<Damaging>();
+        maxDamage = damaging.damage;
         rb = GetComponent<Rigidbody2D>();
         startPos = transform.position;
         sqrMaxRange = maxRange * maxRange;
@@ -22,13 +26,30 @@ public class Projectile : MonoBehaviour
 
     void FixedUpdate()
     {
-        transform.position += transform.up * velocity * Time.fixedDeltaTime;
-
-        float sqrTravelled = (transform.position - startPos).sqrMagnitude;
-        if(sqrTravelled > sqrMaxRange)
+        if (!rb.isKinematic)
         {
-            Destroy(gameObject);
+            transform.position += transform.up * velocity * Time.fixedDeltaTime;
+
+            float sqrTravelled = (transform.position - startPos).sqrMagnitude;
+            if (sqrTravelled > sqrMaxRange)
+            {
+                Destroy(gameObject);
+            }
         }
+    }
+
+    public void Shoot()
+    {
+        if (rb.isKinematic)
+        {
+            rb.isKinematic = false;
+        }
+    }
+
+    public void SetPower(float percent)
+    {
+        transform.localScale = percent * Vector3.one * 2;
+        damaging.damage = (int)(percent * maxDamage) * 2;
     }
 
     void OnCollisionEnter2D(Collision2D other)

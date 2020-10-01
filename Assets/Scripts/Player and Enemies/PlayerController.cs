@@ -38,10 +38,17 @@ public class PlayerController : MonoBehaviour
     public int jumpTimes = 0;
     private LaunchBar activeLaunchBar;
 
+    private Vector3 aimDirection;
+
     private int numBurningObjsTouched;
 
     //Projectiles
     public GameObject projectilePrefab;
+    private float shootStartTime;
+    private float maxShootTime = 1f;
+    private bool isShooting;
+    private Projectile activeProjectile;
+    private GameObject activeProjectileObject;
 
     private Rigidbody2D rb;
     private Transform sprite;
@@ -124,7 +131,7 @@ public class PlayerController : MonoBehaviour
 
         Vector3 mousePosition = Utils.MouseWorldPosition();
         Vector3 aimVector = mousePosition - transform.position;
-        Vector3 aimDirection = aimVector.normalized;
+        aimDirection = aimVector.normalized;
 
         handleTimers();
 
@@ -137,63 +144,9 @@ public class PlayerController : MonoBehaviour
             // TODO - should we set AirJumpBehaviour to PreserveMomentum only when swimming? or all the time?
         }
 
-        if (!isCharging)
-        {
-            if (!inSwimMode && Input.GetMouseButtonDown(1)) // right click
-            {
-                LaunchProjectile(aimDirection);
-            }
-            else if (Input.GetMouseButton(0))
-            {
-                if (maxJumps == -1 || jumpTimes < maxJumps)
-                {
-                    isCharging = true;
-                    chargeStartTime = Time.time;
-                    sprite.localScale = new Vector3(1, 0.5f, 1);
-                    Time.timeScale = aimingTimeScale;
+        handleCharging();
 
-                    if (airJumpBehaviour == AirJumpBehaviour.CancelOnAim)
-                    {
-                        rb.velocity = new Vector3(0.0f, 0.0f, 0.0f);
-                        rb.gravityScale = 0;
-                    }
-
-                     // Instantiate LaunchBar
-                    activeLaunchBar = Instantiate(launchBar, transform.position, Quaternion.FromToRotation(Vector3.right, aimDirection), transform).GetComponent<LaunchBar>();
-                }
-                else 
-                {
-                    // possibly play an "invalid" sound
-                }                
-            }
-        }
-        else // already charging
-        {
-            /*if (Input.GetMouseButton(0) && Time.time - chargeStartTime > maxJumpCharge && isCharging) // Jump when held too long
-            {
-                FinishCharge(Time.time - chargeStartTime, aimDirection);
-            }
-            else*/ if (Input.GetMouseButton(0)) 
-            {
-                // When holding down button, increase bar
-                if (activeLaunchBar != null)
-                {
-                    float percent = Mathf.Min((Time.time - chargeStartTime) / maxChargeTime, 1f);
-                    activeLaunchBar.SetSize(percent);
-                    activeLaunchBar.UpdateDirection(Quaternion.FromToRotation(Vector3.right, aimDirection));
-                }
-            }
-            else if (Input.GetMouseButtonUp(0)) // Jump when release
-            {
-                FinishCharge(Time.time - chargeStartTime, aimDirection);
-
-            }
-
-            if (Input.GetMouseButtonDown(1)) // cancel charge
-            {
-                FinishCharge();
-            }
-        }
+        handleShooting();
     }
 
     void FixedUpdate()
@@ -250,6 +203,59 @@ public class PlayerController : MonoBehaviour
             if (boostTimer <= 0)
             {
                 isBoosted = false;
+            }
+        }
+    }
+
+    void handleCharging()
+    {
+        if (!isCharging)
+        {
+            if (Input.GetMouseButtonDown(0))
+            {
+                if (maxJumps == -1 || jumpTimes < maxJumps)
+                {
+                    isCharging = true;
+                    chargeStartTime = Time.time;
+                    sprite.localScale = new Vector3(1, 0.5f, 1);
+                    Time.timeScale = aimingTimeScale;
+
+                    if (airJumpBehaviour == AirJumpBehaviour.CancelOnAim)
+                    {
+                        rb.velocity = new Vector3(0.0f, 0.0f, 0.0f);
+                        rb.gravityScale = 0;
+                    }
+
+                    // Instantiate LaunchBar
+                    activeLaunchBar = Instantiate(launchBar, transform.position, Quaternion.FromToRotation(Vector3.right, aimDirection), transform).GetComponent<LaunchBar>();
+                }
+                else
+                {
+                    // possibly play an "invalid" sound
+                }
+            }
+        }
+        else // already charging
+        {
+            /*if (Input.GetMouseButton(0) && Time.time - chargeStartTime > maxJumpCharge && isCharging) // Jump when held too long
+            {
+                FinishCharge(Time.time - chargeStartTime, aimDirection);
+            }
+            else*/
+            if (Input.GetMouseButton(0))
+            {
+                // When holding down button, increase bar
+                if (activeLaunchBar != null)
+                {
+                    float percent = Mathf.Min((Time.time - chargeStartTime) / maxChargeTime, 1f);
+                    activeLaunchBar.SetSize(percent);
+                    activeLaunchBar.UpdateDirection(Quaternion.FromToRotation(Vector3.right, aimDirection));
+                }
+            }
+            else if (Input.GetMouseButtonUp(0)) // Jump when release
+            {
+                FinishCharge(Time.time - chargeStartTime, aimDirection);
+
             }
         }
     }
@@ -394,6 +400,53 @@ public class PlayerController : MonoBehaviour
         boostTimer = boostDuration;
     }
 
+    void handleShooting()
+    {
+        if (!isShooting)
+        {
+            if (!inSwimMode && Input.GetMouseButtonDown(1)) // right click
+            {
+                isShooting = true;
+                shootStartTime = Time.time;
+
+                activeProjectileObject = Instantiate(projectilePrefab, transform.position, Quaternion.FromToRotation(Vector3.up, aimDirection), transform);
+                activeProjectile = activeProjectileObject.GetComponentInChildren<Projectile>();
+                activeProjectile.transform.localScale = 0.25f * Vector3.one; // Start at 25%
+            }
+        } else
+        {
+            if (Input.GetMouseButton(1))
+            {
+                // When holding down button, increase projectile
+                if (activeProjectile != null)
+                {
+                    float percent = Mathf.Min((Time.time - shootStartTime) / maxShootTime * 0.75f + 0.25f, 1f); // Start at 25%, max still at 100%
+                    activeProjectile.SetPower(percent);
+                    activeProjectileObject.transform.rotation = Quaternion.FromToRotation(Vector3.up, aimDirection);
+                }
+            }
+            else if (Input.GetMouseButtonUp(1)) // Jump when release
+            {
+                FinishShoot(Time.time - shootStartTime, aimDirection);
+
+            }
+        }
+    }
+
+    void FinishShoot(float shootChargeTime = 0, Vector2 dir = default(Vector2))
+    {
+        isShooting = false;
+        
+
+        if (shootChargeTime != 0)
+        {
+            if (activeProjectile != null)
+            {
+                LaunchProjectile(dir);
+            }
+        }
+    }
+
     void LaunchProjectile(Vector3 aimDirection)
     {
         // Vector3 direction = Vector3.up;
@@ -415,7 +468,8 @@ public class PlayerController : MonoBehaviour
         // Projectile projectile = projectileObject.GetComponent<Projectile>();
         // projectile.Launch((Vector2)aimDirection, 200);
 
-        GameObject projectileInst = Instantiate(projectilePrefab, rb.position + (Vector2)aimDirection.normalized * 0.5f, Quaternion.FromToRotation(Vector3.up, aimDirection));
+        activeProjectile.Shoot();
+        // GameObject projectileInst = Instantiate(projectilePrefab, rb.position + (Vector2)aimDirection.normalized * 0.5f, Quaternion.FromToRotation(Vector3.up, aimDirection));
 
         effectsStorage.PlayEffect(0); // shoot SFX
 
