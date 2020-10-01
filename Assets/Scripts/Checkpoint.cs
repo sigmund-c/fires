@@ -8,11 +8,13 @@ public class Checkpoint : MonoBehaviour
     public Material activatedMat;
 
     private SpriteRenderer sr;
+    private Animation anim;
 
     // Start is called before the first frame update
     void Start()
     {
         sr = GetComponentInChildren<SpriteRenderer>();
+        anim = GetComponentInChildren<Animation>();
     }
 
     void OnTriggerEnter2D(Collider2D col)
@@ -27,7 +29,9 @@ public class Checkpoint : MonoBehaviour
     private void ActivateSprite()
     {
         Debug.Log("actives");
-        sr.color = new Color(1, 0.5f, 0, 1);
+        GetComponent<AudioSource>().Play();
+        anim.Play("CheckpointActivate");
         sr.material = activatedMat;
+        anim.PlayQueued("CheckpointFloat");
     }
 }

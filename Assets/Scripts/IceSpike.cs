@@ -6,6 +6,8 @@ public class IceSpike : MonoBehaviour
 {
     private Rigidbody2D rb;
 
+    private bool fallen = false;
+
     void Awake()
     {
         rb = GetComponent<Rigidbody2D>();
@@ -19,9 +21,14 @@ public class IceSpike : MonoBehaviour
 
     void OnCollisionEnter2D(Collision2D col)
     {
-        if (col.otherCollider is BoxCollider2D)
+        if (!fallen)
         {
-            rb.gravityScale = 0.9f;
+            fallen = true;
+            GetComponent<AudioSource>().Play();
+            if (col.otherCollider is BoxCollider2D)
+            {
+                rb.gravityScale = 0.9f;
+            }
         }
     }
 }
