@@ -11,5 +11,7 @@ public class Burning : MonoBehaviour
     {
         if (showParticles)
             Utils.SpawnScaledParticleSystem(ParticleType.Fire, transform, burningTime);
+
+        GetComponent<AudioSource>().Play();
     }
 }
