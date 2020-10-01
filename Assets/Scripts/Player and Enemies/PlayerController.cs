@@ -61,7 +61,7 @@ public class PlayerController : MonoBehaviour
     private bool touchingGround;
     private Animator animator;
 
-    private AudioStorage audioStorage;
+    private EffectsStorage effectsStorage;
 
 
 
@@ -77,7 +77,7 @@ public class PlayerController : MonoBehaviour
         // print("burning filter: " + LayerMask.LayerToName(burningFilter.layerMask));
         fireHitbox = transform.GetChild(1).gameObject;
         animator = sprite.GetComponent<Animator>();
-        audioStorage = GetComponent<AudioStorage>();
+        effectsStorage = GetComponent<EffectsStorage>();
 
         if (PersistentManager.instance == null)
         {
@@ -281,6 +281,7 @@ public class PlayerController : MonoBehaviour
     void Jump(float jumpChargeTime, Vector2 dirc)
     {
         animator.SetTrigger("Jump");
+        effectsStorage.PlayEffect(1); // jump SFX
         if (jumpChargeTime > maxChargeTime)
         {
             jumpChargeTime = maxChargeTime;
@@ -415,7 +416,7 @@ public class PlayerController : MonoBehaviour
 
         GameObject projectileInst = Instantiate(projectilePrefab, rb.position + (Vector2)aimDirection.normalized * 0.5f, Quaternion.FromToRotation(Vector3.up, aimDirection));
 
-        audioStorage.PlayClip(0); // shoot SFX
+        effectsStorage.PlayEffect(0); // shoot SFX
 
         TakeDamage(1);
     }
