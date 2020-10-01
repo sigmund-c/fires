@@ -315,7 +315,7 @@ public class PlayerController : MonoBehaviour
 
             print("jumpTimes = 0");
             jumpTimes = 0;
-            // Utils.SpawnSparkle(transform);//, new Vector2(0f, -1f));
+            Utils.SpawnSparkle(transform);
 
 
             // Not working on tilemaps :(
