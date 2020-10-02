@@ -31,6 +31,11 @@ public class PlayerController : MonoBehaviour
     public int maxJumps = -1; // -1 means unlimited
     public AirJumpBehaviour airJumpBehaviour;
     public GameObject launchBar;
+
+    // we use GetMouseButton instead of GetMouseButtonDown to start charging so you can charge immediately after touching a surface by holding it down.
+    // but this restarts the charge immediately after cancelling using M2, so we add a cooldown
+    public float chargeCooldown = 0.2f;
+    private float chargeCooldownTimer;  
     
     private float chargeStartTime;
     private bool isCharging;
@@ -56,7 +61,7 @@ public class PlayerController : MonoBehaviour
     public float regularDrag;
     public float swimmingDrag;
     public float originalGravity = 2f;
-    public float aimingTimeScale = 0.5f;
+    public float aimingTimeScale = 0.5f;   
 
     private bool touchingGround;
     private Animator animator;
@@ -143,7 +148,7 @@ public class PlayerController : MonoBehaviour
             {
                 LaunchProjectile(aimDirection);
             }
-            else if (Input.GetMouseButton(0))
+            else if (Input.GetMouseButton(0) && chargeCooldownTimer == 0f)
             {
                 if (maxJumps == -1 || jumpTimes < maxJumps)
                 {
@@ -252,11 +257,17 @@ public class PlayerController : MonoBehaviour
                 isBoosted = false;
             }
         }
+
+        if (chargeCooldownTimer > 0f)
+        {
+            chargeCooldownTimer = Mathf.Max(chargeCooldownTimer - Time.deltaTime, 0f);
+        }
     }
 
     void FinishCharge(float jumpChargeTime = 0 , Vector2 dir = default(Vector2))
     {
         isCharging = false;
+        chargeCooldownTimer = chargeCooldown;
         if (activeLaunchBar != null)
         {
             Destroy(activeLaunchBar.gameObject);
