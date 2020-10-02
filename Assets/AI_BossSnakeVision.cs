@@ -5,6 +5,7 @@ using UnityEngine;
 public class AI_BossSnakeVision : MonoBehaviour
 {
     private AI_BossSnake ai;
+    private bool triggered = false;
 
     // Start is called before the first frame update
     void Start()
@@ -18,7 +19,14 @@ public class AI_BossSnakeVision : MonoBehaviour
         if (col.tag == "Player")
         {
             ai.target = col.transform;
-            ai.StartAI();
+
+            if (!triggered)
+            {
+                triggered = true;
+
+                ai.StartAI();
+                GameObject.FindGameObjectWithTag("Persistent").GetComponent<PersistentAudio>().ChangeMusic(1);
+            }
         }
     }
 

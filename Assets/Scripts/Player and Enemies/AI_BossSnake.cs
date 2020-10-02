@@ -22,7 +22,7 @@ public class AI_BossSnake : MonoBehaviour
     private SpriteRenderer tailSprite;
 
     private float idleTime = 2f;
-    private float nextAttack;
+    private float nextAttack = 0;
     
     public int shootAmount = 0;
     public int tailAmount = 0;
@@ -43,13 +43,13 @@ public class AI_BossSnake : MonoBehaviour
     private List<Transform> spawnTransforms = new List<Transform>();
 
     private EffectsStorage effectsStorage;
-    Damageable headDamageable;
+    BossDamageable headDamageable;
 
     // Start is called before the first frame update
     void Start()
     {
-        headTransform = transform.Find("SnakeHead");
-        headDamageable = GetComponentInChildren<Damageable>();
+        headTransform = transform.Find("Snake").Find("SnakeHead");
+        headDamageable = headTransform.GetComponent<BossDamageable>();
 
         Transform tailAttacks = transform.Find("tailAttacks");
         foreach (Transform child in tailAttacks)
@@ -64,7 +64,7 @@ public class AI_BossSnake : MonoBehaviour
         }
 
         headSprite = headTransform.GetComponent<SpriteRenderer>();
-        tailSprite = transform.Find("SnakeTailSprite").GetComponent<SpriteRenderer>();
+        tailSprite = transform.Find("Snake").Find("SnakeTailSprite").GetComponent<SpriteRenderer>();
         idleTail = tailSprite.sprite;
 
         effectsStorage = GetComponent<EffectsStorage>();
@@ -81,6 +81,15 @@ public class AI_BossSnake : MonoBehaviour
         }
     }
 
+    public void StopAI()
+    {
+        if (hasStarted)
+        {
+            hasStarted = false;
+            Debug.Log("AI stopped");
+        }
+    }
+
     // Update is called once per frame
     void Update()
     {
@@ -92,8 +101,9 @@ public class AI_BossSnake : MonoBehaviour
 
     private void DoAI()
     {
-        if (nextAttack < 0)
+        if (nextAttack <= 0)
         {
+            Debug.Log("generating new attack");
             GenerateNewAttack();
             nextAttack = idleTime;
         } else
@@ -110,16 +120,16 @@ public class AI_BossSnake : MonoBehaviour
             {
                 AISpawn();
             }
-            /*
+            
             if (shootAmount <= 0 && tailAmount <= 0 && spawnAmount <= 0)
             {
+                nextAttack -= Time.deltaTime;
+
                 if (activeSpawnIndicator != null) // destroy spawn indicator created from parallel runs
                 {
-
                     Destroy(activeSpawnIndicator);
                 }
-            }*/
-            nextAttack -= Time.deltaTime;
+            }
         }
 
         UpdateSprite();
@@ -264,7 +274,7 @@ public class AI_BossSnake : MonoBehaviour
         spawnAmount--;
     }
 
-    private void OnCollisionEnter2D(Collision2D collision)
+    void OnTriggerEnter2D(Collider2D collision)
     {
         if (collision.gameObject.name == "iceSpike")
         {
@@ -277,5 +287,6 @@ public class AI_BossSnake : MonoBehaviour
         Instantiate(deathEffect, transform.position, Quaternion.identity);
         healthUI.SetActive(false);
         headDamageable.Die();
+        Destroy(gameObject);
     }
 }

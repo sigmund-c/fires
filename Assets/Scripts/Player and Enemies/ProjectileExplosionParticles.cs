@@ -4,10 +4,19 @@ using UnityEngine;
 
 public class ProjectileExplosionParticles : MonoBehaviour
 {
+    AudioSource audio;
     // Start is called before the first frame update
     void Start()
     {
-        GetComponent<AudioSource>().Play();
-        Destroy(gameObject, 2f);
+        audio = GetComponent<AudioSource>();
+        if (audio != null)
+        {
+            audio.Play();
+            Destroy(gameObject, audio.clip.length);
+        }
+        else
+        {
+            Destroy(gameObject, 2f);
+        }
     }
 }
