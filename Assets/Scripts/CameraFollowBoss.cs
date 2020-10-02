@@ -77,6 +77,13 @@ public class CameraFollowBoss : MonoBehaviour
         StartCoroutine(NullOverrideTarget(duration));
     }
 
+    public void FocusOn(int cameraSnapIndex, float duration)
+    {
+        overrideTarget = snaps[cameraSnapIndex].position;
+        hasOverrideTarget = true;
+        StartCoroutine(NullOverrideTarget(duration));
+    }
+
     IEnumerator NullOverrideTarget(float duration)
     {
         yield return new WaitForSeconds(duration);

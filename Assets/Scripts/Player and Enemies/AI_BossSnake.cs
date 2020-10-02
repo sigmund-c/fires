@@ -43,13 +43,13 @@ public class AI_BossSnake : MonoBehaviour
     private List<Transform> spawnTransforms = new List<Transform>();
 
     private EffectsStorage effectsStorage;
-    Damageable headDamageable;
+    BossDamageable headDamageable;
 
     // Start is called before the first frame update
     void Start()
     {
         headTransform = transform.Find("Snake").Find("SnakeHead");
-        headDamageable = headTransform.GetComponent<Damageable>();
+        headDamageable = headTransform.GetComponent<BossDamageable>();
 
         Transform tailAttacks = transform.Find("tailAttacks");
         foreach (Transform child in tailAttacks)
@@ -78,6 +78,15 @@ public class AI_BossSnake : MonoBehaviour
             nextAttack = idleTime;
             Debug.Log("AI started");
             healthUI.SetActive(true);
+        }
+    }
+
+    public void StopAI()
+    {
+        if (hasStarted)
+        {
+            hasStarted = false;
+            Debug.Log("AI stopped");
         }
     }
 

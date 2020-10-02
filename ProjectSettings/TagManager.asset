@@ -9,6 +9,7 @@ TagManager:
   - PauseMenu
   - BurningObj
   - Checkpoint
+  - Persistent
   layers:
   - Default
   - TransparentFX

@@ -99,6 +99,7 @@ public class Damageable : MonoBehaviour
     public void RestoreHealth(int restore)
     {
         currHealth += restore;
+        currHealth = Mathf.Min(currHealth, maxHealth);
         Debug.Log(name + " restored " + restore + ", with [" + currHealth + "] hp left");
         SetSliderHealth(currHealth);
     }
