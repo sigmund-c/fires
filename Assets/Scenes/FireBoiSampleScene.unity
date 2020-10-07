@@ -5769,10 +5769,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   player: {fileID: 1129089672}
+  speed: 0.1
   snaps:
   - {fileID: 2089571242}
   - {fileID: 1162347249}
-  moveSpeed: 0
+  snapDistances: []
 --- !u!20 &519420031
 Camera:
   m_ObjectHideFlags: 0
@@ -14833,6 +14834,65 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0, y: 0}
+--- !u!1 &1012454325
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1012454326}
+  - component: {fileID: 1012454327}
+  m_Layer: 0
+  m_Name: GameObject
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1012454326
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1012454325}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 1861525248}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1012454327
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1012454325}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ae0ba5656159d0d4d8ef8995d488cfcf, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  boostDuration: 30
+  boostMultiplier: 1.2
+  baseJumpAmount: 0.3
+  maxJumpAmountFromCharge: 1
+  maxChargeTime: 1
+  maxJumps: -1
+  airJumpBehaviour: 0
+  launchBar: {fileID: 0}
+  collidingObjects: 0
+  jumpTimes: 0
+  projectilePrefab: {fileID: 0}
+  canSwim: 0
+  regularDrag: 0
+  swimmingDrag: 0
+  originalGravity: 2
+  aimingTimeScale: 0.5
 --- !u!4 &1129089672 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 6758930255466825041, guid: 6a12fb6aa9d1bf0448337c46aaedf459, type: 3}
@@ -15907,7 +15967,8 @@ Transform:
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 332.32135, y: 363.79465, z: -67.99575}
   m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
+  m_Children:
+  - {fileID: 1012454326}
   m_Father: {fileID: 0}
   m_RootOrder: 17
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}

@@ -7,8 +7,7 @@ public class Save
 {
     public List<float> livingTargetPositionsX = new List<float>();
     public List<float> livingTargetPositionsY = new List<float>();
-    public List<int> livingTargetsTypes = new List<int>();
-
-    public int hits = 0;
-    public int shots = 0;
+    public List<string> enemyTypes = new List<string>();
+    public List<float> enemyPositionsX = new List<float>();
+    public List<float> enemyPositionsY = new List<float>();
 }
