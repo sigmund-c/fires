@@ -635,8 +635,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3dcccb405649a51478d3ff57df780d76, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  projectilePrefab: {fileID: 9173349506180935939, guid: d19126da587e093449695ac894f088fc, type: 3}
-  enemyPrefabs: []
   pauseMenu: {fileID: 1722160459}
 --- !u!4 &522798460
 Transform:
@@ -38077,8 +38075,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3dcccb405649a51478d3ff57df780d76, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  projectilePrefab: {fileID: 0}
-  enemyPrefabs: []
   pauseMenu: {fileID: 0}
 --- !u!114 &1722160462
 MonoBehaviour:
@@ -38394,11 +38390,11 @@ PrefabInstance:
       objectReference: {fileID: 2101911971}
     - target: {fileID: -7804400991250641714, guid: 6a12fb6aa9d1bf0448337c46aaedf459, type: 3}
       propertyPath: maxHealth
-      value: 1000
+      value: 10
       objectReference: {fileID: 0}
     - target: {fileID: -7804400991250641714, guid: 6a12fb6aa9d1bf0448337c46aaedf459, type: 3}
       propertyPath: currHealth
-      value: 1000
+      value: 10
       objectReference: {fileID: 0}
     - target: {fileID: 6758930255466825041, guid: 6a12fb6aa9d1bf0448337c46aaedf459, type: 3}
       propertyPath: m_LocalPosition.x
