@@ -39,7 +39,7 @@ public class AI_Patrol : MonoBehaviour
             {
                 wallInfo = Physics2D.Raycast(groundDetector.position, Vector2.right, wallDetectionDist, ~ignoreLayer);
             }
-            if (wallInfo.collider == true && wallInfo.collider.tag != "Player")
+            if (wallInfo.collider == true && wallInfo.collider.tag != "Player" && wallInfo.collider.tag != "PlayerComponent")
             {
                 Rotate();
             }
