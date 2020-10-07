@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.EventSystems;
 using UnityEngine.SceneManagement;
 
 
@@ -20,7 +21,7 @@ public class PlayerController : MonoBehaviour
     //JumpBoost
     public float boostDuration = 30.0f;
     public float boostMultiplier = 1.2f; //Use this in movement mechanics
-    
+
     private bool isBoosted;
     private float boostTimer;
 
@@ -35,8 +36,8 @@ public class PlayerController : MonoBehaviour
     // we use GetMouseButton instead of GetMouseButtonDown to start charging so you can charge immediately after touching a surface by holding it down.
     // but this restarts the charge immediately after cancelling using M2, so we add a cooldown
     public float chargeCooldown = 0.2f;
-    private float chargeCooldownTimer;  
-    
+    private float chargeCooldownTimer;
+
     private float chargeStartTime;
     private bool isCharging;
     public int collidingObjects = 0;
@@ -61,17 +62,20 @@ public class PlayerController : MonoBehaviour
     public float regularDrag;
     public float swimmingDrag;
     public float originalGravity = 2f;
-    public float aimingTimeScale = 0.5f;   
+    public float aimingTimeScale = 0.5f;
 
     private bool touchingGround;
     private Animator animator;
 
     private EffectsStorage effectsStorage;
 
+    private bool pause;
+
 
 
     void Start()
     {
+        Debug.Log("Start");
         rb = GetComponent<Rigidbody2D>();
         sprite = transform.GetChild(0);
         sr = sprite.GetComponent<SpriteRenderer>();
@@ -85,6 +89,8 @@ public class PlayerController : MonoBehaviour
         effectsStorage = GetComponent<EffectsStorage>();
         effectsStorage.PlayEffect(2); // spawn SFX
 
+        pause = false;
+
         if (PersistentManager.instance == null)
         {
             Instantiate(Utils.persistentManager, Vector3.zero, Quaternion.identity);
@@ -95,7 +101,7 @@ public class PlayerController : MonoBehaviour
     {
         // print("num burning objs touched: " + numBurningObjsTouched);
         // if (numBurningObjsTouched > 0)
-        // {   
+        // {
         //     sr.color = Color.green; // debugging
         //     rb.gravityScale = 0;
         //     rb.velocity = Vector3.zero;
@@ -117,8 +123,10 @@ public class PlayerController : MonoBehaviour
         transform.position = pos;
         Camera.main.transform.position = pos;
     }
+    
     void Update()
     {
+        Debug.Log("Update");
         if (Input.GetKeyDown(KeyCode.R))
         {
             PersistentManager.Reload();
@@ -136,10 +144,16 @@ public class PlayerController : MonoBehaviour
         if (canSwim && inSwimMode) // constantly move towards cursor
         {
             float mag = aimVector.magnitude;
-            float amount = Mathf.Min(mag > 3f ? Mathf.Log(mag) : 0f, 2f); // scale with distance from player to cursor logarithmically, cap at 2 
+            float amount = Mathf.Min(mag > 3f ? Mathf.Log(mag) : 0f, 2f); // scale with distance from player to cursor logarithmically, cap at 2
             print("Amount: " + amount + " Mouse dist: " + mag);
             rb.AddForce(aimDirection * amount * 0.15f, ForceMode2D.Impulse);
             // TODO - should we set AirJumpBehaviour to PreserveMomentum only when swimming? or all the time?
+        }
+
+        // stop all input if hovering over UI element
+        if (EventSystem.current.IsPointerOverGameObject())
+        {
+            return;
         }
 
         if (!isCharging)
@@ -163,13 +177,13 @@ public class PlayerController : MonoBehaviour
                         rb.gravityScale = 0;
                     }
 
-                     // Instantiate LaunchBar
+                    // Instantiate LaunchBar
                     activeLaunchBar = Instantiate(launchBar, transform.position, Quaternion.FromToRotation(Vector3.right, aimDirection), transform).GetComponent<LaunchBar>();
                 }
-                else 
+                else
                 {
                     // possibly play an "invalid" sound
-                }                
+                }
             }
         }
         else // already charging
@@ -178,7 +192,8 @@ public class PlayerController : MonoBehaviour
             {
                 FinishCharge(Time.time - chargeStartTime, aimDirection);
             }
-            else*/ if (Input.GetMouseButton(0)) 
+            else*/
+            if (Input.GetMouseButton(0))
             {
                 // When holding down button, increase bar
                 if (activeLaunchBar != null)
@@ -203,6 +218,8 @@ public class PlayerController : MonoBehaviour
 
     void FixedUpdate()
     {
+        Debug.Log("FixedUpdate");
+
         if (!canSwim)
             return;
 
@@ -278,7 +295,7 @@ public class PlayerController : MonoBehaviour
 
         if (jumpChargeTime != 0)
         {
-            if (/*!touchingGround*/jumpTimes > 0) // jumpTimes only increases after 
+            if (/*!touchingGround*/jumpTimes > 0) // jumpTimes only increases after
             {
                 // Debug.Log("tset");
                 print("jumpTimes++");
@@ -298,7 +315,7 @@ public class PlayerController : MonoBehaviour
         {
             jumpChargeTime = maxChargeTime;
         }
-        
+
         if (airJumpBehaviour == AirJumpBehaviour.CancelOnDash)
         {
             rb.velocity = Vector3.zero;
@@ -335,7 +352,7 @@ public class PlayerController : MonoBehaviour
             /*
             // Check if the "wall" is less than 135 degrees from down, preventing ceiling jumps
             Debug.Log(Vector2.Angle(Vector2.down, col.transform.position - transform.position));
-            if (Vector2.Angle(Vector2.down, col.transform.position - transform.position) < 135) 
+            if (Vector2.Angle(Vector2.down, col.transform.position - transform.position) < 135)
             {
                 jumpTimes = 0;
             }*/

@@ -67,7 +67,6 @@ public class Damageable : MonoBehaviour
         StartCoroutine(HitFlash(invincibleDuration));
         Debug.Log(name + " took " + damage +", with [" + currHealth + "] hp left");
         PlaySound();
-        //Utils.SpawnInfoText(transform.position, damage.ToString(), Vector2.up * 2,InfoTextType.DamageText);
         SetSliderHealth(currHealth);
 
         if (currHealth <= 0)

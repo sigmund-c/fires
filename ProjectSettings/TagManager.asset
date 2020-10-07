@@ -9,8 +9,9 @@ TagManager:
   - PauseMenu
   - BurningObj
   - Checkpoint
-  - Persistent
-  - PlayerComponent
+  - EnemySaved
+  - EnemySavedList
+  - BurningsSavedList
   layers:
   - Default
   - TransparentFX
@@ -20,18 +21,18 @@ TagManager:
   - UI
   - 
   - 
-  - Burning
-  - Flammable Nonburning
-  - FlammableStatic PhysHitbox
-  - Character
-  - Projectile
-  - Character Swimming
-  - Character FireDetector
-  - FlammableDynamic PhysHitbox
   - 
   - 
-  - EnemyProjectile
-  - Enemy
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
   - 
   - 
   - 

@@ -6,11 +6,11 @@ using UnityEditor;
 public enum ParticleType { Fire, Ashes}
 public class Utils : MonoBehaviour
 {
-    public static GameObject fireParticles = Resources.Load<GameObject>("Prefabs/FireParticles");
-    public static GameObject ashParticles = Resources.Load<GameObject>("Prefabs/AshParticles");
-    public static GameObject infoText = Resources.Load<GameObject>("Prefabs/Text_DamageText");
-    public static GameObject sparkle = Resources.Load<GameObject>("Prefabs/Sparkle");
-    public static GameObject persistentManager = Resources.Load<GameObject>("Prefabs/PersistentManager");
+    public static GameObject fireParticles = (GameObject)AssetDatabase.LoadAssetAtPath("Assets/Prefabs/FireParticles.prefab", typeof(GameObject));
+    public static GameObject ashParticles = (GameObject)AssetDatabase.LoadAssetAtPath("Assets/Prefabs/AshParticles.prefab", typeof(GameObject));
+    public static GameObject infoText = (GameObject)AssetDatabase.LoadAssetAtPath("Assets/Prefabs/Text_DamageText.prefab", typeof(GameObject));
+    public static GameObject sparkle = (GameObject)AssetDatabase.LoadAssetAtPath("Assets/Prefabs/Sparkle.prefab", typeof(GameObject));
+    public static GameObject persistentManager = (GameObject)AssetDatabase.LoadAssetAtPath("Assets/Prefabs/PersistentManager.prefab", typeof(GameObject));
     public static int burningLayer = LayerMask.NameToLayer("Burning");
     public static int charLayer = LayerMask.NameToLayer("Character");
     public static int charSwimmingLayer = LayerMask.NameToLayer("Character Swimming");
