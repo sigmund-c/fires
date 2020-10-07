@@ -11,8 +11,6 @@ using System.Runtime.Serialization.Formatters.Binary;
 public class UIManagerScript : MonoBehaviour
 {
     Rigidbody2D rb;
-    public GameObject projectilePrefab;
-    public List<GameObject> enemyPrefabs;
 
     public void StartGame()
     {
@@ -29,9 +27,6 @@ public class UIManagerScript : MonoBehaviour
     public void OnPause()
     {
         Debug.Log("OnPause");
-        BroadcastMessage("GetMessageFromUIScript", true);
-        //SendMessage("GetMessageFromUIScript", false);
-        //SendMessageUpwards("GetMessageFromUIScript", false);
 
         Time.timeScale = 0f;
         pauseMenu.SetActive(true);
@@ -40,10 +35,10 @@ public class UIManagerScript : MonoBehaviour
     public void OnResume()//点击“回到游戏”时执行此方法
     {
         Debug.Log("OnResume");
+
         pauseMenu.SetActive(false);
         Time.timeScale = 1f;
         
-        BroadcastMessage("GetMessageFromUIScript", false);
     }
 
     public void OnMainMenu()//点击“重新开始”时执行此方法
@@ -56,6 +51,10 @@ public class UIManagerScript : MonoBehaviour
     public Save CreateSaveGameObject()
     {
         Save save = new Save();
+
+        //Store the scene name.
+        Scene scene = SceneManager.GetActiveScene();
+        save.sceneName = scene.name;
 
         //Store the player position.
         GameObject player = GameObject.FindGameObjectWithTag("Player");
@@ -72,18 +71,28 @@ public class UIManagerScript : MonoBehaviour
             save.enemyPositionsY.Add(enemy.transform.position.y);
         }
 
-        GameObject[] burningObjs = GameObject.FindGameObjectsWithTag("BurningObj");
-
+        //Stored burnings.
+        GameObject[] burnings = GameObject.FindGameObjectsWithTag("BurningObj");
+        foreach (GameObject burning in burnings)
+        {
+            if (burning.name != "PhysicalHitbox")
+            {
+                save.burningObjTypes.Add(burning.name);
+                save.burningObjPositionsX.Add(burning.transform.position.x);
+                save.burningObjPositionsY.Add(burning.transform.position.y);
+            }
+            
+        }
         return save;
     }
 
     public void SaveGame()
-    {
+    {Scene scene = SceneManager.GetActiveScene ();
         Debug.Log("Saving game.");
-        // 1
+        //
         Save save = CreateSaveGameObject();
 
-        // 2
+        //
         BinaryFormatter bf = new BinaryFormatter();
         Debug.Log("Storing file are stored at "+Application.persistentDataPath);
         FileStream file = File.Create(Application.persistentDataPath + "/gamesave.save");
@@ -107,12 +116,14 @@ public class UIManagerScript : MonoBehaviour
             Save save = (Save)bf.Deserialize(file);
             file.Close();
 
+            //Activate corresponding scene.
+            //SceneManager.LoadScene(save.sceneName);
+
             //Recover player
             GameObject player = GameObject.FindGameObjectWithTag("Player");
             Rigidbody2D rb = player.GetComponent<Rigidbody2D>();
 
-            Vector2 moveDistance = new Vector2(save.livingTargetPositionsX[0]-rb.position.x, save.livingTargetPositionsY[0] - rb.position.y);
-            rb.position += moveDistance;
+            rb.position = new Vector2(save.livingTargetPositionsX[0], save.livingTargetPositionsY[0]);
 
             //Destroy existing enemys.
             GameObject[] enemys = GameObject.FindGameObjectsWithTag("EnemySaved");
@@ -120,27 +131,58 @@ public class UIManagerScript : MonoBehaviour
             {
                 Destroy(enemy);
             }
-
+            //Destroy existing burnings.
+            GameObject[] burnings = GameObject.FindGameObjectsWithTag("BurningObj");
+            foreach (GameObject burning in burnings)
+            {
+                Destroy(burning);
+            }
             //instantiate stored enemys.
             List<GameObject> newEnemys = new List<GameObject>();
             List<GameObject> enemyInsts = new List<GameObject>();
             GameObject enemiesList = GameObject.FindGameObjectWithTag("EnemySavedList"); ;
-            int count = 0;
+            int count_enemies = 0;
             foreach (string enemyType in save.enemyTypes)
             {
                 newEnemys.Add((GameObject)Resources.Load("Prefabs/Enemies/"+ enemyType));
-                if (newEnemys[count] != null && enemiesList != null)
+                if (newEnemys[count_enemies] != null && enemiesList != null)
                 {                
-                    enemyInsts.Add(Instantiate(newEnemys[count], new Vector2(save.enemyPositionsX[count], save.enemyPositionsY[count]), new Quaternion(0,0,0,0), enemiesList.transform));
+                    enemyInsts.Add(Instantiate(newEnemys[count_enemies], new Vector2(save.enemyPositionsX[count_enemies], save.enemyPositionsY[count_enemies]), new Quaternion(0,0,0,0), enemiesList.transform));
                     //Because the name of instantial prefabs will have "(clone)" at tile. We have to delete this tile.
-                    enemyInsts[count].name = enemyType;
+                    enemyInsts[count_enemies].name = enemyType;
                     Debug.Log("successful load "+enemyType);
                 }
                 else
                 {
                     Debug.Log("Loading errors: Failed add prefabs.");
                 }
-                count++;
+                count_enemies++;
+            }
+
+            
+
+            //instantiate stored burnings.
+            List<GameObject> newBurings = new List<GameObject>();
+            List<GameObject> burningInsts = new List<GameObject>();
+            GameObject burningsList = GameObject.FindGameObjectWithTag("BurningsSavedList"); ;
+            int count_burnings = 0;
+            foreach (string burningType in save.burningObjTypes)
+            {
+                newBurings.Add((GameObject)Resources.Load("Prefabs/Burnings/" + burningType));
+                Debug.Log(newBurings[count_burnings]);
+                Debug.Log(burningsList);
+                if (newBurings[count_burnings] != null && burningsList != null)
+                {
+                    burningInsts.Add(Instantiate(newBurings[count_burnings], new Vector2(save.burningObjPositionsX[count_burnings], save.burningObjPositionsY[count_burnings]), new Quaternion(0, 0, 0, 0), burningsList.transform));
+                    //Because the name of instantial prefabs will have "(clone)" at tile. We have to delete this tile.
+                    burningInsts[count_burnings].name = burningType;
+                    Debug.Log("successful load " + burningType);
+                }
+                else
+                {
+                    Debug.Log("Loading errors: Failed add "+ burningType);
+                }
+                count_burnings++;
             }
             Debug.Log("Game Loaded.");
 

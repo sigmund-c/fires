@@ -123,26 +123,10 @@ public class PlayerController : MonoBehaviour
         transform.position = pos;
         Camera.main.transform.position = pos;
     }
-    void GetMessageFromUIScript(bool timeControl)
-    {
-        Debug.Log("Received messages from UI script.");
-        pause = timeControl;
-        Debug.Log("line 122: "+pause);
-
-        if (pause)
-        {
-            Time.timeScale = 0f;
-        }
-        else
-        {
-            Time.timeScale = 1f;
-        }
-    }
+    
     void Update()
     {
         Debug.Log("Update");
-        Debug.Log(Time.timeScale);
-        Debug.Log("line 142: " + pause);
         if (Input.GetKeyDown(KeyCode.R))
         {
             PersistentManager.Reload();

@@ -11,39 +11,40 @@ TagManager:
   - Checkpoint
   - EnemySaved
   - EnemySavedList
+  - BurningsSavedList
   layers:
   - Default
   - TransparentFX
   - Ignore Raycast
-  -
+  - 
   - Water
   - UI
-  -
-  -
-  - Burning
-  - Flammable Nonburning
-  - FlammableStatic PhysHitbox
-  - Character
-  - Projectile
-  - Character Swimming
-  - Character FireDetector
-  - FlammableDynamic PhysHitbox
-  -
-  -
-  - EnemyProjectile
-  - Enemy
-  -
-  -
-  -
-  -
-  -
-  -
-  -
-  -
-  -
-  -
-  -
-  -
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
   m_SortingLayers:
   - name: Default
     uniqueID: 0

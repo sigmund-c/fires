@@ -16,7 +16,7 @@ GameObject:
   - component: {fileID: 7688836953111091522}
   m_Layer: 19
   m_Name: Bear
-  m_TagString: Enemy
+  m_TagString: EnemySaved
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -134,6 +134,7 @@ MonoBehaviour:
   currHealth: 10
   invincibleDuration: 0
   takeKnockback: 0
+  healthSlider: {fileID: 0}
   team: 1
 --- !u!1 &8057157006399786395
 GameObject:
