@@ -164,7 +164,7 @@ public class PlayerController : MonoBehaviour
             rb.AddForce(aimDirection * amount * 0.15f, ForceMode2D.Impulse);
             // TODO - should we set AirJumpBehaviour to PreserveMomentum only when swimming? or all the time?
         }
-        else if (Input.GetMouseButton(0) && chargeCooldownTimer == 0f)
+        if (!isCharging)
         {
             if (!inSwimMode && Input.GetMouseButtonDown(1)) // right click
             {
