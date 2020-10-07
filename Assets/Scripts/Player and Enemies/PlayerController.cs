@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.EventSystems;
 using UnityEngine.SceneManagement;
 
 
@@ -164,13 +165,20 @@ public class PlayerController : MonoBehaviour
             rb.AddForce(aimDirection * amount * 0.15f, ForceMode2D.Impulse);
             // TODO - should we set AirJumpBehaviour to PreserveMomentum only when swimming? or all the time?
         }
+
+        // stop all input if hovering over UI element
+        if (EventSystem.current.IsPointerOverGameObject())
+        {
+            return;
+        }
+
         if (!isCharging)
         {
             if (!inSwimMode && Input.GetMouseButtonDown(1)) // right click
             {
                 LaunchProjectile(aimDirection);
             }
-            else if (Input.GetMouseButton(0))
+            else if (Input.GetMouseButton(0) && chargeCooldownTimer == 0f)
             {
                 if (maxJumps == -1 || jumpTimes < maxJumps)
                 {
