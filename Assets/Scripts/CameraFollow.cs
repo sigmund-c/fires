@@ -3,7 +3,7 @@
 public class CameraFollow : MonoBehaviour
 {
     public Transform player;
-    public float speed = 0.1f;
+    public float speed = 0.5f;
 
     public Transform[] snaps;
     public float[] snapDistances;
