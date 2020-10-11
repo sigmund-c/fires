@@ -12,6 +12,8 @@ TagManager:
   - EnemySaved
   - EnemySavedList
   - BurningsSavedList
+  - PlayerComponent
+  - Persistent
   layers:
   - Default
   - TransparentFX
