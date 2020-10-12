@@ -444,6 +444,7 @@ public class PlayerController : MonoBehaviour
         // projectile.Launch((Vector2)aimDirection, 200);
 
         GameObject projectileInst = Instantiate(projectilePrefab, rb.position + (Vector2)aimDirection.normalized * 0.5f, Quaternion.FromToRotation(Vector3.up, aimDirection));
+        rb.AddForce(-1 * aimDirection * 7, ForceMode2D.Impulse); // Add "recoil" knockback
 
         effectsStorage.PlayEffect(0); // shoot SFX
 
