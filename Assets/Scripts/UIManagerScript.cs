@@ -117,7 +117,15 @@ public class UIManagerScript : MonoBehaviour
             file.Close();
 
             //Activate corresponding scene.
-            //SceneManager.LoadScene(save.sceneName);
+            SceneManager.LoadScene(save.sceneName);
+            SceneManager.activeSceneChanged += ChangedActiveScene;
+            void ChangedActiveScene(Scene current, Scene next)
+            {
+                Debug.Log("Loading game11111."+ current.name);
+                Debug.Log("Loading game22222."+next.name);
+
+            }
+
 
             //Recover player
             GameObject player = GameObject.FindGameObjectWithTag("Player");
