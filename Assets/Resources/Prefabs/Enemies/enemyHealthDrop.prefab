@@ -5057,7 +5057,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   hoverIntensity: 0.25
   HealAmount: 10
-  moveSpeed: 5
+  moveSpeed: 10
 --- !u!1 &7664958219641142870
 GameObject:
   m_ObjectHideFlags: 0

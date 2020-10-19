@@ -109,7 +109,8 @@ public class Damageable : MonoBehaviour
     {
         if (team == Team.Enemy)
         {
-            Instantiate(Utils.enemyHealthDrop, this.transform.position, Quaternion.identity);
+            // When dead, produces a health pickup that moves to players that heals relative to max health
+            Instantiate(Utils.enemyHealthDrop, this.transform.position, Quaternion.identity).GetComponent<HealthCollectibleDrop>().HealAmount = maxHealth + 1;
         }
         Debug.Log(name + " died");
         Destroy(gameObject);
