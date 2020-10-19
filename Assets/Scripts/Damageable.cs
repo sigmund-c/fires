@@ -107,6 +107,10 @@ public class Damageable : MonoBehaviour
 
     public virtual void Die()
     {
+        if (team == Team.Enemy)
+        {
+            Instantiate(Utils.enemyHealthDrop, this.transform.position, Quaternion.identity);
+        }
         Debug.Log(name + " died");
         Destroy(gameObject);
     }

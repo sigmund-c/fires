@@ -10,14 +10,14 @@ public class Collectible : MonoBehaviour
     private new AudioSource audio;
 
     // Start is called before the first frame update
-    void Start()
+    virtual protected void Start()
     {
         originalY = transform.position.y;
         audio = GetComponent<AudioSource>();
     }
 
     // Update is called once per frame
-    public void Update()
+    virtual public void Update()
     {
         //Floating animation
         transform.position = new Vector3(transform.position.x,
@@ -36,6 +36,7 @@ public class Collectible : MonoBehaviour
     IEnumerator DestroyCollectible()
     {
         audio.Play();
+        GetComponent<Collider2D>().enabled = false;
         yield return new WaitForSeconds(0.6f);
         Destroy(gameObject);
     }
