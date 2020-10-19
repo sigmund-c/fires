@@ -5260,7 +5260,7 @@ MonoBehaviour:
   takeKnockback: 1
   healthContainer: {fileID: 0}
   team: 0
-  maxOverheal: 7
+  maxOverheal: 2
   currOverheal: 0
 --- !u!114 &4667251771801684763
 MonoBehaviour:
