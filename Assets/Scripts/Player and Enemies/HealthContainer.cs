@@ -73,6 +73,10 @@ public class HealthContainer : MonoBehaviour
     {
         for (int i = 0; i < damage; i++)
         {
+            if (currHealth < 1)
+            {
+                break;
+            }
             takeDamage();
         }
 
