@@ -8,11 +8,11 @@ public enum Team { Player, Enemy, Neutal }
 public class Damageable : MonoBehaviour
 {
     public static Color HITFLASH_COLOR = new Color(1f, 0.58f, 0.58f);
-    public int maxHealth = 10;
-    public int currHealth = 10;
-    public float invincibleDuration = 1f;
+    public int maxHealth = 2;
+    public int currHealth = 2;
+    public float invincibleDuration = 0f;
     public bool takeKnockback = false;
-    public Slider healthSlider;
+    public HealthContainer healthContainer;
     public Team team;
 
     protected float invincibleTimer = 0; // invincible frames from taking damage
@@ -61,14 +61,28 @@ public class Damageable : MonoBehaviour
         }
     }
     
-    public void TakeDamage(int damage)
+    virtual public void TakeDamage(int damage)
     {
         currHealth -= damage;
         StartCoroutine(HitFlash(invincibleDuration));
         Debug.Log(name + " took " + damage +", with [" + currHealth + "] hp left");
         PlaySound();
         //Utils.SpawnInfoText(transform.position, damage.ToString(), Vector2.up * 2,InfoTextType.DamageText);
-        SetSliderHealth(currHealth);
+        SliderTakeDamage(damage);
+
+        if (currHealth <= 0)
+        {
+            Die();
+        }
+    }
+
+    virtual public void TakeDamageNoInvin(int damage)
+    {
+
+        currHealth -= damage;
+        //StartCoroutine(HitFlash()); No invincibility frames
+        Debug.Log(name + " took " + damage + ", with [" + currHealth + "] hp left");
+        SliderTakeDamage(damage);
 
         if (currHealth <= 0)
         {
@@ -83,26 +97,12 @@ public class Damageable : MonoBehaviour
         rb.AddForce(-aimDirection * knockback * 100);
     }
 
-    public void TakeDamageNoInvin(int damage)
-    {
-
-        currHealth -= damage;
-        //StartCoroutine(HitFlash()); No invincibility frames
-        Debug.Log(name + " took " + damage + ", with [" + currHealth + "] hp left");
-        SetSliderHealth(currHealth);
-
-        if (currHealth <= 0)
-        {
-            Die();
-        }
-    }
-
-    public void RestoreHealth(int restore)
+    virtual public void RestoreHealth(int restore)
     {
         currHealth += restore;
         currHealth = Mathf.Min(currHealth, maxHealth);
         Debug.Log(name + " restored " + restore + ", with [" + currHealth + "] hp left");
-        SetSliderHealth(currHealth);
+        SliderHealDamage(restore);
     }
 
     public virtual void Die()
@@ -148,20 +148,44 @@ public class Damageable : MonoBehaviour
     }
 
     // ============== UI ===================
-    protected void SetSliderMax(int health)
+    protected void SetSliderMax(int health, int overheal = 0)
     {
-        if (healthSlider != null)
+        if (healthContainer == null)
         {
-            healthSlider.maxValue = health;
-            healthSlider.value = health;
+            return;
+        }
+        
+        healthContainer.Initialize(health, overheal);
+        
+    }
+
+    protected void SliderTakeDamage(int health)
+    {
+        if (healthContainer == null)
+        {
+            return;
+        }
+
+        int sliderHealth = healthContainer.takeDamage(health);
+
+        if (sliderHealth != currHealth)
+        {
+            Debug.LogWarning("slider health != curr health, slider: " + sliderHealth + ", curr: " + currHealth);
         }
     }
 
-    protected void SetSliderHealth(int health)
+    protected void SliderHealDamage(int health)
     {
-        if (healthSlider != null)
+        if (healthContainer == null)
         {
-            healthSlider.value = health;
+            return;
+        }
+
+        int sliderHealth = healthContainer.healDamage(health);
+
+        if (sliderHealth != currHealth)
+        {
+            Debug.LogWarning("slider health != curr health, slider: " + sliderHealth + ", curr: " + currHealth);
         }
     }
 }

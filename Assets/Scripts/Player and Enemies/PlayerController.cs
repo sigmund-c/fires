@@ -16,7 +16,7 @@ public class PlayerController : MonoBehaviour
 {
     //Collectible variables
     //Health
-    private Damageable damageable;
+    private PlayerDamageable damageable;
 
     //JumpBoost
     public float boostDuration = 30.0f;
@@ -71,7 +71,7 @@ public class PlayerController : MonoBehaviour
 
     private bool pause;
 
-    public float recoilAmount = 5f;
+    public float recoilAmount = 7f;
 
 
 
@@ -81,7 +81,7 @@ public class PlayerController : MonoBehaviour
         rb = GetComponent<Rigidbody2D>();
         sprite = transform.GetChild(0);
         sr = sprite.GetComponent<SpriteRenderer>();
-        damageable = GetComponent<Damageable>();
+        damageable = GetComponent<PlayerDamageable>();
         burningFilter = new ContactFilter2D();
         burningFilter.useTriggers = true;
         burningFilter.SetLayerMask(LayerMask.GetMask("Burning")); // DO NOT use LayerMask.NameToLayer here -- it returns an int instead of bitmask
@@ -128,7 +128,7 @@ public class PlayerController : MonoBehaviour
     
     void Update()
     {
-        Debug.Log("Update");
+        //Debug.Log("Update");
         if (Input.GetKeyDown(KeyCode.R))
         {
             PersistentManager.Reload();
@@ -220,7 +220,7 @@ public class PlayerController : MonoBehaviour
 
     void FixedUpdate()
     {
-        Debug.Log("FixedUpdate");
+        //Debug.Log("FixedUpdate");
 
         if (!canSwim)
             return;
