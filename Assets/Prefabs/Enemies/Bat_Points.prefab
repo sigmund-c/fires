@@ -123,11 +123,11 @@ GameObject:
   - component: {fileID: 9173349506180935943}
   - component: {fileID: 9173349506180935936}
   - component: {fileID: 9173349506180935937}
-  - component: {fileID: 1197549986561585833}
   - component: {fileID: 3061839936007477676}
   - component: {fileID: 7422361395289229580}
+  - component: {fileID: 2034215217815253978}
   m_Layer: 19
-  m_Name: Bat
+  m_Name: Bat_Points
   m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -196,24 +196,6 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 4
---- !u!114 &1197549986561585833
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 9173349506180935939}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b4a7c5cda163be84fadbdad931ade1e4, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  ignoreLayer:
-    serializedVersion: 2
-    m_Bits: 262144
-  moveSpeed: 4
-  wallDetectionDist: 0.1
-  groundDetector: {fileID: 9173349504666538114}
 --- !u!114 &3061839936007477676
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -248,3 +230,17 @@ MonoBehaviour:
   team: 1
   damage: 3
   knockbackAmount: 3
+--- !u!114 &2034215217815253978
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 9173349506180935939}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bc4969b697b078d46a98df2adc3d61b8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  moveSpeed: 5
+  movePoints: []
