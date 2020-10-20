@@ -78,7 +78,6 @@ public class PlayerController : MonoBehaviour
 
     void Start()
     {
-        Debug.Log("Start");
         rb = GetComponent<Rigidbody2D>();
         sprite = transform.GetChild(0);
         sr = sprite.GetComponent<SpriteRenderer>();
@@ -129,7 +128,6 @@ public class PlayerController : MonoBehaviour
     
     void Update()
     {
-        Debug.Log("Update");
         if (Input.GetKeyDown(KeyCode.R))
         {
             PersistentManager.Reload();
@@ -227,8 +225,6 @@ public class PlayerController : MonoBehaviour
 
     void FixedUpdate()
     {
-        Debug.Log("FixedUpdate");
-
         if (!canSwim)
             return;
 
