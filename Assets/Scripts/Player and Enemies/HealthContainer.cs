@@ -38,13 +38,18 @@ public class HealthContainer : MonoBehaviour
 
     public void Initialize(int maxHealth, int maxOverheal)
     {
-        foreach(Animation health in healths)
-        {
-            GameObject.Destroy(health.gameObject);
+        if (healths != null) {
+            foreach (Animation health in healths)
+            {
+                GameObject.Destroy(health.gameObject);
+            }
         }
-        foreach (Animation overheal in overheals)
+        if (overheals != null)
         {
-            GameObject.Destroy(overheal.gameObject);
+            foreach (Animation overheal in overheals)
+            {
+                GameObject.Destroy(overheal.gameObject);
+            }
         }
 
         this.maxHealth = maxHealth;
