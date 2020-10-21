@@ -144,9 +144,8 @@ MonoBehaviour:
   currHealth: 10
   invincibleDuration: 0
   takeKnockback: 0
-  healthSlider: {fileID: 0}
+  healthContainer: {fileID: 0}
   team: 1
-  immuneTo: 0
 --- !u!114 &6519053897729020960
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -160,7 +159,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   team: 1
-  damage: 3
+  damage: 1
   knockbackAmount: 3
 --- !u!1 &4965883066718877232
 GameObject:

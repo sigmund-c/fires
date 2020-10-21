@@ -230,6 +230,8 @@ GameObject:
   m_Component:
   - component: {fileID: 2349742736035906974}
   - component: {fileID: 7430235698366173995}
+  - component: {fileID: 6442912629681418150}
+  - component: {fileID: 6162696327483092270}
   m_Layer: 19
   m_Name: Snake
   m_TagString: Untagged
@@ -273,6 +275,47 @@ Animation:
   m_PlayAutomatically: 1
   m_AnimatePhysics: 0
   m_CullingType: 0
+--- !u!61 &6442912629681418150
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5567128632453510706}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0.27528572, y: -0.075229645}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0, y: 0}
+    oldSize: {x: 0, y: 0}
+    newSize: {x: 0, y: 0}
+    adaptiveTilingThreshold: 0
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 2.6123848, y: 7.3771896}
+  m_EdgeRadius: 0
+--- !u!114 &6162696327483092270
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5567128632453510706}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f1411a5f2e69cde4ab05687134c58767, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  team: 1
+  damage: 1
+  knockbackAmount: 6
 --- !u!1 &6175827337436425504
 GameObject:
   m_ObjectHideFlags: 0
@@ -417,7 +460,7 @@ SpriteRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_Sprite: {fileID: 21300000, guid: d07f45e9ead70c8428e4ce2b0f56c676, type: 3}
-  m_Color: {r: 1, g: 0.58, b: 0.06, a: 1}
+  m_Color: {r: 0, g: 0.58629227, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -1140,11 +1183,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 95f35f24f134a434ba31c1c6e337c391, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  maxHealth: 30
-  currHealth: 30
+  maxHealth: 7
+  currHealth: 7
   invincibleDuration: 0.3
   takeKnockback: 0
-  healthSlider: {fileID: 0}
+  healthContainer: {fileID: 0}
   team: 1
 --- !u!1 &7739546796593529547
 GameObject:
@@ -2005,7 +2048,7 @@ MonoBehaviour:
   m_LightType: 3
   m_BlendStyleIndex: 0
   m_FalloffIntensity: 0.8
-  m_Color: {r: 1, g: 0.6438272, b: 0.11792451, a: 1}
+  m_Color: {r: 0, g: 0.56078434, b: 0.9490197, a: 1}
   m_Intensity: 3
   m_LightVolumeOpacity: 0
   m_ApplyToSortingLayers: 00000000

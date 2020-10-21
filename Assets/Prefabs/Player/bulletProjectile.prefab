@@ -181,6 +181,7 @@ MonoBehaviour:
   velocity: 10
   maxRange: 6
   explosionHitEffect: {fileID: 2138079904934210083, guid: 1e455327072b0624daace08155614074, type: 3}
+  fizzleEffect: {fileID: 2138079904934210083, guid: bae7a63520753c143bc203a885d6fa78, type: 3}
 --- !u!114 &-2178702847833985064
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -194,7 +195,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   team: 0
-  damage: 5
+  damage: 1
   knockbackAmount: 3
 --- !u!114 &8535838653311159438
 MonoBehaviour:

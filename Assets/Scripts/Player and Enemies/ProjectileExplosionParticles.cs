@@ -9,7 +9,7 @@ public class ProjectileExplosionParticles : MonoBehaviour
     void Start()
     {
         audioSource = GetComponent<AudioSource>();
-        if (audioSource != null)
+        if (audioSource != null && audioSource.clip != null)
         {
             audioSource.Play();
             Destroy(gameObject, audioSource.clip.length);

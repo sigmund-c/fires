@@ -182,7 +182,7 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0.10120964, y: -0.1385777}
+  m_Offset: {x: 0.08183336, y: 0.020310402}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
@@ -193,7 +193,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 1.2542381, y: 0.94392633}
+  m_Size: {x: 2.4400868, y: 2.3157902}
   m_EdgeRadius: 0
 --- !u!50 &7971621719101011298
 Rigidbody2D:
@@ -230,7 +230,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   ignoreLayer:
     serializedVersion: 2
-    m_Bits: 0
+    m_Bits: 262144
   moveSpeed: 4
   wallDetectionDist: 0.1
   groundDetector: {fileID: 7971621717921567969}
@@ -250,9 +250,8 @@ MonoBehaviour:
   currHealth: 10
   invincibleDuration: 1
   takeKnockback: 0
-  healthSlider: {fileID: 0}
+  healthContainer: {fileID: 0}
   team: 1
-  immuneTo: 0
 --- !u!114 &8570118296709303663
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -266,5 +265,5 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   team: 1
-  damage: 3
+  damage: 1
   knockbackAmount: 3

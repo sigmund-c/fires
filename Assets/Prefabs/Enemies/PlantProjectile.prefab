@@ -193,7 +193,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   team: 1
-  damage: 3
+  damage: 1
   knockbackAmount: 3
 --- !u!1 &7332535410252938377
 GameObject:

@@ -6150,9 +6150,9 @@ ParticleSystem:
         ctime6: 0
         ctime7: 0
         atime0: 0
-        atime1: 15420
-        atime2: 32382
-        atime3: 0
+        atime1: 29105
+        atime2: 40478
+        atime3: 48188
         atime4: 0
         atime5: 0
         atime6: 0
@@ -9651,7 +9651,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 515145401318221681}
-  - component: {fileID: 515145401318221687}
+  - component: {fileID: 3822693814511054521}
   - component: {fileID: 515145401318221680}
   m_Layer: 0
   m_Name: SteamVent
@@ -9677,7 +9677,7 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!60 &515145401318221687
+--- !u!60 &3822693814511054521
 PolygonCollider2D:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -9719,9 +9719,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   interval: 2
-  force: 1.2
+  force: 20
   idleParticles: {fileID: 0}
   activeParticles: {fileID: 0}
+  hitbox: {fileID: 0}
   isActive: 0
 --- !u!1 &4758393000213505043
 GameObject:
@@ -9734,7 +9735,7 @@ GameObject:
   - component: {fileID: 1429188386181655148}
   - component: {fileID: 5824250318079216699}
   m_Layer: 0
-  m_Name: cracks_1
+  m_Name: Sprite
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
