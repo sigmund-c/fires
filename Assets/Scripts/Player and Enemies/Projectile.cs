@@ -27,6 +27,10 @@ public class Projectile : MonoBehaviour
         float sqrTravelled = (transform.position - startPos).sqrMagnitude;
         if(sqrTravelled > sqrMaxRange)
         {
+            if (explosionHitEffect != null)
+            {
+                Instantiate(explosionHitEffect, transform.position, Quaternion.identity);
+            }
             Destroy(gameObject);
         }
     }

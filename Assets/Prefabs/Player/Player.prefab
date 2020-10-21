@@ -5087,7 +5087,7 @@ Rigidbody2D:
   m_GravityScale: 2
   m_Material: {fileID: 6200000, guid: b4c4184ef02e79144b189e78d29e94d7, type: 2}
   m_Interpolate: 0
-  m_SleepingMode: 1
+  m_SleepingMode: 0
   m_CollisionDetection: 0
   m_Constraints: 4
 --- !u!61 &6758930255466825042
@@ -5145,6 +5145,7 @@ MonoBehaviour:
   swimmingDrag: 5
   originalGravity: 1.5
   aimingTimeScale: 0.5
+  recoilAmount: 2
 --- !u!82 &6415470349254586071
 AudioSource:
   m_ObjectHideFlags: 0
@@ -5275,6 +5276,7 @@ MonoBehaviour:
   - {fileID: 2138079904934210083, guid: 3d08907610e59214a99d7951942f560e, type: 3}
   - {fileID: 2138079904934210083, guid: 030b4c84e62af2642ae7a2a15f65f909, type: 3}
   - {fileID: 2138079904934210083, guid: c8b9e2b5194a39f43ba151f3b21fbe35, type: 3}
+  - {fileID: 2138079904934210083, guid: c7f86bbfe4ce1cb4fab8d3bfb730d5c3, type: 3}
 --- !u!1 &9140097803991958530
 GameObject:
   m_ObjectHideFlags: 0
@@ -5321,8 +5323,8 @@ MonoBehaviour:
   m_LightType: 3
   m_BlendStyleIndex: 1
   m_FalloffIntensity: 0.7
-  m_Color: {r: 0.9811321, g: 0.58763975, b: 0.1425418, a: 1}
-  m_Intensity: 2
+  m_Color: {r: 0.9811321, g: 0.70117396, b: 0.38319683, a: 1}
+  m_Intensity: 1.8
   m_LightVolumeOpacity: 0
   m_ApplyToSortingLayers: 00000000
   m_LightCookieSprite: {fileID: 0}

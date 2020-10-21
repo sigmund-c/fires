@@ -250,7 +250,9 @@ MonoBehaviour:
   currHealth: 10
   invincibleDuration: 1
   takeKnockback: 0
+  healthSlider: {fileID: 0}
   team: 1
+  immuneTo: 0
 --- !u!114 &8570118296709303663
 MonoBehaviour:
   m_ObjectHideFlags: 0
