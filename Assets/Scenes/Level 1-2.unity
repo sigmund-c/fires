@@ -17445,9 +17445,25 @@ PrefabInstance:
       propertyPath: m_Name
       value: Global Light 2D
       objectReference: {fileID: 0}
+    - target: {fileID: 909501557550327612, guid: 2e92393c8b5e2ea4cbe08fb3ec144aab, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 4203290371541572707, guid: 2e92393c8b5e2ea4cbe08fb3ec144aab, type: 3}
       propertyPath: m_Intensity
       value: 2.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 4203290371541572707, guid: 2e92393c8b5e2ea4cbe08fb3ec144aab, type: 3}
+      propertyPath: m_Color.r
+      value: 0.18039216
+      objectReference: {fileID: 0}
+    - target: {fileID: 4203290371541572707, guid: 2e92393c8b5e2ea4cbe08fb3ec144aab, type: 3}
+      propertyPath: m_Color.g
+      value: 0.18039216
+      objectReference: {fileID: 0}
+    - target: {fileID: 4203290371541572707, guid: 2e92393c8b5e2ea4cbe08fb3ec144aab, type: 3}
+      propertyPath: m_Color.b
+      value: 0.18039216
       objectReference: {fileID: 0}
     - target: {fileID: 6732592987809381508, guid: 2e92393c8b5e2ea4cbe08fb3ec144aab, type: 3}
       propertyPath: m_LocalPosition.x
