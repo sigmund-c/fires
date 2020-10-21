@@ -8,15 +8,24 @@ public class AI_Patrol : MonoBehaviour
     public float moveSpeed;
     public float maxFallDist = 2f;
     public float wallDetectionDist = 0.1f;
+    public float playerDetectionDist = 8f;
+    public float chargeAmount = 10f;
 
     public Transform groundDetector;
 
+    private Rigidbody2D rb;
+    private Animator anim;
+    private AudioSource audioSource;
     private bool movingLeft = true;
+
+    private bool isCharging = false;
 
     // Start is called before the first frame update
     void Start()
     {
-       
+        rb = GetComponent<Rigidbody2D>();
+        anim = GetComponentInChildren<Animator>();
+        audioSource = GetComponent<AudioSource>();
     }
 
     // Update is called once per frame
@@ -32,18 +41,48 @@ public class AI_Patrol : MonoBehaviour
         {
 
             RaycastHit2D wallInfo;
+            RaycastHit2D playerInfo;
             if (movingLeft)
             {
                 wallInfo = Physics2D.Raycast(groundDetector.position, Vector2.left, wallDetectionDist, ~ignoreLayer);
+                playerInfo = Physics2D.Raycast(groundDetector.position, Vector2.left, playerDetectionDist);
             } else
             {
                 wallInfo = Physics2D.Raycast(groundDetector.position, Vector2.right, wallDetectionDist, ~ignoreLayer);
+                playerInfo = Physics2D.Raycast(groundDetector.position, Vector2.right, playerDetectionDist);
             }
             if (wallInfo.collider == true && wallInfo.collider.tag != "Player" && wallInfo.collider.tag != "PlayerComponent")
             {
                 Rotate();
             }
+            if (playerInfo.collider == true && playerInfo.collider.CompareTag("PlayerComponent"))
+            {
+                StartCoroutine(Charge());
+            }
         }
+    }
+
+    IEnumerator Charge()
+    {
+        if (isCharging)
+        {
+            yield break;
+        }
+
+        isCharging = true;
+        audioSource.Play();
+        anim.SetTrigger("Attack");
+        if (movingLeft)
+        {
+            rb.AddForce(Vector2.left * chargeAmount, ForceMode2D.Impulse);
+        } else
+        {
+            rb.AddForce(Vector2.right * chargeAmount, ForceMode2D.Impulse);
+        }
+
+        yield return new WaitForSeconds(1.5f);
+
+        isCharging = false;
     }
 
     void Rotate()
