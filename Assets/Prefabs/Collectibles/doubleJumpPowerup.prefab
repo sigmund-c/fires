@@ -4823,11 +4823,11 @@ GameObject:
   - component: {fileID: 3262097251182585068}
   - component: {fileID: 4789894408595040651}
   - component: {fileID: 4005710246401335312}
-  - component: {fileID: 3952588567496243502}
   - component: {fileID: 5881019150640970918}
   - component: {fileID: 5755551744803702600}
+  - component: {fileID: 465251302100714232}
   m_Layer: 0
-  m_Name: jumpCollectible
+  m_Name: doubleJumpPowerup
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -4926,19 +4926,6 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 0.5, y: 0.6}
   m_EdgeRadius: 0
---- !u!114 &3952588567496243502
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8025800727623740871}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4767e203bc7fd4640b49addcd08a5fab, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  hoverIntensity: 0.25
 --- !u!50 &5881019150640970918
 Rigidbody2D:
   serializedVersion: 4
@@ -5056,6 +5043,20 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+--- !u!114 &465251302100714232
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8025800727623740871}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 24c9569e1f595c34da71d575cdbeccf0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  moveSpeed: 10
+  pickupWooshEffect: {fileID: 2138079904934210083, guid: c0d80e81bab4be64c9477a1773b3371c, type: 3}
 --- !u!1 &8346227284130652241
 GameObject:
   m_ObjectHideFlags: 0

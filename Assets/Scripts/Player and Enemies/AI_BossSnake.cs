@@ -157,7 +157,7 @@ public class AI_BossSnake : MonoBehaviour
     private void GenerateNewAttack()
     {
         //Debug.LogWarning("generating new attack");
-        if ((double)headDamageable.currHealth / headDamageable.maxHealth > 0.66)
+        if ((double)headDamageable.currHealth / headDamageable.maxHealth > 0f) // change to have different "Phases"
         {
             int choice = Random.Range(0, 3);
             if (choice == 0)

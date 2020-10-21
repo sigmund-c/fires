@@ -496,8 +496,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 7480815661654466971}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalPosition: {x: 6.1546, y: 0, z: 0}
+  m_LocalScale: {x: 1.4223, y: 1.4223, z: 1.4223}
   m_Children: []
   m_Father: {fileID: 7739546795622598339}
   m_RootOrder: 3
@@ -1018,7 +1018,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   team: 1
-  damage: 3
+  damage: 1
   knockbackAmount: 3
 --- !u!61 &7739546796320005096
 BoxCollider2D:
@@ -1189,6 +1189,7 @@ MonoBehaviour:
   takeKnockback: 0
   healthContainer: {fileID: 0}
   team: 1
+  doubleJumpPowerup: {fileID: 8025800727623740871, guid: 8275bbda1b4b93f43b258b7e4d36af74, type: 3}
 --- !u!1 &7739546796593529547
 GameObject:
   m_ObjectHideFlags: 0
@@ -1501,7 +1502,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   team: 1
-  damage: 3
+  damage: 1
   knockbackAmount: 3
 --- !u!61 &7739546796921873013
 BoxCollider2D:
@@ -1959,7 +1960,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   team: 1
-  damage: 3
+  damage: 1
   knockbackAmount: 3
 --- !u!61 &7739546797438612675
 BoxCollider2D:
