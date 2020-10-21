@@ -124,6 +124,24 @@ public class UIManagerScript : MonoBehaviour
         pauseMenu.SetActive(true); 
     }
 
+    public void LoadButtonForMainMenu()
+    {
+
+        Component[] loadButtons = loadMenu.GetComponentsInChildren<Button>();
+
+        for (int i = 1; i <= 5; i++)
+        {
+            if (File.Exists(Application.persistentDataPath + "/gamesave" + i + ".save"))
+            {
+                string archive = "Archive " + i;
+                loadButtons[i - 1].GetComponentInChildren<Text>().text = archive;
+            }
+
+        }
+
+        loadMenu.SetActive(true);
+    }
+
     public void LoadButton()
     {
         pauseMenu.SetActive(false);
