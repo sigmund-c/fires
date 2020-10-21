@@ -104,7 +104,7 @@ MonoBehaviour:
   maxFallDist: 2
   wallDetectionDist: 1
   playerDetectionDist: 8
-  chargeAmount: 20
+  chargeAmount: 40
   groundDetector: {fileID: 8057157006973829248}
 --- !u!114 &7634663632262188585
 MonoBehaviour:
@@ -139,7 +139,6 @@ MonoBehaviour:
   takeKnockback: 0
   healthContainer: {fileID: 0}
   team: 1
-  immuneTo: 3
 --- !u!82 &8618669856449974997
 AudioSource:
   m_ObjectHideFlags: 0

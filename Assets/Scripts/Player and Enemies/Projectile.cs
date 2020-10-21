@@ -8,6 +8,7 @@ public class Projectile : MonoBehaviour
     public float maxRange = 10f;
 
     public GameObject explosionHitEffect;
+    public GameObject fizzleEffect;
 
     private Rigidbody2D rb;
     private Vector3 startPos;
@@ -29,7 +30,7 @@ public class Projectile : MonoBehaviour
         {
             if (explosionHitEffect != null)
             {
-                Instantiate(explosionHitEffect, transform.position, Quaternion.identity);
+                Instantiate(fizzleEffect, transform.position, Quaternion.identity);
             }
             Destroy(gameObject);
         }

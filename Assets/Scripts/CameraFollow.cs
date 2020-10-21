@@ -63,7 +63,7 @@ public class CameraFollow : MonoBehaviour
             if (Vector2.Distance(player.position, snaps[i].position) < snapDistance)
             {
                 target = snaps[i].position;
-                cam.orthographicSize = snapDistance;
+                //cam.orthographicSize = snapDistance;
                 return;
             }
         }
