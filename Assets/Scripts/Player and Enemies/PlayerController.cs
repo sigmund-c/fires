@@ -16,7 +16,7 @@ public class PlayerController : MonoBehaviour
 {
     //Collectible variables
     //Health
-    private Damageable damageable;
+    private PlayerDamageable damageable;
 
     //JumpBoost
     public float boostDuration = 30.0f;
@@ -40,7 +40,6 @@ public class PlayerController : MonoBehaviour
 
     private float chargeStartTime;
     private bool isCharging;
-    private bool playChargingSound = true;
     public int collidingObjects = 0;
     public int jumpTimes = 0;
     private LaunchBar activeLaunchBar;
@@ -72,16 +71,17 @@ public class PlayerController : MonoBehaviour
 
     private bool pause;
 
-    public float recoilAmount = 10f;
+    public float recoilAmount = 7f;
 
 
 
     void Start()
     {
+        Debug.Log("Start");
         rb = GetComponent<Rigidbody2D>();
         sprite = transform.GetChild(0);
         sr = sprite.GetComponent<SpriteRenderer>();
-        damageable = GetComponent<Damageable>();
+        damageable = GetComponent<PlayerDamageable>();
         burningFilter = new ContactFilter2D();
         burningFilter.useTriggers = true;
         burningFilter.SetLayerMask(LayerMask.GetMask("Burning")); // DO NOT use LayerMask.NameToLayer here -- it returns an int instead of bitmask
@@ -128,6 +128,7 @@ public class PlayerController : MonoBehaviour
     
     void Update()
     {
+        //Debug.Log("Update");
         if (Input.GetKeyDown(KeyCode.R))
         {
             PersistentManager.Reload();
@@ -171,12 +172,6 @@ public class PlayerController : MonoBehaviour
                     chargeStartTime = Time.time;
                     sprite.localScale = new Vector3(1, 0.5f, 1);
                     Time.timeScale = aimingTimeScale;
-
-                    if (playChargingSound)
-                    {
-                        playChargingSound = false;
-                        effectsStorage.PlayEffect(3); // charge SFX
-                    }
 
                     if (airJumpBehaviour == AirJumpBehaviour.CancelOnAim)
                     {
@@ -225,6 +220,8 @@ public class PlayerController : MonoBehaviour
 
     void FixedUpdate()
     {
+        //Debug.Log("FixedUpdate");
+
         if (!canSwim)
             return;
 
@@ -289,7 +286,6 @@ public class PlayerController : MonoBehaviour
     void FinishCharge(float jumpChargeTime = 0 , Vector2 dir = default(Vector2))
     {
         isCharging = false;
-        playChargingSound = true;
         chargeCooldownTimer = chargeCooldown;
         if (activeLaunchBar != null)
         {

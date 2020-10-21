@@ -194,7 +194,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   team: 0
-  damage: 5
+  damage: 1
   knockbackAmount: 3
 --- !u!114 &8535838653311159438
 MonoBehaviour:

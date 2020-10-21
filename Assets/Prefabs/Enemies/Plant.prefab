@@ -72,11 +72,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9c3bb8adae6a1534e88e5a53b8eaf74a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  maxHealth: 4
-  currHealth: 4
+  maxHealth: 1
+  currHealth: 1
   invincibleDuration: 1
   takeKnockback: 0
-  healthSlider: {fileID: 0}
+  healthContainer: {fileID: 0}
   team: 1
 --- !u!1 &7119250326101581315
 GameObject:
