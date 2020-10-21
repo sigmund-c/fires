@@ -70,8 +70,6 @@ public class PlayerController : MonoBehaviour
 
     private EffectsStorage effectsStorage;
 
-    private bool pause;
-
     public float recoilAmount = 10f;
 
 
@@ -90,8 +88,6 @@ public class PlayerController : MonoBehaviour
         animator = sprite.GetComponent<Animator>();
         effectsStorage = GetComponent<EffectsStorage>();
         effectsStorage.PlayEffect(2); // spawn SFX
-
-        pause = false;
 
         if (PersistentManager.instance == null)
         {

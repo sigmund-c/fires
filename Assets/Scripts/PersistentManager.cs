@@ -48,7 +48,6 @@ public class PersistentManager : MonoBehaviour
             checkpoint = player.transform.position;
             print("new checkpoint: " + checkpoint);
         }
-
         if (!firstRun)
         {
             player = GameObject.FindWithTag("Player");
