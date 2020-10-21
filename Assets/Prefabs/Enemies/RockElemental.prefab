@@ -230,7 +230,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   ignoreLayer:
     serializedVersion: 2
-    m_Bits: 0
+    m_Bits: 262144
   moveSpeed: 4
   wallDetectionDist: 0.1
   groundDetector: {fileID: 7971621717921567969}
