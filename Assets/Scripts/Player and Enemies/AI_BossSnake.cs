@@ -54,7 +54,7 @@ public class AI_BossSnake : MonoBehaviour
         Transform tailAttacks = transform.Find("tailAttacks");
         foreach (Transform child in tailAttacks)
         {
-            tailAnimators.Add(GetComponentInChildren<Animator>());
+            tailAnimators.Add(child.GetComponentInChildren<Animator>());
         }
 
         Transform spawnLocations = transform.Find("spawnLocations");

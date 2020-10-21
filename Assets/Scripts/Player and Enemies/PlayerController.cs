@@ -40,6 +40,7 @@ public class PlayerController : MonoBehaviour
 
     private float chargeStartTime;
     private bool isCharging;
+    private bool playChargingSound = true;
     public int collidingObjects = 0;
     public int jumpTimes = 0;
     private LaunchBar activeLaunchBar;
@@ -162,7 +163,10 @@ public class PlayerController : MonoBehaviour
         {
             if (!inSwimMode && Input.GetMouseButtonDown(1)) // right click
             {
-                LaunchProjectile(aimDirection);
+                if (damageable.currHealth > 1) // Can't kill yourself by shooting fire
+                {
+                    LaunchProjectile(aimDirection);
+                }
             }
             else if (Input.GetMouseButton(0) && chargeCooldownTimer == 0f)
             {
@@ -172,6 +176,12 @@ public class PlayerController : MonoBehaviour
                     chargeStartTime = Time.time;
                     sprite.localScale = new Vector3(1, 0.5f, 1);
                     Time.timeScale = aimingTimeScale;
+
+                    if (playChargingSound)
+                    {
+                        playChargingSound = false;
+                        effectsStorage.PlayEffect(3); // charge SFX
+                    }
 
                     if (airJumpBehaviour == AirJumpBehaviour.CancelOnAim)
                     {
@@ -286,6 +296,7 @@ public class PlayerController : MonoBehaviour
     void FinishCharge(float jumpChargeTime = 0 , Vector2 dir = default(Vector2))
     {
         isCharging = false;
+        playChargingSound = true;
         chargeCooldownTimer = chargeCooldown;
         if (activeLaunchBar != null)
         {
