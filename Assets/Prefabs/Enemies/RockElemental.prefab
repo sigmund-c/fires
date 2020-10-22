@@ -246,13 +246,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9c3bb8adae6a1534e88e5a53b8eaf74a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  maxHealth: 3
-  currHealth: 10
+  maxHealth: 2
+  currHealth: 2
   invincibleDuration: 1
   takeKnockback: 0
-  healthSlider: {fileID: 0}
+  healthContainer: {fileID: 0}
   team: 1
-  immuneTo: 0
 --- !u!114 &8570118296709303663
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -266,5 +265,5 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   team: 1
-  damage: 3
+  damage: 1
   knockbackAmount: 3

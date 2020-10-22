@@ -16,7 +16,7 @@ public class PlayerController : MonoBehaviour
 {
     //Collectible variables
     //Health
-    private PlayerDamageable damageable;
+    private Damageable damageable;
 
     //JumpBoost
     public float boostDuration = 30.0f;
@@ -70,19 +70,16 @@ public class PlayerController : MonoBehaviour
 
     private EffectsStorage effectsStorage;
 
-    private bool pause;
-
-    public float recoilAmount = 7f;
+    public float recoilAmount = 10f;
 
 
 
     void Start()
     {
-        Debug.Log("Start");
         rb = GetComponent<Rigidbody2D>();
         sprite = transform.GetChild(0);
         sr = sprite.GetComponent<SpriteRenderer>();
-        damageable = GetComponent<PlayerDamageable>();
+        damageable = GetComponent<Damageable>();
         burningFilter = new ContactFilter2D();
         burningFilter.useTriggers = true;
         burningFilter.SetLayerMask(LayerMask.GetMask("Burning")); // DO NOT use LayerMask.NameToLayer here -- it returns an int instead of bitmask
@@ -91,8 +88,6 @@ public class PlayerController : MonoBehaviour
         animator = sprite.GetComponent<Animator>();
         effectsStorage = GetComponent<EffectsStorage>();
         effectsStorage.PlayEffect(2); // spawn SFX
-
-        pause = false;
 
         if (PersistentManager.instance == null)
         {
@@ -129,7 +124,6 @@ public class PlayerController : MonoBehaviour
     
     void Update()
     {
-        //Debug.Log("Update");
         if (Input.GetKeyDown(KeyCode.R))
         {
             PersistentManager.Reload();
@@ -163,10 +157,7 @@ public class PlayerController : MonoBehaviour
         {
             if (!inSwimMode && Input.GetMouseButtonDown(1)) // right click
             {
-                if (damageable.currHealth > 1) // Can't kill yourself by shooting fire
-                {
-                    LaunchProjectile(aimDirection);
-                }
+                LaunchProjectile(aimDirection);
             }
             else if (Input.GetMouseButton(0) && chargeCooldownTimer == 0f)
             {
@@ -230,8 +221,6 @@ public class PlayerController : MonoBehaviour
 
     void FixedUpdate()
     {
-        //Debug.Log("FixedUpdate");
-
         if (!canSwim)
             return;
 

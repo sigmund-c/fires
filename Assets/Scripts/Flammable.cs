@@ -12,6 +12,8 @@ public class Flammable : MonoBehaviour
     public float blackenTime = 1f; // time to turn black before turning to ashes
     public bool turnToAshes = true;
 
+    public Triggerable toTrigger;
+
     private SpriteRenderer sr;
     private Burning burning;
 
@@ -25,7 +27,11 @@ public class Flammable : MonoBehaviour
             sr.color = BURNING_COLOUR;
             burning.enabled = true;
             gameObject.layer = Utils.burningLayer;
-            StartCoroutine(BurnToAshes());
+            
+            if (burningTime != -1)
+            {
+                StartCoroutine(BurnToAshes());
+            }
         }
     }
 
@@ -43,6 +49,11 @@ public class Flammable : MonoBehaviour
         {
             if (((Burning)otherComponent).enabled)
                 StartCoroutine(Ignite());
+
+            if (toTrigger != null)
+            {
+                toTrigger.Trigger();
+            }
         }
 
         if (other.gameObject.GetComponent<Projectile>() != null)
@@ -61,9 +72,11 @@ public class Flammable : MonoBehaviour
 
         burning.enabled = true;
         sr.color = BURNING_COLOUR;
-        burning.burningTime = burningTime + blackenTime - 0.2f;
-        
-        StartCoroutine(BurnToAshes());
+        if (burningTime != -1)
+        {
+            burning.burningTime = burningTime + blackenTime - 0.2f;
+            StartCoroutine(BurnToAshes());
+        }
     }
 
     IEnumerator BurnToAshes()

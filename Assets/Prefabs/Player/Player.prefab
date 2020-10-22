@@ -5145,7 +5145,7 @@ MonoBehaviour:
   swimmingDrag: 5
   originalGravity: 1.5
   aimingTimeScale: 0.5
-  recoilAmount: 7
+  recoilAmount: 3
 --- !u!82 &6415470349254586071
 AudioSource:
   m_ObjectHideFlags: 0
