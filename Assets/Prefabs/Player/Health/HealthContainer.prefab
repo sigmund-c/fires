@@ -126,7 +126,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   maxHealth: 3
   currHealth: 0
-  maxOverheal: 0
+  maxOverheal: 2
   currOverheal: 0
   oneHealth: {fileID: 7622638982897894071, guid: 0539b2a513309e9498d4813b1b9b7445, type: 3}
   oneOverheal: {fileID: 7622638982897894071, guid: 9c394428925bbf64892b814ae75e9f92, type: 3}
