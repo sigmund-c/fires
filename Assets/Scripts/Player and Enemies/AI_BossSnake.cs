@@ -9,6 +9,7 @@ public class AI_BossSnake : MonoBehaviour
     public GameObject projectilePrefab;
     public GameObject spawnIndicator;
     public GameObject deathEffect;
+    public GameObject nextLevelCrystal;
     public List<GameObject> enemyPrefabs;
     public float spawnDelay = 1.5f;
 
@@ -287,6 +288,7 @@ public class AI_BossSnake : MonoBehaviour
         Instantiate(deathEffect, transform.position, Quaternion.identity);
         healthUI.SetActive(false);
         headDamageable.Die();
+        Instantiate(nextLevelCrystal, transform.position, Quaternion.identity);
         Destroy(gameObject);
     }
 }

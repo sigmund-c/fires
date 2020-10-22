@@ -63,8 +63,7 @@ public class BossDamageable : Damageable
         yield return new WaitForSeconds(3f);
         if (!hasDied)
         {
-            Instantiate(doubleJumpPowerup);
-            Debug.LogWarning("JWLFE");
+            Instantiate(doubleJumpPowerup, transform.position, Quaternion.identity);
             hasDied = true;
         }
         ai.StartAI();
