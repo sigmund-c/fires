@@ -7,8 +7,8 @@ public class Checkpoint : MonoBehaviour
     public bool isActivated = false;
     public Material activatedMat;
 
-    private SpriteRenderer sr;
-    private Animation anim;
+    protected SpriteRenderer sr;
+    protected Animation anim;
 
     // Start is called before the first frame update
     void Start()

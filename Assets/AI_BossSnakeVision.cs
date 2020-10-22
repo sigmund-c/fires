@@ -29,12 +29,5 @@ public class AI_BossSnakeVision : MonoBehaviour
             }
         }
     }
-
-    private void OnTriggerExit2D(Collider2D col)
-    {
-        if (col.tag == "Player")
-        {
-            ai.target = null;
-        }
-    }
+    
 }

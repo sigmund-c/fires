@@ -21,12 +21,12 @@ public class IceSpike : MonoBehaviour
 
     void OnCollisionEnter2D(Collision2D col)
     {
-        if (!fallen)
+        if (!fallen && !col.gameObject.CompareTag("Player"))
         {
-            fallen = true;
-            GetComponent<AudioSource>().Play();
             if (col.otherCollider is BoxCollider2D)
             {
+                fallen = true;
+                GetComponent<AudioSource>().Play();
                 rb.gravityScale = 0.9f;
             }
         }

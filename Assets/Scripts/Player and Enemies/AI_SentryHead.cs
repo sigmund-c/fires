@@ -45,7 +45,7 @@ public class AI_SentryHead : MonoBehaviour
         if (col.tag == "Player")
         {
             target = col.transform;
-            nextShot = timeBetweenShots * 2; //first shot is slower
+            nextShot = timeBetweenShots; //first shot is slower
         }
     }
 

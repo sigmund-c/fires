@@ -157,7 +157,10 @@ public class PlayerController : MonoBehaviour
         {
             if (!inSwimMode && Input.GetMouseButtonDown(1)) // right click
             {
-                LaunchProjectile(aimDirection);
+                if (damageable.currHealth > 1) // prevent death from clicking
+                {
+                    LaunchProjectile(aimDirection);
+                }
             }
             else if (Input.GetMouseButton(0) && chargeCooldownTimer == 0f)
             {

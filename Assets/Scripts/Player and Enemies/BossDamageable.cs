@@ -4,10 +4,14 @@ using UnityEngine;
 
 public class BossDamageable : Damageable
 {
+    public GameObject doubleJumpPowerup;
+
     private float blackenTime = 1f;
     private AI_BossSnake ai;
     private EffectsStorage effectsStorage;
     SpriteRenderer bodySr;
+
+    private bool hasDied = false;
 
     // Start is called before the first frame update
     protected override void Start()
@@ -57,6 +61,11 @@ public class BossDamageable : Damageable
 
         GameObject.FindGameObjectWithTag("MainCamera").GetComponent<CameraFollowBoss>().FocusOn(transform.position + Vector3.up * 20, 3);
         yield return new WaitForSeconds(3f);
+        if (!hasDied)
+        {
+            Instantiate(doubleJumpPowerup, transform.position, Quaternion.identity);
+            hasDied = true;
+        }
         ai.StartAI();
     }
     
