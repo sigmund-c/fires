@@ -17,7 +17,7 @@ public class UIManagerScript : MonoBehaviour
 
     public void StartGame()
     {
-        SceneManager.LoadScene("Level 1-1");
+        SceneManager.LoadSceneAsync("Level 1-1 - UITest");
     }
 
     public void QuitGame()
@@ -33,7 +33,7 @@ public class UIManagerScript : MonoBehaviour
         pauseMenu.SetActive(true);
     }
 
-    public void OnResume()//点击“回到游戏”时执行此方法
+    public void OnResume()//
     {
         Debug.Log("OnResume");
 
@@ -42,11 +42,18 @@ public class UIManagerScript : MonoBehaviour
         
     }
 
-    public void OnMainMenu()//点击“重新开始”时执行此方法
+    public void AtLoadBackToPause()//
+    {
+        loadMenu.SetActive(false);
+        pauseMenu.SetActive(true);
+
+    }
+
+    public void OnMainMenu()//
     {
         //Loading Scene0
-        SceneManager.LoadScene("MenuScene");
-        Time.timeScale = 1f;
+        //SceneManager.LoadSceneAsync("MenuScene");
+        //Time.timeScale = 1f;
     }
 
     public Save CreateSaveGameObject()
@@ -59,9 +66,13 @@ public class UIManagerScript : MonoBehaviour
 
         //Store the player position.
         GameObject player = GameObject.FindGameObjectWithTag("Player");
-        Rigidbody2D rb = player.GetComponent<Rigidbody2D>();
-        save.livingTargetPositionsX.Add(rb.position.x);
-        save.livingTargetPositionsY.Add(rb.position.y);
+        if (player != null)
+        {
+            Rigidbody2D rb = player.GetComponent<Rigidbody2D>();
+            save.livingTargetPositionsX.Add(rb.position.x);
+            save.livingTargetPositionsY.Add(rb.position.y);
+        }
+        
 
         //Stored enemies.
         GameObject[] enemys = GameObject.FindGameObjectsWithTag("EnemySaved");
@@ -177,16 +188,18 @@ public class UIManagerScript : MonoBehaviour
             file.Close();
 
             //Activate corresponding scene.
-            SceneManager.LoadScene(save.sceneName);
+            SceneManager.LoadSceneAsync(save.sceneName);
             //Test if new scene loaded. Load objects when new scene loaded.
             SceneManager.activeSceneChanged += ChangedActiveScene;
             void ChangedActiveScene(Scene current, Scene next)
             {
                 //Recover player
                 GameObject player = GameObject.FindGameObjectWithTag("Player");
-                Rigidbody2D rb = player.GetComponent<Rigidbody2D>();
-
-                rb.position = new Vector2(save.livingTargetPositionsX[0], save.livingTargetPositionsY[0]);
+                if (player != null)
+                {
+                    Rigidbody2D rb = player.GetComponent<Rigidbody2D>();
+                    rb.position = new Vector2(save.livingTargetPositionsX[0], save.livingTargetPositionsY[0]);
+                }
 
                 //Destroy existing enemys.
                 GameObject[] enemys = GameObject.FindGameObjectsWithTag("EnemySaved");
