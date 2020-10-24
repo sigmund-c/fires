@@ -6,6 +6,7 @@ public class AI_SentryHead : MonoBehaviour
 {
     public GameObject projectilePrefab;
     public float timeBetweenShots = 1f;
+    public bool isUpsideDown = false;
     private float nextShot;
 
     private Transform target = null;
@@ -21,7 +22,13 @@ public class AI_SentryHead : MonoBehaviour
         if (target != null)
         {
             // 2D equivalent of tranform.LookAt()
-            transform.up = target.position - transform.position;
+            if (!isUpsideDown)
+            {
+                transform.up = target.position - transform.position;
+            } else
+            {
+                transform.up = transform.position - target.position;
+            }
 
             if (nextShot > 0)
             {

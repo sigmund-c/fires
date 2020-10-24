@@ -14,13 +14,9 @@ public class AI_BossSnake : MonoBehaviour
     public float spawnDelay = 1.5f;
 
     public GameObject healthUI;
-
-    public Sprite idleHead;
-    public Sprite attackHead;
-    public Sprite idleTail;
-    public Sprite attackTail;
-    private SpriteRenderer headSprite;
-    private SpriteRenderer tailSprite;
+    
+    private Animator headAnim;
+    private Animator tailAnim;
 
     private float idleTime = 2f;
     private float nextAttack = 0;
@@ -64,9 +60,8 @@ public class AI_BossSnake : MonoBehaviour
             spawnTransforms.Add(child);
         }
 
-        headSprite = headTransform.GetComponent<SpriteRenderer>();
-        tailSprite = transform.Find("Snake").Find("SnakeTailSprite").GetComponent<SpriteRenderer>();
-        idleTail = tailSprite.sprite;
+        headAnim = headTransform.GetComponent<Animator>();
+        tailAnim = transform.Find("Snake").Find("SnakeTailSprite").GetComponent<Animator>();
 
         effectsStorage = GetComponent<EffectsStorage>();
     }
@@ -132,27 +127,7 @@ public class AI_BossSnake : MonoBehaviour
                 }
             }
         }
-
-        UpdateSprite();
-    }
-
-    private void UpdateSprite()
-    {
-        if (shootAmount > 0)
-        {
-            headSprite.sprite = attackHead;
-        } else
-        {
-            headSprite.sprite = idleHead;
-        }
-
-        if (tailAmount > 0)
-        {
-            tailSprite.sprite = attackTail;
-        } else
-        {
-            tailSprite.sprite = idleTail;
-        }
+        
     }
 
     private void GenerateNewAttack()
@@ -196,7 +171,7 @@ public class AI_BossSnake : MonoBehaviour
         if (target != null)
         {
             // 2D equivalent of tranform.LookAt()
-            headTransform.up = Quaternion.Euler(0, 0, -90) * (target.position - headTransform.position);
+            //headTransform.up = Quaternion.Euler(0, 0, -90) * (target.position - headTransform.position);
 
             if (nextShot > 0)
             {
@@ -204,6 +179,7 @@ public class AI_BossSnake : MonoBehaviour
             }
             else
             {
+                headAnim.SetTrigger("Attack");
                 ShootProjectile();
                 nextShot = timeBetweenShots;
             }
@@ -232,6 +208,7 @@ public class AI_BossSnake : MonoBehaviour
         }
         else
         {
+            tailAnim.SetTrigger("Attack");
             TailAttack();
             nextTail = timeBetweenTails;
         }
@@ -288,6 +265,7 @@ public class AI_BossSnake : MonoBehaviour
         Instantiate(deathEffect, transform.position, Quaternion.identity);
         healthUI.SetActive(false);
         headDamageable.Die();
+        GameObject.FindGameObjectWithTag("Persistent").GetComponent<PersistentAudio>().ChangeMusic(0);
         Instantiate(nextLevelCrystal, transform.position, Quaternion.identity).GetComponent<NextLevelCore>().sceneName = "Level 2-1";
         Destroy(gameObject);
     }

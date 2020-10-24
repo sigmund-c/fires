@@ -17,7 +17,7 @@ public class UIManagerScript : MonoBehaviour
 
     public void StartGame()
     {
-        SceneManager.LoadSceneAsync("Level 1-1 - UITest");
+        SceneManager.LoadSceneAsync("Level 1-1");
     }
 
     public void QuitGame()

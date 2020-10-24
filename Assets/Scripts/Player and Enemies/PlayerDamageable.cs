@@ -28,6 +28,10 @@ public class PlayerDamageable : Damageable
     {
         if (currOverheal > 0)
         {
+            if (damage > currOverheal)
+            {
+                currHealth -= damage - currOverheal;
+            }
             currOverheal -= damage;
         } else
         {

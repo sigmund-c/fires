@@ -60,12 +60,13 @@ public class BossDamageable : Damageable
         GetComponent<Collider2D>().enabled = true; // hitbox
 
         GameObject.FindGameObjectWithTag("MainCamera").GetComponent<CameraFollowBoss>().FocusOn(transform.position + Vector3.up * 20, 3);
+        yield return new WaitForSeconds(1.5f);
         if (!hasDied)
         {
             Instantiate(doubleJumpPowerup, transform.position, Quaternion.identity);
             hasDied = true;
         }
-        yield return new WaitForSeconds(3f);
+        yield return new WaitForSeconds(1.5f);
         ai.StartAI();
     }
     

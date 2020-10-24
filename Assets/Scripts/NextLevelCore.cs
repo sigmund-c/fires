@@ -24,6 +24,7 @@ public class NextLevelCore : MonoBehaviour
     {
         if (!isActivated && col.gameObject.tag == "Player")
         {
+            col.GetComponent<PlayerDamageable>().currHealth = 50;
             isActivated = true;
             ActivateSprite();
         }

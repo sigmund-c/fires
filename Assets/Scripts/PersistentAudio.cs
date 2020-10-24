@@ -5,6 +5,7 @@ using System.Collections.Generic;
 public class PersistentAudio : MonoBehaviour
 {
     public List<AudioClip> audioStorage = new List<AudioClip>();
+    public int isPlaying;
 
     private AudioSource _audioSource;
     private void Awake()
@@ -14,6 +15,7 @@ public class PersistentAudio : MonoBehaviour
         if (_audioSource.clip == null)
         {
             _audioSource.clip = audioStorage[0];
+            isPlaying = 0;
         }
 
         PlayMusic();
@@ -38,6 +40,7 @@ public class PersistentAudio : MonoBehaviour
             _audioSource.Stop();
         }
         _audioSource.Play();
+        isPlaying = index;
     }
 
     public void StopMusic()

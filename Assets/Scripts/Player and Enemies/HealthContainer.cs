@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class HealthContainer : MonoBehaviour
 {
@@ -18,16 +19,17 @@ public class HealthContainer : MonoBehaviour
     void Start()
     {
         healths = new Animation[maxHealth];
+        float length = oneHealth.GetComponent<RectTransform>().sizeDelta.x * transform.parent.GetComponent<Canvas>().scaleFactor;
         for(int i = 0; i < maxHealth; i++)
         {
-            Vector3 pos = this.transform.position + new Vector3(100 * i, 0); // each container is 100 to the right of the previous
+            Vector3 pos = this.transform.position + new Vector3(length * i, 0); // each container is 100 to the right of the previous
             healths[i] = GameObject.Instantiate(oneHealth, pos, Quaternion.identity, this.transform).GetComponent<Animation>();
         }
 
         overheals = new Animation[maxOverheal];
         for (int i = 0; i < maxOverheal; i++)
         {
-            Vector3 pos = this.transform.position + new Vector3(100 * (i + maxHealth), 0);
+            Vector3 pos = this.transform.position + new Vector3(length * (i + maxHealth), 0);
             overheals[i] = GameObject.Instantiate(oneOverheal, pos, Quaternion.identity, this.transform).GetComponent<Animation>();
         }
 

@@ -20,7 +20,7 @@ public class Flammable : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        sr = GetComponent<SpriteRenderer>();
+        sr = GetComponentInChildren<SpriteRenderer>();
         burning = GetComponent<Burning>();
         if (isBurning)
         {

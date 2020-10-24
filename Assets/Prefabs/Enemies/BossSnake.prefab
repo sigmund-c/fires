@@ -564,10 +564,6 @@ MonoBehaviour:
   - {fileID: 8057157005736239361, guid: 1d22c54e2ae56484b9586d77ce938bad, type: 3}
   spawnDelay: 1.5
   healthUI: {fileID: 0}
-  idleHead: {fileID: 21300000, guid: da8dda3f78a4e8642a5dc61595cae67b, type: 3}
-  attackHead: {fileID: 21300000, guid: 5c77aa6995057204596253fca7aef7c6, type: 3}
-  idleTail: {fileID: 21300000, guid: 5cd15f43588d8104da6a13d31174a739, type: 3}
-  attackTail: {fileID: 21300000, guid: a1f3d666ad4e2994abbab99b67e6ef99, type: 3}
   shootAmount: 0
   tailAmount: 0
   spawnAmount: 0
@@ -1027,6 +1023,7 @@ GameObject:
   - component: {fileID: 7739546795705391647}
   - component: {fileID: 4979613696755227892}
   - component: {fileID: 6219512532141477314}
+  - component: {fileID: 4518708093620406101}
   m_Layer: 19
   m_Name: SnakeHead
   m_TagString: Untagged
@@ -1042,7 +1039,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 7739546796472876070}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -1.6100006, y: 1.8399963, z: 0}
+  m_LocalPosition: {x: -1.6100006, y: 2.43, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 2349742736035906974}
@@ -1088,7 +1085,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 6
-  m_Sprite: {fileID: 21300000, guid: da8dda3f78a4e8642a5dc61595cae67b, type: 3}
+  m_Sprite: {fileID: 2305515397191558934, guid: 98d9288f94aa7344fa7f0da9cce1f5c3, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -1116,7 +1113,7 @@ BoxCollider2D:
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 1.5625, y: 2.0625}
+    oldSize: {x: 2, y: 2.25}
     newSize: {x: 1.5625, y: 2.0625}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
@@ -1144,6 +1141,25 @@ MonoBehaviour:
   healthContainer: {fileID: 0}
   team: 1
   doubleJumpPowerup: {fileID: 8025800727623740871, guid: 8275bbda1b4b93f43b258b7e4d36af74, type: 3}
+--- !u!95 &4518708093620406101
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7739546796472876070}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 476b3e7f82e63e745bfe4f095fd0b4a9, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1 &7739546796593529547
 GameObject:
   m_ObjectHideFlags: 0
@@ -1154,6 +1170,7 @@ GameObject:
   m_Component:
   - component: {fileID: 7739546796593529544}
   - component: {fileID: 7739546796593529545}
+  - component: {fileID: 2971532171937937806}
   m_Layer: 19
   m_Name: SnakeTailSprite
   m_TagString: Untagged
@@ -1169,7 +1186,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 7739546796593529547}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 3.08, y: -3.78, z: 0}
+  m_LocalPosition: {x: 1.73, y: -2.76, z: 0}
   m_LocalScale: {x: -1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 2349742736035906974}
@@ -1214,18 +1231,37 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 6
-  m_Sprite: {fileID: 0}
+  m_SortingOrder: -5
+  m_Sprite: {fileID: 3943427361388387528, guid: 025be8e645ae7994b866c9e575a11791, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
-  m_Size: {x: 8, y: 8}
+  m_Size: {x: 2.6875, y: 1.8125}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
-  m_WasSpriteAssigned: 0
+  m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!95 &2971532171937937806
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7739546796593529547}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 86ae230cb3c1e7e48915016b40bd7927, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1 &7739546796886809632
 GameObject:
   m_ObjectHideFlags: 0
@@ -1297,7 +1333,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 5
-  m_Sprite: {fileID: 21300000, guid: ba2e7ccbf50b71a49b5277d2b3e63335, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 578afd1c64f134c4eb55868afc4f20f3, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
