@@ -288,7 +288,7 @@ public class AI_BossSnake : MonoBehaviour
         Instantiate(deathEffect, transform.position, Quaternion.identity);
         healthUI.SetActive(false);
         headDamageable.Die();
-        Instantiate(nextLevelCrystal, transform.position, Quaternion.identity);
+        Instantiate(nextLevelCrystal, transform.position, Quaternion.identity).GetComponent<NextLevelCore>().sceneName = "Level 2-1";
         Destroy(gameObject);
     }
 }
