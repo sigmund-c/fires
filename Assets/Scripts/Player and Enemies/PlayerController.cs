@@ -346,6 +346,15 @@ public class PlayerController : MonoBehaviour
         {
             // touchingGround = true;
 
+            // check angle
+            // ContactPoint2D[] contacts = new ContactPoint2D[col.contactCount];
+            // col.GetContacts(contacts);
+            // print("CONTACTS:");
+            // foreach (ContactPoint2D point in contacts)
+            // {
+            //     print(point);
+            // }
+
             collidingObjects++; // Take into account when colliding with multiple objects before Exiting
 
             print("jumpTimes = 0");
