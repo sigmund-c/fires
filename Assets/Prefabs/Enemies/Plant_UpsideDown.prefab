@@ -78,6 +78,7 @@ MonoBehaviour:
   takeKnockback: 0
   healthContainer: {fileID: 0}
   team: 1
+  immuneTo: 3
 --- !u!1 &7119250326101581315
 GameObject:
   m_ObjectHideFlags: 0
@@ -304,5 +305,5 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   projectilePrefab: {fileID: 1311386620750424233, guid: d5c785e0f84cf884dbfab1ffd1315c10, type: 3}
-  timeBetweenShots: 1
+  timeBetweenShots: 1.8
   isUpsideDown: 1
