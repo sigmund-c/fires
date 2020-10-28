@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
-public enum Team { Player, Enemy, Neutal }
+public enum Team { Player, Enemy, Neutal, None }
 
 public class Damageable : MonoBehaviour
 {
@@ -14,6 +14,7 @@ public class Damageable : MonoBehaviour
     public bool takeKnockback = false;
     public HealthContainer healthContainer;
     public Team team;
+    public Team immuneTo = Team.None;
 
     protected float invincibleTimer = 0; // invincible frames from taking damage
     protected Collider2D colliderObj;
@@ -51,7 +52,7 @@ public class Damageable : MonoBehaviour
 
         Damaging damaging = col.gameObject.GetComponent<Damaging>();
 
-        if (damaging != null && damaging.team != team)
+        if (damaging != null && damaging.team != team && damaging.team != immuneTo)
         {
             TakeDamage(damaging.damage);
             if (takeKnockback)

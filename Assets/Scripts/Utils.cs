@@ -31,6 +31,7 @@ public class Utils : MonoBehaviour
             ParticleSystem.MainModule main = ps.main;
             main.duration = time;
             ps.Play();
+            main.loop = false;
         }
 
         ParticleSystem.EmissionModule emission = ps.emission;

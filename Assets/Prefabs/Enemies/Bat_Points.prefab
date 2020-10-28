@@ -10,6 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 9173349504162487704}
   - component: {fileID: 9173349504162487711}
+  - component: {fileID: 5886775235438612949}
   m_Layer: 19
   m_Name: BatSprite
   m_TagString: Untagged
@@ -71,7 +72,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: e25004aa59fd0404aa31b5974cd988fd, type: 3}
+  m_Sprite: {fileID: 3972076772874270335, guid: 7afb4344744480b44b1432c89e69e2a1, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -82,6 +83,25 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!95 &5886775235438612949
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 9173349504162487705}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 780acd8a09bf10a4f8f9902debadff96, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1 &9173349504666538115
 GameObject:
   m_ObjectHideFlags: 0
@@ -121,8 +141,8 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 9173349506180935943}
-  - component: {fileID: 9173349506180935936}
   - component: {fileID: 9173349506180935937}
+  - component: {fileID: 4201721934183486529}
   - component: {fileID: 3061839936007477676}
   - component: {fileID: 7422361395289229580}
   - component: {fileID: 2034215217815253978}
@@ -149,32 +169,6 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!61 &9173349506180935936
-BoxCollider2D:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 9173349506180935939}
-  m_Enabled: 1
-  m_Density: 1
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_UsedByEffector: 0
-  m_UsedByComposite: 0
-  m_Offset: {x: 0.10120964, y: -0.1385777}
-  m_SpriteTilingProperty:
-    border: {x: 0, y: 0, z: 0, w: 0}
-    pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 3.84, y: 3.84}
-    newSize: {x: 3.84, y: 3.84}
-    adaptiveTilingThreshold: 0.5
-    drawMode: 0
-    adaptiveTiling: 0
-  m_AutoTiling: 0
-  serializedVersion: 2
-  m_Size: {x: 1.2542381, y: 0.94392633}
-  m_EdgeRadius: 0
 --- !u!50 &9173349506180935937
 Rigidbody2D:
   serializedVersion: 4
@@ -196,6 +190,36 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 4
+--- !u!60 &4201721934183486529
+PolygonCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 9173349506180935939}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0, y: 0}
+    oldSize: {x: 0, y: 0}
+    newSize: {x: 0, y: 0}
+    adaptiveTilingThreshold: 0
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  m_Points:
+    m_Paths:
+    - - {x: -0.36518288, y: 0.79685104}
+      - {x: -0.9452601, y: 0.08845532}
+      - {x: -0.21680588, y: -0.5478257}
+      - {x: 0.73849547, y: -0.48978308}
+      - {x: 0.49312878, y: 0.72692335}
 --- !u!114 &3061839936007477676
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -214,6 +238,7 @@ MonoBehaviour:
   takeKnockback: 0
   healthContainer: {fileID: 0}
   team: 1
+  immuneTo: 3
 --- !u!114 &7422361395289229580
 MonoBehaviour:
   m_ObjectHideFlags: 0

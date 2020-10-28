@@ -139,6 +139,7 @@ MonoBehaviour:
   takeKnockback: 0
   healthContainer: {fileID: 0}
   team: 1
+  immuneTo: 3
 --- !u!82 &8618669856449974997
 AudioSource:
   m_ObjectHideFlags: 0
