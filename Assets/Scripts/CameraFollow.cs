@@ -8,6 +8,10 @@ public class CameraFollow : MonoBehaviour
     public Transform[] snaps;
     public float[] snapDistances;
 
+    public float cameraInitialSpeed;
+    public float cameraMaxSpeed = 1f;
+    public float cameraAccel;
+
     private bool hasOverrideTarget = false;
     private Vector3 overrideTarget;
     private Vector3 target;
@@ -40,7 +44,7 @@ public class CameraFollow : MonoBehaviour
         if (shakeDuration <= 0)
         {
             DecideTarget();
-            transform.position = Vector3.MoveTowards(transform.position, target + new Vector3(0, 0, -10f), 1f);
+            transform.position = Vector3.MoveTowards(transform.position, target + new Vector3(0, 0, -10f), cameraMaxSpeed);
 
         }
     }
