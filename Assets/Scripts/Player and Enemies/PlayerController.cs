@@ -132,6 +132,17 @@ public class PlayerController : MonoBehaviour
             // StartCoroutine(Respawn(prevLoc));
         }
 
+        if (Input.GetKeyDown(KeyCode.PageUp))
+        {
+            int sceneID = SceneManager.GetActiveScene().buildIndex;
+            SceneManager.LoadScene(sceneID + 1);
+        }
+        else if (Input.GetKeyDown(KeyCode.PageDown))
+        {
+            int sceneID = SceneManager.GetActiveScene().buildIndex;
+            SceneManager.LoadScene(sceneID - 1);
+        }
+
         Vector3 mousePosition = Utils.MouseWorldPosition();
         Vector3 aimVector = mousePosition - transform.position;
         Vector3 aimDirection = aimVector.normalized;
