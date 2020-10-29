@@ -32,7 +32,7 @@ public class BossDamageable : Damageable
 
     IEnumerator DeathAndRespawn()
     {
-
+        GetComponent<Collider2D>().enabled = false;
         GameObject.FindGameObjectWithTag("MainCamera").GetComponent<CameraFollowBoss>().FocusOn(transform.position, blackenTime + 6f);
         effectsStorage.PlayEffect(1); //Death SFX
 
@@ -67,6 +67,7 @@ public class BossDamageable : Damageable
             hasDied = true;
         }
         yield return new WaitForSeconds(1.5f);
+        GetComponent<Collider2D>().enabled = true;
         ai.StartAI();
     }
     

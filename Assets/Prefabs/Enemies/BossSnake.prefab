@@ -1136,10 +1136,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   maxHealth: 7
   currHealth: 7
-  invincibleDuration: 0.3
+  invincibleDuration: 0
   takeKnockback: 0
   healthContainer: {fileID: 0}
   team: 1
+  immuneTo: 3
   doubleJumpPowerup: {fileID: 8025800727623740871, guid: 8275bbda1b4b93f43b258b7e4d36af74, type: 3}
 --- !u!95 &4518708093620406101
 Animator:

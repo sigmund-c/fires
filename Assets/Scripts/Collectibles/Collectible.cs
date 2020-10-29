@@ -40,4 +40,9 @@ public class Collectible : MonoBehaviour
         yield return new WaitForSeconds(0.6f);
         Destroy(gameObject);
     }
+
+    public void PlayAudio()
+    {
+        audio.Play();
+    }
 }
