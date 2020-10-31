@@ -1,0 +1,430 @@
+fileFormatVersion: 2
+guid: b70fd7974c491a04b900f0632266b943
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: -4554793921463348658
+    second: Button Hover Quite_0
+  - first:
+      213: -5142395799315997453
+    second: Button Hover Quite_1
+  - first:
+      213: -3586010546564250583
+    second: Button Hover Quite_2
+  - first:
+      213: -8238131293099261784
+    second: Button Hover Quite_3
+  - first:
+      213: 1829676759076133159
+    second: Button Hover Quite_4
+  - first:
+      213: 1020075624168175390
+    second: Button Hover Quite_5
+  - first:
+      213: -4790153040797639962
+    second: Button Hover Quite_6
+  - first:
+      213: 5421716349496245440
+    second: Button Hover Quite_7
+  - first:
+      213: -6201449265448524633
+    second: Button Hover Quite_8
+  - first:
+      213: 3505036292792539736
+    second: Button Hover Quite_9
+  - first:
+      213: -8673875312831034664
+    second: Button Hover Quite_10
+  - first:
+      213: 4735011776857590083
+    second: Button Hover Quite_11
+  - first:
+      213: 1473431400657090329
+    second: Button Hover Quite_0
+  - first:
+      213: -6533421111856911201
+    second: Button Hover Quite_1
+  - first:
+      213: -4818610158204038593
+    second: Button Hover Quite_2
+  - first:
+      213: -1131338812799656042
+    second: Button Hover Quite_3
+  - first:
+      213: -7904973672555519921
+    second: Button Hover Quite_4
+  - first:
+      213: -6302156501558016876
+    second: Button Hover Quite_5
+  - first:
+      213: 7254832421821940584
+    second: Button Hover Quite_6
+  - first:
+      213: -7511482112671349244
+    second: Button Hover Quite_7
+  - first:
+      213: -4164835573685532879
+    second: Button Hover Quite_8
+  - first:
+      213: -7351000198244727697
+    second: Button Hover Quite_9
+  - first:
+      213: -4977424665724918169
+    second: Button Hover Quite_10
+  - first:
+      213: 8079862180523446071
+    second: Button Hover Quite_11
+  externalObjects: {}
+  serializedVersion: 11
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 0
+    aniso: -1
+    mipBias: -100
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: Button Hover Quite_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 394
+        width: 410
+        height: 192
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 91772156d0ea27410800000000000000
+      internalID: 1473431400657090329
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Button Hover Quite_1
+      rect:
+        serializedVersion: 2
+        x: 415
+        y: 394
+        width: 410
+        height: 192
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f9c2bb34d10a455a0800000000000000
+      internalID: -6533421111856911201
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Button Hover Quite_2
+      rect:
+        serializedVersion: 2
+        x: 830
+        y: 394
+        width: 410
+        height: 192
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f32d829579bd02db0800000000000000
+      internalID: -4818610158204038593
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Button Hover Quite_3
+      rect:
+        serializedVersion: 2
+        x: 1245
+        y: 394
+        width: 410
+        height: 192
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 69fd676085dac40f0800000000000000
+      internalID: -1131338812799656042
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Button Hover Quite_4
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 197
+        width: 410
+        height: 192
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f406380c354eb4290800000000000000
+      internalID: -7904973672555519921
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Button Hover Quite_5
+      rect:
+        serializedVersion: 2
+        x: 415
+        y: 197
+        width: 410
+        height: 192
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 49447b55d0e3a88a0800000000000000
+      internalID: -6302156501558016876
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Button Hover Quite_6
+      rect:
+        serializedVersion: 2
+        x: 830
+        y: 197
+        width: 410
+        height: 192
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8630faf56a75ea460800000000000000
+      internalID: 7254832421821940584
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Button Hover Quite_7
+      rect:
+        serializedVersion: 2
+        x: 1245
+        y: 197
+        width: 410
+        height: 192
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4060689e0dad1c790800000000000000
+      internalID: -7511482112671349244
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Button Hover Quite_8
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 410
+        height: 192
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 137409aac188336c0800000000000000
+      internalID: -4164835573685532879
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Button Hover Quite_9
+      rect:
+        serializedVersion: 2
+        x: 415
+        y: 0
+        width: 410
+        height: 192
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f640cc754400cf990800000000000000
+      internalID: -7351000198244727697
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Button Hover Quite_10
+      rect:
+        serializedVersion: 2
+        x: 830
+        y: 0
+        width: 410
+        height: 192
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 766e23753a2aceab0800000000000000
+      internalID: -4977424665724918169
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Button Hover Quite_11
+      rect:
+        serializedVersion: 2
+        x: 1245
+        y: 0
+        width: 410
+        height: 192
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 73f863028df612070800000000000000
+      internalID: 8079862180523446071
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+  spritePackingTag: 
+  pSDRemoveMatte: 0
+  pSDShowRemoveMatteOption: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

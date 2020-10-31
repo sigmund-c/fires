@@ -314,7 +314,7 @@ public class PlayerController : MonoBehaviour
             if (/*!touchingGround*/jumpTimes > 0) // jumpTimes only increases after
             {
                 // Debug.Log("tset");
-                print("jumpTimes++");
+                // print("jumpTimes++");
                 jumpTimes++;
             }
             Jump(jumpChargeTime, dir);
@@ -368,7 +368,7 @@ public class PlayerController : MonoBehaviour
 
             collidingObjects++; // Take into account when colliding with multiple objects before Exiting
 
-            print("jumpTimes = 0");
+            // print("jumpTimes = 0");
             jumpTimes = 0;
             Utils.SpawnSparkle(transform);
 
@@ -389,7 +389,7 @@ public class PlayerController : MonoBehaviour
         // Starts the jump counter only after leaving the ground (by jumping, or sliding off the ground)
         if (col.gameObject.tag == "Ground" || col.gameObject.tag == "BurningObj")
         {
-            print("touchingGround = false");
+            // print("touchingGround = false");
             // touchingGround = false;
             // print("jumpTimes = 1");
             collidingObjects--;

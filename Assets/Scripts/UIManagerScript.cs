@@ -52,8 +52,8 @@ public class UIManagerScript : MonoBehaviour
     public void OnMainMenu()//
     {
         //Loading Scene0
-        //SceneManager.LoadSceneAsync("MenuScene");
-        //Time.timeScale = 1f;
+        SceneManager.LoadSceneAsync("MenuScene");
+        Time.timeScale = 1f;
     }
 
     public Save CreateSaveGameObject()
