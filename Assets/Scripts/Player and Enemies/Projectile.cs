@@ -38,7 +38,7 @@ public class Projectile : MonoBehaviour
 
     void OnCollisionEnter2D(Collision2D other)
     {
-        Debug.Log("Projectile Collision with " + other.gameObject);
+        // Debug.Log("Projectile Collision with " + other.gameObject);
         if (explosionHitEffect != null)
         {
             Instantiate(explosionHitEffect, transform.position, Quaternion.identity);
