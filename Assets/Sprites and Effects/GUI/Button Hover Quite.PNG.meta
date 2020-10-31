@@ -38,6 +38,42 @@ TextureImporter:
   - first:
       213: 4735011776857590083
     second: Button Hover Quite_11
+  - first:
+      213: 1473431400657090329
+    second: Button Hover Quite_0
+  - first:
+      213: -6533421111856911201
+    second: Button Hover Quite_1
+  - first:
+      213: -4818610158204038593
+    second: Button Hover Quite_2
+  - first:
+      213: -1131338812799656042
+    second: Button Hover Quite_3
+  - first:
+      213: -7904973672555519921
+    second: Button Hover Quite_4
+  - first:
+      213: -6302156501558016876
+    second: Button Hover Quite_5
+  - first:
+      213: 7254832421821940584
+    second: Button Hover Quite_6
+  - first:
+      213: -7511482112671349244
+    second: Button Hover Quite_7
+  - first:
+      213: -4164835573685532879
+    second: Button Hover Quite_8
+  - first:
+      213: -7351000198244727697
+    second: Button Hover Quite_9
+  - first:
+      213: -4977424665724918169
+    second: Button Hover Quite_10
+  - first:
+      213: 8079862180523446071
+    second: Button Hover Quite_11
   externalObjects: {}
   serializedVersion: 11
   mipmaps:
@@ -68,7 +104,7 @@ TextureImporter:
   maxTextureSize: 2048
   textureSettings:
     serializedVersion: 2
-    filterMode: -1
+    filterMode: 0
     aniso: -1
     mipBias: -100
     wrapU: 1
@@ -129,9 +165,9 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 0
-        y: 390.6667
-        width: 413.75
-        height: 195.33333
+        y: 394
+        width: 410
+        height: 192
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -139,8 +175,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: e42911e8f0f1ac0c0800000000000000
-      internalID: -4554793921463348658
+      spriteID: 91772156d0ea27410800000000000000
+      internalID: 1473431400657090329
       vertices: []
       indices: 
       edges: []
@@ -149,10 +185,10 @@ TextureImporter:
       name: Button Hover Quite_1
       rect:
         serializedVersion: 2
-        x: 413
-        y: 390.6667
-        width: 413.75
-        height: 195.33333
+        x: 415
+        y: 394
+        width: 410
+        height: 192
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -160,8 +196,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 3fc1f4f144a82a8b0800000000000000
-      internalID: -5142395799315997453
+      spriteID: f9c2bb34d10a455a0800000000000000
+      internalID: -6533421111856911201
       vertices: []
       indices: 
       edges: []
@@ -170,10 +206,10 @@ TextureImporter:
       name: Button Hover Quite_2
       rect:
         serializedVersion: 2
-        x: 826
-        y: 390.6667
-        width: 413.75
-        height: 195.33333
+        x: 830
+        y: 394
+        width: 410
+        height: 192
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -181,8 +217,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 924cb3b486eeb3ec0800000000000000
-      internalID: -3586010546564250583
+      spriteID: f32d829579bd02db0800000000000000
+      internalID: -4818610158204038593
       vertices: []
       indices: 
       edges: []
@@ -191,10 +227,10 @@ TextureImporter:
       name: Button Hover Quite_3
       rect:
         serializedVersion: 2
-        x: 1239
-        y: 390.6667
-        width: 413.75
-        height: 195.33333
+        x: 1245
+        y: 394
+        width: 410
+        height: 192
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -202,8 +238,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 8a00ac58c374cad80800000000000000
-      internalID: -8238131293099261784
+      spriteID: 69fd676085dac40f0800000000000000
+      internalID: -1131338812799656042
       vertices: []
       indices: 
       edges: []
@@ -213,9 +249,9 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 0
-        y: 195.66667
-        width: 413.75
-        height: 195.33333
+        y: 197
+        width: 410
+        height: 192
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -223,8 +259,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 729558e7151546910800000000000000
-      internalID: 1829676759076133159
+      spriteID: f406380c354eb4290800000000000000
+      internalID: -7904973672555519921
       vertices: []
       indices: 
       edges: []
@@ -233,10 +269,10 @@ TextureImporter:
       name: Button Hover Quite_5
       rect:
         serializedVersion: 2
-        x: 413
-        y: 195.66667
-        width: 413.75
-        height: 195.33333
+        x: 415
+        y: 197
+        width: 410
+        height: 192
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -244,8 +280,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: e1734962069082e00800000000000000
-      internalID: 1020075624168175390
+      spriteID: 49447b55d0e3a88a0800000000000000
+      internalID: -6302156501558016876
       vertices: []
       indices: 
       edges: []
@@ -254,10 +290,10 @@ TextureImporter:
       name: Button Hover Quite_6
       rect:
         serializedVersion: 2
-        x: 826
-        y: 195.66667
-        width: 413.75
-        height: 195.33333
+        x: 830
+        y: 197
+        width: 410
+        height: 192
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -265,8 +301,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 6eadf7f4035f58db0800000000000000
-      internalID: -4790153040797639962
+      spriteID: 8630faf56a75ea460800000000000000
+      internalID: 7254832421821940584
       vertices: []
       indices: 
       edges: []
@@ -275,10 +311,10 @@ TextureImporter:
       name: Button Hover Quite_7
       rect:
         serializedVersion: 2
-        x: 1239
-        y: 195.66667
-        width: 413.75
-        height: 195.33333
+        x: 1245
+        y: 197
+        width: 410
+        height: 192
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -286,8 +322,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 0ccb6ac5b4ecd3b40800000000000000
-      internalID: 5421716349496245440
+      spriteID: 4060689e0dad1c790800000000000000
+      internalID: -7511482112671349244
       vertices: []
       indices: 
       edges: []
@@ -297,9 +333,9 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 0
-        y: 0.66667175
-        width: 413.75
-        height: 195.33333
+        y: 0
+        width: 410
+        height: 192
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -307,8 +343,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 7a46550ffb600f9a0800000000000000
-      internalID: -6201449265448524633
+      spriteID: 137409aac188336c0800000000000000
+      internalID: -4164835573685532879
       vertices: []
       indices: 
       edges: []
@@ -317,10 +353,10 @@ TextureImporter:
       name: Button Hover Quite_9
       rect:
         serializedVersion: 2
-        x: 413
-        y: 0.66667175
-        width: 413.75
-        height: 195.33333
+        x: 415
+        y: 0
+        width: 410
+        height: 192
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -328,8 +364,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 85a50c410f364a030800000000000000
-      internalID: 3505036292792539736
+      spriteID: f640cc754400cf990800000000000000
+      internalID: -7351000198244727697
       vertices: []
       indices: 
       edges: []
@@ -338,10 +374,10 @@ TextureImporter:
       name: Button Hover Quite_10
       rect:
         serializedVersion: 2
-        x: 826
-        y: 0.66667175
-        width: 413.75
-        height: 195.33333
+        x: 830
+        y: 0
+        width: 410
+        height: 192
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -349,8 +385,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 8da0da0fb5430a780800000000000000
-      internalID: -8673875312831034664
+      spriteID: 766e23753a2aceab0800000000000000
+      internalID: -4977424665724918169
       vertices: []
       indices: 
       edges: []
@@ -359,10 +395,10 @@ TextureImporter:
       name: Button Hover Quite_11
       rect:
         serializedVersion: 2
-        x: 1239
-        y: 0.66667175
-        width: 413.75
-        height: 195.33333
+        x: 1245
+        y: 0
+        width: 410
+        height: 192
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -370,8 +406,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 34943e6bf1426b140800000000000000
-      internalID: 4735011776857590083
+      spriteID: 73f863028df612070800000000000000
+      internalID: 8079862180523446071
       vertices: []
       indices: 
       edges: []
