@@ -10,11 +10,13 @@ public class ReadCollectible : Collectible
     public int textIndex;
     new UnityEngine.Experimental.Rendering.Universal.Light2D light;
     private bool setLight;
+    private AudioSource audioSource;
 
     new void Start()
     {
         setLight = true;
         light = GetComponent<UnityEngine.Experimental.Rendering.Universal.Light2D>();
+        audioSource = GetComponent<AudioSource>();
         base.Start();
     }
 
@@ -36,7 +38,10 @@ public class ReadCollectible : Collectible
 
     new void OnTriggerEnter2D(Collider2D other)
     {
-
+        if (other.CompareTag("Player"))
+        {
+            audioSource.Play();
+        }
     }
 
     void OnTriggerExit2D(Collider2D other)
