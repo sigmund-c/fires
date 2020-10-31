@@ -5,7 +5,9 @@ using UnityEngine.Experimental.Rendering.LWRP;
 
 public class ReadCollectible : Collectible
 {
+    public TextManager textManager;
     public ParticleSystem particle;
+    public int textIndex;
     new UnityEngine.Experimental.Rendering.Universal.Light2D light;
     private bool setLight;
 
@@ -16,21 +18,29 @@ public class ReadCollectible : Collectible
         base.Start();
     }
 
-    new void OnTriggerEnter2D(Collider2D other)
+    void OnTriggerStay2D(Collider2D other)
     {
         PlayerController controller = other.GetComponent<PlayerController>();
-
         if (controller != null)
         {
+            textManager.SetBody(textIndex);
+            textManager.Enable(true);
             if (setLight)
             {
                 setLight = false;
                 particle.Play();
                 light.intensity = 1.0f;
             }
-            Time.timeScale = 0;
         }
+    }
 
-        base.PlayAudio();
+    new void OnTriggerEnter2D(Collider2D other)
+    {
+
+    }
+
+    void OnTriggerExit2D(Collider2D other)
+    {
+        textManager.Enable(false);
     }
 }
