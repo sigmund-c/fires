@@ -1,0 +1,799 @@
+fileFormatVersion: 2
+guid: c75c8c3513bddaf4791618d3d4fae22f
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: -2938364813279627944
+    second: Button On-Click New Game_0
+  - first:
+      213: 8164408359037745298
+    second: Button On-Click New Game_1
+  - first:
+      213: 2150468479741059773
+    second: Button On-Click New Game_2
+  - first:
+      213: 6313546157688749850
+    second: Button On-Click New Game_3
+  - first:
+      213: 4598536761913851032
+    second: Button On-Click New Game_4
+  - first:
+      213: -7482930510054630009
+    second: Button On-Click New Game_5
+  - first:
+      213: -7566935210629872764
+    second: Button On-Click New Game_6
+  - first:
+      213: -3437751863177130231
+    second: Button On-Click New Game_7
+  - first:
+      213: -2914306177303749759
+    second: Button On-Click New Game_8
+  - first:
+      213: 5039793668028539388
+    second: Button On-Click New Game_9
+  - first:
+      213: -1411595028427949905
+    second: Button On-Click New Game_10
+  - first:
+      213: -2077289187125490999
+    second: Button On-Click New Game_11
+  - first:
+      213: 8947902762723871794
+    second: Button On-Click New Game_12
+  - first:
+      213: -693588258942849831
+    second: Button On-Click New Game_13
+  - first:
+      213: -3562116247168364337
+    second: Button On-Click New Game_14
+  - first:
+      213: 7794349304126754656
+    second: Button On-Click New Game_15
+  - first:
+      213: 4114070106999083862
+    second: Button On-Click New Game_16
+  - first:
+      213: -7742635139006184006
+    second: Button On-Click New Game_17
+  - first:
+      213: 6301396018598848288
+    second: Button On-Click New Game_18
+  - first:
+      213: -4220572947293813643
+    second: Button On-Click New Game_19
+  - first:
+      213: 2917480014561725689
+    second: Button On-Click New Game_20
+  - first:
+      213: 5799115425919670665
+    second: Button On-Click New Game_21
+  - first:
+      213: 1342234276772950979
+    second: Button On-Click New Game_22
+  - first:
+      213: -3567638719375245786
+    second: Button On-Click New Game_23
+  - first:
+      213: -7057672788611874757
+    second: Button On-Click New Game_24
+  - first:
+      213: -1698141040252092704
+    second: Button On-Click New Game_25
+  - first:
+      213: 5602807233990701270
+    second: Button On-Click New Game_26
+  - first:
+      213: 8690910720342235654
+    second: Button On-Click New Game_27
+  - first:
+      213: 1928491400981304477
+    second: Button On-Click New Game_28
+  - first:
+      213: -2576979841640767938
+    second: Button On-Click New Game_29
+  - first:
+      213: -9139305832941634325
+    second: Button On-Click New Game_30
+  - first:
+      213: 2928551381195075773
+    second: Button On-Click New Game_31
+  - first:
+      213: 1712614978253968201
+    second: Button On-Click New Game_32
+  - first:
+      213: 7180561585041463756
+    second: Button On-Click New Game_33
+  - first:
+      213: 3108178690757045374
+    second: Button On-Click New Game_34
+  - first:
+      213: -8040910442878942106
+    second: Button On-Click New Game_35
+  - first:
+      213: 907115239271402665
+    second: Button On-Click New Game_36
+  - first:
+      213: -4375533214921314076
+    second: Button On-Click New Game_37
+  - first:
+      213: -3013293213730796322
+    second: Button On-Click New Game_38
+  - first:
+      213: 3246221441283674150
+    second: Button On-Click New Game_39
+  - first:
+      213: -2350828034970716082
+    second: Button On-Click New Game_40
+  - first:
+      213: -6088063589983114301
+    second: Button On-Click New Game_41
+  - first:
+      213: 4695163359498459193
+    second: Button On-Click New Game_42
+  - first:
+      213: -7052212823330159763
+    second: Button On-Click New Game_43
+  - first:
+      213: -7528467851575579852
+    second: Button On-Click New Game_44
+  - first:
+      213: 2248488209446248534
+    second: Button On-Click New Game_45
+  - first:
+      213: 2453783895579014756
+    second: Button On-Click New Game_46
+  - first:
+      213: -7552759795337122449
+    second: Button On-Click New Game_47
+  - first:
+      213: 3693922320312872557
+    second: Button On-Click New Game_48
+  - first:
+      213: 4362674099155852173
+    second: Button On-Click New Game_49
+  - first:
+      213: -6786109402983812625
+    second: Button On-Click New Game_50
+  - first:
+      213: -6049442517561568791
+    second: Button On-Click New Game_51
+  - first:
+      213: 223219196754254615
+    second: Button On-Click New Game_52
+  - first:
+      213: 3738672552338454559
+    second: Button On-Click New Game_53
+  - first:
+      213: 3392742525670495287
+    second: Button On-Click New Game_54
+  - first:
+      213: 1674065186065228269
+    second: Button On-Click New Game_55
+  - first:
+      213: 3193495587780543584
+    second: Button On-Click New Game_56
+  - first:
+      213: 634307476327546923
+    second: Button On-Click New Game_57
+  - first:
+      213: -5681087003257049346
+    second: Button On-Click New Game_58
+  - first:
+      213: 4806441412172505537
+    second: Button On-Click New Game_59
+  - first:
+      213: -7326665840597460411
+    second: Button On-Click New Game_60
+  - first:
+      213: 485387800069758827
+    second: Button On-Click New Game_61
+  - first:
+      213: -4141442797016224172
+    second: Button On-Click New Game_62
+  - first:
+      213: 7043110518266862970
+    second: Button On-Click New Game_63
+  - first:
+      213: 7442214419762443327
+    second: Button On-Click New Game_64
+  - first:
+      213: 5723997406942654054
+    second: Button On-Click New Game_65
+  - first:
+      213: 631834102808323435
+    second: Button On-Click New Game_66
+  - first:
+      213: 1401950599188823493
+    second: Button On-Click New Game_67
+  - first:
+      213: -3475595205709147232
+    second: Button On-Click New Game_68
+  - first:
+      213: 9003048167770044846
+    second: Button On-Click New Game_69
+  - first:
+      213: 578460860539002188
+    second: Button On-Click New Game_70
+  - first:
+      213: 6357317800523828729
+    second: Button On-Click New Game_71
+  - first:
+      213: 2703237421038933130
+    second: Button On-Click New Game_72
+  - first:
+      213: -7520056006804438954
+    second: Button On-Click New Game_73
+  - first:
+      213: -5312442348370171948
+    second: Button On-Click New Game_74
+  - first:
+      213: 9107064954935708851
+    second: Button On-Click New Game_75
+  - first:
+      213: -7886547407543896356
+    second: Button On-Click New Game_76
+  - first:
+      213: 2827216357842159240
+    second: Button On-Click New Game_77
+  - first:
+      213: 2635016047879362763
+    second: Button On-Click New Game_78
+  - first:
+      213: -5984927810147428841
+    second: Button On-Click New Game_79
+  - first:
+      213: -8725866531212610105
+    second: Button On-Click New Game_80
+  - first:
+      213: 7401963453865745884
+    second: Button On-Click New Game_81
+  - first:
+      213: 5507643965967672497
+    second: Button On-Click New Game_82
+  - first:
+      213: -8817173289747857277
+    second: Button On-Click New Game_83
+  - first:
+      213: 4974490568539697910
+    second: Button On-Click New Game_84
+  - first:
+      213: -4119923262121815786
+    second: Button On-Click New Game_85
+  - first:
+      213: -3388416571440137871
+    second: Button On-Click New Game_86
+  - first:
+      213: 775648348891731033
+    second: Button On-Click New Game_87
+  - first:
+      213: -2893763713249622409
+    second: Button On-Click New Game_88
+  - first:
+      213: 1893269445219400039
+    second: Button On-Click New Game_89
+  - first:
+      213: -2630791395980049787
+    second: Button On-Click New Game_90
+  - first:
+      213: -6565419451244962555
+    second: Button On-Click New Game_91
+  - first:
+      213: 5797898819530873410
+    second: Button On-Click New Game_92
+  - first:
+      213: -4084654068528363454
+    second: Button On-Click New Game_93
+  - first:
+      213: 8410821322121899209
+    second: Button On-Click New Game_94
+  - first:
+      213: 1233940715608857529
+    second: Button On-Click New Game_95
+  - first:
+      213: -4319355090887910713
+    second: Button On-Click New Game_96
+  - first:
+      213: -703374153554847040
+    second: Button On-Click New Game_97
+  - first:
+      213: 1166765605232799925
+    second: Button On-Click New Game_98
+  - first:
+      213: 2140615038014782232
+    second: Button On-Click New Game_99
+  - first:
+      213: 1740069070568223001
+    second: Button On-Click New Game_100
+  - first:
+      213: 4049168319536044544
+    second: Button On-Click New Game_101
+  - first:
+      213: -3783584263481948247
+    second: Button On-Click New Game_102
+  - first:
+      213: 2963251201229755701
+    second: Button On-Click New Game_103
+  - first:
+      213: 7889397944390469994
+    second: Button On-Click New Game_104
+  - first:
+      213: -469396244206203971
+    second: Button On-Click New Game_105
+  - first:
+      213: 4360113482908143537
+    second: Button On-Click New Game_106
+  - first:
+      213: -7557173725807255629
+    second: Button On-Click New Game_107
+  - first:
+      213: -1071809857534906444
+    second: Button On-Click New Game_108
+  - first:
+      213: -8918827761202750824
+    second: Button On-Click New Game_109
+  - first:
+      213: -6140197390650493178
+    second: Button On-Click New Game_110
+  - first:
+      213: -7067344363582563332
+    second: Button On-Click New Game_111
+  - first:
+      213: 2430336327541262001
+    second: Button On-Click New Game_112
+  - first:
+      213: -4049903048930354549
+    second: Button On-Click New Game_113
+  - first:
+      213: 5238402674731484824
+    second: Button On-Click New Game_114
+  - first:
+      213: -5906708930229478224
+    second: Button On-Click New Game_115
+  - first:
+      213: 5991929961376704553
+    second: Button On-Click New Game_116
+  - first:
+      213: -5338386285628143162
+    second: Button On-Click New Game_117
+  - first:
+      213: 6310999555479386267
+    second: Button On-Click New Game_118
+  - first:
+      213: -2492982480370351311
+    second: Button On-Click New Game_119
+  - first:
+      213: -1505279979760936278
+    second: Button On-Click New Game_120
+  - first:
+      213: 2163495068161341957
+    second: Button On-Click New Game_121
+  - first:
+      213: 7222904297167596760
+    second: Button On-Click New Game_122
+  - first:
+      213: 2448074270721878079
+    second: Button On-Click New Game_123
+  - first:
+      213: -6018853134581210569
+    second: Button On-Click New Game_124
+  - first:
+      213: 6761429435656324527
+    second: Button On-Click New Game_125
+  - first:
+      213: 8798943340879038705
+    second: Button On-Click New Game_126
+  - first:
+      213: -2587286486914046826
+    second: Button On-Click New Game_127
+  - first:
+      213: 8314941847104207609
+    second: Button On-Click New Game_128
+  - first:
+      213: -3949961813986244619
+    second: Button On-Click New Game_129
+  - first:
+      213: -8661343058627603866
+    second: Button On-Click New Game_130
+  - first:
+      213: -8209615660475320909
+    second: Button On-Click New Game_131
+  - first:
+      213: 4355062689777537213
+    second: Button On-Click New Game_132
+  - first:
+      213: -7512537420408082354
+    second: Button On-Click New Game_133
+  - first:
+      213: -5696045485359959493
+    second: Button On-Click New Game_134
+  - first:
+      213: 7927353865799270541
+    second: Button On-Click New Game_135
+  - first:
+      213: 3367833698664353227
+    second: Button On-Click New Game_136
+  - first:
+      213: -2092959435388533137
+    second: Button On-Click New Game_137
+  - first:
+      213: -5695977334430806327
+    second: Button On-Click New Game_138
+  - first:
+      213: 8792307872216842840
+    second: Button On-Click New Game_139
+  - first:
+      213: -5329668666204026131
+    second: Button On-Click New Game_140
+  - first:
+      213: -8346358632046439152
+    second: Button On-Click New Game_141
+  - first:
+      213: -6950399131630933632
+    second: Button On-Click New Game_142
+  - first:
+      213: -1341246195386232451
+    second: Button On-Click New Game_143
+  - first:
+      213: 1072067493223577310
+    second: Button On-Click New Game_144
+  - first:
+      213: -4007213861186764188
+    second: Button On-Click New Game_145
+  - first:
+      213: -5035363223370625849
+    second: Button On-Click New Game_146
+  - first:
+      213: -4672075696990842382
+    second: Button On-Click New Game_147
+  - first:
+      213: -22938206499774665
+    second: Button On-Click New Game_148
+  - first:
+      213: 2622561793039167616
+    second: Button On-Click New Game_149
+  - first:
+      213: -7754210550021576277
+    second: Button On-Click New Game_150
+  - first:
+      213: 2539818370976772230
+    second: Button On-Click New Game_151
+  - first:
+      213: -4760257669154730687
+    second: Button On-Click New Game_152
+  - first:
+      213: 3544667435848069473
+    second: Button On-Click New Game_153
+  externalObjects: {}
+  serializedVersion: 11
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: -1
+    aniso: -1
+    mipBias: -100
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: Button On-Click New Game_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 390.6667
+        width: 413.75
+        height: 195.33333
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 855f5fb35c4d837d0800000000000000
+      internalID: -2938364813279627944
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Button On-Click New Game_1
+      rect:
+        serializedVersion: 2
+        x: 413
+        y: 390.6667
+        width: 413.75
+        height: 195.33333
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 298bca9452ecd4170800000000000000
+      internalID: 8164408359037745298
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Button On-Click New Game_2
+      rect:
+        serializedVersion: 2
+        x: 826
+        y: 390.6667
+        width: 413.75
+        height: 195.33333
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: db2e3ab40bff7dd10800000000000000
+      internalID: 2150468479741059773
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Button On-Click New Game_3
+      rect:
+        serializedVersion: 2
+        x: 1239
+        y: 390.6667
+        width: 413.75
+        height: 195.33333
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a1ff112a7c83e9750800000000000000
+      internalID: 6313546157688749850
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Button On-Click New Game_4
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 195.66667
+        width: 413.75
+        height: 195.33333
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 89c337422d841df30800000000000000
+      internalID: 4598536761913851032
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Button On-Click New Game_5
+      rect:
+        serializedVersion: 2
+        x: 413
+        y: 195.66667
+        width: 413.75
+        height: 195.33333
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 78dd24de85a472890800000000000000
+      internalID: -7482930510054630009
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Button On-Click New Game_6
+      rect:
+        serializedVersion: 2
+        x: 826
+        y: 195.66667
+        width: 413.75
+        height: 195.33333
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 483c20c6488dcf690800000000000000
+      internalID: -7566935210629872764
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Button On-Click New Game_7
+      rect:
+        serializedVersion: 2
+        x: 1239
+        y: 195.66667
+        width: 413.75
+        height: 195.33333
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 90fc369f4e6aa40d0800000000000000
+      internalID: -3437751863177130231
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Button On-Click New Game_8
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 0.66667175
+        width: 413.75
+        height: 195.33333
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 18b551fe8fd4e87d0800000000000000
+      internalID: -2914306177303749759
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Button On-Click New Game_9
+      rect:
+        serializedVersion: 2
+        x: 413
+        y: 0.66667175
+        width: 413.75
+        height: 195.33333
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cf1aa1c93a1f0f540800000000000000
+      internalID: 5039793668028539388
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Button On-Click New Game_10
+      rect:
+        serializedVersion: 2
+        x: 826
+        y: 0.66667175
+        width: 413.75
+        height: 195.33333
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fa838d3fcc1096ce0800000000000000
+      internalID: -1411595028427949905
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+  spritePackingTag: 
+  pSDRemoveMatte: 0
+  pSDShowRemoveMatteOption: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

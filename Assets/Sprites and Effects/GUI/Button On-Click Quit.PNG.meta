@@ -1,0 +1,370 @@
+fileFormatVersion: 2
+guid: c436cef3577f92b4190a5766933b1633
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: 6466559337095713839
+    second: Button On-Click Quit_0
+  - first:
+      213: -2527243255240237483
+    second: Button On-Click Quit_1
+  - first:
+      213: -8042881862537386795
+    second: Button On-Click Quit_2
+  - first:
+      213: 3170248437598223336
+    second: Button On-Click Quit_3
+  - first:
+      213: 888996617615295702
+    second: Button On-Click Quit_4
+  - first:
+      213: -2656947751258067501
+    second: Button On-Click Quit_5
+  - first:
+      213: -7310155569927849162
+    second: Button On-Click Quit_6
+  - first:
+      213: -486985012379107713
+    second: Button On-Click Quit_7
+  - first:
+      213: 6508591891393151037
+    second: Button On-Click Quit_8
+  - first:
+      213: 6278615742064007075
+    second: Button On-Click Quit_9
+  - first:
+      213: -265970011643009483
+    second: Button On-Click Quit_10
+  externalObjects: {}
+  serializedVersion: 11
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: -1
+    aniso: -1
+    mipBias: -100
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: Button On-Click Quit_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 390.6667
+        width: 413.75
+        height: 195.33333
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f24539ea475ddb950800000000000000
+      internalID: 6466559337095713839
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Button On-Click Quit_1
+      rect:
+        serializedVersion: 2
+        x: 413
+        y: 390.6667
+        width: 413.75
+        height: 195.33333
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 55e576636ad6decd0800000000000000
+      internalID: -2527243255240237483
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Button On-Click Quit_2
+      rect:
+        serializedVersion: 2
+        x: 826
+        y: 390.6667
+        width: 413.75
+        height: 195.33333
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5d4e60d1f81f16090800000000000000
+      internalID: -8042881862537386795
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Button On-Click Quit_3
+      rect:
+        serializedVersion: 2
+        x: 1239
+        y: 390.6667
+        width: 413.75
+        height: 195.33333
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8eb77c4482cfefb20800000000000000
+      internalID: 3170248437598223336
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Button On-Click Quit_4
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 195.66667
+        width: 413.75
+        height: 195.33333
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6d4cb7fa6b9565c00800000000000000
+      internalID: 888996617615295702
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Button On-Click Quit_5
+      rect:
+        serializedVersion: 2
+        x: 413
+        y: 195.66667
+        width: 413.75
+        height: 195.33333
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3dd6d7be810a02bd0800000000000000
+      internalID: -2656947751258067501
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Button On-Click Quit_6
+      rect:
+        serializedVersion: 2
+        x: 826
+        y: 195.66667
+        width: 413.75
+        height: 195.33333
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 63b7b917d3c1d8a90800000000000000
+      internalID: -7310155569927849162
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Button On-Click Quit_7
+      rect:
+        serializedVersion: 2
+        x: 1239
+        y: 195.66667
+        width: 413.75
+        height: 195.33333
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f7e343e16b1ed39f0800000000000000
+      internalID: -486985012379107713
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Button On-Click Quit_8
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 0.66667175
+        width: 413.75
+        height: 195.33333
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d300a7a57d9235a50800000000000000
+      internalID: 6508591891393151037
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Button On-Click Quit_9
+      rect:
+        serializedVersion: 2
+        x: 413
+        y: 0.66667175
+        width: 413.75
+        height: 195.33333
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3a796ea70cf122750800000000000000
+      internalID: 6278615742064007075
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Button On-Click Quit_10
+      rect:
+        serializedVersion: 2
+        x: 826
+        y: 0.66667175
+        width: 413.75
+        height: 195.33333
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 536ac1ffea51f4cf0800000000000000
+      internalID: -265970011643009483
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+  spritePackingTag: 
+  pSDRemoveMatte: 0
+  pSDShowRemoveMatteOption: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
