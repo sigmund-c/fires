@@ -38,6 +38,42 @@ TextureImporter:
   - first:
       213: -5133624496603388318
     second: Button Hover New Game_11
+  - first:
+      213: -1304449208627093731
+    second: Button Hover New Game_0
+  - first:
+      213: 3877510540154553931
+    second: Button Hover New Game_1
+  - first:
+      213: -2928377442248421248
+    second: Button Hover New Game_2
+  - first:
+      213: -3277598691669423491
+    second: Button Hover New Game_3
+  - first:
+      213: 6654242761269839436
+    second: Button Hover New Game_4
+  - first:
+      213: -8843121112654376222
+    second: Button Hover New Game_5
+  - first:
+      213: 4812263774360827296
+    second: Button Hover New Game_6
+  - first:
+      213: -3727123773806935575
+    second: Button Hover New Game_7
+  - first:
+      213: 2703361813592074418
+    second: Button Hover New Game_8
+  - first:
+      213: 7148975051610353117
+    second: Button Hover New Game_9
+  - first:
+      213: -678474048422397242
+    second: Button Hover New Game_10
+  - first:
+      213: 2182203493167599433
+    second: Button Hover New Game_11
   externalObjects: {}
   serializedVersion: 11
   mipmaps:
@@ -68,7 +104,7 @@ TextureImporter:
   maxTextureSize: 2048
   textureSettings:
     serializedVersion: 2
-    filterMode: -1
+    filterMode: 0
     aniso: -1
     mipBias: -100
     wrapU: 1
@@ -129,18 +165,18 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 0
-        y: 390
-        width: 414
-        height: 195
+        y: 394
+        width: 410
+        height: 192
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 39e61b15d3b10eeb0800000000000000
-      internalID: -4692720861542519149
+      spriteID: d1f1e342b5aa5ede0800000000000000
+      internalID: -1304449208627093731
       vertices: []
       indices: 
       edges: []
@@ -149,19 +185,19 @@ TextureImporter:
       name: Button Hover New Game_1
       rect:
         serializedVersion: 2
-        x: 413
-        y: 390.6667
-        width: 413.75
-        height: 195.33333
+        x: 415
+        y: 394
+        width: 410
+        height: 192
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: bbab25916843902d0800000000000000
-      internalID: -3312058300399174981
+      spriteID: b46ceb6da4fafc530800000000000000
+      internalID: 3877510540154553931
       vertices: []
       indices: 
       edges: []
@@ -170,19 +206,19 @@ TextureImporter:
       name: Button Hover New Game_2
       rect:
         serializedVersion: 2
-        x: 826
-        y: 390.6667
-        width: 413.75
-        height: 195.33333
+        x: 830
+        y: 394
+        width: 410
+        height: 192
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: a6c47a3ceb5e3c180800000000000000
-      internalID: -9096174214869201814
+      spriteID: 08014824b305c57d0800000000000000
+      internalID: -2928377442248421248
       vertices: []
       indices: 
       edges: []
@@ -191,19 +227,19 @@ TextureImporter:
       name: Button Hover New Game_3
       rect:
         serializedVersion: 2
-        x: 1239
-        y: 390.6667
-        width: 413.75
-        height: 195.33333
+        x: 1245
+        y: 394
+        width: 410
+        height: 192
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: e5f574823df5db7b0800000000000000
-      internalID: -5206900233651921058
+      spriteID: d7a42cafa51a382d0800000000000000
+      internalID: -3277598691669423491
       vertices: []
       indices: 
       edges: []
@@ -213,18 +249,18 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 0
-        y: 195.66667
-        width: 413.75
-        height: 195.33333
+        y: 197
+        width: 410
+        height: 192
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 430957109dd71b840800000000000000
-      internalID: 5238106212594454580
+      spriteID: c4604b2298e985c50800000000000000
+      internalID: 6654242761269839436
       vertices: []
       indices: 
       edges: []
@@ -233,19 +269,19 @@ TextureImporter:
       name: Button Hover New Game_5
       rect:
         serializedVersion: 2
-        x: 413
-        y: 195.66667
-        width: 413.75
-        height: 195.33333
+        x: 415
+        y: 197
+        width: 410
+        height: 192
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 51fa96d87b8dc7810800000000000000
-      internalID: 1764523436885520149
+      spriteID: 2e29a7e633ce64580800000000000000
+      internalID: -8843121112654376222
       vertices: []
       indices: 
       edges: []
@@ -254,19 +290,19 @@ TextureImporter:
       name: Button Hover New Game_6
       rect:
         serializedVersion: 2
-        x: 826
-        y: 195.66667
-        width: 413.75
-        height: 195.33333
+        x: 830
+        y: 197
+        width: 410
+        height: 192
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 02772e602fd1a3300800000000000000
-      internalID: 232531256097797920
+      spriteID: 0a5f144086898c240800000000000000
+      internalID: 4812263774360827296
       vertices: []
       indices: 
       edges: []
@@ -275,19 +311,19 @@ TextureImporter:
       name: Button Hover New Game_7
       rect:
         serializedVersion: 2
-        x: 1239
-        y: 195
-        width: 414
-        height: 195
+        x: 1245
+        y: 197
+        width: 410
+        height: 192
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 35eb97953bb3275b0800000000000000
-      internalID: -5372165764013244845
+      spriteID: 9e10354cca8964cc0800000000000000
+      internalID: -3727123773806935575
       vertices: []
       indices: 
       edges: []
@@ -297,18 +333,18 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 0
-        y: 0.66667175
-        width: 413.75
-        height: 195.33333
+        y: 0
+        width: 410
+        height: 192
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 0516a0c6e8e05d190800000000000000
-      internalID: -7938422763309866672
+      spriteID: 2b8e2861f35448520800000000000000
+      internalID: 2703361813592074418
       vertices: []
       indices: 
       edges: []
@@ -317,19 +353,19 @@ TextureImporter:
       name: Button Hover New Game_9
       rect:
         serializedVersion: 2
-        x: 413
-        y: 0.66667175
-        width: 413.75
-        height: 195.33333
+        x: 415
+        y: 0
+        width: 410
+        height: 192
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 2864bec7aba3e1a80800000000000000
-      internalID: -8494287274540054910
+      spriteID: ddd6d5bbee2463360800000000000000
+      internalID: 7148975051610353117
       vertices: []
       indices: 
       edges: []
@@ -338,19 +374,19 @@ TextureImporter:
       name: Button Hover New Game_10
       rect:
         serializedVersion: 2
-        x: 823
+        x: 830
         y: 0
-        width: 414
-        height: 195
+        width: 410
+        height: 192
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 018904e8642f6beb0800000000000000
-      internalID: -4704306375893673968
+      spriteID: 6ca367a92739596f0800000000000000
+      internalID: -678474048422397242
       vertices: []
       indices: 
       edges: []
@@ -359,19 +395,19 @@ TextureImporter:
       name: Button Hover New Game_11
       rect:
         serializedVersion: 2
-        x: 1239
+        x: 1245
         y: 0
-        width: 414
-        height: 195
+        width: 410
+        height: 192
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 26626bd28b3b1c8b0800000000000000
-      internalID: -5133624496603388318
+      spriteID: 94f0fd5e38eb84e10800000000000000
+      internalID: 2182203493167599433
       vertices: []
       indices: 
       edges: []

@@ -35,6 +35,39 @@ TextureImporter:
   - first:
       213: -265970011643009483
     second: Button On-Click Quit_10
+  - first:
+      213: -5871561874461336845
+    second: Button On-Click Quit_0
+  - first:
+      213: -8525019460909639346
+    second: Button On-Click Quit_1
+  - first:
+      213: 3852668877099888101
+    second: Button On-Click Quit_2
+  - first:
+      213: -2453825801810568461
+    second: Button On-Click Quit_3
+  - first:
+      213: -3034595878331222353
+    second: Button On-Click Quit_4
+  - first:
+      213: 3485602172082063296
+    second: Button On-Click Quit_5
+  - first:
+      213: 3374712972417974801
+    second: Button On-Click Quit_6
+  - first:
+      213: 5579469122485109333
+    second: Button On-Click Quit_7
+  - first:
+      213: -869097956743706574
+    second: Button On-Click Quit_8
+  - first:
+      213: -8958240998057442289
+    second: Button On-Click Quit_9
+  - first:
+      213: 6471018339455093286
+    second: Button On-Click Quit_10
   externalObjects: {}
   serializedVersion: 11
   mipmaps:
@@ -65,7 +98,7 @@ TextureImporter:
   maxTextureSize: 2048
   textureSettings:
     serializedVersion: 2
-    filterMode: -1
+    filterMode: 0
     aniso: -1
     mipBias: -100
     wrapU: 1
@@ -126,18 +159,18 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 0
-        y: 390.6667
-        width: 413.75
-        height: 195.33333
+        y: 394
+        width: 410
+        height: 192
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: f24539ea475ddb950800000000000000
-      internalID: 6466559337095713839
+      spriteID: 3fa51048595048ea0800000000000000
+      internalID: -5871561874461336845
       vertices: []
       indices: 
       edges: []
@@ -146,19 +179,19 @@ TextureImporter:
       name: Button On-Click Quit_1
       rect:
         serializedVersion: 2
-        x: 413
-        y: 390.6667
-        width: 413.75
-        height: 195.33333
+        x: 415
+        y: 394
+        width: 410
+        height: 192
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 55e576636ad6decd0800000000000000
-      internalID: -2527243255240237483
+      spriteID: e495031c7fb01b980800000000000000
+      internalID: -8525019460909639346
       vertices: []
       indices: 
       edges: []
@@ -167,19 +200,19 @@ TextureImporter:
       name: Button On-Click Quit_2
       rect:
         serializedVersion: 2
-        x: 826
-        y: 390.6667
-        width: 413.75
-        height: 195.33333
+        x: 830
+        y: 394
+        width: 410
+        height: 192
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 5d4e60d1f81f16090800000000000000
-      internalID: -8042881862537386795
+      spriteID: 5ededb07eed677530800000000000000
+      internalID: 3852668877099888101
       vertices: []
       indices: 
       edges: []
@@ -188,19 +221,19 @@ TextureImporter:
       name: Button On-Click Quit_3
       rect:
         serializedVersion: 2
-        x: 1239
-        y: 390.6667
-        width: 413.75
-        height: 195.33333
+        x: 1245
+        y: 394
+        width: 410
+        height: 192
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 8eb77c4482cfefb20800000000000000
-      internalID: 3170248437598223336
+      spriteID: 3fa94662f6242fdd0800000000000000
+      internalID: -2453825801810568461
       vertices: []
       indices: 
       edges: []
@@ -210,18 +243,18 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 0
-        y: 195.66667
-        width: 413.75
-        height: 195.33333
+        y: 197
+        width: 410
+        height: 192
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 6d4cb7fa6b9565c00800000000000000
-      internalID: 888996617615295702
+      spriteID: fa6f33b6023f2e5d0800000000000000
+      internalID: -3034595878331222353
       vertices: []
       indices: 
       edges: []
@@ -230,19 +263,19 @@ TextureImporter:
       name: Button On-Click Quit_5
       rect:
         serializedVersion: 2
-        x: 413
-        y: 195.66667
-        width: 413.75
-        height: 195.33333
+        x: 415
+        y: 197
+        width: 410
+        height: 192
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 3dd6d7be810a02bd0800000000000000
-      internalID: -2656947751258067501
+      spriteID: 0c7084f35b85f5030800000000000000
+      internalID: 3485602172082063296
       vertices: []
       indices: 
       edges: []
@@ -251,19 +284,19 @@ TextureImporter:
       name: Button On-Click Quit_6
       rect:
         serializedVersion: 2
-        x: 826
-        y: 195.66667
-        width: 413.75
-        height: 195.33333
+        x: 830
+        y: 197
+        width: 410
+        height: 192
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 63b7b917d3c1d8a90800000000000000
-      internalID: -7310155569927849162
+      spriteID: 11240e3819365de20800000000000000
+      internalID: 3374712972417974801
       vertices: []
       indices: 
       edges: []
@@ -272,19 +305,19 @@ TextureImporter:
       name: Button On-Click Quit_7
       rect:
         serializedVersion: 2
-        x: 1239
-        y: 195.66667
-        width: 413.75
-        height: 195.33333
+        x: 1245
+        y: 197
+        width: 410
+        height: 192
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: f7e343e16b1ed39f0800000000000000
-      internalID: -486985012379107713
+      spriteID: 5524cf80b914e6d40800000000000000
+      internalID: 5579469122485109333
       vertices: []
       indices: 
       edges: []
@@ -294,18 +327,18 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 0
-        y: 0.66667175
-        width: 413.75
-        height: 195.33333
+        y: 0
+        width: 410
+        height: 192
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: d300a7a57d9235a50800000000000000
-      internalID: 6508591891393151037
+      spriteID: 2380645530850f3f0800000000000000
+      internalID: -869097956743706574
       vertices: []
       indices: 
       edges: []
@@ -314,19 +347,19 @@ TextureImporter:
       name: Button On-Click Quit_9
       rect:
         serializedVersion: 2
-        x: 413
-        y: 0.66667175
-        width: 413.75
-        height: 195.33333
+        x: 415
+        y: 0
+        width: 410
+        height: 192
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 3a796ea70cf122750800000000000000
-      internalID: 6278615742064007075
+      spriteID: f04027a664feda380800000000000000
+      internalID: -8958240998057442289
       vertices: []
       indices: 
       edges: []
@@ -335,19 +368,19 @@ TextureImporter:
       name: Button On-Click Quit_10
       rect:
         serializedVersion: 2
-        x: 826
-        y: 0.66667175
-        width: 413.75
-        height: 195.33333
+        x: 830
+        y: 0
+        width: 410
+        height: 192
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 536ac1ffea51f4cf0800000000000000
-      internalID: -265970011643009483
+      spriteID: 62a424215ecadc950800000000000000
+      internalID: 6471018339455093286
       vertices: []
       indices: 
       edges: []

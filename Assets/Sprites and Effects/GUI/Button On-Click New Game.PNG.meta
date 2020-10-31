@@ -464,6 +464,39 @@ TextureImporter:
   - first:
       213: 3544667435848069473
     second: Button On-Click New Game_153
+  - first:
+      213: 4403548300728466090
+    second: Button On-Click New Game_0
+  - first:
+      213: 633256137556188776
+    second: Button On-Click New Game_1
+  - first:
+      213: -3930038778129823768
+    second: Button On-Click New Game_2
+  - first:
+      213: 3205122800064653102
+    second: Button On-Click New Game_3
+  - first:
+      213: 7366116767053625007
+    second: Button On-Click New Game_4
+  - first:
+      213: 4520289040503337046
+    second: Button On-Click New Game_5
+  - first:
+      213: 2053120365874885118
+    second: Button On-Click New Game_6
+  - first:
+      213: -2510239194583059159
+    second: Button On-Click New Game_7
+  - first:
+      213: 6468166136909940311
+    second: Button On-Click New Game_8
+  - first:
+      213: -7174209186874207597
+    second: Button On-Click New Game_9
+  - first:
+      213: -4406764571776892335
+    second: Button On-Click New Game_10
   externalObjects: {}
   serializedVersion: 11
   mipmaps:
@@ -494,7 +527,7 @@ TextureImporter:
   maxTextureSize: 2048
   textureSettings:
     serializedVersion: 2
-    filterMode: -1
+    filterMode: 0
     aniso: -1
     mipBias: -100
     wrapU: 1
@@ -555,18 +588,18 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 0
-        y: 390.6667
-        width: 413.75
-        height: 195.33333
+        y: 394
+        width: 410
+        height: 192
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 855f5fb35c4d837d0800000000000000
-      internalID: -2938364813279627944
+      spriteID: aaaf13839db8c1d30800000000000000
+      internalID: 4403548300728466090
       vertices: []
       indices: 
       edges: []
@@ -575,19 +608,19 @@ TextureImporter:
       name: Button On-Click New Game_1
       rect:
         serializedVersion: 2
-        x: 413
-        y: 390.6667
-        width: 413.75
-        height: 195.33333
+        x: 415
+        y: 394
+        width: 410
+        height: 192
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 298bca9452ecd4170800000000000000
-      internalID: 8164408359037745298
+      spriteID: 86e5fda1a17c9c800800000000000000
+      internalID: 633256137556188776
       vertices: []
       indices: 
       edges: []
@@ -596,19 +629,19 @@ TextureImporter:
       name: Button On-Click New Game_2
       rect:
         serializedVersion: 2
-        x: 826
-        y: 390.6667
-        width: 413.75
-        height: 195.33333
+        x: 830
+        y: 394
+        width: 410
+        height: 192
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: db2e3ab40bff7dd10800000000000000
-      internalID: 2150468479741059773
+      spriteID: 8e7cf04bd82b579c0800000000000000
+      internalID: -3930038778129823768
       vertices: []
       indices: 
       edges: []
@@ -617,19 +650,19 @@ TextureImporter:
       name: Button On-Click New Game_3
       rect:
         serializedVersion: 2
-        x: 1239
-        y: 390.6667
-        width: 413.75
-        height: 195.33333
+        x: 1245
+        y: 394
+        width: 410
+        height: 192
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: a1ff112a7c83e9750800000000000000
-      internalID: 6313546157688749850
+      spriteID: e27eb578432ea7c20800000000000000
+      internalID: 3205122800064653102
       vertices: []
       indices: 
       edges: []
@@ -639,18 +672,18 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 0
-        y: 195.66667
-        width: 413.75
-        height: 195.33333
+        y: 197
+        width: 410
+        height: 192
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 89c337422d841df30800000000000000
-      internalID: 4598536761913851032
+      spriteID: fa6b74a1c24b93660800000000000000
+      internalID: 7366116767053625007
       vertices: []
       indices: 
       edges: []
@@ -659,19 +692,19 @@ TextureImporter:
       name: Button On-Click New Game_5
       rect:
         serializedVersion: 2
-        x: 413
-        y: 195.66667
-        width: 413.75
-        height: 195.33333
+        x: 415
+        y: 197
+        width: 410
+        height: 192
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 78dd24de85a472890800000000000000
-      internalID: -7482930510054630009
+      spriteID: 650fa4dceea4bbe30800000000000000
+      internalID: 4520289040503337046
       vertices: []
       indices: 
       edges: []
@@ -680,19 +713,19 @@ TextureImporter:
       name: Button On-Click New Game_6
       rect:
         serializedVersion: 2
-        x: 826
-        y: 195.66667
-        width: 413.75
-        height: 195.33333
+        x: 830
+        y: 197
+        width: 410
+        height: 192
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 483c20c6488dcf690800000000000000
-      internalID: -7566935210629872764
+      spriteID: ef1b71948162e7c10800000000000000
+      internalID: 2053120365874885118
       vertices: []
       indices: 
       edges: []
@@ -701,19 +734,19 @@ TextureImporter:
       name: Button On-Click New Game_7
       rect:
         serializedVersion: 2
-        x: 1239
-        y: 195.66667
-        width: 413.75
-        height: 195.33333
+        x: 1245
+        y: 197
+        width: 410
+        height: 192
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 90fc369f4e6aa40d0800000000000000
-      internalID: -3437751863177130231
+      spriteID: 9253d9990c6d92dd0800000000000000
+      internalID: -2510239194583059159
       vertices: []
       indices: 
       edges: []
@@ -723,18 +756,18 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 0
-        y: 0.66667175
-        width: 413.75
-        height: 195.33333
+        y: 0
+        width: 410
+        height: 192
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 18b551fe8fd4e87d0800000000000000
-      internalID: -2914306177303749759
+      spriteID: 7564abae4da83c950800000000000000
+      internalID: 6468166136909940311
       vertices: []
       indices: 
       edges: []
@@ -743,19 +776,19 @@ TextureImporter:
       name: Button On-Click New Game_9
       rect:
         serializedVersion: 2
-        x: 413
-        y: 0.66667175
-        width: 413.75
-        height: 195.33333
+        x: 415
+        y: 0
+        width: 410
+        height: 192
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: cf1aa1c93a1f0f540800000000000000
-      internalID: 5039793668028539388
+      spriteID: 392d40051c6107c90800000000000000
+      internalID: -7174209186874207597
       vertices: []
       indices: 
       edges: []
@@ -764,19 +797,19 @@ TextureImporter:
       name: Button On-Click New Game_10
       rect:
         serializedVersion: 2
-        x: 826
-        y: 0.66667175
-        width: 413.75
-        height: 195.33333
+        x: 830
+        y: 0
+        width: 410
+        height: 192
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: fa838d3fcc1096ce0800000000000000
-      internalID: -1411595028427949905
+      spriteID: 152467258f608d2c0800000000000000
+      internalID: -4406764571776892335
       vertices: []
       indices: 
       edges: []
