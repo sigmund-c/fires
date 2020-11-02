@@ -17,6 +17,10 @@ public class ReadCollectible : Collectible
         setLight = true;
         light = GetComponent<UnityEngine.Experimental.Rendering.Universal.Light2D>();
         audioSource = GetComponent<AudioSource>();
+        if (textManager == null)
+        {
+            textManager = GameObject.Find("TextManager").GetComponent<TextManager>();
+        }
         base.Start();
     }
 
