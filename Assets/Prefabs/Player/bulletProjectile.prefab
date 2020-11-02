@@ -178,7 +178,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a287920410fc37e41b847f724a11187c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  velocity: 10
+  velocity: 14
   maxRange: 18
   explosionHitEffect: {fileID: 2138079904934210083, guid: 1e455327072b0624daace08155614074, type: 3}
   fizzleEffect: {fileID: 2138079904934210083, guid: bae7a63520753c143bc203a885d6fa78, type: 3}
