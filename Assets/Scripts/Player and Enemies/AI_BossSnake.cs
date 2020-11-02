@@ -265,6 +265,15 @@ public class AI_BossSnake : MonoBehaviour
         Instantiate(deathEffect, transform.position, Quaternion.identity);
         healthUI.SetActive(false);
         headDamageable.Die();
+
+        foreach (GameObject enemy in GameObject.FindGameObjectsWithTag("Enemy"))
+        {
+            if (enemy.transform.root != transform.root && enemy.GetComponent<Damageable>() != null)
+            {
+                enemy.GetComponent<Damageable>().Die();
+            }
+        }
+
         GameObject.FindGameObjectWithTag("Persistent").GetComponent<PersistentAudio>().ChangeMusic(0);
         Instantiate(nextLevelCrystal, transform.position, Quaternion.identity).GetComponent<NextLevelCore>().sceneName = "Level 2-1";
         Destroy(gameObject);

@@ -36,6 +36,14 @@ public class BossDamageable : Damageable
         GameObject.FindGameObjectWithTag("MainCamera").GetComponent<CameraFollowBoss>().FocusOn(transform.position, blackenTime + 6f);
         effectsStorage.PlayEffect(1); //Death SFX
 
+        foreach(GameObject enemy in GameObject.FindGameObjectsWithTag("Enemy"))
+        {
+            if (enemy.transform.root != transform.root && enemy.GetComponent<Damageable>() != null)
+            {
+                enemy.GetComponent<Damageable>().Die();
+            }
+        } 
+
         GetComponent<SpriteRenderer>().color = new Color(1, 1, 1, 0);
         GetComponent<Collider2D>().enabled = false; // hitbox
         ai.StopAI();
