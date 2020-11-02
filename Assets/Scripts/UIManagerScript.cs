@@ -271,4 +271,15 @@ public class UIManagerScript : MonoBehaviour
             Debug.Log("No game saved!");
         }
     }
+
+    public void toggleSound(bool toggle)
+    {
+        AudioListener.pause = toggle;
+    }
+
+
+    public void sliderVolume(float value)
+    {
+        AudioListener.volume = value;
+    }
 }
