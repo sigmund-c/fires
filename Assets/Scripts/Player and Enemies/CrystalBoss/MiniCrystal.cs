@@ -70,7 +70,7 @@ public class MiniCrystal : MonoBehaviour
         float distance = Vector2.Distance(transform.position, parentPos);
         while (Mathf.Abs(distance - orbitRadius) > 0.05f)
         {
-            Debug.Log(distance);
+            //Debug.Log(distance);
             if (distance > orbitRadius)
                 transform.position = Vector2.MoveTowards(transform.position, parentPos, changeRadiusSpeed * Time.deltaTime);
             else

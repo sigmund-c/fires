@@ -67,7 +67,6 @@ public class AI_LeapToPlayer : MonoBehaviour
     {
         if (col.tag == "Player")
         {
-            Debug.LogWarning("Ecit");
             target = null;
         }
     }

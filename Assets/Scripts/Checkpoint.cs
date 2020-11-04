@@ -28,7 +28,6 @@ public class Checkpoint : MonoBehaviour
 
     private void ActivateSprite()
     {
-        // Debug.Log("actives");
         GetComponent<AudioSource>().Play();
         anim.Play("CheckpointActivate");
         sr.material = activatedMat;

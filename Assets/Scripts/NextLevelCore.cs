@@ -32,7 +32,6 @@ public class NextLevelCore : MonoBehaviour
 
     protected void ActivateSprite()
     {
-        Debug.Log("nextLevel");
         GetComponent<AudioSource>().Play();
         anim.Play();
         StartCoroutine(nextLevelDelay());

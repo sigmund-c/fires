@@ -26,7 +26,6 @@ public class BossDamageable : Damageable
     // Override, will respawn
     public override void Die()
     {
-        Debug.Log(name + " died");
         StartCoroutine(DeathAndRespawn());
     }
 

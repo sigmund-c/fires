@@ -66,7 +66,6 @@ public class Damageable : MonoBehaviour
     {
         currHealth -= damage;
         StartCoroutine(HitFlash(invincibleDuration));
-        Debug.Log(name + " took " + damage +", with [" + currHealth + "] hp left");
         PlaySound();
         //Utils.SpawnInfoText(transform.position, damage.ToString(), Vector2.up * 2,InfoTextType.DamageText);
         SliderTakeDamage(damage);
@@ -82,7 +81,6 @@ public class Damageable : MonoBehaviour
 
         currHealth -= damage;
         //StartCoroutine(HitFlash()); No invincibility frames
-        Debug.Log(name + " took " + damage + ", with [" + currHealth + "] hp left");
         SliderTakeDamage(damage);
 
         if (currHealth <= 0)
@@ -102,7 +100,6 @@ public class Damageable : MonoBehaviour
     {
         currHealth += restore;
         currHealth = Mathf.Min(currHealth, maxHealth);
-        Debug.Log(name + " restored " + restore + ", with [" + currHealth + "] hp left");
         SliderHealDamage(restore);
     }
 
@@ -113,7 +110,6 @@ public class Damageable : MonoBehaviour
             // When dead, produces a health pickup that moves to players that heals relative to max health
             Instantiate(Utils.enemyHealthDrop, this.transform.position, Quaternion.identity).GetComponent<HealthCollectibleDrop>().HealAmount = maxHealth + 1;
         }
-        Debug.Log(name + " died");
         Destroy(gameObject);
     }
     
@@ -176,7 +172,7 @@ public class Damageable : MonoBehaviour
 
         if (sliderHealth != currHealth)
         {
-            Debug.LogWarning("slider health != curr health, slider: " + sliderHealth + ", curr: " + currHealth);
+            //Debug.LogWarning("slider health != curr health, slider: " + sliderHealth + ", curr: " + currHealth);
         }
     }
 
@@ -191,7 +187,7 @@ public class Damageable : MonoBehaviour
 
         if (sliderHealth != currHealth)
         {
-            Debug.LogWarning("slider health != curr health, slider: " + sliderHealth + ", curr: " + currHealth);
+            //Debug.LogWarning("slider health != curr health, slider: " + sliderHealth + ", curr: " + currHealth);
         }
     }
 }
