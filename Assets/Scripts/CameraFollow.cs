@@ -14,14 +14,14 @@ public class CameraFollow : MonoBehaviour
 
     private bool hasOverrideTarget = false;
     private Vector3 overrideTarget;
-    private Vector3 target;
-    private Camera cam;
+    protected Vector3 target;
+    protected Camera cam;
 
     private float shakeMagnitude;
     private Vector3 initialPosition;
-    private float shakeDuration = 0f;
+    protected float shakeDuration = 0f;
 
-    private void Start()
+    protected void Start()
     {
         cam = GetComponent<Camera>();
 
@@ -49,7 +49,7 @@ public class CameraFollow : MonoBehaviour
         }
     }
 
-    void DecideTarget()
+    protected void DecideTarget()
     {
         if (hasOverrideTarget)
         {
