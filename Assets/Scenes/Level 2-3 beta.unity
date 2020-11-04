@@ -26263,7 +26263,7 @@ Transform:
   m_Children:
   - {fileID: 57862316}
   m_Father: {fileID: 0}
-  m_RootOrder: 8
+  m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &702242699
 PrefabInstance:
@@ -26326,7 +26326,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4668033746506706691, guid: 932a70d9c315c4e41b67b465e4610ccf, type: 3}
       propertyPath: m_RootOrder
-      value: 6
+      value: 9
       objectReference: {fileID: 0}
     - target: {fileID: 4668033746506706691, guid: 932a70d9c315c4e41b67b465e4610ccf, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
@@ -31283,7 +31283,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 515145401318221681, guid: 82fd87a002d3450439535abc5f405ee2, type: 3}
       propertyPath: m_RootOrder
-      value: 9
+      value: 8
       objectReference: {fileID: 0}
     - target: {fileID: 515145401318221681, guid: 82fd87a002d3450439535abc5f405ee2, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
@@ -31470,17 +31470,6 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: aa382bd81eae3a84c8ea16da517b09f5, type: 3}
---- !u!114 &1238716111 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 5070694746096231916, guid: aa382bd81eae3a84c8ea16da517b09f5, type: 3}
-  m_PrefabInstance: {fileID: 1238716108}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b896a060d4e713a4591b5996b1aaa4f4, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1001 &1285454875
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -31891,7 +31880,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 7
+  m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &5143708407760541410
 PrefabInstance:
@@ -31900,10 +31889,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 596645696}
     m_Modifications:
-    - target: {fileID: 3780283645982030208, guid: 2a03a9e7b904e7245bfc6b4a1f6f2315, type: 3}
-      propertyPath: healthContainer
-      value: 
-      objectReference: {fileID: 1238716111}
     - target: {fileID: 5143708407809916489, guid: 2a03a9e7b904e7245bfc6b4a1f6f2315, type: 3}
       propertyPath: m_Name
       value: BossCrystal
@@ -31951,10 +31936,6 @@ PrefabInstance:
     - target: {fileID: 5143708407809916494, guid: 2a03a9e7b904e7245bfc6b4a1f6f2315, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 8796870923284147752, guid: 2a03a9e7b904e7245bfc6b4a1f6f2315, type: 3}
-      propertyPath: m_Materials.Array.size
-      value: 5
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 2a03a9e7b904e7245bfc6b4a1f6f2315, type: 3}
