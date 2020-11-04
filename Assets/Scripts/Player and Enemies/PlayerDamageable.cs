@@ -38,7 +38,6 @@ public class PlayerDamageable : Damageable
             currHealth -= damage;
         }
         StartCoroutine(HitFlash(invincibleDuration));
-        Debug.Log(name + " took " + damage + ", with [" + currHealth + "] hp left");
         PlaySound();
         //Utils.SpawnInfoText(transform.position, damage.ToString(), Vector2.up * 2,InfoTextType.DamageText);
         SliderTakeDamage(damage);
@@ -66,7 +65,6 @@ public class PlayerDamageable : Damageable
             currHealth -= damage;
         }
         //StartCoroutine(HitFlash()); No invincibility frames
-        Debug.Log(name + " took " + damage + ", with [" + currHealth + "] hp left");
         SliderTakeDamage(damage);
         if (regen != null)
         {
@@ -88,7 +86,6 @@ public class PlayerDamageable : Damageable
             currOverheal = Mathf.Min(currHealth - maxHealth, maxOverheal);
             currHealth = maxHealth;
         }
-        Debug.Log(name + " restored " + restore + ", with [" + currHealth + "] hp left");
         SliderHealDamage(restore);
     }
 
@@ -109,7 +106,6 @@ public class PlayerDamageable : Damageable
     // Override, will respawn
     public override void Die()
     {
-        Debug.Log(name + " died");
         if (PersistentManager.instance != null)
             PersistentManager.Reload();
     }

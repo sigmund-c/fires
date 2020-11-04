@@ -17,10 +17,8 @@ public class Burnable : MonoBehaviour
     // Update is called once per frame
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        Debug.Log("touch");
         if(!isBurning && collision.tag == "Player")
         {
-            Debug.Log("burn");
             isBurning = true;
             GameObject fires = Instantiate(fireParticles, transform);
             startBurningTime = Time.time;

@@ -27,16 +27,12 @@ public class UIManagerScript : MonoBehaviour
 
     public void OnPause()
     {
-        Debug.Log("OnPause");
-
         Time.timeScale = 0f;
         pauseMenu.SetActive(true);
     }
 
     public void OnResume()//
     {
-        Debug.Log("OnResume");
-
         pauseMenu.SetActive(false);
         Time.timeScale = 1f;
         
@@ -119,17 +115,13 @@ public class UIManagerScript : MonoBehaviour
 
     public void SaveGame(int NumOfSavedFile)
     {Scene scene = SceneManager.GetActiveScene ();
-        Debug.Log("Saving game.");
-        //
         Save save = CreateSaveGameObject();
 
-        //
         BinaryFormatter bf = new BinaryFormatter();
-        Debug.Log("Storing file are stored at "+Application.persistentDataPath);
+        //Debug.Log("Storing file are stored at "+Application.persistentDataPath);
         FileStream file = File.Create(Application.persistentDataPath + "/gamesave" + NumOfSavedFile + ".save");
         bf.Serialize(file, save);
         file.Close();
-        Debug.Log("Game Saved.");
 
         saveMenu.SetActive(false);
         pauseMenu.SetActive(true); 
@@ -174,7 +166,6 @@ public class UIManagerScript : MonoBehaviour
 
     public void LoadGame(int NumOfSavedFile)
     {
-        Debug.Log("Loading game.");
         //SceneManager.LoadScene("FireBoiSampleScene");
 
         //Judge if saving file exists.
@@ -226,11 +217,11 @@ public class UIManagerScript : MonoBehaviour
                         enemyInsts.Add(Instantiate(newEnemys[count_enemies], new Vector2(save.enemyPositionsX[count_enemies], save.enemyPositionsY[count_enemies]), new Quaternion(0, 0, 0, 0), enemiesList.transform));
                         //Because the name of instantial prefabs will have "(clone)" at tile. We have to delete this tile.
                         enemyInsts[count_enemies].name = enemyType;
-                        Debug.Log("successful load " + enemyType);
+                        //Debug.Log("successful load " + enemyType);
                     }
                     else
                     {
-                        Debug.Log("Loading errors: Failed add prefabs.");
+                        //Debug.Log("Loading errors: Failed add prefabs.");
                     }
                     count_enemies++;
                 }
@@ -245,30 +236,29 @@ public class UIManagerScript : MonoBehaviour
                 foreach (string burningType in save.burningObjTypes)
                 {
                     newBurings.Add((GameObject)Resources.Load("Prefabs/Burnings/" + burningType));
-                    Debug.Log(newBurings[count_burnings]);
-                    Debug.Log(burningsList);
+                    //Debug.Log(newBurings[count_burnings]);
+                    //Debug.Log(burningsList);
                     if (newBurings[count_burnings] != null && burningsList != null)
                     {
                         burningInsts.Add(Instantiate(newBurings[count_burnings], new Vector2(save.burningObjPositionsX[count_burnings], save.burningObjPositionsY[count_burnings]), new Quaternion(0, 0, 0, 0), burningsList.transform));
                         //Because the name of instantial prefabs will have "(clone)" at tile. We have to delete this tile.
                         burningInsts[count_burnings].name = burningType;
-                        Debug.Log("successful load " + burningType);
+                        //Debug.Log("successful load " + burningType);
                     }
                     else
                     {
-                        Debug.Log("Loading errors: Failed add " + burningType);
+                        //Debug.Log("Loading errors: Failed add " + burningType);
                     }
                     count_burnings++;
                 }
             }
-            Debug.Log("Game Loaded.");
 
             loadMenu.SetActive(false);
             Time.timeScale = 1f;
         }
         else
         {
-            Debug.Log("No game saved!");
+            //Debug.Log("No game saved!");
         }
     }
 

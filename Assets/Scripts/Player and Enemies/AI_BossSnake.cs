@@ -72,7 +72,6 @@ public class AI_BossSnake : MonoBehaviour
         {
             hasStarted = true;
             nextAttack = idleTime;
-            Debug.Log("AI started");
             healthUI.SetActive(true);
         }
     }
@@ -82,7 +81,6 @@ public class AI_BossSnake : MonoBehaviour
         if (hasStarted)
         {
             hasStarted = false;
-            Debug.Log("AI stopped");
         }
     }
 
@@ -99,7 +97,6 @@ public class AI_BossSnake : MonoBehaviour
     {
         if (nextAttack <= 0)
         {
-            Debug.Log("generating new attack");
             GenerateNewAttack();
             nextAttack = idleTime;
         } else
