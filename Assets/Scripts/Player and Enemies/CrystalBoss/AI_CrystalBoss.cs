@@ -30,7 +30,7 @@ public class AI_CrystalBoss : MonoBehaviour
         for (int i = 0; i < crystalAmount; i++)
         {
             miniCrystals[i] = Instantiate(miniCrystalPrefab, new Vector3(0, 0.3f, 0), Quaternion.identity, transform).GetComponent<MiniCrystal>();
-            miniCrystals[i].setRadius(7f);
+            miniCrystals[i].setRadius(5f);
             miniCrystals[i].orbitSpeed = 70f;
             yield return new WaitForSeconds(1f);
         }
