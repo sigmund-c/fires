@@ -32,7 +32,7 @@ public class BossDamageable : Damageable
     IEnumerator DeathAndRespawn()
     {
         GetComponent<Collider2D>().enabled = false;
-        GameObject.FindGameObjectWithTag("MainCamera").GetComponent<CameraFollowBoss>().FocusOn(transform.position, blackenTime + 6f);
+        GameObject.FindGameObjectWithTag("MainCamera").GetComponent<CameraFollow>().FocusOn(transform.position, blackenTime + 6f);
         effectsStorage.PlayEffect(1); //Death SFX
 
         foreach(GameObject enemy in GameObject.FindGameObjectsWithTag("Enemy"))
@@ -66,7 +66,7 @@ public class BossDamageable : Damageable
         RestoreHealth(maxHealth - currHealth);
         GetComponent<Collider2D>().enabled = true; // hitbox
 
-        GameObject.FindGameObjectWithTag("MainCamera").GetComponent<CameraFollowBoss>().FocusOn(transform.position + Vector3.up * 20, 3);
+        GameObject.FindGameObjectWithTag("MainCamera").GetComponent<CameraFollow>().FocusOn(transform.position + Vector3.up * 20, 3);
         yield return new WaitForSeconds(1.5f);
         if (!hasDied)
         {

@@ -12,6 +12,7 @@ public class Utils : MonoBehaviour
     public static GameObject sparkle = Resources.Load<GameObject>("Prefabs/Sparkle");
     public static GameObject enemyHealthDrop = Resources.Load<GameObject>("Prefabs/Enemies/enemyHealthDrop");
     public static GameObject persistentManager = Resources.Load<GameObject>("Prefabs/PersistentManager");
+    public static GameObject shineEffect = Resources.Load<GameObject>("Prefabs/ShineEffect");
     public static int burningLayer = LayerMask.NameToLayer("Burning");
     public static int charLayer = LayerMask.NameToLayer("Character");
     public static int charSwimmingLayer = LayerMask.NameToLayer("Character Swimming");

@@ -21,6 +21,10 @@ public class Damageable : MonoBehaviour
     protected Rigidbody2D rb;
     protected SpriteRenderer sr;
     protected AudioSource audioSource;
+    protected SpriteMask spriteMask;
+
+    protected Sprite shineSprite;
+    protected GameObject shineObject;
 
     // Start is called before the first frame update
     protected virtual void Start()
@@ -31,6 +35,7 @@ public class Damageable : MonoBehaviour
         if (sr == null)
             sr = GetComponentInChildren<SpriteRenderer>();
         audioSource = GetComponent<AudioSource>();
+        spriteMask = GetComponent<SpriteMask>();
 
         SetSliderMax(maxHealth);
     }
@@ -52,8 +57,15 @@ public class Damageable : MonoBehaviour
 
         Damaging damaging = col.gameObject.GetComponent<Damaging>();
 
-        if (damaging != null && damaging.team != team && damaging.team != immuneTo)
+
+        if (damaging != null && damaging.team != team)
         {
+            if (damaging.team == immuneTo)
+            {
+                HitShine();
+                return;
+            }
+
             TakeDamage(damaging.damage);
             if (takeKnockback)
             {
@@ -113,6 +125,48 @@ public class Damageable : MonoBehaviour
         Destroy(gameObject);
     }
     
+    protected void HitShine()
+    {
+        if (shineObject != null)
+        {
+            Destroy(shineObject);
+        }
+
+        if (spriteMask == null)
+        {
+            spriteMask = this.gameObject.AddComponent<SpriteMask>();
+            spriteMask.sprite = sr.sprite;
+        }
+        if (shineSprite == null)
+        {
+            shineSprite = Resources.Load<Sprite>("Sprites/128x128shine.png");
+        }
+
+        shineObject = Instantiate(Utils.shineEffect, transform.position + new Vector3(0, sr.bounds.size.y / 2), Quaternion.identity, transform);
+
+        StopCoroutine(HitShineAnim());
+        StartCoroutine(HitShineAnim());
+    }
+
+    protected IEnumerator HitShineAnim()
+    {
+        float timeLeft = 1f;
+        float height = sr.bounds.size.y;
+
+        while (timeLeft > 0 && shineObject != null)
+        {
+            shineObject.transform.Translate(Vector3.down * height * 2 * Time.deltaTime);
+            timeLeft -= Time.deltaTime;
+
+            yield return null;
+        }
+
+        if (shineObject != null)
+        {
+            Destroy(shineObject);
+        }
+    }
+
     protected IEnumerator HitFlash(float duration = -1f)
     {
         if (invincibleDuration > 0) // Hitflash should signify iframes
