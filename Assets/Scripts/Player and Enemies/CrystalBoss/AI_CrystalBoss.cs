@@ -16,6 +16,8 @@ public class AI_CrystalBoss : MonoBehaviour
 
     public GameObject miniCrystalPrefab;
     public int crystalAmount = 6;
+    public float orbitRadius = 5f;
+    public float orbitSpeed = 70f;
     private MiniCrystal[] miniCrystals;
 
     // Start is called before the first frame update
@@ -29,9 +31,9 @@ public class AI_CrystalBoss : MonoBehaviour
     {
         for (int i = 0; i < crystalAmount; i++)
         {
-            miniCrystals[i] = Instantiate(miniCrystalPrefab, new Vector3(0, 0.3f, 0), Quaternion.identity, transform).GetComponent<MiniCrystal>();
-            miniCrystals[i].setRadius(5f);
-            miniCrystals[i].orbitSpeed = 70f;
+            miniCrystals[i] = Instantiate(miniCrystalPrefab, new Vector3(0, -0.3f, 0), Quaternion.identity, transform).GetComponent<MiniCrystal>();
+            miniCrystals[i].setRadius(orbitRadius);
+            miniCrystals[i].orbitSpeed = orbitSpeed;
             yield return new WaitForSeconds(1f);
         }
     }
