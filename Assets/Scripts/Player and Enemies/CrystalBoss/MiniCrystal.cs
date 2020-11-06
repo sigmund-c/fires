@@ -19,16 +19,21 @@ public class MiniCrystal : MonoBehaviour
     private Vector2 parentPos;
 
     public float changeRadiusSpeed = 3f;
+    private Transform spriteTransform;
 
     // Start is called before the first frame update
     void Start()
     {
         parentPos = transform.parent.position;
+
+        spriteTransform = GetComponentInChildren<SpriteRenderer>().transform;
     }
 
     // Update is called once per frame
     void Update()
     {
+        //spriteTransform.rotation = Quaternion.Inverse(transform.rotation);
+
         switch (curState)
         {
             case MiniCrystalAction.Stop:
@@ -46,7 +51,8 @@ public class MiniCrystal : MonoBehaviour
 
     private void HandleSpinState()
     {
-        transform.RotateAround(parentPos, Vector3.forward, orbitSpeed * Time.deltaTime);
+        //transform.RotateAround(parentPos, Vector3.forward, orbitSpeed * Time.deltaTime);
+        //spriteTransform.rotation = Quaternion.identity;
     }
 
     private void HandleGuardState()

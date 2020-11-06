@@ -7,16 +7,28 @@ using UnityEngine.Rendering.Universal;
 public class LaserController : MonoBehaviour
 {
     public float RayDistance = 100f;
+    public float laserTriggerDuration = 3.0f;
+    public Transform PlayerTransform;
+
     public UnityEngine.Rendering.VolumeProfile volumeProfile;
-    public float bloomIntensity = 1.5f;
+    public float bloomIntensity;
+    private float bloomIntensityDefault;
     private Bloom bloom;
-    private ParticleSystem particleSystem;
+
     LineRenderer m_lineRenderer;
     Transform m_transform;
+    ParticleSystem particleSystem;
+    private Vector2 laserTargetPos;
+    private bool laserTriggered;
+    private float laserTriggerTimer;
+
+    public LayerMask ignoreLayer;
 
     private void Awake()
     {
+        laserTriggered = false;
         volumeProfile.TryGet(out bloom);
+        bloomIntensityDefault = bloom.intensity.value;
         m_transform = GetComponent<Transform>();
         m_lineRenderer = GetComponent<LineRenderer>();
         particleSystem = GetComponent<ParticleSystem>();
@@ -24,36 +36,61 @@ public class LaserController : MonoBehaviour
 
     void Update()
     {
-        ShootLaser();
+        if (laserTriggered)
+        {
+            if(!particleSystem.isPlaying)
+            {
+                particleSystem.Play();
+                bloom.intensity.value = bloomIntensity;
+            }
+            DrawRayAndParticles(m_transform.position, laserTargetPos);
+            laserTriggerTimer -= Time.deltaTime;
+            if(laserTriggerTimer <= 0)
+            {
+                laserTriggered = false;
+            }
+        } else {
+            StopLaser();
+        }
     }
 
-    void Draw2DRay(Vector2 startPos, Vector2 endPos)
+    void DrawRayAndParticles(Vector3 startPos, Vector3 endPos)
     {
         //Draw Line
-        m_lineRenderer.SetPosition(0, startPos);
-        m_lineRenderer.SetPosition(1, endPos);
+        m_lineRenderer.SetPosition(0, (Vector2)startPos);
+        m_lineRenderer.SetPosition(1, (Vector2)endPos);
 
-        //Particle Direction (Velocity)
-        ParticleSystem.VelocityOverLifetimeModule vel = particleSystem.velocityOverLifetime;
-        AnimationCurve curve = new AnimationCurve();
-        curve.AddKey(startPos.x, startPos.y);
-        curve.AddKey(endPos.x, endPos.y);
-        ParticleSystem.MinMaxCurve minMaxCurve = new ParticleSystem.MinMaxCurve(1.0f, curve);
-        // vel.x = minMaxCurve;
-        // vel.y = minMaxCurve;
-        // vel.z = minMaxCurve;
+        //Particle System direction (rotation)
+        Vector3 relativePos = endPos - startPos;
+        ParticleSystem.ShapeModule shp = particleSystem.shape;
+        Vector3 rot = Quaternion.LookRotation(relativePos, Vector3.up).eulerAngles;
+        shp.rotation = new Vector3(rot.x, rot.y, 0f);
     }
 
-    public void ShootLaser()
+    public void ShootLaser(Vector3 target)
     {
-        //bloom.intensity.value = bloomIntensity;
-        RaycastHit2D hit = Physics2D.Raycast(m_transform.position, transform.right);
+        laserTriggered = true;
+        laserTriggerTimer = laserTriggerDuration;
+        
+        Vector3 direction = target - m_transform.position;
+        RaycastHit2D hit = Physics2D.Raycast(m_transform.position, direction, 100f, ~ignoreLayer);
         if(hit)
         {
-            Draw2DRay(m_transform.position, hit.point);
+            Debug.LogWarning(hit.collider.name);
+            Debug.LogWarning(hit.collider.gameObject.layer);
+            laserTargetPos = hit.point;
         } else
         {
-            Draw2DRay(m_transform.position, m_transform.transform.right * RayDistance);
+                laserTargetPos = direction.normalized * RayDistance;
+        }
+    }
+
+    public void StopLaser()
+    {
+        if(particleSystem.isPlaying)
+        {
+            particleSystem.Stop();
+            bloom.intensity.value = bloomIntensityDefault;
         }
     }
 }
