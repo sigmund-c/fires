@@ -39,9 +39,9 @@ public class LaserController : MonoBehaviour
         curve.AddKey(startPos.x, startPos.y);
         curve.AddKey(endPos.x, endPos.y);
         ParticleSystem.MinMaxCurve minMaxCurve = new ParticleSystem.MinMaxCurve(1.0f, curve);
-        vel.x = minMaxCurve;
-        vel.y = minMaxCurve;
-        vel.z = minMaxCurve;
+        // vel.x = minMaxCurve;
+        // vel.y = minMaxCurve;
+        // vel.z = minMaxCurve;
     }
 
     public void ShootLaser()
