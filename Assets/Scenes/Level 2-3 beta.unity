@@ -31242,6 +31242,11 @@ ParticleSystem:
         m_PostInfinity: 2
         m_RotationOrder: 4
     vectorLabel1_3: W
+--- !u!1 &776094379 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 6758930255466825052, guid: 6a12fb6aa9d1bf0448337c46aaedf459, type: 3}
+  m_PrefabInstance: {fileID: 831928909}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &800793651
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -31889,6 +31894,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 596645696}
     m_Modifications:
+    - target: {fileID: 171502939811344664, guid: 2a03a9e7b904e7245bfc6b4a1f6f2315, type: 3}
+      propertyPath: PlayerTransform
+      value: 
+      objectReference: {fileID: 973810741}
     - target: {fileID: 5143708407809916489, guid: 2a03a9e7b904e7245bfc6b4a1f6f2315, type: 3}
       propertyPath: m_Name
       value: BossCrystal
@@ -31937,5 +31946,9 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 5143708407809916495, guid: 2a03a9e7b904e7245bfc6b4a1f6f2315, type: 3}
+      propertyPath: Player
+      value: 
+      objectReference: {fileID: 776094379}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 2a03a9e7b904e7245bfc6b4a1f6f2315, type: 3}

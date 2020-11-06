@@ -28,8 +28,8 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2771613395734812434}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 18.12, y: -3.97, z: 0}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 7.76, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 5143708407809916494}
@@ -206,8 +206,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   RayDistance: 100
+  laserTriggerDuration: 3
+  PlayerTransform: {fileID: 0}
   volumeProfile: {fileID: 11400000, guid: 0c700c0d1e54c9a428e27dfb71117915, type: 2}
-  bloomIntensity: 2
+  bloomIntensity: 5
 --- !u!198 &5182059752990404355
 ParticleSystem:
   m_ObjectHideFlags: 0
@@ -224,7 +226,7 @@ ParticleSystem:
   ringBufferLoopRange: {x: 0, y: 1}
   looping: 1
   prewarm: 0
-  playOnAwake: 1
+  playOnAwake: 0
   useUnscaledTime: 0
   autoRandomSeed: 1
   useRigidbodyForVelocity: 1
@@ -291,7 +293,7 @@ ParticleSystem:
     startLifetime:
       serializedVersion: 2
       minMaxState: 0
-      scalar: 5
+      scalar: 1.5
       minScalar: 5
       maxCurve:
         serializedVersion: 2
@@ -344,7 +346,7 @@ ParticleSystem:
     startSpeed:
       serializedVersion: 2
       minMaxState: 0
-      scalar: 10
+      scalar: 12
       minScalar: 5
       maxCurve:
         serializedVersion: 2
@@ -836,13 +838,13 @@ ParticleSystem:
     serializedVersion: 6
     enabled: 1
     type: 4
-    angle: 10
+    angle: 1
     length: 5
     boxThickness: {x: 0, y: 0, z: 0}
     radiusThickness: 1
     donutRadius: 0.2
     m_Position: {x: 0, y: 0, z: 0}
-    m_Rotation: {x: 0, y: 90, z: 0}
+    m_Rotation: {x: 0, y: 0, z: 0}
     m_Scale: {x: 1, y: 1, z: 1}
     placementMode: 0
     m_MeshMaterialIndex: 0
@@ -1660,7 +1662,7 @@ ParticleSystem:
     flipU: 0
     flipV: 0
   VelocityModule:
-    enabled: 1
+    enabled: 0
     x:
       serializedVersion: 2
       minMaxState: 0
@@ -5148,8 +5150,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9c3bb8adae6a1534e88e5a53b8eaf74a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  maxHealth: 7
-  currHealth: 7
+  maxHealth: 12
+  currHealth: 12
   invincibleDuration: 0
   takeKnockback: 0
   healthContainer: {fileID: 0}
@@ -5167,5 +5169,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c2da48ea1db2643498d73f6444d0785f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  Player: {fileID: 0}
+  laserController: {fileID: 171502939811344664}
   miniCrystalPrefab: {fileID: 2898129549674868373, guid: 15027b5f43e6b6047abb1fa9b19ce9ff, type: 3}
   crystalAmount: 5

@@ -13,14 +13,19 @@ public enum BossActionType
 public class AI_CrystalBoss : MonoBehaviour
 {
     private BossActionType curState = BossActionType.Idle;
-
+    public GameObject Player;
+    private Transform playerTransform;
+    public LaserController laserController;
     public GameObject miniCrystalPrefab;
     public int crystalAmount = 6;
     private MiniCrystal[] miniCrystals;
+    private bool stateRunning;
 
     // Start is called before the first frame update
     void Start()
     {
+        stateRunning = false;
+        playerTransform = Player.GetComponent<Transform>();
         miniCrystals = new MiniCrystal[crystalAmount];
         StartCoroutine(CreateMiniCrystals());
     }
@@ -39,6 +44,11 @@ public class AI_CrystalBoss : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        if (stateRunning)
+        {
+            return;
+        }
+
         switch (curState)
         {
             case BossActionType.Idle:
@@ -46,11 +56,11 @@ public class AI_CrystalBoss : MonoBehaviour
                 break;
 
             case BossActionType.BigLaser:
-                HandleBigLaserState();
+                StartCoroutine(HandleBigLaserState());
                 break;
 
             case BossActionType.SpinLaser:
-                HandleSpinLaserState();
+                StartCoroutine(HandleSpinLaserState());
                 break;
         }
     }
@@ -70,7 +80,7 @@ public class AI_CrystalBoss : MonoBehaviour
                 mini.SwitchState(MiniCrystalAction.Spinning);
         }
 
-        int choice = Random.Range(0, 1);
+        int choice = Random.Range(0, 2);
         switch (choice)
         {
             case 0:
@@ -83,13 +93,21 @@ public class AI_CrystalBoss : MonoBehaviour
         }
     }
 
-    private void HandleBigLaserState()
+    private IEnumerator HandleBigLaserState()
     {
+        stateRunning = true;
+        //Start charging sequence
+        Vector3 currentPlayerPos = playerTransform.position;
+        //Fire at player
+        laserController.ShootLaser(currentPlayerPos);
 
+        yield return new WaitForSeconds(2f);
+        curState = BossActionType.Idle;
+        stateRunning = false;
     }
 
-    private void HandleSpinLaserState()
+    private IEnumerator HandleSpinLaserState()
     {
-
+        yield return new WaitForSeconds(2f);
     }
 }
