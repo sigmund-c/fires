@@ -52,7 +52,7 @@ public class SteamVent : MonoBehaviour
 
     void OnTriggerEnter2D(Collider2D other)
     {
-        print("TRIGGERED");
+        //print("TRIGGERED");
         if (isActive && other.gameObject.tag == "Player")
         {
             other.gameObject.GetComponent<Rigidbody2D>().AddForce(rotation * Vector3.up * force, ForceMode2D.Impulse);
