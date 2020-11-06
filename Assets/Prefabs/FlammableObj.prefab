@@ -205,8 +205,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   isBurning: 0
-  ignitionTime: 0.05
-  burningTime: 6
+  ignitionTime: 0.12
+  burningTime: 6.5
   blackenTime: 1
   turnToAshes: 1
   toTrigger: {fileID: 0}

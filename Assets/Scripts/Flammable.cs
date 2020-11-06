@@ -68,7 +68,8 @@ public class Flammable : MonoBehaviour
         // print(gameObject + "started burning, changed layer to burning layer");
         gameObject.layer = Utils.burningLayer;
         
-        yield return new WaitForSeconds(Random.Range(0f, 0.3f) + ignitionTime);
+        // yield return new WaitForSeconds(Random.Range(0f, 0.3f) + ignitionTime);
+        yield return new WaitForSeconds(ignitionTime);
 
         burning.enabled = true;
         sr.color = BURNING_COLOUR;
