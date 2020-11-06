@@ -58,6 +58,7 @@ public class MiniCrystal : MonoBehaviour
     {
         curState = state;
     }
+    
 
     public void setRadius(float newRadius)
     {
