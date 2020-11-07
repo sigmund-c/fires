@@ -17,12 +17,14 @@ public class UIManagerScript : MonoBehaviour
 
     public void StartGame()
     {
+        //mute other buttons.
+        Button[] buttons = GameObject.FindObjectsOfType<Button>();
+        Debug.Log(buttons);
+        foreach (Button button in buttons)
+        {
+            button.enabled = false;
+        }
         SceneManager.LoadSceneAsync("Level 1-1");
-    }
-
-    public void QuitGame()
-    {
-        Application.Quit();
     }
 
     public void OnPause()
@@ -52,12 +54,30 @@ public class UIManagerScript : MonoBehaviour
         Time.timeScale = 1f;
     }
 
+    public void QuitGame()
+    {
+        //mute other buttons.
+        Button[] buttons = GameObject.FindObjectsOfType<Button>();
+        Debug.Log(buttons);
+        foreach (Button button in buttons)
+        {
+            button.enabled = false;
+        }
+        Application.Quit();
+    }
+
     public void ContinueGame()//
     {
+        //mute other buttons.
+        Button[] buttons = GameObject.FindObjectsOfType<Button>();
+        Debug.Log(buttons);
+        foreach (Button button in buttons)
+        {
+            button.enabled = false;
+        }
         //Get the stored.
         string last_level = PlayerPrefs.GetString("Last_Level");
         //Loading Scene0
-        Debug.Log("TEST2-" + last_level);
         SceneManager.LoadSceneAsync(last_level);
         Time.timeScale = 1f;
     }
