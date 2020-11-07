@@ -6,7 +6,7 @@ using UnityEngine.Rendering.Universal;
 
 public class LaserController : MonoBehaviour
 {
-    public float RayDistance = 100f;
+    public float RayDistance = 80f;
     public float laserTriggerDuration = 3.0f;
 
     public UnityEngine.Rendering.VolumeProfile volumeProfile;
@@ -17,7 +17,7 @@ public class LaserController : MonoBehaviour
     LineRenderer m_lineRenderer;
     Transform m_transform;
     ParticleSystem particleSystem;
-    private Vector2 laserTargetPos;
+    private Vector3 laserTargetPos;
     private bool laserTriggered;
     private float laserTriggerTimer;
 
@@ -43,6 +43,14 @@ public class LaserController : MonoBehaviour
                 bloom.intensity.value = bloomIntensity;
             }
             DrawRayAndParticles(m_transform.position, laserTargetPos);
+
+            RaycastHit2D hit = Physics2D.Raycast(m_transform.position, (laserTargetPos-m_transform.position).normalized, RayDistance, ~ignoreLayer);
+            if(hit && hit.collider.gameObject.tag == "Player")
+            {
+                PlayerDamageable player = hit.collider.gameObject.GetComponent<PlayerDamageable>();
+                player.TakeDamage(1);
+            }
+
             laserTriggerTimer -= Time.deltaTime;
             if(laserTriggerTimer <= 0)
             {
@@ -74,20 +82,18 @@ public class LaserController : MonoBehaviour
 
     public void ShootLaser(Vector3 target)
     {
+        Vector3 direction = target - m_transform.position;
+        laserTargetPos = direction.normalized * RayDistance;
+
+        //DELAY FOR CHARGING
+        StartCoroutine(Delay(2f));
+
         laserTriggered = true;
         laserTriggerTimer = laserTriggerDuration;
-        
-        Vector3 direction = target - m_transform.position;
-        RaycastHit2D hit = Physics2D.Raycast(m_transform.position, direction, 100f, ~ignoreLayer);
-        if(hit)
-        {
-            Debug.LogWarning(hit.collider.name);
-            Debug.LogWarning(hit.collider.gameObject.layer);
-            laserTargetPos = hit.point;
-        } else
-        {
-            laserTargetPos = direction.normalized * RayDistance;
-        }
     }
 
+    private IEnumerator Delay(float time)
+    {
+         yield return new WaitForSeconds(time);
+    }
 }

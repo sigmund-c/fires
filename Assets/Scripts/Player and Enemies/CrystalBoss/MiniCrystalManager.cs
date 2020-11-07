@@ -46,7 +46,6 @@ public class MiniCrystalManager : MonoBehaviour
         {
             shieldPoses[i] = shieldPos.GetChild(i);
         }
-        laserController = GetComponentInChildren<LaserController>();
     }
 
     public int GetRemainingCrystals()
