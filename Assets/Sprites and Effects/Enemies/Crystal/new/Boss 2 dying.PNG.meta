@@ -1,0 +1,2497 @@
+fileFormatVersion: 2
+guid: 7431776dfd4c3874cae0210a1930cabf
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: 8396195591729024245
+    second: Boss 2 dying_0
+  - first:
+      213: 3958028017682910056
+    second: Boss 2 dying_1
+  - first:
+      213: -6877849770067328613
+    second: Boss 2 dying_2
+  - first:
+      213: -7193629348135365287
+    second: Boss 2 dying_3
+  - first:
+      213: -3787218204799039900
+    second: Boss 2 dying_4
+  - first:
+      213: 7625087735282072312
+    second: Boss 2 dying_5
+  - first:
+      213: -2892191316163733074
+    second: Boss 2 dying_6
+  - first:
+      213: -4033516853428587937
+    second: Boss 2 dying_7
+  - first:
+      213: -407946412165617702
+    second: Boss 2 dying_8
+  - first:
+      213: 1012475009513260530
+    second: Boss 2 dying_9
+  - first:
+      213: 2244771208366674574
+    second: Boss 2 dying_10
+  - first:
+      213: -6735443034818311779
+    second: Boss 2 dying_11
+  - first:
+      213: 8067327545291756447
+    second: Boss 2 dying_12
+  - first:
+      213: -1416714653153711477
+    second: Boss 2 dying_13
+  - first:
+      213: -1947047676196611566
+    second: Boss 2 dying_14
+  - first:
+      213: 2475894060993423106
+    second: Boss 2 dying_15
+  - first:
+      213: 1537969745118345934
+    second: Boss 2 dying_16
+  - first:
+      213: 8937878534518922382
+    second: Boss 2 dying_17
+  - first:
+      213: -5171427175019596138
+    second: Boss 2 dying_18
+  - first:
+      213: 8927067484291898944
+    second: Boss 2 dying_19
+  - first:
+      213: -2921391924428534167
+    second: Boss 2 dying_20
+  - first:
+      213: -7134018182273154250
+    second: Boss 2 dying_21
+  - first:
+      213: -2323758180755958269
+    second: Boss 2 dying_22
+  - first:
+      213: -8688401295326528393
+    second: Boss 2 dying_23
+  - first:
+      213: -7384427918787158945
+    second: Boss 2 dying_24
+  - first:
+      213: -988345826203204612
+    second: Boss 2 dying_25
+  - first:
+      213: 711480852258707896
+    second: Boss 2 dying_26
+  - first:
+      213: 7880488756296141956
+    second: Boss 2 dying_27
+  - first:
+      213: 3902529705928315261
+    second: Boss 2 dying_28
+  - first:
+      213: -8552543283363293586
+    second: Boss 2 dying_29
+  - first:
+      213: -4953531001098611544
+    second: Boss 2 dying_30
+  - first:
+      213: -5136818607962605289
+    second: Boss 2 dying_31
+  - first:
+      213: 9155238438263751484
+    second: Boss 2 dying_32
+  - first:
+      213: -4925263109057561599
+    second: Boss 2 dying_33
+  - first:
+      213: 2458802625570267983
+    second: Boss 2 dying_34
+  - first:
+      213: 7083004556013101383
+    second: Boss 2 dying_35
+  - first:
+      213: -7313253260267187696
+    second: Boss 2 dying_36
+  - first:
+      213: 6619838331527759500
+    second: Boss 2 dying_37
+  - first:
+      213: -6992071582736525746
+    second: Boss 2 dying_38
+  - first:
+      213: 9197119790902797601
+    second: Boss 2 dying_39
+  - first:
+      213: -2942571620563368360
+    second: Boss 2 dying_40
+  - first:
+      213: -1672721920087067832
+    second: Boss 2 dying_41
+  - first:
+      213: 2243031872311463520
+    second: Boss 2 dying_42
+  - first:
+      213: -2544231960453066847
+    second: Boss 2 dying_43
+  - first:
+      213: 4705132496641433432
+    second: Boss 2 dying_44
+  - first:
+      213: -1674506666244796412
+    second: Boss 2 dying_45
+  - first:
+      213: 36546915557199198
+    second: Boss 2 dying_46
+  - first:
+      213: -844867234927019192
+    second: Boss 2 dying_47
+  - first:
+      213: 8542468884017970501
+    second: Boss 2 dying_48
+  - first:
+      213: 7659921916311239325
+    second: Boss 2 dying_49
+  - first:
+      213: 2228830393376641908
+    second: Boss 2 dying_50
+  - first:
+      213: -2029005966142906191
+    second: Boss 2 dying_51
+  - first:
+      213: -1465851964655155021
+    second: Boss 2 dying_52
+  - first:
+      213: 6239430250886582991
+    second: Boss 2 dying_53
+  - first:
+      213: 7034201070547040860
+    second: Boss 2 dying_54
+  - first:
+      213: -906091716349888806
+    second: Boss 2 dying_55
+  - first:
+      213: -3496207851732248097
+    second: Boss 2 dying_56
+  - first:
+      213: -6647328104870492489
+    second: Boss 2 dying_57
+  - first:
+      213: -3162092731214904881
+    second: Boss 2 dying_58
+  - first:
+      213: -798530548036509441
+    second: Boss 2 dying_59
+  - first:
+      213: 5327871181791638583
+    second: Boss 2 dying_60
+  - first:
+      213: 5652133625141227685
+    second: Boss 2 dying_61
+  - first:
+      213: -5535822429091282562
+    second: Boss 2 dying_62
+  - first:
+      213: 687480333426356725
+    second: Boss 2 dying_63
+  - first:
+      213: 475532449681601749
+    second: Boss 2 dying_64
+  - first:
+      213: 5706811162949022871
+    second: Boss 2 dying_65
+  - first:
+      213: -7084582916914063825
+    second: Boss 2 dying_66
+  - first:
+      213: -1139420819835643119
+    second: Boss 2 dying_67
+  - first:
+      213: 7754265672341480220
+    second: Boss 2 dying_68
+  - first:
+      213: -9112048451756594776
+    second: Boss 2 dying_69
+  - first:
+      213: 6555893006192591991
+    second: Boss 2 dying_70
+  - first:
+      213: -3310914926807478340
+    second: Boss 2 dying_71
+  - first:
+      213: 625742404343302367
+    second: Boss 2 dying_72
+  - first:
+      213: 8140065979616254351
+    second: Boss 2 dying_73
+  - first:
+      213: 8499790828243630352
+    second: Boss 2 dying_74
+  - first:
+      213: 8004773153037180972
+    second: Boss 2 dying_75
+  - first:
+      213: 1120582737638100505
+    second: Boss 2 dying_76
+  - first:
+      213: 21079884665191484
+    second: Boss 2 dying_77
+  - first:
+      213: -5429431844290940299
+    second: Boss 2 dying_78
+  - first:
+      213: 2981677846275784504
+    second: Boss 2 dying_79
+  - first:
+      213: -7620022808639861177
+    second: Boss 2 dying_80
+  - first:
+      213: 949193174018438011
+    second: Boss 2 dying_81
+  - first:
+      213: 7923030850454554867
+    second: Boss 2 dying_82
+  - first:
+      213: 6470532139455378890
+    second: Boss 2 dying_83
+  - first:
+      213: 7497252355274636036
+    second: Boss 2 dying_84
+  - first:
+      213: -8145558435149652690
+    second: Boss 2 dying_85
+  - first:
+      213: 3499704036712291735
+    second: Boss 2 dying_86
+  - first:
+      213: -3095526929423398772
+    second: Boss 2 dying_87
+  - first:
+      213: -7668105666895640405
+    second: Boss 2 dying_88
+  - first:
+      213: -8130972555135775452
+    second: Boss 2 dying_89
+  - first:
+      213: 784857991970020945
+    second: Boss 2 dying_90
+  - first:
+      213: -3205419958527369585
+    second: Boss 2 dying_91
+  - first:
+      213: -3985226215089913957
+    second: Boss 2 dying_92
+  - first:
+      213: 7880994226054449553
+    second: Boss 2 dying_93
+  - first:
+      213: 6584264104086765539
+    second: Boss 2 dying_94
+  - first:
+      213: 5435182319153162619
+    second: Boss 2 dying_95
+  - first:
+      213: -5619354818752078866
+    second: Boss 2 dying_96
+  - first:
+      213: 8135200328738435273
+    second: Boss 2 dying_97
+  - first:
+      213: 5338814430575639980
+    second: Boss 2 dying_98
+  - first:
+      213: -7262326959304747575
+    second: Boss 2 dying_99
+  - first:
+      213: 3034537142674476093
+    second: Boss 2 dying_100
+  - first:
+      213: -1829201253071818211
+    second: Boss 2 dying_101
+  - first:
+      213: -3036324782217017880
+    second: Boss 2 dying_102
+  - first:
+      213: 139900814489471890
+    second: Boss 2 dying_103
+  - first:
+      213: -3226727592229577318
+    second: Boss 2 dying_104
+  - first:
+      213: -163814628518822467
+    second: Boss 2 dying_105
+  - first:
+      213: 3719464174773366732
+    second: Boss 2 dying_106
+  - first:
+      213: -4418083144731054164
+    second: Boss 2 dying_107
+  - first:
+      213: -8033899495815852426
+    second: Boss 2 dying_108
+  - first:
+      213: 7167375587024841897
+    second: Boss 2 dying_109
+  - first:
+      213: -3511034931473381784
+    second: Boss 2 dying_110
+  - first:
+      213: 8886833722559040797
+    second: Boss 2 dying_111
+  - first:
+      213: 2401963891105758174
+    second: Boss 2 dying_112
+  - first:
+      213: 4182020201785984215
+    second: Boss 2 dying_113
+  - first:
+      213: 4675616548297225426
+    second: Boss 2 dying_114
+  - first:
+      213: 1875515908216981205
+    second: Boss 2 dying_115
+  - first:
+      213: -6086302094546868809
+    second: Boss 2 dying_116
+  - first:
+      213: -864485030016451489
+    second: Boss 2 dying_117
+  - first:
+      213: 5853536545916952940
+    second: Boss 2 dying_118
+  - first:
+      213: 5645581236327157873
+    second: Boss 2 dying_119
+  - first:
+      213: 6767765721447823172
+    second: Boss 2 dying_120
+  - first:
+      213: -4728698254397083589
+    second: Boss 2 dying_121
+  - first:
+      213: -5486169028851291544
+    second: Boss 2 dying_122
+  - first:
+      213: 5111163570875641590
+    second: Boss 2 dying_123
+  - first:
+      213: -5567355199896526950
+    second: Boss 2 dying_124
+  - first:
+      213: 3789620795351122680
+    second: Boss 2 dying_125
+  - first:
+      213: 1461754115054931324
+    second: Boss 2 dying_126
+  - first:
+      213: -150626091683094979
+    second: Boss 2 dying_127
+  - first:
+      213: -8798822599120121214
+    second: Boss 2 dying_128
+  - first:
+      213: -6058203222999103551
+    second: Boss 2 dying_129
+  - first:
+      213: 8180642321657968407
+    second: Boss 2 dying_130
+  - first:
+      213: 3399338403116290467
+    second: Boss 2 dying_131
+  - first:
+      213: -4715319761393064569
+    second: Boss 2 dying_132
+  - first:
+      213: 8104275177913078547
+    second: Boss 2 dying_133
+  - first:
+      213: -665780728951837978
+    second: Boss 2 dying_134
+  - first:
+      213: -7087408261844573967
+    second: Boss 2 dying_135
+  - first:
+      213: -5757751957083876331
+    second: Boss 2 dying_136
+  - first:
+      213: 6016929575071032446
+    second: Boss 2 dying_137
+  - first:
+      213: -7393062015325515271
+    second: Boss 2 dying_138
+  - first:
+      213: 338702289288502875
+    second: Boss 2 dying_139
+  - first:
+      213: -4468206185414044646
+    second: Boss 2 dying_140
+  - first:
+      213: -4594973358595545116
+    second: Boss 2 dying_141
+  - first:
+      213: 3414535634541543320
+    second: Boss 2 dying_142
+  - first:
+      213: -3620789820129139568
+    second: Boss 2 dying_143
+  - first:
+      213: 7279979514060709761
+    second: Boss 2 dying_144
+  - first:
+      213: 4491184609602467693
+    second: Boss 2 dying_145
+  - first:
+      213: -291858253425651068
+    second: Boss 2 dying_146
+  - first:
+      213: 1401113798336644656
+    second: Boss 2 dying_147
+  - first:
+      213: -1042862604299104072
+    second: Boss 2 dying_148
+  - first:
+      213: -2446105838943216834
+    second: Boss 2 dying_149
+  - first:
+      213: 3773802676066421609
+    second: Boss 2 dying_150
+  - first:
+      213: -6854626686430104097
+    second: Boss 2 dying_151
+  - first:
+      213: -728922780785539150
+    second: Boss 2 dying_152
+  - first:
+      213: -4572147491843903973
+    second: Boss 2 dying_153
+  - first:
+      213: -4413630501530755939
+    second: Boss 2 dying_154
+  - first:
+      213: -4533052857572424035
+    second: Boss 2 dying_155
+  - first:
+      213: -4908786595312938766
+    second: Boss 2 dying_156
+  - first:
+      213: -6243322291264648481
+    second: Boss 2 dying_157
+  - first:
+      213: -4851964007883206239
+    second: Boss 2 dying_158
+  - first:
+      213: -6214722592407315181
+    second: Boss 2 dying_159
+  - first:
+      213: -8526171201092341677
+    second: Boss 2 dying_160
+  - first:
+      213: -1071051891657143076
+    second: Boss 2 dying_161
+  - first:
+      213: -7601598645508993655
+    second: Boss 2 dying_162
+  - first:
+      213: -6262524596365410831
+    second: Boss 2 dying_163
+  - first:
+      213: -4442242451715065786
+    second: Boss 2 dying_164
+  - first:
+      213: -6743486075905162417
+    second: Boss 2 dying_165
+  - first:
+      213: -959028361738485708
+    second: Boss 2 dying_166
+  - first:
+      213: -4345144723278308512
+    second: Boss 2 dying_167
+  - first:
+      213: -6840346065320380764
+    second: Boss 2 dying_168
+  - first:
+      213: 5804717876424932062
+    second: Boss 2 dying_169
+  - first:
+      213: 2168423606674640661
+    second: Boss 2 dying_170
+  - first:
+      213: 7087128769134446780
+    second: Boss 2 dying_171
+  - first:
+      213: 2638252119201287080
+    second: Boss 2 dying_172
+  - first:
+      213: 1011671529590499565
+    second: Boss 2 dying_173
+  - first:
+      213: -6277666653798006269
+    second: Boss 2 dying_174
+  - first:
+      213: -4123369762157612559
+    second: Boss 2 dying_175
+  - first:
+      213: 1759297008027037667
+    second: Boss 2 dying_176
+  - first:
+      213: -1780305184114606481
+    second: Boss 2 dying_177
+  - first:
+      213: -8401084949001302163
+    second: Boss 2 dying_178
+  - first:
+      213: 2359984190289082514
+    second: Boss 2 dying_179
+  - first:
+      213: -8237987121497950655
+    second: Boss 2 dying_180
+  - first:
+      213: -8890239165850427691
+    second: Boss 2 dying_181
+  - first:
+      213: -2007367316370105827
+    second: Boss 2 dying_182
+  - first:
+      213: -2738370695566371530
+    second: Boss 2 dying_183
+  - first:
+      213: 1921312859552076471
+    second: Boss 2 dying_184
+  - first:
+      213: 4283867789600029405
+    second: Boss 2 dying_185
+  - first:
+      213: 7058607460543754687
+    second: Boss 2 dying_186
+  - first:
+      213: 4909218857179943773
+    second: Boss 2 dying_187
+  - first:
+      213: -5687489671485462220
+    second: Boss 2 dying_188
+  - first:
+      213: -8952177934755237457
+    second: Boss 2 dying_189
+  - first:
+      213: 7099373617792410630
+    second: Boss 2 dying_190
+  - first:
+      213: 2331390676150676247
+    second: Boss 2 dying_191
+  - first:
+      213: -9054029414803407845
+    second: Boss 2 dying_192
+  - first:
+      213: 5002330925485400620
+    second: Boss 2 dying_193
+  - first:
+      213: 2335844628854838209
+    second: Boss 2 dying_194
+  - first:
+      213: 4091565293306131470
+    second: Boss 2 dying_195
+  - first:
+      213: 5935251920688374369
+    second: Boss 2 dying_196
+  - first:
+      213: -2793483981682845875
+    second: Boss 2 dying_197
+  - first:
+      213: -8859002656829306292
+    second: Boss 2 dying_198
+  - first:
+      213: 5638493768205923708
+    second: Boss 2 dying_199
+  - first:
+      213: -3544534434369976493
+    second: Boss 2 dying_200
+  - first:
+      213: 7859277943241492834
+    second: Boss 2 dying_201
+  - first:
+      213: 770583250168108826
+    second: Boss 2 dying_202
+  - first:
+      213: 3090914440718083210
+    second: Boss 2 dying_203
+  - first:
+      213: 9052981298611219064
+    second: Boss 2 dying_204
+  - first:
+      213: 161184799384542058
+    second: Boss 2 dying_205
+  - first:
+      213: -1106974403310590519
+    second: Boss 2 dying_206
+  - first:
+      213: 665171546687767743
+    second: Boss 2 dying_207
+  - first:
+      213: 6122273651251987109
+    second: Boss 2 dying_208
+  - first:
+      213: 5206296591331448645
+    second: Boss 2 dying_209
+  - first:
+      213: 4413648818359163338
+    second: Boss 2 dying_210
+  - first:
+      213: 582350186812351525
+    second: Boss 2 dying_211
+  - first:
+      213: 5770350389933191047
+    second: Boss 2 dying_212
+  - first:
+      213: 8005450735627425667
+    second: Boss 2 dying_213
+  - first:
+      213: 3299382009319766218
+    second: Boss 2 dying_214
+  - first:
+      213: -7959957174846776954
+    second: Boss 2 dying_215
+  - first:
+      213: 9008935778302212727
+    second: Boss 2 dying_216
+  - first:
+      213: -6803370872216076543
+    second: Boss 2 dying_217
+  - first:
+      213: 5811065057864811151
+    second: Boss 2 dying_218
+  - first:
+      213: -1688565636789324438
+    second: Boss 2 dying_219
+  - first:
+      213: 1498072372412677090
+    second: Boss 2 dying_220
+  - first:
+      213: -4490020287893387774
+    second: Boss 2 dying_221
+  - first:
+      213: 2030596964845498001
+    second: Boss 2 dying_222
+  - first:
+      213: 221664560349843953
+    second: Boss 2 dying_223
+  - first:
+      213: 1200902783231840684
+    second: Boss 2 dying_224
+  - first:
+      213: 3414553521677864198
+    second: Boss 2 dying_225
+  - first:
+      213: -4086877142901109959
+    second: Boss 2 dying_226
+  - first:
+      213: 3995648066251287779
+    second: Boss 2 dying_227
+  - first:
+      213: -4222223576393427179
+    second: Boss 2 dying_228
+  - first:
+      213: 2486784653076098306
+    second: Boss 2 dying_229
+  - first:
+      213: 7834199147926979364
+    second: Boss 2 dying_230
+  - first:
+      213: -6430805712784589956
+    second: Boss 2 dying_231
+  - first:
+      213: -223799823218032084
+    second: Boss 2 dying_232
+  - first:
+      213: 6234650734510644153
+    second: Boss 2 dying_233
+  - first:
+      213: 5835001736626300226
+    second: Boss 2 dying_234
+  - first:
+      213: -7834632492846379909
+    second: Boss 2 dying_235
+  - first:
+      213: -3305146121473940534
+    second: Boss 2 dying_236
+  - first:
+      213: 5371009500651796076
+    second: Boss 2 dying_237
+  - first:
+      213: -4252253207880236517
+    second: Boss 2 dying_238
+  - first:
+      213: -3482586397119270892
+    second: Boss 2 dying_239
+  - first:
+      213: 86004186396010578
+    second: Boss 2 dying_240
+  - first:
+      213: 5332609748647908404
+    second: Boss 2 dying_241
+  - first:
+      213: 9177979818046957240
+    second: Boss 2 dying_242
+  - first:
+      213: -2405171149044942639
+    second: Boss 2 dying_243
+  - first:
+      213: -1657789284977204076
+    second: Boss 2 dying_244
+  - first:
+      213: 975245839336520521
+    second: Boss 2 dying_245
+  - first:
+      213: 8828189178519956693
+    second: Boss 2 dying_246
+  - first:
+      213: -5712137898702876831
+    second: Boss 2 dying_247
+  - first:
+      213: 8291009681016244659
+    second: Boss 2 dying_248
+  - first:
+      213: -7969559328244463951
+    second: Boss 2 dying_249
+  - first:
+      213: -8231656858180211824
+    second: Boss 2 dying_250
+  - first:
+      213: 1720635215726346058
+    second: Boss 2 dying_251
+  - first:
+      213: -6459336464251766495
+    second: Boss 2 dying_252
+  - first:
+      213: -1447349310655784124
+    second: Boss 2 dying_253
+  - first:
+      213: -5645194153090795577
+    second: Boss 2 dying_254
+  - first:
+      213: -8048601154913316184
+    second: Boss 2 dying_255
+  - first:
+      213: -4846362388363829211
+    second: Boss 2 dying_256
+  - first:
+      213: -3753956247451486018
+    second: Boss 2 dying_257
+  - first:
+      213: -7871114606351268243
+    second: Boss 2 dying_258
+  - first:
+      213: -6141016435927623059
+    second: Boss 2 dying_259
+  - first:
+      213: 882532797267518778
+    second: Boss 2 dying_260
+  - first:
+      213: 2456833226391318559
+    second: Boss 2 dying_261
+  - first:
+      213: 356941726161249334
+    second: Boss 2 dying_262
+  - first:
+      213: -9042029770403337252
+    second: Boss 2 dying_263
+  - first:
+      213: -61606610128409720
+    second: Boss 2 dying_264
+  - first:
+      213: 5687411086210636342
+    second: Boss 2 dying_265
+  - first:
+      213: -8450396137791346616
+    second: Boss 2 dying_266
+  - first:
+      213: 6291296107850175625
+    second: Boss 2 dying_267
+  - first:
+      213: 3370371611700936100
+    second: Boss 2 dying_268
+  - first:
+      213: 4973437674596785414
+    second: Boss 2 dying_269
+  - first:
+      213: -2873185330362282076
+    second: Boss 2 dying_270
+  - first:
+      213: -4652968090188017873
+    second: Boss 2 dying_271
+  - first:
+      213: -6763679432292570743
+    second: Boss 2 dying_272
+  - first:
+      213: -5698046391960575939
+    second: Boss 2 dying_273
+  - first:
+      213: -7389378304989304439
+    second: Boss 2 dying_274
+  - first:
+      213: -8879786794459926867
+    second: Boss 2 dying_275
+  - first:
+      213: 6911169641129224765
+    second: Boss 2 dying_276
+  - first:
+      213: -2287182146716876328
+    second: Boss 2 dying_277
+  - first:
+      213: -952857619965966122
+    second: Boss 2 dying_278
+  - first:
+      213: -8779168127876994465
+    second: Boss 2 dying_279
+  - first:
+      213: -5862725167030574245
+    second: Boss 2 dying_280
+  - first:
+      213: 144183287536705314
+    second: Boss 2 dying_281
+  - first:
+      213: -2167010474768659660
+    second: Boss 2 dying_282
+  - first:
+      213: 7284582237296615537
+    second: Boss 2 dying_283
+  - first:
+      213: -5383563316973566138
+    second: Boss 2 dying_284
+  - first:
+      213: -6172295446429664820
+    second: Boss 2 dying_285
+  - first:
+      213: -6185466667272852764
+    second: Boss 2 dying_286
+  - first:
+      213: 7997510566647579599
+    second: Boss 2 dying_287
+  - first:
+      213: 7543736291770130123
+    second: Boss 2 dying_288
+  - first:
+      213: -6353758453704143216
+    second: Boss 2 dying_289
+  - first:
+      213: 7480964909977645954
+    second: Boss 2 dying_290
+  - first:
+      213: -2902918948888932629
+    second: Boss 2 dying_291
+  - first:
+      213: 389367873782414011
+    second: Boss 2 dying_292
+  - first:
+      213: 44225458560860326
+    second: Boss 2 dying_293
+  - first:
+      213: 2414459217269954205
+    second: Boss 2 dying_294
+  - first:
+      213: -4134221145862158685
+    second: Boss 2 dying_295
+  - first:
+      213: -3514475217089360196
+    second: Boss 2 dying_296
+  - first:
+      213: 8248124191918809679
+    second: Boss 2 dying_297
+  - first:
+      213: -4492635561194331254
+    second: Boss 2 dying_298
+  - first:
+      213: 7970590954843179222
+    second: Boss 2 dying_299
+  - first:
+      213: 6775540380311600990
+    second: Boss 2 dying_300
+  - first:
+      213: 936047670553226915
+    second: Boss 2 dying_301
+  - first:
+      213: 1290206237247223005
+    second: Boss 2 dying_302
+  - first:
+      213: 6011655741089137986
+    second: Boss 2 dying_303
+  - first:
+      213: 3768857395311274957
+    second: Boss 2 dying_304
+  - first:
+      213: -3204977757680364615
+    second: Boss 2 dying_305
+  - first:
+      213: -7623552032200858653
+    second: Boss 2 dying_306
+  - first:
+      213: -736343942262563967
+    second: Boss 2 dying_307
+  - first:
+      213: -7115067936442147178
+    second: Boss 2 dying_308
+  - first:
+      213: 2767011898400486705
+    second: Boss 2 dying_309
+  - first:
+      213: 7530080329979905515
+    second: Boss 2 dying_310
+  - first:
+      213: 2007664460905529166
+    second: Boss 2 dying_311
+  - first:
+      213: 1926210133647312811
+    second: Boss 2 dying_312
+  - first:
+      213: -7410771923599994415
+    second: Boss 2 dying_313
+  - first:
+      213: 8454632843271753491
+    second: Boss 2 dying_314
+  - first:
+      213: 8388693247675116577
+    second: Boss 2 dying_315
+  - first:
+      213: -8446790328484350168
+    second: Boss 2 dying_316
+  - first:
+      213: 1366844189706966447
+    second: Boss 2 dying_317
+  - first:
+      213: 4330864687027508190
+    second: Boss 2 dying_318
+  - first:
+      213: -5169408938666125214
+    second: Boss 2 dying_319
+  - first:
+      213: 745610298313997763
+    second: Boss 2 dying_320
+  - first:
+      213: 5185707921596620145
+    second: Boss 2 dying_321
+  - first:
+      213: 2298168860276470210
+    second: Boss 2 dying_322
+  - first:
+      213: 6592248455007067207
+    second: Boss 2 dying_323
+  - first:
+      213: 6294136678942835001
+    second: Boss 2 dying_324
+  - first:
+      213: -8281226963446497884
+    second: Boss 2 dying_325
+  - first:
+      213: -6162153270481728898
+    second: Boss 2 dying_326
+  - first:
+      213: 1673989154886989200
+    second: Boss 2 dying_327
+  - first:
+      213: 8823112064824082640
+    second: Boss 2 dying_328
+  - first:
+      213: -4184013447541730131
+    second: Boss 2 dying_329
+  - first:
+      213: 919242135543353991
+    second: Boss 2 dying_330
+  - first:
+      213: 1865061946894785714
+    second: Boss 2 dying_331
+  - first:
+      213: 201837680192035778
+    second: Boss 2 dying_332
+  - first:
+      213: 1797052195373816974
+    second: Boss 2 dying_333
+  - first:
+      213: -1689978528539726347
+    second: Boss 2 dying_334
+  - first:
+      213: 6882369930614726234
+    second: Boss 2 dying_335
+  - first:
+      213: -6344347418481688275
+    second: Boss 2 dying_336
+  - first:
+      213: -6087573744965999800
+    second: Boss 2 dying_337
+  - first:
+      213: 6184430774880581962
+    second: Boss 2 dying_338
+  - first:
+      213: 4871562539101006033
+    second: Boss 2 dying_339
+  - first:
+      213: -2140681872508542401
+    second: Boss 2 dying_340
+  - first:
+      213: -2679666861554437336
+    second: Boss 2 dying_341
+  - first:
+      213: -1506805728676258841
+    second: Boss 2 dying_342
+  - first:
+      213: -5943537156762513234
+    second: Boss 2 dying_343
+  - first:
+      213: 6307719824331358931
+    second: Boss 2 dying_344
+  - first:
+      213: -8381590197298667771
+    second: Boss 2 dying_345
+  - first:
+      213: 6238351795836322588
+    second: Boss 2 dying_346
+  - first:
+      213: 1588702835052230880
+    second: Boss 2 dying_347
+  - first:
+      213: 5899296383175540529
+    second: Boss 2 dying_348
+  - first:
+      213: 3335549086661415041
+    second: Boss 2 dying_349
+  - first:
+      213: 8039518003124652744
+    second: Boss 2 dying_350
+  - first:
+      213: -6533200289001824418
+    second: Boss 2 dying_351
+  - first:
+      213: -5189237251205800676
+    second: Boss 2 dying_352
+  - first:
+      213: 226515577169853731
+    second: Boss 2 dying_353
+  - first:
+      213: 1744303301341841428
+    second: Boss 2 dying_354
+  - first:
+      213: 7825271981773923895
+    second: Boss 2 dying_355
+  - first:
+      213: 1172561682055529323
+    second: Boss 2 dying_356
+  - first:
+      213: 1148886813628029988
+    second: Boss 2 dying_357
+  - first:
+      213: -7272235273694318951
+    second: Boss 2 dying_358
+  - first:
+      213: 1867091364923235436
+    second: Boss 2 dying_359
+  - first:
+      213: -7515778283860089403
+    second: Boss 2 dying_360
+  - first:
+      213: 5444191508430880272
+    second: Boss 2 dying_361
+  - first:
+      213: 610327471409227968
+    second: Boss 2 dying_362
+  - first:
+      213: -5509680444839102079
+    second: Boss 2 dying_363
+  - first:
+      213: 156904484226419803
+    second: Boss 2 dying_364
+  - first:
+      213: 7409470479474876969
+    second: Boss 2 dying_365
+  - first:
+      213: 8264368303080513741
+    second: Boss 2 dying_366
+  - first:
+      213: -1707914065671077871
+    second: Boss 2 dying_367
+  - first:
+      213: 1638253409786175951
+    second: Boss 2 dying_368
+  - first:
+      213: -3763103000561907935
+    second: Boss 2 dying_369
+  - first:
+      213: -6594433649299647038
+    second: Boss 2 dying_370
+  - first:
+      213: 421167691399020354
+    second: Boss 2 dying_371
+  - first:
+      213: 3715639863472806019
+    second: Boss 2 dying_372
+  - first:
+      213: -9110375913641887548
+    second: Boss 2 dying_373
+  - first:
+      213: -8269017960705782077
+    second: Boss 2 dying_374
+  - first:
+      213: 3826349960159869178
+    second: Boss 2 dying_375
+  - first:
+      213: 5324550944747519681
+    second: Boss 2 dying_376
+  - first:
+      213: -4700944612708248144
+    second: Boss 2 dying_377
+  - first:
+      213: 5032825923626862340
+    second: Boss 2 dying_378
+  - first:
+      213: 7405721490058890784
+    second: Boss 2 dying_379
+  - first:
+      213: -627053494887144716
+    second: Boss 2 dying_380
+  - first:
+      213: -126871579317284400
+    second: Boss 2 dying_381
+  - first:
+      213: 1729248179731960065
+    second: Boss 2 dying_382
+  - first:
+      213: -8058658750283463327
+    second: Boss 2 dying_383
+  - first:
+      213: 6979918896334174101
+    second: Boss 2 dying_384
+  - first:
+      213: 6226558831220211699
+    second: Boss 2 dying_0
+  - first:
+      213: 8516257391720781980
+    second: Boss 2 dying_1
+  - first:
+      213: 4161602390612268256
+    second: Boss 2 dying_2
+  - first:
+      213: -5959268524888821507
+    second: Boss 2 dying_3
+  - first:
+      213: 4316236726846079917
+    second: Boss 2 dying_4
+  - first:
+      213: 5138216234825722638
+    second: Boss 2 dying_5
+  - first:
+      213: 4021591298148945881
+    second: Boss 2 dying_6
+  - first:
+      213: -8744549869698773988
+    second: Boss 2 dying_7
+  - first:
+      213: 4088088035399586539
+    second: Boss 2 dying_8
+  - first:
+      213: 5521718743777549530
+    second: Boss 2 dying_9
+  - first:
+      213: -4444130830192905047
+    second: Boss 2 dying_10
+  - first:
+      213: 7075867089609792880
+    second: Boss 2 dying_11
+  - first:
+      213: -7632029687273606350
+    second: Boss 2 dying_12
+  - first:
+      213: -2009095272852217190
+    second: Boss 2 dying_13
+  - first:
+      213: -3397718315871723530
+    second: Boss 2 dying_14
+  - first:
+      213: -3125511681087426664
+    second: Boss 2 dying_15
+  - first:
+      213: -2233151575895116404
+    second: Boss 2 dying_16
+  - first:
+      213: -5542446361253753737
+    second: Boss 2 dying_17
+  - first:
+      213: 6050542680147072219
+    second: Boss 2 dying_18
+  - first:
+      213: -4509501766020976145
+    second: Boss 2 dying_19
+  - first:
+      213: -3242448630101204335
+    second: Boss 2 dying_20
+  - first:
+      213: -5764053800521344967
+    second: Boss 2 dying_21
+  - first:
+      213: 2230425481029341574
+    second: Boss 2 dying_22
+  - first:
+      213: 8830938807067601942
+    second: Boss 2 dying_23
+  - first:
+      213: -4223127987108753488
+    second: Boss 2 dying_24
+  - first:
+      213: 5352567063689038309
+    second: Boss 2 dying_25
+  - first:
+      213: -7739968450957566972
+    second: Boss 2 dying_26
+  - first:
+      213: 8906825397487414370
+    second: Boss 2 dying_27
+  - first:
+      213: -388678188365148589
+    second: Boss 2 dying_28
+  - first:
+      213: 9182057780037539821
+    second: Boss 2 dying_29
+  - first:
+      213: -1856750418099249191
+    second: Boss 2 dying_30
+  - first:
+      213: 371178079913507962
+    second: Boss 2 dying_31
+  - first:
+      213: -3013061824755418353
+    second: Boss 2 dying_32
+  - first:
+      213: -5421260234902817108
+    second: Boss 2 dying_33
+  - first:
+      213: -3192091684039435791
+    second: Boss 2 dying_34
+  - first:
+      213: 2927365953902258926
+    second: Boss 2 dying_35
+  - first:
+      213: -1984319564168123133
+    second: Boss 2 dying_36
+  - first:
+      213: -8242617297179599230
+    second: Boss 2 dying_37
+  - first:
+      213: 2481641704086951428
+    second: Boss 2 dying_38
+  - first:
+      213: 2042335411554793321
+    second: Boss 2 dying_39
+  - first:
+      213: -1169544624365976903
+    second: Boss 2 dying_40
+  - first:
+      213: 4337630784635242140
+    second: Boss 2 dying_41
+  - first:
+      213: 2563633756472845239
+    second: Boss 2 dying_42
+  - first:
+      213: -2755512893170235778
+    second: Boss 2 dying_43
+  - first:
+      213: 4110493165725894658
+    second: Boss 2 dying_44
+  - first:
+      213: 3219407648894745838
+    second: Boss 2 dying_45
+  - first:
+      213: -2514834019599196656
+    second: Boss 2 dying_46
+  - first:
+      213: -7554731769314891358
+    second: Boss 2 dying_47
+  - first:
+      213: 6258213885399288831
+    second: Boss 2 dying_48
+  - first:
+      213: 132281638993795530
+    second: Boss 2 dying_49
+  - first:
+      213: -3993501715912095057
+    second: Boss 2 dying_50
+  - first:
+      213: -7959221373602115584
+    second: Boss 2 dying_51
+  - first:
+      213: -8773625911452774416
+    second: Boss 2 dying_52
+  - first:
+      213: -6039060723098485333
+    second: Boss 2 dying_53
+  - first:
+      213: -7854207794339145748
+    second: Boss 2 dying_54
+  - first:
+      213: 14272262386718783
+    second: Boss 2 dying_55
+  - first:
+      213: 3608656084007133693
+    second: Boss 2 dying_56
+  - first:
+      213: -4496736421875490872
+    second: Boss 2 dying_57
+  - first:
+      213: 438623022683995717
+    second: Boss 2 dying_58
+  - first:
+      213: -2148422460826732280
+    second: Boss 2 dying_59
+  - first:
+      213: -8686832138517134916
+    second: Boss 2 dying_60
+  - first:
+      213: 5047873903905319007
+    second: Boss 2 dying_61
+  - first:
+      213: -267682494352955063
+    second: Boss 2 dying_62
+  - first:
+      213: -8117698743927898882
+    second: Boss 2 dying_63
+  - first:
+      213: 729272608368112429
+    second: Boss 2 dying_64
+  - first:
+      213: -232503927640188550
+    second: Boss 2 dying_65
+  - first:
+      213: -3003202659477290140
+    second: Boss 2 dying_66
+  - first:
+      213: 5432366561563400951
+    second: Boss 2 dying_67
+  - first:
+      213: 1203166351536656073
+    second: Boss 2 dying_68
+  - first:
+      213: 1936092109144303143
+    second: Boss 2 dying_69
+  - first:
+      213: 5583472169186970913
+    second: Boss 2 dying_70
+  - first:
+      213: 5740875465067192816
+    second: Boss 2 dying_71
+  - first:
+      213: -5392907262989509488
+    second: Boss 2 dying_72
+  - first:
+      213: -7966817349288727533
+    second: Boss 2 dying_73
+  - first:
+      213: 4074965287348767005
+    second: Boss 2 dying_74
+  - first:
+      213: 5339932835300424215
+    second: Boss 2 dying_75
+  - first:
+      213: 982219938988128484
+    second: Boss 2 dying_76
+  - first:
+      213: -2150688019360948423
+    second: Boss 2 dying_77
+  - first:
+      213: -6153148758579993014
+    second: Boss 2 dying_78
+  - first:
+      213: -5401445785307552724
+    second: Boss 2 dying_79
+  - first:
+      213: -1822944820812085174
+    second: Boss 2 dying_80
+  - first:
+      213: 1626856828365207897
+    second: Boss 2 dying_81
+  - first:
+      213: -5829525895158101525
+    second: Boss 2 dying_82
+  - first:
+      213: -530881006581382519
+    second: Boss 2 dying_83
+  - first:
+      213: 7817060986811281973
+    second: Boss 2 dying_84
+  - first:
+      213: 371345473765467483
+    second: Boss 2 dying_85
+  - first:
+      213: -8166735783735243570
+    second: Boss 2 dying_86
+  - first:
+      213: -5867960160469637074
+    second: Boss 2 dying_87
+  - first:
+      213: -72383371452261395
+    second: Boss 2 dying_88
+  - first:
+      213: 5719558381929356081
+    second: Boss 2 dying_89
+  - first:
+      213: -7893573457753537634
+    second: Boss 2 dying_90
+  - first:
+      213: -6198271473241570349
+    second: Boss 2 dying_91
+  - first:
+      213: 363827334799728061
+    second: Boss 2 dying_92
+  - first:
+      213: 4547433365912365543
+    second: Boss 2 dying_93
+  - first:
+      213: -4832555671594315482
+    second: Boss 2 dying_94
+  - first:
+      213: 4218583263277211374
+    second: Boss 2 dying_95
+  - first:
+      213: 3504917216137770133
+    second: Boss 2 dying_96
+  - first:
+      213: -8185521264542852566
+    second: Boss 2 dying_97
+  - first:
+      213: 1216038153895701006
+    second: Boss 2 dying_98
+  - first:
+      213: 5786224531990061387
+    second: Boss 2 dying_99
+  - first:
+      213: 7786958131254217331
+    second: Boss 2 dying_100
+  - first:
+      213: -7370286993816247805
+    second: Boss 2 dying_101
+  - first:
+      213: -3974785080428612015
+    second: Boss 2 dying_102
+  - first:
+      213: 1171423767700463373
+    second: Boss 2 dying_103
+  - first:
+      213: 4892026233783568805
+    second: Boss 2 dying_104
+  - first:
+      213: -3227772758600095554
+    second: Boss 2 dying_105
+  - first:
+      213: 3634007736088667619
+    second: Boss 2 dying_106
+  - first:
+      213: -273220998032964480
+    second: Boss 2 dying_107
+  - first:
+      213: 1704989809296709014
+    second: Boss 2 dying_108
+  - first:
+      213: -8871422019523976680
+    second: Boss 2 dying_109
+  - first:
+      213: 7566054522321697309
+    second: Boss 2 dying_110
+  - first:
+      213: 8402805095906155368
+    second: Boss 2 dying_111
+  - first:
+      213: -5778257273368334981
+    second: Boss 2 dying_112
+  - first:
+      213: 4499788803042604160
+    second: Boss 2 dying_113
+  - first:
+      213: 2511934269977963620
+    second: Boss 2 dying_114
+  - first:
+      213: -5314033818730432893
+    second: Boss 2 dying_115
+  - first:
+      213: -6469941594781879582
+    second: Boss 2 dying_116
+  - first:
+      213: 5791073279733034093
+    second: Boss 2 dying_117
+  - first:
+      213: -4718350989072456406
+    second: Boss 2 dying_118
+  - first:
+      213: 5322308010507167058
+    second: Boss 2 dying_119
+  - first:
+      213: 2376573063493443392
+    second: Boss 2 dying_120
+  - first:
+      213: -6125831863684259026
+    second: Boss 2 dying_121
+  - first:
+      213: 2445436344145690174
+    second: Boss 2 dying_122
+  - first:
+      213: 3395782072323839865
+    second: Boss 2 dying_123
+  - first:
+      213: 8124423295732948634
+    second: Boss 2 dying_124
+  - first:
+      213: 1861070267376392
+    second: Boss 2 dying_125
+  - first:
+      213: -7251059341301091901
+    second: Boss 2 dying_126
+  - first:
+      213: 7627902256850357065
+    second: Boss 2 dying_127
+  - first:
+      213: -6786435579280320088
+    second: Boss 2 dying_128
+  - first:
+      213: -5813926352412485645
+    second: Boss 2 dying_129
+  - first:
+      213: -4025720376421075147
+    second: Boss 2 dying_130
+  - first:
+      213: 8768611824668931987
+    second: Boss 2 dying_131
+  - first:
+      213: 4939230579014192610
+    second: Boss 2 dying_132
+  - first:
+      213: 510931233447176466
+    second: Boss 2 dying_133
+  - first:
+      213: 1131887116174157243
+    second: Boss 2 dying_134
+  - first:
+      213: 1438943841373127643
+    second: Boss 2 dying_135
+  - first:
+      213: 127005576673273513
+    second: Boss 2 dying_136
+  - first:
+      213: -8182174588400366139
+    second: Boss 2 dying_137
+  - first:
+      213: -6856352086001635299
+    second: Boss 2 dying_138
+  - first:
+      213: -7073819320799259056
+    second: Boss 2 dying_139
+  - first:
+      213: -9121319066699374739
+    second: Boss 2 dying_140
+  - first:
+      213: 7224577537806676024
+    second: Boss 2 dying_141
+  - first:
+      213: -6048963157000423505
+    second: Boss 2 dying_142
+  - first:
+      213: -6236791816400718638
+    second: Boss 2 dying_143
+  - first:
+      213: -8273627329557099724
+    second: Boss 2 dying_144
+  - first:
+      213: 8074832818757363274
+    second: Boss 2 dying_145
+  - first:
+      213: -7035105800501228239
+    second: Boss 2 dying_146
+  - first:
+      213: -5424056586765294740
+    second: Boss 2 dying_147
+  - first:
+      213: 4205339771848297246
+    second: Boss 2 dying_148
+  - first:
+      213: 8873208942741424648
+    second: Boss 2 dying_149
+  - first:
+      213: 6762480220672632718
+    second: Boss 2 dying_150
+  - first:
+      213: -6787761888199488949
+    second: Boss 2 dying_151
+  - first:
+      213: 1692801879184621929
+    second: Boss 2 dying_152
+  - first:
+      213: -7152384562647229115
+    second: Boss 2 dying_153
+  - first:
+      213: -6887728927878781167
+    second: Boss 2 dying_154
+  - first:
+      213: 9048714289671082585
+    second: Boss 2 dying_155
+  externalObjects: {}
+  serializedVersion: 11
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 0
+    aniso: -1
+    mipBias: -100
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 16
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Android
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: Boss 2 dying_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 665
+        width: 128
+        height: 128
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3ffb3fb644e296650800000000000000
+      internalID: 6226558831220211699
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Boss 2 dying_1
+      rect:
+        serializedVersion: 2
+        x: 133
+        y: 665
+        width: 128
+        height: 128
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c98df490af2df2670800000000000000
+      internalID: 8516257391720781980
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Boss 2 dying_2
+      rect:
+        serializedVersion: 2
+        x: 266
+        y: 665
+        width: 128
+        height: 128
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0e45cdc335bf0c930800000000000000
+      internalID: 4161602390612268256
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Boss 2 dying_3
+      rect:
+        serializedVersion: 2
+        x: 399
+        y: 665
+        width: 128
+        height: 128
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: df0f5d4a9dc6c4da0800000000000000
+      internalID: -5959268524888821507
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Boss 2 dying_4
+      rect:
+        serializedVersion: 2
+        x: 532
+        y: 665
+        width: 128
+        height: 128
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: da3c7264f6a56eb30800000000000000
+      internalID: 4316236726846079917
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Boss 2 dying_5
+      rect:
+        serializedVersion: 2
+        x: 665
+        y: 665
+        width: 128
+        height: 128
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e0baeef217c9e4740800000000000000
+      internalID: 5138216234825722638
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Boss 2 dying_6
+      rect:
+        serializedVersion: 2
+        x: 798
+        y: 665
+        width: 128
+        height: 128
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9df48f57aff8fc730800000000000000
+      internalID: 4021591298148945881
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Boss 2 dying_7
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 532
+        width: 128
+        height: 128
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c1c8aef593e15a680800000000000000
+      internalID: -8744549869698773988
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Boss 2 dying_8
+      rect:
+        serializedVersion: 2
+        x: 133
+        y: 532
+        width: 128
+        height: 128
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: be25488986ecbb830800000000000000
+      internalID: 4088088035399586539
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Boss 2 dying_9
+      rect:
+        serializedVersion: 2
+        x: 266
+        y: 532
+        width: 128
+        height: 128
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: adc1a7031f511ac40800000000000000
+      internalID: 5521718743777549530
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Boss 2 dying_10
+      rect:
+        serializedVersion: 2
+        x: 399
+        y: 532
+        width: 128
+        height: 128
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9a47df25e864352c0800000000000000
+      internalID: -4444130830192905047
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Boss 2 dying_11
+      rect:
+        serializedVersion: 2
+        x: 532
+        y: 532
+        width: 128
+        height: 128
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 07d9112e0a7823260800000000000000
+      internalID: 7075867089609792880
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Boss 2 dying_12
+      rect:
+        serializedVersion: 2
+        x: 665
+        y: 532
+        width: 128
+        height: 128
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 23332d68f65951690800000000000000
+      internalID: -7632029687273606350
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Boss 2 dying_13
+      rect:
+        serializedVersion: 2
+        x: 798
+        y: 532
+        width: 128
+        height: 128
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a922ab57e724e14e0800000000000000
+      internalID: -2009095272852217190
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Boss 2 dying_14
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 399
+        width: 128
+        height: 128
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6ff90af8131e8d0d0800000000000000
+      internalID: -3397718315871723530
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Boss 2 dying_15
+      rect:
+        serializedVersion: 2
+        x: 133
+        y: 399
+        width: 128
+        height: 128
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 89f237b8fa3ff94d0800000000000000
+      internalID: -3125511681087426664
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Boss 2 dying_16
+      rect:
+        serializedVersion: 2
+        x: 266
+        y: 399
+        width: 128
+        height: 128
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c85fa2539704201e0800000000000000
+      internalID: -2233151575895116404
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Boss 2 dying_17
+      rect:
+        serializedVersion: 2
+        x: 399
+        y: 399
+        width: 128
+        height: 128
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 77c40da46664513b0800000000000000
+      internalID: -5542446361253753737
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Boss 2 dying_18
+      rect:
+        serializedVersion: 2
+        x: 532
+        y: 399
+        width: 128
+        height: 128
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bd4918ca288d7f350800000000000000
+      internalID: 6050542680147072219
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Boss 2 dying_19
+      rect:
+        serializedVersion: 2
+        x: 665
+        y: 399
+        width: 128
+        height: 128
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fe1b25249080b61c0800000000000000
+      internalID: -4509501766020976145
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Boss 2 dying_20
+      rect:
+        serializedVersion: 2
+        x: 798
+        y: 399
+        width: 128
+        height: 128
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 192ad5076228003d0800000000000000
+      internalID: -3242448630101204335
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Boss 2 dying_21
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 266
+        width: 128
+        height: 128
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9385fa19b97f100b0800000000000000
+      internalID: -5764053800521344967
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Boss 2 dying_22
+      rect:
+        serializedVersion: 2
+        x: 133
+        y: 266
+        width: 128
+        height: 128
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 681dbbe582014fe10800000000000000
+      internalID: 2230425481029341574
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Boss 2 dying_23
+      rect:
+        serializedVersion: 2
+        x: 266
+        y: 266
+        width: 128
+        height: 128
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 61ce9748e0ccd8a70800000000000000
+      internalID: 8830938807067601942
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Boss 2 dying_24
+      rect:
+        serializedVersion: 2
+        x: 399
+        y: 266
+        width: 128
+        height: 128
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0bf4f57887f6465c0800000000000000
+      internalID: -4223127987108753488
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Boss 2 dying_25
+      rect:
+        serializedVersion: 2
+        x: 532
+        y: 266
+        width: 128
+        height: 128
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5e904a3a263284a40800000000000000
+      internalID: 5352567063689038309
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Boss 2 dying_26
+      rect:
+        serializedVersion: 2
+        x: 665
+        y: 266
+        width: 128
+        height: 128
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 40c91f3b3bb169490800000000000000
+      internalID: -7739968450957566972
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Boss 2 dying_27
+      rect:
+        serializedVersion: 2
+        x: 798
+        y: 266
+        width: 128
+        height: 128
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 26c2aa532866b9b70800000000000000
+      internalID: 8906825397487414370
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Boss 2 dying_28
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 133
+        width: 128
+        height: 128
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 35e8d8a3f332b9af0800000000000000
+      internalID: -388678188365148589
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Boss 2 dying_29
+      rect:
+        serializedVersion: 2
+        x: 133
+        y: 133
+        width: 128
+        height: 128
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: de7df3ef6e83d6f70800000000000000
+      internalID: 9182057780037539821
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Boss 2 dying_30
+      rect:
+        serializedVersion: 2
+        x: 266
+        y: 133
+        width: 128
+        height: 128
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9dfd2ac055f7b36e0800000000000000
+      internalID: -1856750418099249191
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Boss 2 dying_31
+      rect:
+        serializedVersion: 2
+        x: 399
+        y: 133
+        width: 128
+        height: 128
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a7cf7a14f70b62500800000000000000
+      internalID: 371178079913507962
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Boss 2 dying_32
+      rect:
+        serializedVersion: 2
+        x: 532
+        y: 133
+        width: 128
+        height: 128
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f0bb929fb347f26d0800000000000000
+      internalID: -3013061824755418353
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Boss 2 dying_33
+      rect:
+        serializedVersion: 2
+        x: 665
+        y: 133
+        width: 128
+        height: 128
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ca6baa71a80d3c4b0800000000000000
+      internalID: -5421260234902817108
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Boss 2 dying_34
+      rect:
+        serializedVersion: 2
+        x: 798
+        y: 133
+        width: 128
+        height: 128
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1f9d95a968963b3d0800000000000000
+      internalID: -3192091684039435791
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Boss 2 dying_35
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 128
+        height: 128
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: eeaaae143d710a820800000000000000
+      internalID: 2927365953902258926
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+  spritePackingTag: 
+  pSDRemoveMatte: 0
+  pSDShowRemoveMatteOption: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

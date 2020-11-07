@@ -132,7 +132,7 @@ public class AI_CrystalBoss : MonoBehaviour
         miniCrystals.FaceTowards(playerTransform.position);
         while (elapsedTime < waitTime)
         {
-            miniCrystals.LerpTowards(playerTransform.position);
+            miniCrystals.LerpTowards(playerTransform.position, orbitSpeed/200f);
             elapsedTime += Time.deltaTime;
 
             yield return null;

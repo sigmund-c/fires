@@ -92,6 +92,18 @@ public class LaserController : MonoBehaviour
         laserTriggerTimer = laserTriggerDuration;
     }
 
+    public void ShootLaser(Vector3 target, float dur)
+    {
+        Vector3 direction = target - m_transform.position;
+        laserTargetPos = direction.normalized * RayDistance;
+
+        //DELAY FOR CHARGING
+        StartCoroutine(Delay(2f));
+
+        laserTriggered = true;
+        laserTriggerTimer = dur - 2f;
+    }
+
     private IEnumerator Delay(float time)
     {
          yield return new WaitForSeconds(time);

@@ -26186,7 +26186,6 @@ Transform:
   - {fileID: 2004350818}
   - {fileID: 2069283129}
   - {fileID: 1946128395}
-  - {fileID: 4507714566889754923}
   m_Father: {fileID: 596645696}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -31570,7 +31569,7 @@ Transform:
   - {fileID: 28285381}
   - {fileID: 2004761018}
   m_Father: {fileID: 1946128395}
-  m_RootOrder: 0
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 180}
 --- !u!4 &973810741 stripped
 Transform:
@@ -32249,6 +32248,7 @@ Transform:
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
+  - {fileID: 4507714566889754923}
   - {fileID: 913455195}
   m_Father: {fileID: 57862316}
   m_RootOrder: 2
@@ -32312,6 +32312,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2004350818}
   - component: {fileID: 2004350819}
+  - component: {fileID: 2004350820}
   m_Layer: 19
   m_Name: centreSprite
   m_TagString: Untagged
@@ -32373,7 +32374,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: 268ffec9028323340a6284b930a5d9db, type: 3}
+  m_Sprite: {fileID: 4229016421115649805, guid: 7524a2f29d419f0449e920fa7c5756e6, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -32384,6 +32385,25 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!95 &2004350820
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2004350817}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 293d2a854a504bc43a7eff86ddf8cb86, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1 &2004761017
 GameObject:
   m_ObjectHideFlags: 0
@@ -37415,7 +37435,7 @@ LineRenderer:
     textureMode: 0
     shadowBias: 0.5
     generateLightingData: 0
-  m_UseWorldSpace: 1
+  m_UseWorldSpace: 0
   m_Loop: 0
 --- !u!4 &4507714566889754923
 Transform:
@@ -37424,13 +37444,13 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 6995392291036529136}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalRotation: {x: 0, y: 0, z: 0.19080894, w: 0.9816273}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
-  m_Father: {fileID: 57862316}
-  m_RootOrder: 3
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_Father: {fileID: 1946128395}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 22}
 --- !u!114 &4972909159858186234
 MonoBehaviour:
   m_ObjectHideFlags: 0

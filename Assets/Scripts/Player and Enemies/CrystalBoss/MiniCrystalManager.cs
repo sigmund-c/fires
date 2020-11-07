@@ -138,6 +138,8 @@ public class MiniCrystalManager : MonoBehaviour
         float elapsedTime = 0f;
         float waitTime = seconds;
 
+        ShootBigLaser(seconds);
+
         while (elapsedTime < waitTime)
         {
             for (int i = 0; i < miniCrystals.Count; i++)
@@ -155,14 +157,7 @@ public class MiniCrystalManager : MonoBehaviour
 
     public void ShootBigLaser(float seconds)
     {
-        StartCoroutine(ShootAndStopBigLaser(seconds));
-    }
-
-    private IEnumerator ShootAndStopBigLaser(float seconds)
-    {
-        laserController.ShootLaser(PlayerTransform.position);
-
-        yield return new WaitForSeconds(seconds);
+        laserController.ShootLaser(transform.up, seconds);
     }
     
     private void UpdateRemainingCrystals()
