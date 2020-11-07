@@ -51,11 +51,12 @@ public class AI_CrystalBoss : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        StartCoroutine(Delay(0.3f));
         if (stateRunning)
         {
             return;
         }
-
+        StartCoroutine(Delay(0.3f));
         switch (curState)
         {
             case BossActionType.Idle:
@@ -74,6 +75,7 @@ public class AI_CrystalBoss : MonoBehaviour
 
     private void HandleIdleState()
     {
+        StartCoroutine(Delay(0.3f));
         if (stateRunning)
         {
             return;
@@ -90,7 +92,7 @@ public class AI_CrystalBoss : MonoBehaviour
 
         yield return new WaitForSeconds(2f);
 
-        int choice = Random.Range(0, 2);
+        int choice = Random.Range(0, 1);
         switch (choice)
         {
             case 0:
@@ -107,6 +109,7 @@ public class AI_CrystalBoss : MonoBehaviour
 
     private void HandleBigLaserState()
     {
+        StartCoroutine(Delay(0.3f));
         if (stateRunning)
         {
             return;
@@ -144,6 +147,7 @@ public class AI_CrystalBoss : MonoBehaviour
 
     private void HandleSpinLaserState()
     {
+        StartCoroutine(Delay(0.3f));
         if (stateRunning)
         {
             return;
@@ -213,4 +217,8 @@ public class AI_CrystalBoss : MonoBehaviour
         stateRunning = false;
     }
 
+     private IEnumerator Delay(float time)
+     {
+         yield return new WaitForSeconds(time);
+     }
 }

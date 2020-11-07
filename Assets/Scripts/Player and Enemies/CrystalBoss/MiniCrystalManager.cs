@@ -8,6 +8,7 @@ public class MiniCrystalManager : MonoBehaviour
     private List<MiniCrystal> miniCrystals;
     public GameObject miniCrystalPrefab;
     public LaserController laserController;
+    public Transform PlayerTransform;
 
     public float orbitRadius;
     public float orbitSpeed;
@@ -160,11 +161,9 @@ public class MiniCrystalManager : MonoBehaviour
 
     private IEnumerator ShootAndStopBigLaser(float seconds)
     {
-        laserController.ShootLaser(Vector3.down);
+        laserController.ShootLaser(PlayerTransform.position);
 
         yield return new WaitForSeconds(seconds);
-
-        laserController.StopLaser();
     }
     
     private void UpdateRemainingCrystals()
