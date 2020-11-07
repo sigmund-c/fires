@@ -37,6 +37,13 @@ public class PersistentManager : MonoBehaviour
 
     void OnSceneLoaded(Scene scene, LoadSceneMode mode)
     {
+        //Store the level to playerPrefs.
+        if (SceneManager.GetActiveScene().name != "MenuScene")
+        {
+            PlayerPrefs.SetString("Last_Level", SceneManager.GetActiveScene().name);
+            Debug.Log(SceneManager.GetActiveScene().name + " saved.");
+        }
+        
         print("firstRun: " + firstRun);
         print("prev: " + prevScene + " curr: " + SceneManager.GetActiveScene().name);
         if (prevScene != SceneManager.GetActiveScene().name) // new level
