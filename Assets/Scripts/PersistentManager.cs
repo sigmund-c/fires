@@ -40,7 +40,7 @@ public class PersistentManager : MonoBehaviour
         //Store the level to playerPrefs.
         if (SceneManager.GetActiveScene().name != "MenuScene")
         {
-            //PlayerPrefs.SetString("Last_Level", SceneManager.GetActiveScene().name);
+            PlayerPrefs.SetString("Last_Level", SceneManager.GetActiveScene().name);
             Debug.Log(SceneManager.GetActiveScene().name + " saved.");
         }
         
