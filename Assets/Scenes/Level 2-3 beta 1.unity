@@ -26186,6 +26186,7 @@ Transform:
   - {fileID: 2004350818}
   - {fileID: 2069283129}
   - {fileID: 1946128395}
+  - {fileID: 4507714566889754923}
   m_Father: {fileID: 596645696}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -31569,7 +31570,7 @@ Transform:
   - {fileID: 28285381}
   - {fileID: 2004761018}
   m_Father: {fileID: 1946128395}
-  m_RootOrder: 1
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 180}
 --- !u!4 &973810741 stripped
 Transform:
@@ -32248,7 +32249,6 @@ Transform:
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
-  - {fileID: 4507714566889754923}
   - {fileID: 913455195}
   m_Father: {fileID: 57862316}
   m_RootOrder: 2
@@ -32266,7 +32266,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   miniCrystalPrefab: {fileID: 2898129549674868373, guid: 15027b5f43e6b6047abb1fa9b19ce9ff, type: 3}
-  laserController: {fileID: 0}
+  laserController: {fileID: 4972909159858186234}
+  PlayerTransform: {fileID: 973810741}
   orbitRadius: 0
   orbitSpeed: 0
   crystalMoveSpeed: 7
@@ -32583,7 +32584,7 @@ ParticleSystem:
     startSpeed:
       serializedVersion: 2
       minMaxState: 0
-      scalar: 12
+      scalar: 16
       minScalar: 5
       maxCurve:
         serializedVersion: 2
@@ -37427,8 +37428,8 @@ Transform:
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
-  m_Father: {fileID: 1946128395}
-  m_RootOrder: 0
+  m_Father: {fileID: 57862316}
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &4972909159858186234
 MonoBehaviour:
@@ -37442,9 +37443,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9b2fc88a595654e4f9b7d60c135449c7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  RayDistance: 100
+  RayDistance: 80
   laserTriggerDuration: 3
-  PlayerTransform: {fileID: 0}
   volumeProfile: {fileID: 11400000, guid: 0c700c0d1e54c9a428e27dfb71117915, type: 2}
   bloomIntensity: 5
   ignoreLayer:
