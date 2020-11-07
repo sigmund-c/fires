@@ -8,7 +8,6 @@ public class LaserController : MonoBehaviour
 {
     public float RayDistance = 100f;
     public float laserTriggerDuration = 3.0f;
-    public Transform PlayerTransform;
 
     public UnityEngine.Rendering.VolumeProfile volumeProfile;
     public float bloomIntensity;
@@ -50,15 +49,21 @@ public class LaserController : MonoBehaviour
                 laserTriggered = false;
             }
         } else {
-            StopLaser();
+            if(particleSystem.isPlaying)
+            {
+                particleSystem.Stop();
+                bloom.intensity.value = bloomIntensityDefault;
+                m_lineRenderer.positionCount = 0;
+            }
         }
     }
 
     void DrawRayAndParticles(Vector3 startPos, Vector3 endPos)
     {
         //Draw Line
-        m_lineRenderer.SetPosition(0, (Vector2)startPos);
-        m_lineRenderer.SetPosition(1, (Vector2)endPos);
+        m_lineRenderer.positionCount = 2;
+        m_lineRenderer.SetPosition(0, startPos);
+        m_lineRenderer.SetPosition(1, endPos);
 
         //Particle System direction (rotation)
         Vector3 relativePos = endPos - startPos;
@@ -81,16 +86,8 @@ public class LaserController : MonoBehaviour
             laserTargetPos = hit.point;
         } else
         {
-                laserTargetPos = direction.normalized * RayDistance;
+            laserTargetPos = direction.normalized * RayDistance;
         }
     }
 
-    public void StopLaser()
-    {
-        if(particleSystem.isPlaying)
-        {
-            particleSystem.Stop();
-            bloom.intensity.value = bloomIntensityDefault;
-        }
-    }
 }
