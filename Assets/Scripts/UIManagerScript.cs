@@ -52,6 +52,15 @@ public class UIManagerScript : MonoBehaviour
         Time.timeScale = 1f;
     }
 
+    public void ContinueGame()//
+    {
+        //Get the stored.
+        string last_level = PlayerPrefs.GetString("Last_Level");
+        //Loading Scene0
+        Debug.Log("TEST2-" + last_level);
+        SceneManager.LoadSceneAsync(last_level);
+        Time.timeScale = 1f;
+    }
     public Save CreateSaveGameObject()
     {
         Save save = new Save();
