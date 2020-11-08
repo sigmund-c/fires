@@ -389,7 +389,11 @@ MonoBehaviour:
   - {fileID: 1578840734}
   displayTimes:
   - 1.5
+  - 2.5
+  fadeTimes:
   - 2
+  - 3.5
+  delay: 0.5
 --- !u!114 &1866971258
 MonoBehaviour:
   m_ObjectHideFlags: 0
