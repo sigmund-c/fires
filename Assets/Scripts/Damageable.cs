@@ -70,6 +70,32 @@ public class Damageable : MonoBehaviour
             }
         }
     }
+
+    public void TriggerCollision(Collider2D col)
+    {
+        if (invincibleTimer > 0)
+        {
+            return;
+        }
+
+        Damaging damaging = col.gameObject.GetComponent<Damaging>();
+
+
+        if (damaging != null && damaging.team != team)
+        {
+            if (damaging.team == immuneTo)
+            {
+                HitShine();
+                return;
+            }
+
+            TakeDamage(damaging.damage);
+            if (takeKnockback)
+            {
+                TakeKnockback(damaging.knockbackAmount, damaging.transform.position);
+            }
+        }
+    }
     
 
     virtual public void TakeDamage(int damage)
