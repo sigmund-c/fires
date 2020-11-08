@@ -19,7 +19,7 @@ public class MiniCrystal : MonoBehaviour
     private Vector2 parentPos;
 
     public float changeRadiusSpeed = 3f;
-    private Transform spriteTransform;
+    public Transform spriteTransform;
 
     private Animator anim;
     public LaserController laser;

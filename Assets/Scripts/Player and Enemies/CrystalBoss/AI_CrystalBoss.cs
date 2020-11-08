@@ -7,7 +7,8 @@ public enum BossActionType
     Idle,
     BigLaser,
     SpinLaser,
-    IcicleDrop
+    IcicleDrop,
+    ScatterShot
 }
 
 
@@ -25,7 +26,6 @@ public class AI_CrystalBoss : MonoBehaviour
     private bool stateRunning = false;
     private bool bossStarted = false;
 
-    private float crystalMoveSpeed = 7f;
     public GameObject Player;
     private Transform playerTransform;
     private Animator animator;
@@ -89,6 +89,10 @@ public class AI_CrystalBoss : MonoBehaviour
             case BossActionType.IcicleDrop:
                 HandleIcicleDropState();
                 break;
+
+            case BossActionType.ScatterShot:
+                HandleScatterShotState();
+                break;
         }
     }
 
@@ -111,7 +115,7 @@ public class AI_CrystalBoss : MonoBehaviour
 
         yield return new WaitForSeconds(2f);
 
-        int choice = Random.Range(0, 3);
+        int choice = Random.Range(0, 4);
         switch (choice)
         {
             case 0:
@@ -124,6 +128,10 @@ public class AI_CrystalBoss : MonoBehaviour
 
             case 2:
                 curState = BossActionType.IcicleDrop;
+                break;
+            
+            case 3:
+                curState = BossActionType.ScatterShot;
                 break;
         }
 
@@ -269,10 +277,35 @@ public class AI_CrystalBoss : MonoBehaviour
         stateRunning = false;
     }
 
-     private IEnumerator Delay(float time)
-     {
-         yield return new WaitForSeconds(time);
-     }
+    private void HandleScatterShotState()
+    {
+        StartCoroutine(Delay(0.3f));
+        if (stateRunning)
+        {
+            return;
+        }
+        Debug.LogWarning("scattershot");
+        StartCoroutine(ScatterShot());
+    }
+
+    private IEnumerator ScatterShot()
+    {
+        stateRunning = true;
+        SetVulnerable();
+        StartCoroutine(Delay(2f));
+        miniCrystals.SetScatter(3f);
+        SetInvulnerable();
+        yield return new WaitForSeconds(5f);
+        
+        miniCrystals.isSpinning = true;
+        curState = BossActionType.Idle;
+        stateRunning = false;
+    }
+
+    private IEnumerator Delay(float time)
+    {
+        yield return new WaitForSeconds(time);
+    }
 
 
     public void SetVulnerable()
