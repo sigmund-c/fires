@@ -10,6 +10,8 @@ public class IcicleManager : MonoBehaviour
     private bool isTriggered;
     private Transform[] spawnPoses;
     private float[] spawnTimes;
+    private GameObject[] spawnObjects;
+    private float maxTravelDist = 90f;
     private int spawnCounter;
 
     private Transform icicleLeftPos;
@@ -35,7 +37,7 @@ public class IcicleManager : MonoBehaviour
         }
     }
 
-    void Update()
+    void FixedUpdate()
     {
         if (isTriggered)
         {
@@ -43,7 +45,7 @@ public class IcicleManager : MonoBehaviour
             {
                 if(Time.time > spawnTimes[i])
                 {
-                    Instantiate(iciclePrefab, spawnPoses[i].position, Quaternion.identity);
+                    spawnObjects[i] = Instantiate(iciclePrefab, spawnPoses[i].position, Quaternion.identity);
                     spawnCounter++;
                     spawnTimes[i] = Mathf.Infinity;
                 }
@@ -52,7 +54,20 @@ public class IcicleManager : MonoBehaviour
             if (spawnCounter == spawnTimes.Length)
             {
                 isTriggered = false;
-                spawnCounter = 0;
+            }
+        } else if (spawnCounter > 0)
+        {
+            for (int i = 0; i < spawnObjects.Length; i++) {
+                if(spawnObjects[i] == null)
+                {
+                    continue;
+                }
+                float distTravelled = (spawnObjects[i].transform.position - spawnPoses[i].position).magnitude;
+                if (distTravelled >= maxTravelDist)
+                {
+                    Destroy(spawnObjects[i]);
+                    spawnCounter --;
+                }
             }
         }
     }
@@ -65,11 +80,13 @@ public class IcicleManager : MonoBehaviour
             case 0:
                 spawnPoses = icicleLeftPoses;
                 spawnTimes = new float[icicleLeftPos.childCount];
+                spawnObjects = new GameObject[icicleLeftPos.childCount];
                 break;
 
             case 1:
                 spawnPoses = icicleRightPoses;
                 spawnTimes = new float[icicleRightPos.childCount];
+                spawnObjects = new GameObject[icicleRightPos.childCount];
                 break;
         }
         float currentTime = Time.time;
