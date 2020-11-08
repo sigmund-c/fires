@@ -13,12 +13,6 @@ public class IceSpike : MonoBehaviour
         rb = GetComponent<Rigidbody2D>();
     }
 
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
-
     void OnCollisionEnter2D(Collision2D col)
     {
         if (!fallen && !col.gameObject.CompareTag("Player"))
