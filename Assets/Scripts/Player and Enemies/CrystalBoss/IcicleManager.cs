@@ -26,7 +26,7 @@ public class IcicleManager : MonoBehaviour
     private UnityEngine.Experimental.Rendering.Universal.Light2D lightLeft;
     private UnityEngine.Experimental.Rendering.Universal.Light2D lightRight;
     private float lightMaxIntensity;
-    private float lightAddIntensity = 0.03f;
+    private float lightAddIntensity = 0.02f;
     private float lightTimerValue = 0.04f;
     private float lightTimer;
     private bool timerRunning = true;
