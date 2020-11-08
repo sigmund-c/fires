@@ -7,8 +7,9 @@ public class MiniCrystalManager : MonoBehaviour
     private int crystalAmount;
     private List<MiniCrystal> miniCrystals;
     public GameObject miniCrystalPrefab;
+    public GameObject projectilePrefab;
     public LaserController laserController;
-    public Transform PlayerTransform;
+    private Transform PlayerTransform;
 
     public float orbitRadius;
     public float orbitSpeed;
@@ -23,6 +24,11 @@ public class MiniCrystalManager : MonoBehaviour
     private Transform shieldPos;
     private Transform[] shieldPoses;
     
+
+    void Start()
+    {
+        PlayerTransform = GameObject.Find("Player").GetComponent<Transform>();
+    }
 
     public void StartCrystals(int crystals, float orbitRadius, float orbitSpeed)
     {
@@ -165,6 +171,31 @@ public class MiniCrystalManager : MonoBehaviour
         }
 
         SetEqualDistance();
+    }
+
+    public void SetScatter(float seconds)
+    {
+        StartCoroutine(Scatter(seconds));
+    }
+
+    private IEnumerator Scatter(float seconds)
+    {
+        isSpinning = false;
+
+        for (int i = 0; i < miniCrystals.Count; i++)
+        {
+            if (miniCrystals[i] == null) continue;
+            miniCrystals[i].VulnerableFor(seconds > 1? seconds - 1 :  seconds);
+            miniCrystals[i].transform.position = Vector3.MoveTowards(miniCrystals[i].transform.position, shieldPoses[i].position, crystalMoveSpeed * 3 *Time.deltaTime);
+        }
+        yield return new WaitForSeconds(2f);
+        for (int i = 0; i < miniCrystals.Count; i++)
+        {
+            if (miniCrystals[i] == null) continue;
+            Instantiate(projectilePrefab, miniCrystals[i].transform.position + PlayerTransform.position.normalized * 0.5f, Quaternion.FromToRotation(Vector3.up, PlayerTransform.position));
+        }
+
+        
     }
 
     public void ShootBigLaser(float seconds)
