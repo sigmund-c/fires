@@ -1,6 +1,9 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Rendering;
+using UnityEngine.Rendering.Universal;
+using UnityEngine.Experimental.Rendering.LWRP;
 
 public class IcicleManager : MonoBehaviour
 {
@@ -13,11 +16,20 @@ public class IcicleManager : MonoBehaviour
     private GameObject[] spawnObjects;
     private float maxTravelDist = 90f;
     private int spawnCounter;
+    private UnityEngine.Experimental.Rendering.Universal.Light2D usedLight;
 
     private Transform icicleLeftPos;
     private Transform[] icicleLeftPoses;
     private Transform icicleRightPos;
     private Transform[] icicleRightPoses;
+
+    private UnityEngine.Experimental.Rendering.Universal.Light2D lightLeft;
+    private UnityEngine.Experimental.Rendering.Universal.Light2D lightRight;
+    private float lightMaxIntensity;
+    private float lightAddIntensity = 0.03f;
+    private float lightTimerValue = 0.04f;
+    private float lightTimer;
+    private bool timerRunning = true;
 
     void Start()
     {
@@ -34,6 +46,25 @@ public class IcicleManager : MonoBehaviour
         for (int i = 0; i < icicleRightPos.childCount; i++)
         {
             icicleRightPoses[i] = icicleRightPos.GetChild(i);
+        }
+
+        lightLeft = GameObject.Find("IcicleLight_Left").GetComponent<UnityEngine.Experimental.Rendering.Universal.Light2D>();
+        lightRight = GameObject.Find("IcicleLight_Right").GetComponent<UnityEngine.Experimental.Rendering.Universal.Light2D>();
+        lightMaxIntensity = lightLeft.intensity;
+        lightTimer = lightTimerValue;
+    }
+
+    void Update()
+    {
+        if(isTriggered && timerRunning)
+        {
+            lightTimer -= Time.deltaTime;
+            if (lightTimer <= 0)
+            {
+                timerRunning = false;
+                updateLight();
+                lightTimer = lightTimerValue;
+            }
         }
     }
 
@@ -54,6 +85,8 @@ public class IcicleManager : MonoBehaviour
             if (spawnCounter == spawnTimes.Length)
             {
                 isTriggered = false;
+                usedLight.enabled = false;
+                usedLight.intensity = lightMaxIntensity;
             }
         } else if (spawnCounter > 0)
         {
@@ -81,12 +114,14 @@ public class IcicleManager : MonoBehaviour
                 spawnPoses = icicleLeftPoses;
                 spawnTimes = new float[icicleLeftPos.childCount];
                 spawnObjects = new GameObject[icicleLeftPos.childCount];
+                usedLight = lightLeft;
                 break;
 
             case 1:
                 spawnPoses = icicleRightPoses;
                 spawnTimes = new float[icicleRightPos.childCount];
                 spawnObjects = new GameObject[icicleRightPos.childCount];
+                usedLight = lightRight;
                 break;
         }
         float currentTime = Time.time;
@@ -96,6 +131,17 @@ public class IcicleManager : MonoBehaviour
         }
 
         isTriggered = true;
+        usedLight.enabled = true;
+        usedLight.intensity = 0;
         return 5.0f;
+    }
+
+    private void updateLight()
+    {
+        if (usedLight.intensity < lightMaxIntensity)
+        {
+            usedLight.intensity += lightAddIntensity;
+        }
+        timerRunning = true;
     }
 }
