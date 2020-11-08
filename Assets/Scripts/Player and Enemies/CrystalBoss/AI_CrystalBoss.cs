@@ -22,7 +22,8 @@ public class AI_CrystalBoss : MonoBehaviour
 
     public MiniCrystalManager miniCrystals;
     private IcicleManager icicleManager;
-    public bool stateRunning = false;
+    private bool stateRunning = false;
+    private bool bossStarted = false;
 
     private float crystalMoveSpeed = 7f;
     public GameObject Player;
@@ -30,7 +31,6 @@ public class AI_CrystalBoss : MonoBehaviour
     private Animator animator;
     private Damageable damageable;
 
-    // Start is called before the first frame update
     void Start()
     {
         miniCrystals = GetComponentInChildren<MiniCrystalManager>();
@@ -41,8 +41,16 @@ public class AI_CrystalBoss : MonoBehaviour
         Player = GameObject.Find("Player");
         playerTransform = Player.GetComponent<Transform>();
 
-        StartCoroutine(CreateMiniCrystals());
         damageable.immuneTo = Team.Player;
+    }
+
+    public void StartBoss()
+    {
+        if (!bossStarted)
+        {
+            bossStarted = true;
+            StartCoroutine(CreateMiniCrystals());
+        }
     }
 
     IEnumerator CreateMiniCrystals()
@@ -59,7 +67,7 @@ public class AI_CrystalBoss : MonoBehaviour
     void Update()
     {
         StartCoroutine(Delay(0.3f));
-        if (stateRunning)
+        if (stateRunning || !bossStarted)
         {
             return;
         }
