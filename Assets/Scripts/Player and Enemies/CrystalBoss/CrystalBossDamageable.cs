@@ -13,7 +13,7 @@ public class CrystalBossDamageable : Damageable
 
         GameObject.FindGameObjectWithTag("Persistent").GetComponent<PersistentAudio>().ChangeMusic(0);
         GameObject final = Instantiate(finalCrystal, transform.position, Quaternion.identity);
-        final.GetComponent<NextLevelCore>().sceneName = "MenuScene";
+        final.GetComponent<NextLevelCore>().sceneName = "EndingScene";
         final.GetComponent<Animation>().Play("shiftDown");
         Destroy(gameObject);
     }
