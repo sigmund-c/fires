@@ -15,6 +15,7 @@ public class Damageable : MonoBehaviour
     public HealthContainer healthContainer;
     public Team team;
     public Team immuneTo = Team.None;
+    public GameObject deathEffect;
 
     protected float invincibleTimer = 0; // invincible frames from taking damage
     protected Collider2D colliderObj;
@@ -146,6 +147,12 @@ public class Damageable : MonoBehaviour
             // When dead, produces a health pickup that moves to players that heals relative to max health
             Instantiate(Utils.enemyHealthDrop, this.transform.position, Quaternion.identity).GetComponent<HealthCollectibleDrop>().HealAmount = maxHealth + 1;
         }
+
+        if (deathEffect != null)
+        {
+            Instantiate(deathEffect, transform.position, Quaternion.identity);
+        }
+
         Destroy(gameObject);
     }
     

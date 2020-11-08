@@ -42,24 +42,24 @@ public class PersistentManager : MonoBehaviour
         {
             PlayerPrefs.SetString("Last_Level", SceneManager.GetActiveScene().name);
             Debug.Log(SceneManager.GetActiveScene().name + " saved.");
-        }
-        
-        print("firstRun: " + firstRun);
-        print("prev: " + prevScene + " curr: " + SceneManager.GetActiveScene().name);
-        if (prevScene != SceneManager.GetActiveScene().name) // new level
-        {
-            firstRun = true;
-            print("-----------firstRun set to true");
-            prevScene = SceneManager.GetActiveScene().name;
-            player = GameObject.FindWithTag("Player");
-            checkpoint = player.transform.position;
-            print("new checkpoint: " + checkpoint);
-        }
-        if (!firstRun)
-        {
-            player = GameObject.FindWithTag("Player");
-            player.transform.position = checkpoint;
-            Camera.main.transform.position = checkpoint;
+
+            print("firstRun: " + firstRun);
+            print("prev: " + prevScene + " curr: " + SceneManager.GetActiveScene().name);
+            if (prevScene != SceneManager.GetActiveScene().name) // new level
+            {
+                firstRun = true;
+                print("-----------firstRun set to true");
+                prevScene = SceneManager.GetActiveScene().name;
+                player = GameObject.FindWithTag("Player");
+                checkpoint = player.transform.position;
+                print("new checkpoint: " + checkpoint);
+            }
+            if (!firstRun)
+            {
+                player = GameObject.FindWithTag("Player");
+                player.transform.position = checkpoint;
+                Camera.main.transform.position = checkpoint;
+            }
         }
     }
 
