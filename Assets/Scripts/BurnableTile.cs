@@ -27,6 +27,10 @@ public class BurnableTile : MonoBehaviour
         {
             tilemap.SetTile(playerPos, null);
             GameObject.Instantiate(burnEffect, playerPos, Quaternion.identity);
+            if (tilemap.GetTile(playerPos) != null)
+            {
+
+            }
             // Add burning effects here
         }
     }
