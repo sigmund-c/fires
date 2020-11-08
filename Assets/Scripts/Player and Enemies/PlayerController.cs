@@ -3,7 +3,9 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.EventSystems;
 using UnityEngine.SceneManagement;
-
+using UnityEngine.Rendering;
+using UnityEngine.Rendering.Universal;
+using UnityEngine.Experimental.Rendering.LWRP;
 
 public enum AirJumpBehaviour { PreserveMomentum, CancelOnAim, CancelOnDash };
 
@@ -72,7 +74,8 @@ public class PlayerController : MonoBehaviour
 
     public float recoilAmount = 10f;
 
-
+    public VolumeProfile volumeProfile;
+    private Bloom bloom;
 
     void Start()
     {
@@ -93,6 +96,9 @@ public class PlayerController : MonoBehaviour
         {
             Instantiate(Utils.persistentManager, Vector3.zero, Quaternion.identity);
         }
+
+        volumeProfile.TryGet(out bloom);
+        bloom.intensity.value = 0.5f;
     }
 
     void SetSwimMode()

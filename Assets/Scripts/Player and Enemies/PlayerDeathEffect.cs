@@ -24,7 +24,7 @@ public class PlayerDeathEffect : MonoBehaviour
 
     IEnumerator WaitForRespawn(float wait)
     {
-        yield return new WaitForSeconds(wait * 0.4f);
+        yield return new WaitForSeconds(wait * 0.2f);
 
         if (PersistentManager.instance != null)
             PersistentManager.Reload();

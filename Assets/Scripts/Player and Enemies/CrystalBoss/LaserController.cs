@@ -13,7 +13,7 @@ public class LaserController : MonoBehaviour
 
     public UnityEngine.Rendering.VolumeProfile volumeProfile;
     public float bloomIntensity = 5.0f;
-    private float bloomIntensityDefault;
+    private float bloomIntensityDefault = 2.0f;
     private Bloom bloom;
     private Collider2D col;
 
@@ -36,7 +36,7 @@ public class LaserController : MonoBehaviour
     {
         laserTriggered = false;
         volumeProfile.TryGet(out bloom);
-        bloomIntensityDefault = bloom.intensity.value;
+        // bloomIntensityDefault = bloom.intensity.value;
         m_transform = GetComponent<Transform>();
         m_lineRenderer = GetComponent<LineRenderer>();
         particleSystem = GetComponent<ParticleSystem>();

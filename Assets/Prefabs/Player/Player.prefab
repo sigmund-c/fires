@@ -5156,6 +5156,7 @@ MonoBehaviour:
   originalGravity: 1.5
   aimingTimeScale: 0.4
   recoilAmount: 3
+  volumeProfile: {fileID: 11400000, guid: 0c700c0d1e54c9a428e27dfb71117915, type: 2}
 --- !u!82 &6415470349254586071
 AudioSource:
   m_ObjectHideFlags: 0
