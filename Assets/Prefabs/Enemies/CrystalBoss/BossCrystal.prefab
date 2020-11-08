@@ -1165,6 +1165,7 @@ GameObject:
   - component: {fileID: 4265567150976633197}
   - component: {fileID: 5198854641353264802}
   - component: {fileID: 896230961593323996}
+  - component: {fileID: 3539915163312267572}
   m_Layer: 19
   m_Name: BossCrystal
   m_TagString: Enemy
@@ -1272,7 +1273,7 @@ AudioSource:
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 8300000, guid: f307c96fa436f9e49b59fb952365121c, type: 3}
   m_PlayOnAwake: 1
-  m_Volume: 0.6
+  m_Volume: 0.3
   m_Pitch: 1
   Loop: 0
   Mute: 0
@@ -1356,6 +1357,21 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+--- !u!114 &3539915163312267572
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5198854641353264804}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f1411a5f2e69cde4ab05687134c58767, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  team: 1
+  damage: 1
+  knockbackAmount: 10
 --- !u!1 &5198854641376165835
 GameObject:
   m_ObjectHideFlags: 0
@@ -1684,9 +1700,17 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 1198537765341602581, guid: a00130f5bead3484abbda68d9538d509, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 5708366416227333070, guid: a00130f5bead3484abbda68d9538d509, type: 3}
       propertyPath: m_Name
       value: Laser
+      objectReference: {fileID: 0}
+    - target: {fileID: 7896863163089169031, guid: a00130f5bead3484abbda68d9538d509, type: 3}
+      propertyPath: m_Size.x
+      value: 2
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: a00130f5bead3484abbda68d9538d509, type: 3}
