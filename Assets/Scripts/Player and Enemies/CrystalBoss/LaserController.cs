@@ -27,6 +27,10 @@ public class LaserController : MonoBehaviour
     private float laserFireTime;
 
     public LayerMask ignoreLayer;
+    public AudioClip chargingLaser;
+    public AudioClip shootingLaser;
+    private AudioSource audioSource;
+    private bool laserAudioed = false;
 
     private void Awake()
     {
@@ -38,6 +42,7 @@ public class LaserController : MonoBehaviour
         particleSystem = GetComponent<ParticleSystem>();
         light = GetComponent<UnityEngine.Experimental.Rendering.Universal.Light2D>();
         col = GetComponent<Collider2D>();
+        audioSource = GetComponent<AudioSource>();
     }
 
     void Update()
@@ -46,6 +51,12 @@ public class LaserController : MonoBehaviour
         {
             if (Time.time > laserFireTime)
             {
+                if (!laserAudioed)
+                {
+                    laserAudioed = true;
+                    audioSource.clip = shootingLaser;
+                    audioSource.Play();
+                }
                 col.enabled = true;
                 if (!particleSystem.isPlaying)
                 {
@@ -67,6 +78,8 @@ public class LaserController : MonoBehaviour
                 {
                     laserTriggered = false;
                     col.enabled = false;
+                    laserAudioed = false;
+                    audioSource.Stop();
                 }
             }
         } else {
@@ -106,6 +119,8 @@ public class LaserController : MonoBehaviour
 
         laserTriggered = true;
         laserTriggerTimer = laserTriggerDuration;
+        audioSource.clip = chargingLaser;
+        audioSource.Play();
     }
 
     public void ShootLaser(Vector3 target, float dur)
@@ -119,6 +134,8 @@ public class LaserController : MonoBehaviour
 
         laserTriggered = true;
         laserTriggerTimer = dur - 2f;
+        audioSource.clip = chargingLaser;
+        audioSource.Play();
     }
 
     private IEnumerator Delay(float time)

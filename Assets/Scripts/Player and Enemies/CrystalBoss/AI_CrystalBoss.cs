@@ -206,7 +206,7 @@ public class AI_CrystalBoss : MonoBehaviour
 
         float elapsedTime = 0;
         float waitTime = 5f;
-        float attackSpeed = (0.2f + ((crystalAmount - miniCrystals.GetRemainingCrystals())/(float)crystalAmount * 0.8f)) * 1.5f * orbitSpeed; // faster as less crystals survive
+        float attackSpeed = (0.2f + ((crystalAmount - miniCrystals.GetRemainingCrystals())/(float)crystalAmount * 0.8f)) * 2f * orbitSpeed; // faster as less crystals survive
 
         Debug.LogWarning(attackSpeed);
 

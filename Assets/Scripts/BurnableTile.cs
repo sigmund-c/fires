@@ -27,6 +27,14 @@ public class BurnableTile : MonoBehaviour
         {
             tilemap.SetTile(playerPos, null);
             GameObject.Instantiate(burnEffect, playerPos, Quaternion.identity);
+            if (tilemap.GetTile(playerPos - Vector3Int.down) != null)
+            {
+                tilemap.SetTile(playerPos - Vector3Int.down, null);
+            }
+            if (tilemap.GetTile(playerPos - Vector3Int.up) != null)
+            {
+                tilemap.SetTile(playerPos - Vector3Int.up, null);
+            }
             // Add burning effects here
         }
     }

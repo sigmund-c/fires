@@ -31,6 +31,10 @@ public class IcicleManager : MonoBehaviour
     private float lightTimer;
     private bool timerRunning = true;
 
+    private AudioSource audioLeft;
+    private AudioSource audioRight;
+    private AudioSource usedAudio;
+
     void Start()
     {
         spawnCounter = 0;
@@ -52,6 +56,9 @@ public class IcicleManager : MonoBehaviour
         lightRight = GameObject.Find("IcicleLight_Right").GetComponent<UnityEngine.Experimental.Rendering.Universal.Light2D>();
         lightMaxIntensity = lightLeft.intensity;
         lightTimer = lightTimerValue;
+
+        audioLeft = GameObject.Find("Audio_Left").GetComponent<AudioSource>();
+        audioRight = GameObject.Find("Audio_Right").GetComponent<AudioSource>();
     }
 
     void Update()
@@ -77,6 +84,7 @@ public class IcicleManager : MonoBehaviour
                 if(Time.time > spawnTimes[i])
                 {
                     spawnObjects[i] = Instantiate(iciclePrefab, spawnPoses[i].position, Quaternion.identity);
+                    spawnObjects[i].GetComponent<AudioSource>().PlayDelayed(1);
                     spawnCounter++;
                     spawnTimes[i] = Mathf.Infinity;
                 }
@@ -115,6 +123,7 @@ public class IcicleManager : MonoBehaviour
                 spawnTimes = new float[icicleLeftPos.childCount];
                 spawnObjects = new GameObject[icicleLeftPos.childCount];
                 usedLight = lightLeft;
+                usedAudio = audioLeft;
                 break;
 
             case 1:
@@ -122,6 +131,7 @@ public class IcicleManager : MonoBehaviour
                 spawnTimes = new float[icicleRightPos.childCount];
                 spawnObjects = new GameObject[icicleRightPos.childCount];
                 usedLight = lightRight;
+                usedAudio = audioRight;
                 break;
         }
         float currentTime = Time.time;
@@ -133,6 +143,7 @@ public class IcicleManager : MonoBehaviour
         isTriggered = true;
         usedLight.enabled = true;
         usedLight.intensity = 0;
+        usedAudio.Play();
         return 5.0f;
     }
 
