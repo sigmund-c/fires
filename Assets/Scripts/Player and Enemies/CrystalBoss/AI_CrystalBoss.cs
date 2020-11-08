@@ -6,7 +6,8 @@ public enum BossActionType
 {
     Idle,
     BigLaser,
-    SpinLaser
+    SpinLaser,
+    IcicleDrop
 }
 
 
@@ -20,7 +21,7 @@ public class AI_CrystalBoss : MonoBehaviour
     public float orbitSpeed = 70f;
 
     public MiniCrystalManager miniCrystals;
-
+    private IcicleManager icicleManager;
     public bool stateRunning = false;
 
     private float crystalMoveSpeed = 7f;
@@ -31,7 +32,7 @@ public class AI_CrystalBoss : MonoBehaviour
     void Start()
     {
         miniCrystals = GetComponentInChildren<MiniCrystalManager>();
-
+        icicleManager = GetComponentInChildren<IcicleManager>();
         Player = GameObject.Find("Player");
         playerTransform = Player.GetComponent<Transform>();
 
@@ -70,6 +71,10 @@ public class AI_CrystalBoss : MonoBehaviour
             case BossActionType.SpinLaser:
                 HandleSpinLaserState();
                 break;
+
+            case BossActionType.IcicleDrop:
+                HandleIcicleDropState();
+                break;
         }
     }
 
@@ -92,7 +97,7 @@ public class AI_CrystalBoss : MonoBehaviour
 
         yield return new WaitForSeconds(2f);
 
-        int choice = Random.Range(0, 1);
+        int choice = Random.Range(0, 3);
         switch (choice)
         {
             case 0:
@@ -101,6 +106,10 @@ public class AI_CrystalBoss : MonoBehaviour
 
             case 1:
                 curState = BossActionType.SpinLaser;
+                break;
+
+            case 2:
+                curState = BossActionType.IcicleDrop;
                 break;
         }
 
@@ -124,7 +133,7 @@ public class AI_CrystalBoss : MonoBehaviour
 
         
         float elapsedTime = 0f;
-        float waitTime = 7f;
+        float waitTime = 8f;
 
         miniCrystals.SetGuarding(waitTime);
         miniCrystals.ShootBigLaser(waitTime);
@@ -214,6 +223,27 @@ public class AI_CrystalBoss : MonoBehaviour
 
         curState = BossActionType.Idle;
 
+        stateRunning = false;
+    }
+
+    private void HandleIcicleDropState()
+    {
+        StartCoroutine(Delay(0.3f));
+        if (stateRunning)
+        {
+            return;
+        }
+        Debug.LogWarning("icedrop");
+        StartCoroutine(IcicleDrop());
+    }
+
+    private IEnumerator IcicleDrop()
+    {
+        stateRunning = true;
+
+        yield return new WaitForSeconds(icicleManager.IceDrop());
+
+        curState = BossActionType.Idle;
         stateRunning = false;
     }
 
