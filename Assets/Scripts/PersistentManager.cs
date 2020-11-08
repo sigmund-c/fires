@@ -8,6 +8,7 @@ public class PersistentManager : MonoBehaviour
     public static GameObject player;
     public static PersistentManager instance = null;
     public static Vector3 checkpoint;
+    public static Vector3 camCheckpoint;
     public static bool firstRun = true;
     public static string prevScene;
 
@@ -19,9 +20,15 @@ public class PersistentManager : MonoBehaviour
             instance = this;
             DontDestroyOnLoad(gameObject);
 
+            print("== PersistentManager first Awake() ==");
             print("Set initial checkpoint");
+
             player = GameObject.FindWithTag("Player");
             checkpoint = player.transform.position;
+            camCheckpoint = Camera.main.transform.position;
+            print("new checkpoint: " + checkpoint);
+            print("cam checkpoint:" + camCheckpoint);
+
             prevScene = SceneManager.GetActiveScene().name;
         }
         else if (instance != this)
@@ -38,28 +45,33 @@ public class PersistentManager : MonoBehaviour
     void OnSceneLoaded(Scene scene, LoadSceneMode mode)
     {
         //Store the level to playerPrefs.
-        if (SceneManager.GetActiveScene().name != "MenuScene")
+        string currScene = SceneManager.GetActiveScene().name;
+        if (currScene != "MenuScene")
         {
             PlayerPrefs.SetString("Last_Level", SceneManager.GetActiveScene().name);
-            Debug.Log(SceneManager.GetActiveScene().name + " saved.");
-
-            print("firstRun: " + firstRun);
-            print("prev: " + prevScene + " curr: " + SceneManager.GetActiveScene().name);
-            if (prevScene != SceneManager.GetActiveScene().name) // new level
+            Debug.Log(currScene + " saved.");
+        }
+        
+        if (prevScene != currScene) // new level
+        {
+            firstRun = true;
+            print("== First run (new level) ==");
+            
+            if (currScene != "MenuScene")
             {
-                firstRun = true;
-                print("-----------firstRun set to true");
-                prevScene = SceneManager.GetActiveScene().name;
                 player = GameObject.FindWithTag("Player");
                 checkpoint = player.transform.position;
-                print("new checkpoint: " + checkpoint);
+                camCheckpoint = Camera.main.transform.position; // at the start, camera won't be on player
+
+                prevScene = currScene;
             }
-            if (!firstRun)
-            {
-                player = GameObject.FindWithTag("Player");
-                player.transform.position = checkpoint;
-                Camera.main.transform.position = checkpoint;
-            }
+
+        }
+        if (!firstRun)
+        {
+            player = GameObject.FindWithTag("Player");
+            player.transform.position = checkpoint;
+            Camera.main.transform.position = camCheckpoint;
         }
     }
 
