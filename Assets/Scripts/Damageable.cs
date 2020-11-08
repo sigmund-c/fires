@@ -48,17 +48,14 @@ public class Damageable : MonoBehaviour
         }
     }
 
-    public void OnCollisionEnter2D(Collision2D col)
+    public void TakeHit(Damaging damaging)
     {
         if (invincibleTimer > 0)
         {
             return;
         }
 
-        Damaging damaging = col.gameObject.GetComponent<Damaging>();
-
-
-        if (damaging != null && damaging.team != team)
+        if (damaging.team != team)
         {
             if (damaging.team == immuneTo)
             {
@@ -74,6 +71,7 @@ public class Damageable : MonoBehaviour
         }
     }
     
+
     virtual public void TakeDamage(int damage)
     {
         currHealth -= damage;

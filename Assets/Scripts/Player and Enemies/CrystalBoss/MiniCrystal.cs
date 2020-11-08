@@ -5,21 +5,25 @@ using UnityEngine;
 
 public enum MiniCrystalAction
 {
-    Stop,
-    Spinning,
-    Guarding
+    Offense,
+    Defense
 }
 
 public class MiniCrystal : MonoBehaviour
 {
     public float orbitSpeed = 10f;
-    public float orbitRadius = 0f; 
+    public float orbitRadius = 0f;
+    private bool isSpinning = false;
 
-    private MiniCrystalAction curState = MiniCrystalAction.Spinning;
+    private MiniCrystalAction curState = MiniCrystalAction.Defense;
     private Vector2 parentPos;
 
     public float changeRadiusSpeed = 3f;
     private Transform spriteTransform;
+
+    private Animator anim;
+    public LaserController laser;
+    private Damageable damageable;
 
     // Start is called before the first frame update
     void Start()
@@ -27,49 +31,58 @@ public class MiniCrystal : MonoBehaviour
         parentPos = transform.parent.position;
 
         spriteTransform = GetComponentInChildren<SpriteRenderer>().transform;
+        anim = GetComponentInChildren<Animator>();
+        laser = GetComponentInChildren<LaserController>();
+        damageable = GetComponent<Damageable>();
+        damageable.immuneTo = Team.Player;
     }
 
     // Update is called once per frame
     void Update()
     {
         //spriteTransform.rotation = Quaternion.Inverse(transform.rotation);
-
+        /*
         switch (curState)
         {
-            case MiniCrystalAction.Stop:
+            case MiniCrystalAction.Offense:
+                HandleOffenseState();
                 break;
 
-            case MiniCrystalAction.Spinning:
-                HandleSpinState();
+            case MiniCrystalAction.Defense:
+                HandleDefenseState();
                 break;
+        }*/
 
-            case MiniCrystalAction.Guarding:
-                HandleGuardState();
-                break;
+
+        if (isSpinning)
+        {
+            transform.Rotate(0, 0, orbitSpeed * Time.deltaTime);
         }
     }
 
-    private void HandleSpinState()
+    public void VulnerableFor(float seconds)
     {
-        //transform.RotateAround(parentPos, Vector3.forward, orbitSpeed * Time.deltaTime);
-        //spriteTransform.rotation = Quaternion.identity;
+        StartCoroutine(Vulnerable(seconds));
     }
 
-    private void HandleGuardState()
+    IEnumerator Vulnerable(float seconds)
     {
+        SetVulnerable();
 
-    }
+        yield return new WaitForSeconds(seconds);
 
-    public void SwitchState(MiniCrystalAction state)
-    {
-        curState = state;
+        SetInvulnerable();
     }
-    
 
     public void setRadius(float newRadius)
     {
         orbitRadius = newRadius;
         StartCoroutine(ChangeRadius());
+    }
+
+    public void ShootLaser(float seconds)
+    {
+        laser.ShootLaser(Vector3.up, seconds);
     }
 
     IEnumerator ChangeRadius()
@@ -87,5 +100,29 @@ public class MiniCrystal : MonoBehaviour
             yield return null;
         }
 
+    }
+
+    public void SetVulnerable()
+    {
+        anim.SetTrigger("Vulnerable");
+        StartCoroutine(VulnerableAfterAnim());
+    }
+
+    IEnumerator VulnerableAfterAnim()
+    {
+        yield return new WaitForSeconds(1);
+        damageable.immuneTo = Team.None;
+    }
+
+    public void SetInvulnerable()
+    {
+        anim.SetTrigger("Invulnerable");
+        StartCoroutine(InvulnerableAfterAnim());
+    }
+
+    IEnumerator InvulnerableAfterAnim()
+    {
+        yield return new WaitForSeconds(2);
+        damageable.immuneTo = Team.Player;
     }
 }

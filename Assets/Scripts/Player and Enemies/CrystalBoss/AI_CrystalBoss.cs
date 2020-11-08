@@ -27,16 +27,22 @@ public class AI_CrystalBoss : MonoBehaviour
     private float crystalMoveSpeed = 7f;
     public GameObject Player;
     private Transform playerTransform;
+    private Animator animator;
+    private Damageable damageable;
 
     // Start is called before the first frame update
     void Start()
     {
         miniCrystals = GetComponentInChildren<MiniCrystalManager>();
         icicleManager = GetComponentInChildren<IcicleManager>();
+        animator = GetComponentInChildren<Animator>();
+        damageable = GetComponent<Damageable>();
+
         Player = GameObject.Find("Player");
         playerTransform = Player.GetComponent<Transform>();
 
         StartCoroutine(CreateMiniCrystals());
+        damageable.immuneTo = Team.Player;
     }
 
     IEnumerator CreateMiniCrystals()
@@ -130,6 +136,7 @@ public class AI_CrystalBoss : MonoBehaviour
     private IEnumerator BigLaser()
     {
         stateRunning = true;
+        SetVulnerable();
 
         
         float elapsedTime = 0f;
@@ -141,7 +148,7 @@ public class AI_CrystalBoss : MonoBehaviour
         miniCrystals.FaceTowards(playerTransform.position);
         while (elapsedTime < waitTime)
         {
-            miniCrystals.LerpTowards(playerTransform.position, orbitSpeed/200f);
+            miniCrystals.LerpTowards(playerTransform.position, orbitSpeed/100f);
             elapsedTime += Time.deltaTime;
 
             yield return null;
@@ -150,6 +157,7 @@ public class AI_CrystalBoss : MonoBehaviour
         miniCrystals.isSpinning = true;
 
         curState = BossActionType.Idle;
+        SetInvulnerable();
         stateRunning = false;
     }
     
@@ -166,10 +174,11 @@ public class AI_CrystalBoss : MonoBehaviour
         StartCoroutine(SpinLaser());
     }
 
-    // spin laser in one direction for 1 sec, then in the other for 1 sec, then spin regularly for 1 sec.
+    // spin laser in one direction for 5 sec, then in the other for 5 sec. + 1 sec buffer
     private IEnumerator SpinLaser()
     {
         stateRunning = true;
+        SetVulnerable();
 
         /*
         SetAllCrystalRadius(0);
@@ -184,6 +193,8 @@ public class AI_CrystalBoss : MonoBehaviour
         float attackSpeed = (0.2f + ((crystalAmount - miniCrystals.GetRemainingCrystals())/(float)crystalAmount * 0.8f)) * 1.5f * orbitSpeed; // faster as less crystals survive
 
         Debug.LogWarning(attackSpeed);
+
+        miniCrystals.ShootSmallLasers(waitTime * 2);
 
         while (elapsedTime < waitTime)
         {
@@ -212,7 +223,7 @@ public class AI_CrystalBoss : MonoBehaviour
             }
             else if (elapsedTime / waitTime > 0.5f) // deccelerate
             {
-                miniCrystals.orbitSpeed = Mathf.Lerp(-attackSpeed, orbitSpeed, elapsedTime / waitTime * 2 - 1); ;
+                miniCrystals.orbitSpeed = Mathf.Lerp(-attackSpeed, -orbitSpeed, elapsedTime / waitTime * 2 - 1); ;
             }
 
             elapsedTime += Time.deltaTime;
@@ -222,6 +233,7 @@ public class AI_CrystalBoss : MonoBehaviour
         yield return new WaitForSeconds(1);
 
         curState = BossActionType.Idle;
+        SetInvulnerable();
 
         stateRunning = false;
     }
@@ -240,10 +252,12 @@ public class AI_CrystalBoss : MonoBehaviour
     private IEnumerator IcicleDrop()
     {
         stateRunning = true;
+        SetVulnerable();
 
         yield return new WaitForSeconds(icicleManager.IceDrop());
 
         curState = BossActionType.Idle;
+        SetInvulnerable();
         stateRunning = false;
     }
 
@@ -251,4 +265,29 @@ public class AI_CrystalBoss : MonoBehaviour
      {
          yield return new WaitForSeconds(time);
      }
+
+
+    public void SetVulnerable()
+    {
+        animator.SetTrigger("Vulnerable");
+        StartCoroutine(VulnerableAfterAnim());
+    }
+
+    IEnumerator VulnerableAfterAnim()
+    {
+        yield return new WaitForSeconds(1);
+        damageable.immuneTo = Team.None;
+    }
+
+    public void SetInvulnerable()
+    {
+        animator.SetTrigger("Invulnerable");
+        StartCoroutine(InvulnerableAfterAnim());
+    }
+
+    IEnumerator InvulnerableAfterAnim()
+    {
+        yield return new WaitForSeconds(2);
+        damageable.immuneTo = Team.Player;
+    }
 }

@@ -15,6 +15,7 @@ public class LaserController : MonoBehaviour
     public float bloomIntensity = 5.0f;
     private float bloomIntensityDefault;
     private Bloom bloom;
+    private Collider2D col;
 
     LineRenderer m_lineRenderer;
     Transform m_transform;
@@ -36,6 +37,7 @@ public class LaserController : MonoBehaviour
         m_lineRenderer = GetComponent<LineRenderer>();
         particleSystem = GetComponent<ParticleSystem>();
         light = GetComponent<UnityEngine.Experimental.Rendering.Universal.Light2D>();
+        col = GetComponent<Collider2D>();
     }
 
     void Update()
@@ -44,13 +46,14 @@ public class LaserController : MonoBehaviour
         {
             if (Time.time > laserFireTime)
             {
-                if(!particleSystem.isPlaying)
+                col.enabled = true;
+                if (!particleSystem.isPlaying)
                 {
                     particleSystem.Play();
                     bloom.intensity.value = bloomIntensity;
                     light.enabled = true;
                 }
-                DrawRayAndParticles(m_transform.position, laserTargetPos);
+                DrawRayAndParticles(Vector3.zero, laserTargetPos);
 
                 // RaycastHit2D hit = Physics2D.Raycast(m_transform.position, (laserTargetPos-m_transform.position).normalized, RayDistance, ~ignoreLayer);
                 // if(hit && hit.collider.gameObject.tag == "Player")
@@ -63,6 +66,7 @@ public class LaserController : MonoBehaviour
                 if(laserTriggerTimer <= 0)
                 {
                     laserTriggered = false;
+                    col.enabled = false;
                 }
             }
         } else {
@@ -93,7 +97,7 @@ public class LaserController : MonoBehaviour
 
     public void ShootLaser(Vector3 target)
     {
-        Vector3 direction = target - m_transform.position;
+        Vector3 direction = target;
         laserTargetPos = direction.normalized * RayDistance;
 
         //DELAY FOR CHARGING
@@ -106,7 +110,7 @@ public class LaserController : MonoBehaviour
 
     public void ShootLaser(Vector3 target, float dur)
     {
-        Vector3 direction = target - m_transform.position;
+        Vector3 direction = target;
         laserTargetPos = direction.normalized * RayDistance;
 
         //DELAY FOR CHARGING

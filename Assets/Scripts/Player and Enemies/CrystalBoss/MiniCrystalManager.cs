@@ -88,6 +88,15 @@ public class MiniCrystalManager : MonoBehaviour
     {
         if (speed == -1) speed = orbitSpeed / 8;
         transform.up = Vector3.MoveTowards(transform.up, pos - transform.position, speed * Time.deltaTime);
+        //transform.up = transform.up + (pos - transform.up).normalized * speed * Time.deltaTime;
+        /*
+        if (Vector3.Dot(pos, transform.right) < 0)
+        {
+            transform.Rotate(0, 0, speed * 100 * Time.deltaTime);
+        } else
+        {
+            transform.Rotate(0, 0, -speed * 100 * Time.deltaTime);
+        }*/
     }
 
     public void SetEqualDistance()
@@ -109,7 +118,6 @@ public class MiniCrystalManager : MonoBehaviour
             pos[i] = transform.position + orbitRadius * new Vector3(Mathf.Cos(sectionAngle * i), Mathf.Sin(sectionAngle * i));
         }
 
-
         float elapsedTime = 0f;
         float waitTime = 1f;
 
@@ -124,6 +132,9 @@ public class MiniCrystalManager : MonoBehaviour
 
             yield return null;
         }
+
+        ResetRotation();
+
     }
 
     public void SetGuarding(float seconds)
@@ -147,6 +158,7 @@ public class MiniCrystalManager : MonoBehaviour
                 if (miniCrystals[i] == null) continue;
                 miniCrystals[i].transform.position = Vector3.MoveTowards(miniCrystals[i].transform.position, guardPoses[i].position, crystalMoveSpeed * 3 * Time.deltaTime);
             }
+            ResetRotation();
             elapsedTime += Time.deltaTime;
 
             yield return null;
@@ -157,12 +169,35 @@ public class MiniCrystalManager : MonoBehaviour
 
     public void ShootBigLaser(float seconds)
     {
-        laserController.ShootLaser(transform.up, seconds);
+        laserController.ShootLaser(Vector3.up, seconds);
+    }
+
+    public void ShootSmallLasers(float seconds)
+    {
+        UpdateRemainingCrystals();
+
+        for (int i = 0; i < miniCrystals.Count; i++)
+        {
+            // every other mini crystal
+            if (i % 2 == 1 || miniCrystals[i] == null) continue;
+            miniCrystals[i].ShootLaser(seconds);
+            miniCrystals[i].VulnerableFor(seconds);
+        }
     }
     
     private void UpdateRemainingCrystals()
     {
         miniCrystals.RemoveAll(item => item == null);
+    }
+
+    private void ResetRotation()
+    {
+        // reset rotation
+        for (int i = 0; i < miniCrystals.Count; i++)
+        {
+            if (miniCrystals[i] == null) continue;
+            miniCrystals[i].transform.up = miniCrystals[i].transform.position - transform.position;
+        }
     }
 
     private void SetAllCrystalRadius(float newRadius)

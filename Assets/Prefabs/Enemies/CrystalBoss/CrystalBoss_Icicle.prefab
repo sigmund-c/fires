@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 3907768041070191802}
   - component: {fileID: 8009761638562103700}
   - component: {fileID: 1024877451941171995}
-  m_Layer: 0
+  m_Layer: 18
   m_Name: CrystalBoss_Icicle
   m_TagString: Untagged
   m_Icon: {fileID: 0}
