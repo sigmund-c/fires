@@ -109,15 +109,4 @@ public class PlayerDamageable : Damageable
         if (PersistentManager.instance != null)
             PersistentManager.Reload();
     }
-
-    private void OnTriggerEnter2D(Collider2D col)
-    {
-        if (col.tag == "Checkpoint")
-        {
-            PersistentManager.checkpoint = col.transform.position;
-            print("checkpoint saved at : " + PersistentManager.checkpoint);
-
-            RestoreHealth(maxHealth - currHealth);
-        }
-    }
 }

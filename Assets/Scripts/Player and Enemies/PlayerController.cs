@@ -127,9 +127,6 @@ public class PlayerController : MonoBehaviour
         if (Input.GetKeyDown(KeyCode.R))
         {
             PersistentManager.Reload();
-            // Vector3 prevLoc = PersistentManager.instance.checkpoint;
-            // SceneManager.LoadScene(SceneManager.GetActiveScene().name);
-            // StartCoroutine(Respawn(prevLoc));
         }
 
         if (Input.GetKeyDown(KeyCode.PageUp))
@@ -396,6 +393,31 @@ public class PlayerController : MonoBehaviour
             if (collidingObjects <= 0) { // Only start counting when not touching anything
                 jumpTimes = 1;
             }
+        }
+    }
+
+    void OnTriggerEnter2D(Collider2D col)
+    {
+        if (col.tag == "Checkpoint")
+        {
+            PersistentManager.checkpoint = col.transform.position;
+            PersistentManager.camCheckpoint = col.transform.position + new Vector3(0f, 0f, -10f);
+            print("checkpoint saved at : " + PersistentManager.checkpoint);
+        }
+
+        if (col.gameObject.tag == "CameraTrigger")
+        {
+            CameraSizeTrigger sizeTrigger = col.gameObject.GetComponent<CameraSizeTrigger>();
+            float camSize = sizeTrigger == null ? 8 : sizeTrigger.cameraSize;
+            CameraFollow.instance.UpdateTarget(col.gameObject, entered: true, cameraSize: camSize);
+        }
+    }
+
+    void OnTriggerExit2D(Collider2D col)
+    {
+        if (col.gameObject.tag == "CameraTrigger")
+        {
+            CameraFollow.instance.UpdateTarget(col.gameObject, entered: false);
         }
     }
 
