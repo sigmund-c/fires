@@ -15,7 +15,7 @@ public class MiniCrystal : MonoBehaviour
     public float orbitRadius = 0f;
     private bool isSpinning = false;
 
-    private MiniCrystalAction curState = MiniCrystalAction.Defense;
+    // private MiniCrystalAction curState = MiniCrystalAction.Defense;
     private Vector2 parentPos;
 
     public float changeRadiusSpeed = 3f;
