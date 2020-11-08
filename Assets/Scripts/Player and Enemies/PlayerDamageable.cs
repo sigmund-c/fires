@@ -106,7 +106,7 @@ public class PlayerDamageable : Damageable
     // Override, will respawn
     public override void Die()
     {
-        if (PersistentManager.instance != null)
-            PersistentManager.Reload();
+        Instantiate(deathEffect, transform.position, Quaternion.identity);
+        this.gameObject.SetActive(false);
     }
 }

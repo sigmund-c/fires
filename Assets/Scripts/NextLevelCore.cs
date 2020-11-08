@@ -17,7 +17,7 @@ public class NextLevelCore : MonoBehaviour
     void Start()
     {
         sr = GetComponentInChildren<SpriteRenderer>();
-        anim = GetComponentInChildren<Animation>();
+        anim = transform.Find("CheckpointSprite").GetComponentInChildren<Animation>();
     }
 
     void OnTriggerEnter2D(Collider2D col)

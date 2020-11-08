@@ -257,6 +257,7 @@ MonoBehaviour:
   healthContainer: {fileID: 0}
   team: 1
   immuneTo: 3
+  deathEffect: {fileID: 1005252247000372058, guid: f3d3ce618dc34a0408da38beccf6886c, type: 3}
 --- !u!114 &7422361395289229580
 MonoBehaviour:
   m_ObjectHideFlags: 0

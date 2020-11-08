@@ -112,6 +112,7 @@ GameObject:
   - component: {fileID: 1508777186100171315}
   - component: {fileID: 2691892645434917479}
   - component: {fileID: 8578445051940646055}
+  - component: {fileID: 1754831471329739194}
   m_Layer: 0
   m_Name: NextLevelCore
   m_TagString: Checkpoint
@@ -268,8 +269,24 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: dfa74411851c6d24eb483aa4b4afdb13, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  sceneName: 
   isActivated: 0
-  activatedMat: {fileID: 0}
+--- !u!111 &1754831471329739194
+Animation:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1508777186100171314}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Animation: {fileID: 0}
+  m_Animations:
+  - {fileID: 7400000, guid: 6bbf569d65a76d14ab98c0b6a7c837c4, type: 2}
+  m_WrapMode: 0
+  m_PlayAutomatically: 1
+  m_AnimatePhysics: 0
+  m_CullingType: 0
 --- !u!1 &6955308592212212870
 GameObject:
   m_ObjectHideFlags: 0
