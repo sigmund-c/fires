@@ -9,6 +9,7 @@ public class CrystalBossManager : MonoBehaviour
     public TilemapRenderer tilemap;
     public TilemapCollider2D tilemapColl;
     private bool firstTrigger = false;
+    public HealthContainer bossHealth;
 
     void Start()
     {
@@ -23,6 +24,9 @@ public class CrystalBossManager : MonoBehaviour
             tilemap.enabled = true;
             tilemapColl.enabled = true;
             boss.StartBoss();
+            GameObject.FindGameObjectWithTag("Persistent").GetComponent<PersistentAudio>().ChangeMusic(1);
+            bossHealth.gameObject.SetActive(true);
         }
+        
     }
 }

@@ -1,6 +1,7 @@
 ﻿using UnityEngine;
 using System.Collections;
 using System.Collections.Generic;
+using UnityEngine.SceneManagement;
 
 public class PersistentAudio : MonoBehaviour
 {
@@ -12,10 +13,32 @@ public class PersistentAudio : MonoBehaviour
     {
         DontDestroyOnLoad(transform.gameObject);
         _audioSource = GetComponent<AudioSource>();
+
+        OnLevelWasLoaded();
+    }
+
+    void OnLevelWasLoaded()
+    {
+
+        string sceneName = SceneManager.GetActiveScene().name;
+
+        if (sceneName == "MenuScene")
+        {
+            return;
+        }
+
         if (_audioSource.clip == null)
         {
-            _audioSource.clip = audioStorage[0];
-            isPlaying = 0;
+            if (sceneName.StartsWith("Level 1"))
+            {
+                _audioSource.clip = audioStorage[0];
+                isPlaying = 0;
+            }
+            else
+            {
+                _audioSource.clip = audioStorage[2];
+                isPlaying = 2;
+            }
         }
 
         PlayMusic();
