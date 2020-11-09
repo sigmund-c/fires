@@ -46,7 +46,7 @@ public class PersistentManager : MonoBehaviour
     {
         //Store the level to playerPrefs.
         string currScene = SceneManager.GetActiveScene().name;
-        if (currScene != "MenuScene")
+        if (currScene != "MenuScene" && currScene != "EndingVideo")
         {
             PlayerPrefs.SetString("Last_Level", SceneManager.GetActiveScene().name);
             Debug.Log(currScene + " saved.");
@@ -57,7 +57,7 @@ public class PersistentManager : MonoBehaviour
             firstRun = true;
             print("== First run (new level) ==");
             
-            if (currScene != "MenuScene")
+            if (currScene != "MenuScene" && currScene != "EndingVideo")
             {
                 player = GameObject.FindWithTag("Player");
                 checkpoint = player.transform.position;

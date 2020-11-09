@@ -76,7 +76,14 @@ public class UIManagerScript : MonoBehaviour
             button.enabled = false;
         }
         //Get the stored.
-        string last_level = PlayerPrefs.GetString("Last_Level");
+        string last_level;
+        if (PlayerPrefs.HasKey("Last_Level"))
+        {
+            last_level = PlayerPrefs.GetString("Last_Level");
+        } else
+        {
+            last_level = "Level 1-1";
+        }
         //Loading Scene0
         SceneManager.LoadSceneAsync(last_level);
         Time.timeScale = 1f;

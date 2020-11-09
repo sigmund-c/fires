@@ -22,7 +22,7 @@ public class PersistentAudio : MonoBehaviour
 
         string sceneName = SceneManager.GetActiveScene().name;
 
-        if (sceneName == "MenuScene")
+        if (sceneName == "MenuScene" || sceneName == "EndingVideo")
         {
             return;
         }
