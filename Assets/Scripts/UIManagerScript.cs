@@ -17,6 +17,11 @@ public class UIManagerScript : MonoBehaviour
 
     public void StartGame()
     {
+        if (PlayerPrefs.GetFloat("startTime") != null)
+        {
+             PlayerPrefs.SetFloat("startTime", Time.time);
+        }
+
         //mute other buttons.
         Button[] buttons = GameObject.FindObjectsOfType<Button>();
         Debug.Log(buttons);
