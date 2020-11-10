@@ -55,6 +55,7 @@ public class PlayerController : MonoBehaviour
     private Rigidbody2D rb;
     private Transform sprite;
     private SpriteRenderer sr;
+    private ParticleSystem.MainModule particle;
 
     private ContactFilter2D burningFilter;
 
@@ -82,6 +83,7 @@ public class PlayerController : MonoBehaviour
         rb = GetComponent<Rigidbody2D>();
         sprite = transform.GetChild(0);
         sr = sprite.GetComponent<SpriteRenderer>();
+        particle = GetComponentInChildren<ParticleSystem>().main;
         damageable = GetComponent<Damageable>();
         burningFilter = new ContactFilter2D();
         burningFilter.useTriggers = true;
@@ -130,6 +132,8 @@ public class PlayerController : MonoBehaviour
     
     void Update()
     {
+        UpdateSpriteJumpColor();
+
         if (Input.GetKeyDown(KeyCode.R))
         {
             PersistentManager.Reload();
@@ -502,5 +506,10 @@ public class PlayerController : MonoBehaviour
         effectsStorage.PlayEffect(0); // shoot SFX
 
         TakeDamage(1);
+    }
+
+    void UpdateSpriteJumpColor()
+    {
+        particle.startColor = Color.Lerp(Color.black, Color.white, (float)(maxJumps - jumpTimes) / maxJumps / 2 + 0.5f);
     }
 }
