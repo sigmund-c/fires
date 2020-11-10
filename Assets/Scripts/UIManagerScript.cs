@@ -17,6 +17,8 @@ public class UIManagerScript : MonoBehaviour
 
     public void StartGame()
     {
+        PlayerPrefs.SetInt("startTime", (int)Time.time);
+
         //mute other buttons.
         Button[] buttons = GameObject.FindObjectsOfType<Button>();
         Debug.Log(buttons);
@@ -83,6 +85,7 @@ public class UIManagerScript : MonoBehaviour
         } else
         {
             last_level = "Level 1-1";
+            PlayerPrefs.SetInt("startTime", (int)Time.time);
         }
         //Loading Scene0
         SceneManager.LoadSceneAsync(last_level);
