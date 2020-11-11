@@ -24,21 +24,20 @@ public class PersistentAudio : MonoBehaviour
 
         if (sceneName == "MenuScene" || sceneName == "EndingVideo")
         {
+            _audioSource.Stop();
             return;
         }
 
-        if (_audioSource.clip == null)
+        int toPlay = 0;
+        if (sceneName.StartsWith("Level 2"))
         {
-            if (sceneName.StartsWith("Level 1"))
-            {
-                _audioSource.clip = audioStorage[0];
-                isPlaying = 0;
-            }
-            else
-            {
-                _audioSource.clip = audioStorage[2];
-                isPlaying = 2;
-            }
+            toPlay = 2;
+        }
+
+        if (_audioSource.clip == null || isPlaying != toPlay)
+        {
+            _audioSource.clip = audioStorage[toPlay];
+            isPlaying = toPlay;
         }
 
         PlayMusic();

@@ -206,6 +206,7 @@ MonoBehaviour:
   orbitSpeed: 40
   orbitRadius: 0
   changeRadiusSpeed: 3
+  spriteTransform: {fileID: 0}
   laser: {fileID: 0}
 --- !u!50 &-5924126622511560697
 Rigidbody2D:
