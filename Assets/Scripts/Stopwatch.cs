@@ -14,7 +14,7 @@ public class Stopwatch : MonoBehaviour
     {
         StopwatchText = GetComponent<Text>();
         currentTime = (int)Time.time;
-        if (PlayerPrefs.GetInt("startTime") == null)
+        if (!PlayerPrefs.HasKey("startTime"))
         {
              startTime = (int)Time.time;
              PlayerPrefs.SetInt("startTime", startTime);
@@ -23,6 +23,11 @@ public class Stopwatch : MonoBehaviour
             startTime = PlayerPrefs.GetInt("startTime");
         }
         currentTime = (int)Time.time;
+
+        int timePassed = currentTime - startTime;
+        string minutes = (timePassed / 60).ToString("00");
+        string seconds = (timePassed % 60).ToString("00");
+        StopwatchText.text = minutes + ":" + seconds;
     }
 
     // Update is called once per frame
