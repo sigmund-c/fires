@@ -15,6 +15,7 @@ TagManager:
   - PlayerComponent
   - Persistent
   - CameraTrigger
+  - VolumeSlider
   layers:
   - Default
   - TransparentFX

@@ -21,7 +21,6 @@ public class UIManagerScript : MonoBehaviour
 
         //mute other buttons.
         Button[] buttons = GameObject.FindObjectsOfType<Button>();
-        Debug.Log(buttons);
         foreach (Button button in buttons)
         {
             button.enabled = false;
@@ -33,6 +32,13 @@ public class UIManagerScript : MonoBehaviour
     {
         Time.timeScale = 0f;
         pauseMenu.SetActive(true);
+
+        //Set the slider handle to the right position.
+        Slider slider = GameObject.Find("StandardCanvas/DlgPause/SliderVolume").GetComponent<Slider>();
+        if (slider != null)
+        {
+            slider.value = AudioListener.volume;
+        }
     }
 
     public void OnResume()//
@@ -310,5 +316,6 @@ public class UIManagerScript : MonoBehaviour
     public void sliderVolume(float value)
     {
         AudioListener.volume = value;
+        PlayerPrefs.SetFloat("volume", value);
     }
 }

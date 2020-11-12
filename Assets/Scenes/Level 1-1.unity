@@ -10209,6 +10209,10 @@ PrefabInstance:
       propertyPath: m_SizeDelta.x
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 4668033745560478522, guid: 932a70d9c315c4e41b67b465e4610ccf, type: 3}
+      propertyPath: m_TagString
+      value: VolumeSlider
+      objectReference: {fileID: 0}
     - target: {fileID: 4668033746506706691, guid: 932a70d9c315c4e41b67b465e4610ccf, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0
@@ -10296,6 +10300,30 @@ PrefabInstance:
     - target: {fileID: 4668033746506706695, guid: 932a70d9c315c4e41b67b465e4610ccf, type: 3}
       propertyPath: m_Name
       value: StandardCanvas
+      objectReference: {fileID: 0}
+    - target: {fileID: 4668033746742635650, guid: 932a70d9c315c4e41b67b465e4610ccf, type: 3}
+      propertyPath: m_AnchorMin.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4668033746742635650, guid: 932a70d9c315c4e41b67b465e4610ccf, type: 3}
+      propertyPath: m_AnchorMax.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4668033746742635650, guid: 932a70d9c315c4e41b67b465e4610ccf, type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4668033746745170449, guid: 932a70d9c315c4e41b67b465e4610ccf, type: 3}
+      propertyPath: m_AnchorMax.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4668033746745170449, guid: 932a70d9c315c4e41b67b465e4610ccf, type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4668033747175529268, guid: 932a70d9c315c4e41b67b465e4610ccf, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4751455602879841162, guid: 932a70d9c315c4e41b67b465e4610ccf, type: 3}
       propertyPath: m_SizeDelta.y

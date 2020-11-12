@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using UnityEngine.UI;
 
 public class PersistentManager : MonoBehaviour
 {
@@ -44,6 +45,13 @@ public class PersistentManager : MonoBehaviour
 
     void OnSceneLoaded(Scene scene, LoadSceneMode mode)
     {
+        //Set the volume.
+        if (PlayerPrefs.HasKey("volume") == true)
+        {
+            float storedVolume = PlayerPrefs.GetFloat("volume");
+            AudioListener.volume = storedVolume;
+        }
+
         //Store the level to playerPrefs.
         string currScene = SceneManager.GetActiveScene().name;
         if (currScene != "MenuScene" && currScene != "EndingVideo")
@@ -51,7 +59,7 @@ public class PersistentManager : MonoBehaviour
             PlayerPrefs.SetString("Last_Level", SceneManager.GetActiveScene().name);
             Debug.Log(currScene + " saved.");
         }
-        
+
         if (prevScene != currScene) // new level
         {
             firstRun = true;
