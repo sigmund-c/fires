@@ -77,6 +77,24 @@ Tilemap:
       m_TileColorIndex: 0
       m_TileObjectToInstantiateIndex: 65535
       m_AllTileFlags: 1073741825
+  - first: {x: 2, y: -6, z: 0}
+    second:
+      serializedVersion: 2
+      m_TileIndex: 84
+      m_TileSpriteIndex: 84
+      m_TileMatrixIndex: 0
+      m_TileColorIndex: 0
+      m_TileObjectToInstantiateIndex: 65535
+      m_AllTileFlags: 1073741825
+  - first: {x: 3, y: -6, z: 0}
+    second:
+      serializedVersion: 2
+      m_TileIndex: 85
+      m_TileSpriteIndex: 85
+      m_TileMatrixIndex: 0
+      m_TileColorIndex: 0
+      m_TileObjectToInstantiateIndex: 65535
+      m_AllTileFlags: 1073741825
   - first: {x: -2, y: -5, z: 0}
     second:
       serializedVersion: 2
@@ -967,6 +985,10 @@ Tilemap:
     m_Data: {fileID: 11400000, guid: d84c7c8d7534ddc4fbe1fd074941a1b5, type: 2}
   - m_RefCount: 1
     m_Data: {fileID: 11400000, guid: 3999d33e1aae78d489028548e97b856d, type: 2}
+  - m_RefCount: 1
+    m_Data: {fileID: 11400000, guid: 15c50d058cf86d44dbeb7711bcbcfc64, type: 2}
+  - m_RefCount: 1
+    m_Data: {fileID: 11400000, guid: 347e230c0dc6d4d468a3be2333c3d4da, type: 2}
   m_TileSpriteArray:
   - m_RefCount: 1
     m_Data: {fileID: 5441223297315994465, guid: 251fe6afce94af14a94a5740e95c4552, type: 3}
@@ -1136,8 +1158,12 @@ Tilemap:
     m_Data: {fileID: -754124803437252511, guid: bc349b91ea2f6e141a7b517ed9830637, type: 3}
   - m_RefCount: 1
     m_Data: {fileID: -2677241223792781518, guid: bc349b91ea2f6e141a7b517ed9830637, type: 3}
+  - m_RefCount: 1
+    m_Data: {fileID: -3907131192786493643, guid: bc349b91ea2f6e141a7b517ed9830637, type: 3}
+  - m_RefCount: 1
+    m_Data: {fileID: -6541090553321694737, guid: bc349b91ea2f6e141a7b517ed9830637, type: 3}
   m_TileMatrixArray:
-  - m_RefCount: 84
+  - m_RefCount: 86
     m_Data:
       e00: 1
       e01: 0
@@ -1156,13 +1182,13 @@ Tilemap:
       e32: 0
       e33: 1
   m_TileColorArray:
-  - m_RefCount: 84
+  - m_RefCount: 86
     m_Data: {r: 1, g: 1, b: 1, a: 1}
   m_TileObjectToInstantiateArray: []
   m_AnimationFrameRate: 1
   m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_Origin: {x: -2, y: -6, z: 0}
-  m_Size: {x: 16, y: 7, z: 1}
+  m_Origin: {x: -2, y: -7, z: 0}
+  m_Size: {x: 16, y: 8, z: 1}
   m_TileAnchor: {x: 0.5, y: 0.5, z: 0}
   m_TileOrientation: 0
   m_TileOrientationMatrix:
@@ -1241,7 +1267,7 @@ GameObject:
   - component: {fileID: 3504534767336950194}
   - component: {fileID: 1964281343959246526}
   m_Layer: 31
-  m_Name: Palette_01
+  m_Name: Palette_Grassy
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1274,7 +1300,7 @@ Grid:
   m_CellGap: {x: 0, y: 0, z: 0}
   m_CellLayout: 0
   m_CellSwizzle: 0
---- !u!114 &457359156177226207
+--- !u!114 &6172644680095822276
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
