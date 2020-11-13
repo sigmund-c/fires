@@ -5122,7 +5122,7 @@ MonoBehaviour:
   launchBar: {fileID: 5925175496615645783, guid: 475877e99a5f1e0478331a22692acb71, type: 3}
   chargeCooldown: 0.2
   collidingObjects: 0
-  jumpTimes: 0
+  jumpTimes: 1
   projectilePrefab: {fileID: 1311386620750424233, guid: 9e0e1b7747b491241ba7847f247d6677, type: 3}
   canSwim: 0
   regularDrag: 0.5

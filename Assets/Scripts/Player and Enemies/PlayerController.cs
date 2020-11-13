@@ -44,7 +44,7 @@ public class PlayerController : MonoBehaviour
     private bool isCharging;
     private bool playChargingSound = true;
     public int collidingObjects = 0;
-    public int jumpTimes = 0;
+    public int jumpTimes = 1;
     private LaunchBar activeLaunchBar;
 
     private int numBurningObjsTouched;

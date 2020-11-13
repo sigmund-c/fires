@@ -19,7 +19,7 @@ public class Checkpoint : MonoBehaviour
 
     void OnTriggerEnter2D(Collider2D col)
     {
-        if (!isActivated)
+        if (col.gameObject.tag == "Player" && !isActivated)
         {
             isActivated = true;
             ActivateSprite();
