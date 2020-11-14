@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 7119250325952263062}
   - component: {fileID: 7119250325952263063}
   - component: {fileID: 352820122383186268}
+  - component: {fileID: 7566495829368257018}
   m_Layer: 19
   m_Name: Plant
   m_TagString: Enemy
@@ -72,14 +73,29 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9c3bb8adae6a1534e88e5a53b8eaf74a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  maxHealth: 1
-  currHealth: 1
-  invincibleDuration: 1
+  maxHealth: 3
+  currHealth: 3
+  invincibleDuration: 0
   takeKnockback: 0
   healthContainer: {fileID: 0}
   team: 1
   immuneTo: 3
   deathEffect: {fileID: 1005252247000372058, guid: ba2abbaa0b14cfc418a6baae21f61f6d, type: 3}
+--- !u!114 &7566495829368257018
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7119250325952263056}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f1411a5f2e69cde4ab05687134c58767, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  team: 1
+  damage: 1
+  knockbackAmount: 3
 --- !u!1 &7119250326101581315
 GameObject:
   m_ObjectHideFlags: 0
@@ -90,6 +106,7 @@ GameObject:
   m_Component:
   - component: {fileID: 7119250326101581314}
   - component: {fileID: 7119250326101581313}
+  - component: {fileID: 5659179010718904180}
   m_Layer: 19
   m_Name: PlantSprite
   m_TagString: Untagged
@@ -151,8 +168,8 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: ee1563f095dde5248b7a3797bf926f9b, type: 3}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Sprite: {fileID: -577468632639256432, guid: dafbb61faaa0afa42814bdaa7635045f, type: 3}
+  m_Color: {r: 0.3891292, g: 0.7264151, b: 0.3728017, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -162,6 +179,25 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!95 &5659179010718904180
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7119250326101581315}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 8d49a7a6540710c4689d00f70b056a40, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1 &7119250326114159523
 GameObject:
   m_ObjectHideFlags: 0
@@ -172,6 +208,7 @@ GameObject:
   m_Component:
   - component: {fileID: 7119250326114159522}
   - component: {fileID: 7119250326114159521}
+  - component: {fileID: 7222845163427668015}
   m_Layer: 18
   m_Name: PlantHeadSprite
   m_TagString: Untagged
@@ -232,8 +269,8 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: 9030563837501d04cab0aff7409a9472, type: 3}
+  m_SortingOrder: 1
+  m_Sprite: {fileID: 8307531795017223771, guid: 9e0cbb796dbc5dc48b976555eec49057, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -244,6 +281,25 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!95 &7222845163427668015
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7119250326114159523}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 6ea85a7c9036f444e8b591d5f01d1208, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1 &7119250327076378041
 GameObject:
   m_ObjectHideFlags: 0
@@ -253,8 +309,8 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 7119250327076378040}
-  - component: {fileID: 7119250327076378046}
   - component: {fileID: 7119250327076378047}
+  - component: {fileID: 4596690651628444255}
   m_Layer: 18
   m_Name: PlantHead
   m_TagString: Enemy
@@ -277,7 +333,24 @@ Transform:
   m_Father: {fileID: 7119250325952263062}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!58 &7119250327076378046
+--- !u!114 &7119250327076378047
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7119250327076378041}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1350ce226835b3d44acef279f37d8d42, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  projectilePrefab: {fileID: 1311386620750424233, guid: d5c785e0f84cf884dbfab1ffd1315c10, type: 3}
+  timeBetweenShots: 1.2
+  isUpsideDown: 0
+  animFireDelay: 0.5
+  projectileVelocity: 7.5
+--- !u!58 &4596690651628444255
 CircleCollider2D:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -292,19 +365,4 @@ CircleCollider2D:
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
   serializedVersion: 2
-  m_Radius: 12
---- !u!114 &7119250327076378047
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7119250327076378041}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 1350ce226835b3d44acef279f37d8d42, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  projectilePrefab: {fileID: 1311386620750424233, guid: d5c785e0f84cf884dbfab1ffd1315c10, type: 3}
-  timeBetweenShots: 1.8
-  isUpsideDown: 0
+  m_Radius: 15

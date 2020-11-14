@@ -21,6 +21,7 @@ public class Damageable : MonoBehaviour
     protected Collider2D colliderObj;
     protected Rigidbody2D rb;
     protected SpriteRenderer sr;
+    protected Color initialColor;
     protected AudioSource audioSource;
     protected SpriteMask spriteMask;
 
@@ -35,6 +36,7 @@ public class Damageable : MonoBehaviour
         sr = GetComponent<SpriteRenderer>();
         if (sr == null)
             sr = GetComponentInChildren<SpriteRenderer>();
+        initialColor = sr.color;
         audioSource = GetComponent<AudioSource>();
         spriteMask = GetComponent<SpriteMask>();
 
@@ -207,7 +209,7 @@ public class Damageable : MonoBehaviour
             {
                 sr.color = HITFLASH_COLOR;
                 yield return new WaitForSeconds(0.1f);
-                sr.color = Color.white;
+                sr.color = initialColor;
                 yield return new WaitForSeconds(0.1f);
             }
         }
@@ -217,7 +219,7 @@ public class Damageable : MonoBehaviour
             {
                 sr.color = HITFLASH_COLOR;
                 yield return new WaitForSeconds(0.1f);
-                sr.color = Color.white;
+                sr.color = initialColor;
                 yield return new WaitForSeconds(0.1f);
             }
         }
