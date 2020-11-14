@@ -37,10 +37,11 @@ public class HealthContainer : MonoBehaviour
         currOverheal = 0;
 
         Transform frame = transform.Find("Frame");
+        /*
         if (frame != null)
         {
             frame.SetAsLastSibling(); // Set frame to be on top
-        }
+        }*/
     }
 
 
