@@ -16,6 +16,8 @@ public class HealthContainer : MonoBehaviour
     public GameObject oneOverheal;
     private Animation[] overheals;
 
+    private Animation anim;
+
     void Start()
     {
         healths = new Animation[maxHealth];
@@ -35,6 +37,8 @@ public class HealthContainer : MonoBehaviour
 
         currHealth = maxHealth;
         currOverheal = 0;
+
+        anim = GetComponent<Animation>();
 
         Transform frame = transform.Find("Frame");
         /*
@@ -79,6 +83,11 @@ public class HealthContainer : MonoBehaviour
         healths[currHealth - 1].Play("healthDamage");
         currHealth--;
 
+        if (currHealth == 1)
+        {
+            anim.Play("barFlash");
+        }
+
         return currHealth;
     }
 
@@ -114,6 +123,11 @@ public class HealthContainer : MonoBehaviour
         {
             healths[currHealth].Play("healthFull");
             currHealth++;
+        }
+
+        if (currHealth > 1)
+        {
+            anim.Play("barNeutral");
         }
 
         return currHealth;
