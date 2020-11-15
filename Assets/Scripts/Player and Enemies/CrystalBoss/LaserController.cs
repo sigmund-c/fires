@@ -30,6 +30,7 @@ public class LaserController : MonoBehaviour
     public AudioClip chargingLaser;
     public AudioClip shootingLaser;
     private AudioSource audioSource;
+    private AudioSource audioSourceBass;
     private bool laserAudioed = false;
 
     private void Awake()
@@ -43,6 +44,7 @@ public class LaserController : MonoBehaviour
         light = GetComponent<UnityEngine.Experimental.Rendering.Universal.Light2D>();
         col = GetComponent<Collider2D>();
         audioSource = GetComponent<AudioSource>();
+        audioSourceBass = transform.GetChild(0).GetComponent<AudioSource>();
     }
 
     void Update()
@@ -56,6 +58,7 @@ public class LaserController : MonoBehaviour
                     laserAudioed = true;
                     audioSource.clip = shootingLaser;
                     audioSource.Play();
+                    audioSourceBass.Play();
                 }
                 col.enabled = true;
                 if (!particleSystem.isPlaying)
@@ -80,6 +83,7 @@ public class LaserController : MonoBehaviour
                     col.enabled = false;
                     laserAudioed = false;
                     audioSource.Stop();
+                    audioSourceBass.Stop();
                 }
             }
         } else {

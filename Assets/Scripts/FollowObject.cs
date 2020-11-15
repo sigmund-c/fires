@@ -10,7 +10,8 @@ public class FollowObject : MonoBehaviour
     {
         if (obj != null)
         {
-            transform.position = obj.transform.position;
+            Vector3 objPos = obj.transform.position;
+            transform.position = new Vector3(objPos.x, objPos.y, 0f);
         }
     }
 }
