@@ -73,6 +73,9 @@ public class AI_BossSnake : MonoBehaviour
             hasStarted = true;
             nextAttack = idleTime;
             healthUI.SetActive(true);
+
+            spawnAmount = 3; //spawns 3 enemies at start
+            nextSpawn = spawnDelay;
         }
     }
 
@@ -152,7 +155,7 @@ public class AI_BossSnake : MonoBehaviour
                 //Debug.LogWarning("spawning");
                 shootAmount = 0;
                 tailAmount = 0;
-                spawnAmount = Random.Range(1, 3);
+                spawnAmount = Random.Range(2, 4);
                 nextSpawn = spawnDelay;
             }
         } // TODO: other health amounts

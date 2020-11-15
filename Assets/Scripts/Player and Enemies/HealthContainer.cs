@@ -85,7 +85,10 @@ public class HealthContainer : MonoBehaviour
 
         if (currHealth == 1)
         {
-            anim.Play("barFlash");
+            if (anim != null)
+            {
+                anim.Play("barFlash");
+            }
         }
 
         return currHealth;
@@ -127,7 +130,10 @@ public class HealthContainer : MonoBehaviour
 
         if (currHealth > 1)
         {
-            anim.Play("barNeutral");
+            if (anim != null)
+            {
+                anim.Play("barNeutral");
+            }
         }
 
         return currHealth;
